@@ -1,0 +1,2028 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FFRend.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\FFRend.ico"
+IDR_FFRENDTYPE          ICON    DISCARDABLE     "res\\FFRendDoc.ico"
+IDI_FF_HDR_PLAY         ICON    DISCARDABLE     "res\\ff_hdr_play.ico"
+IDI_SORT_DOWN           ICON    DISCARDABLE     "res\\sort_down.ico"
+IDI_SORT_UP             ICON    DISCARDABLE     "res\\sort_up.ico"
+IDI_PL_NORMAL           ICON    DISCARDABLE     "res\\pl_normal.ico"
+IDI_PL_PLAYING          ICON    DISCARDABLE     "res\\pl_playing.ico"
+IDI_PL_STOPPED          ICON    DISCARDABLE     "res\\pl_stopped.ico"
+IDI_PL_PLAYD            ICON    DISCARDABLE     "res\\pl_playd.ico"
+IDI_PL_PLAYU            ICON    DISCARDABLE     "res\\pl_playu.ico"
+IDI_PL_LOOPD            ICON    DISCARDABLE     "res\\pl_loopd.ico"
+IDI_PL_LOOPU            ICON    DISCARDABLE     "res\\pl_loopu.ico"
+IDI_PL_SHUFFLED         ICON    DISCARDABLE     "res\\pl_shuffled.ico"
+IDI_PL_SHUFFLEU         ICON    DISCARDABLE     "res\\pl_shuffleu.ico"
+IDI_MONITOR             ICON    DISCARDABLE     "res\\monitor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_WINDOW_PAUSE
+    BUTTON      ID_FILE_RECORD
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "&Video"
+        BEGIN
+            MENUITEM "&Open...",                    ID_FILE_VIDEO_OPEN
+            MENUITEM SEPARATOR
+            MENUITEM "Recent Video",                ID_FILE_VIDEO_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM "&Export...\tCtrl+E",          ID_FILE_EXPORT
+        MENUITEM "&Record...\tCtrl+R",          ID_FILE_RECORD
+        POPUP "&Metaplugin"
+        BEGIN
+            MENUITEM "&Export...",                  ID_FILE_META_EXPORT
+            MENUITEM "&Import...",                  ID_FILE_META_IMPORT
+            MENUITEM "&Properties...",              ID_FILE_META_PROPS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Job Control\tF4",            ID_FILE_JOB_CONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert...\tIns",             ID_EDIT_INSERT
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Insert &Empty\tAlt+Ins",      ID_EDIT_INSERT_EMPTY
+        MENUITEM SEPARATOR
+        MENUITEM "&Options...\tShift+O",        ID_EDIT_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Sync Oscillators",           ID_EDIT_SYNC_OSCILLATORS
+        POPUP "&Modulation Range"
+        BEGIN
+            MENUITEM "&Edit...",                    ID_EDIT_MOD_RANGE_EDIT
+            MENUITEM "&Remove",                     ID_EDIT_MOD_RANGE_REMOVE
+            MENUITEM SEPARATOR
+            MENUITEM "Set &Start",                  ID_EDIT_MOD_RANGE_SET_START
+
+            MENUITEM "Set &En&d\t",                 ID_EDIT_MOD_RANGE_SET_END
+
+            MENUITEM SEPARATOR
+            MENUITEM "Goto S&tart",                 ID_EDIT_MOD_RANGE_GOTO_START
+
+            MENUITEM "Goto E&nd",                   ID_EDIT_MOD_RANGE_GOTO_END
+
+        END
+        MENUITEM "Playlist\tShift+A",           ID_EDIT_PLAYLIST
+    END
+    POPUP "&Plugin"
+    BEGIN
+        MENUITEM "&Load...\tCtrl+L",            ID_PLUGIN_LOAD
+        MENUITEM "&Unload",                     ID_PLUGIN_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Monitor\tF8",                ID_PLUGIN_MONITOR
+        MENUITEM "&Bypass\tF9",                 ID_PLUGIN_BYPASS
+        MENUITEM "&Solo",                       ID_PLUGIN_SOLO
+        MENUITEM SEPARATOR
+        MENUITEM "Input",                       ID_PLUGIN_INPUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PLUGIN_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Recent Plugin",               ID_PLUGIN_MRU_FILE1, GRAYED
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Output\tShift+U",            ID_VIEW_OUTPUT
+        MENUITEM "&Master\tShift+M",            ID_VIEW_MASTER
+        MENUITEM "&Patch\tShift+P",             ID_VIEW_PATCH
+        MENUITEM "&Files\tShift+F",             ID_VIEW_FILES
+        MENUITEM "Mo&nitor\tShift+N",           ID_VIEW_MONITOR
+        MENUITEM SEPARATOR
+        MENUITEM "M&IDI Setup\tShift+I",        ID_VIEW_MIDI_SETUP
+        MENUITEM "M&etaparams\tShift+E",        ID_VIEW_METAPARM
+        MENUITEM "&Record Status\tShift+R",     ID_VIEW_RECORD_STATUS
+        MENUITEM SEPARATOR
+        MENUITEM "&Graph\tShift+G",             ID_VIEW_GRAPH
+        MENUITEM "&History\tShift+H",           ID_VIEW_HISTORY
+        MENUITEM "&Queues\tShift+Q",            ID_VIEW_QUEUES
+        MENUITEM "&Load Balance\tShift+L",      ID_VIEW_LOAD_BALANCE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Full Screen\tCtrl+F11",      ID_WINDOW_FULL_SCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause\tSpace",               ID_WINDOW_PAUSE
+        MENUITEM "&Step\tShift+Space",          ID_WINDOW_STEP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_INDEX
+        MENUITEM "FFRend on the &Web",          ID_APP_HOME_PAGE
+        MENUITEM "Check for &Updates",          ID_HELP_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "&About FFRend...",            ID_APP_ABOUT
+    END
+END
+
+IDR_VIEW_CTX MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Load...",                    ID_PLUGIN_LOAD
+        MENUITEM "&Unload",                     ID_PLUGIN_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Monitor",                    ID_PLUGIN_MONITOR
+        MENUITEM "&Bypass",                     ID_PLUGIN_BYPASS
+        MENUITEM "&Solo",                       ID_PLUGIN_SOLO
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert...",                  ID_EDIT_INSERT
+        MENUITEM "&Delete",                     ID_EDIT_DELETE
+        MENUITEM "Insert &Empty",               ID_EDIT_INSERT_EMPTY
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Input",                       ID_PLUGIN_INPUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PLUGIN_PROPERTIES
+    END
+END
+
+IDR_HISTORY_CTX MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Zoom &In",                    ID_VIEW_ZOOM_IN
+        MENUITEM "Zoom O&ut",                   ID_VIEW_ZOOM_OUT
+        MENUITEM "&Reset Zoom",                 ID_VIEW_RESET_ZOOM
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause",                      ID_HISTORY_PAUSE
+        MENUITEM "Show &Times",                 ID_HISTORY_SHOW_TIMES
+        MENUITEM SEPARATOR
+        MENUITEM "&Open...",                    ID_HISTORY_OPEN
+        MENUITEM "&Save...",                    ID_HISTORY_SAVE
+    END
+END
+
+IDR_FB_CTX_BAR MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Parent Folder",              ID_FB_PARENT_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Icons",                      ID_FB_VIEW_ICON
+        MENUITEM "&Small Icons",                ID_FB_VIEW_SMALL_ICON
+        MENUITEM "&List",                       ID_FB_VIEW_LIST
+        MENUITEM "&Details",                    ID_FB_VIEW_REPORT
+        MENUITEM "&Thumbnails",                 ID_FB_VIEW_THUMBNAIL
+        MENUITEM SEPARATOR
+        POPUP "&Arrange"
+        BEGIN
+            MENUITEM "by &Name",                    ID_FB_SORT_NAME
+            MENUITEM "by &Type",                    ID_FB_SORT_TYPE
+            MENUITEM "by &Size",                    ID_FB_SORT_SIZE
+            MENUITEM "by &Date",                    ID_FB_SORT_DATE
+        END
+    END
+END
+
+IDR_FB_CTX_ITEM MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Open",                       ID_FB_FILE_OPEN
+        MENUITEM "&Rename",                     ID_FB_RENAME
+        MENUITEM "&Delete",                     ID_FB_DELETE
+        MENUITEM "&Properties",                 ID_FB_FILE_PROPS
+    END
+END
+
+IDR_VIEW_ROW_CTX MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "Mod &Range"
+        BEGIN
+            MENUITEM "&Edit...",                    ID_EDIT_MOD_RANGE_EDIT
+            MENUITEM "&Remove",                     ID_EDIT_MOD_RANGE_REMOVE
+            MENUITEM SEPARATOR
+            MENUITEM "Set &Start",                  ID_EDIT_MOD_RANGE_SET_START
+
+            MENUITEM "Set &En&d\t",                 ID_EDIT_MOD_RANGE_SET_END
+
+            MENUITEM SEPARATOR
+            MENUITEM "Goto S&tart",                 ID_EDIT_MOD_RANGE_GOTO_START
+
+            MENUITEM "Goto E&nd",                   ID_EDIT_MOD_RANGE_GOTO_END
+
+        END
+        POPUP "&Metaparam"
+        BEGIN
+            MENUITEM "&Parameter",                  ID_METAPARM_ADD_PARAM
+            MENUITEM "Mod &Enable",                 ID_METAPARM_ADD_MOD_ENAB
+            MENUITEM "Mod &Waveform",               ID_METAPARM_ADD_MOD_WAVE
+            MENUITEM "Mod &Frequency",              ID_METAPARM_ADD_MOD_FREQ
+            MENUITEM "Mod P&ulse Width",            ID_METAPARM_ADD_MOD_PW
+            MENUITEM SEPARATOR
+            MENUITEM "Plugin &Bypass",              ID_METAPARM_ADD_BYPASS
+            MENUITEM SEPARATOR
+            MENUITEM "&All Parameters",             ID_METAPARM_ADD_ALL_PARAMS
+
+        END
+    END
+END
+
+IDR_METAPARM_CTX MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Insert",                     ID_METAPARM_INSERT
+        MENUITEM "&Delete",                     ID_METAPARM_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Group",                      ID_METAPARM_GROUP
+        MENUITEM "&Ungroup",                    ID_METAPARM_UNGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_METAPARM_PROPS
+    END
+END
+
+IDR_JOB_CONTROL MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Load job list...",           ID_JOB_FILE_LOAD_LIST
+        MENUITEM "&Save job list...",           ID_JOB_FILE_SAVE_LIST
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Clear list",                 ID_JOB_EDIT_CLEAR_LIST
+        MENUITEM "&Delete done jobs",           ID_JOB_EDIT_DELETE_DONE
+        MENUITEM SEPARATOR
+        MENUITEM "All Waiting => Postponed",    ID_JOB_EDIT_WAITING_POSTPONED
+
+        MENUITEM "All Postponed => Waiting",    ID_JOB_EDIT_POSTPONED_WAITING
+
+        MENUITEM "All Done => Waiting",         ID_JOB_EDIT_DONE_WAITING
+        MENUITEM "All Failed => Waiting",       ID_JOB_EDIT_FAILED_WAITING
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Shutdown when finished",     ID_JOB_OPTS_SHUTDOWN
+    END
+END
+
+IDR_JOB_CONTROL_CTX MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Postpone",                   ID_JOB_EDIT_POSTPONE
+        MENUITEM "&Delete",                     ID_JOB_EDIT_DELETE
+        MENUITEM "&Skip",                       ID_JOB_EDIT_SKIP
+        MENUITEM "View &Error",                 ID_JOB_VIEW_ERROR
+    END
+END
+
+IDR_MAIN_JOB MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Job Control",                ID_FILE_JOB_CONTROL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_INDEX
+        MENUITEM "FFRend on the &Web",          32771
+        MENUITEM SEPARATOR
+        MENUITEM "&About FFRend...",            ID_APP_ABOUT
+    END
+END
+
+IDR_PLAYLIST MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_PL_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_PL_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_PL_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_PL_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_PL_FILE_MRU_FILE1
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Add...",                     ID_PL_EDIT_ADD
+        MENUITEM "&Insert...\tIns",             ID_PL_EDIT_INSERT
+        MENUITEM "&Delete\tDel",                ID_PL_EDIT_DELETE
+    END
+    POPUP "&Auto"
+    BEGIN
+        MENUITEM "&Play",                       ID_PL_AUTO_PLAY
+        MENUITEM "&Loop",                       ID_PL_AUTO_LOOP
+        MENUITEM "&Shuffle",                    ID_PL_AUTO_SHUFFLE
+    END
+END
+
+IDR_PLAYLIST_CTX MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Open",                        ID_PL_EDIT_OPEN_PROJECT
+        MENUITEM "Delete",                      ID_PL_EDIT_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_PLAYLIST,       VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_FILE_EXPORT,         VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_VIEW_METAPARM,       VIRTKEY, SHIFT, NOINVERT
+    "F",            ID_VIEW_FILES,          VIRTKEY, SHIFT, NOINVERT
+    "G",            ID_VIEW_GRAPH,          VIRTKEY, SHIFT, NOINVERT
+    "H",            ID_VIEW_HISTORY,        VIRTKEY, SHIFT, NOINVERT
+    "I",            ID_VIEW_MIDI_SETUP,     VIRTKEY, SHIFT, NOINVERT
+    "L",            ID_PLUGIN_LOAD,         VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_VIEW_LOAD_BALANCE,   VIRTKEY, SHIFT, NOINVERT
+    "M",            ID_VIEW_MASTER,         VIRTKEY, SHIFT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_VIEW_MONITOR,        VIRTKEY, SHIFT, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_EDIT_OPTIONS,        VIRTKEY, SHIFT, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_VIEW_PATCH,          VIRTKEY, SHIFT, NOINVERT
+    "Q",            ID_VIEW_QUEUES,         VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_FILE_RECORD,         VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_VIEW_RECORD_STATUS,  VIRTKEY, SHIFT, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_VIEW_OUTPUT,         VIRTKEY, SHIFT, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_APP_CANCEL,          VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP_INDEX,          VIRTKEY, NOINVERT
+    VK_F11,         ID_WINDOW_FULL_SCREEN,  VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          ID_FILE_JOB_CONTROL,    VIRTKEY, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          ID_PLUGIN_MONITOR,      VIRTKEY, NOINVERT
+    VK_F9,          ID_PLUGIN_BYPASS,       VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_INSERT,         VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_INSERT_EMPTY,   VIRTKEY, ALT, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_SPACE,       ID_WINDOW_PAUSE,        VIRTKEY, NOINVERT
+    VK_SPACE,       ID_WINDOW_STEP,         VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_PLAYLIST ACCELERATORS DISCARDABLE 
+BEGIN
+    "N",            ID_PL_FILE_NEW,         VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_PL_FILE_OPEN,        VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_PL_FILE_SAVE,        VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_PL_EDIT_DELETE,      VIRTKEY, NOINVERT
+    VK_INSERT,      ID_PL_EDIT_INSERT,      VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTS_ENGINE DIALOG DISCARDABLE  0, 0, 250, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Engine"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Frame &Size:",IDC_STATIC,7,7,38,8
+    COMBOBOX        IDC_OPTS_FRAME_SIZE,7,18,60,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Width:",IDC_STATIC,74,7,22,8
+    EDITTEXT        IDC_OPTS_FRAME_WIDTH,74,18,40,14,ES_AUTOHSCROLL
+    LTEXT           "&Height:",IDC_STATIC,121,7,24,8
+    EDITTEXT        IDC_OPTS_FRAME_HEIGHT,121,18,40,14,ES_AUTOHSCROLL
+    LTEXT           "Frame &Rate:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_OPTS_FRAME_RATE,7,48,40,14,ES_AUTOHSCROLL
+    LTEXT           "&Color Depth:",IDC_STATIC,57,37,40,8
+    COMBOBOX        IDC_OPTS_COLOR_DEPTH,57,48,40,49,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Timeout:",IDC_STATIC,107,37,28,8
+    EDITTEXT        IDC_OPTS_FRAME_TIMEOUT,107,48,40,14,ES_AUTOHSCROLL
+    CONTROL         "&Lock frame rate",IDC_OPTS_LOCK_FRAME_RATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,68,65,10
+    CONTROL         "Use &multimedia timer",IDC_OPTS_USE_MM_TIMER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,81,68,80,10
+    LTEXT           "&Value:",IDC_STATIC,181,18,21,8
+    EDITTEXT        IDC_OPTS_RAND_SEED,181,28,40,14,ES_AUTOHSCROLL
+    CONTROL         "Us&e time",IDC_OPTS_RAND_USE_TIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,181,50,43,10
+    GROUPBOX        "Random Seed",IDC_STATIC,171,7,62,61
+    PUSHBUTTON      "&Advanced...",IDC_OPTS_ADVANCED,172,76,60,14
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 207, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About FFRend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "FFRend Version 2.0.0\nCopyleft 2010 Chris Korda",
+                    IDC_ABOUT_TEXT,40,7,108,17,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,160,7,40,14,WS_GROUP
+    EDITTEXT        IDC_ABOUT_LICENSE,7,38,193,45,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    LTEXT           "http://ffrend.sourceforge.net",IDC_ABOUT_URL,40,23,91,8,
+                    SS_NOTIFY
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 186, 49
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Progress"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,7,7,172,14
+    PUSHBUTTON      "Cancel",IDCANCEL,67,28,50,14
+    RTEXT           "",IDC_PROGRESS_PERCENT,139,27,40,15,SS_CENTERIMAGE
+END
+
+IDD_MULTI_FILE DIALOG DISCARDABLE  0, 0, 186, 24
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Preview",IDC_MULTI_FILE_PREVIEW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,41,10
+END
+
+IDD_FF_PLUGS_ROW DIALOG DISCARDABLE  0, 0, 390, 16
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "",IDC_FF_PARM_NAME,2,0,70,15,SS_NOPREFIX | SS_NOTIFY | 
+                    SS_CENTERIMAGE
+    CONTROL         "Slider",IDC_FF_PARM_SLIDER,"msctls_trackbar32",
+                    TBS_NOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,74,0,100,
+                    15
+    EDITTEXT        IDC_FF_PARM_EDIT,176,1,50,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_FF_PARM_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,216,1,11,
+                    14
+    CONTROL         "",IDC_FF_MOD_ENAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    229,2,10,12
+    COMBOBOX        IDC_FF_MOD_WAVE,242,1,60,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FF_MOD_FREQ,304,1,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_FF_MOD_FREQ_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,334,1,11,
+                    14
+    EDITTEXT        IDC_FF_MOD_PW,346,1,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_FF_MOD_PW_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,376,1,11,
+                    14
+END
+
+IDD_SLIDER_SELECTION DIALOG DISCARDABLE  0, 0, 161, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Slider Selection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Start:",IDC_STATIC,7,7,18,8
+    EDITTEXT        IDC_SLIDER_SEL_START,7,18,40,14,ES_AUTOHSCROLL
+    LTEXT           "End:",IDC_STATIC,55,7,16,8
+    EDITTEXT        IDC_SLIDER_SEL_END,55,18,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,104,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,25,50,14
+END
+
+IDD_ROW_FORM DIALOGEX 0, 0, 240, 137
+STYLE WS_CHILD | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_PATCH_ROW DIALOG DISCARDABLE  0, 0, 161, 16
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_PB_ENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,
+                    3,9,10
+    RTEXT           "",IDC_PB_INPUT,16,1,69,12,SS_NOPREFIX | SS_NOTIFY | 
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_PB_SOURCE,90,1,70,150,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_MASTER DIALOG DISCARDABLE  0, 0, 154, 12
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MA_SPEED_EDIT,113,0,40,12,ES_AUTOHSCROLL
+    CONTROL         "Speed Slider",IDC_MA_SPEED_SLIDER,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,30,0,80,12
+    RTEXT           "Speed:",IDC_MA_SPEED_CAP,1,0,26,12,SS_CENTERIMAGE
+END
+
+IDD_MIDI_SETUP DIALOG DISCARDABLE  0, 0, 286, 185
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_MS_PROP,2,2,91,89,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Learn",IDC_MS_LEARN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,106,3,34,10
+    CONTROL         "Tab1",IDC_MS_TAB,"SysTabControl32",WS_TABSTOP,0,18,286,
+                    167
+END
+
+IDD_MIDI_SETUP_ROW DIALOG DISCARDABLE  0, 0, 282, 15
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "",IDC_MS_TITLE,0,1,76,12,SS_NOPREFIX | SS_CENTERIMAGE
+    EDITTEXT        IDC_MS_RANGE,80,1,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MS_RANGE_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,112,1,10,
+                    12
+    COMBOBOX        IDC_MS_EVENT,122,1,40,67,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_MS_CHAN,164,1,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_MS_CHAN_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,195,1,11,
+                    12
+    EDITTEXT        IDC_MS_CTRL,206,1,40,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MS_CTRL_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,237,1,11,
+                    12
+    EDITTEXT        IDC_MS_VALUE,248,1,30,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER | NOT WS_TABSTOP
+END
+
+IDD_METAPARM_GROUP DIALOG DISCARDABLE  0, 0, 124, 150
+STYLE WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Metaparam Group"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,67,129,50,14
+    CONTROL         "List1",IDC_MPG_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,22,110,98
+    LTEXT           "group",IDC_MPG_MASTER,7,7,110,8,SS_NOPREFIX
+END
+
+IDD_METAPARM_ROW DIALOG DISCARDABLE  0, 0, 312, 16
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "",IDC_METAPARM_NAME,1,0,70,15,SS_NOPREFIX | SS_NOTIFY | 
+                    SS_CENTERIMAGE
+    CONTROL         "Metaparam Slider",IDC_METAPARM_SLIDER,"msctls_trackbar32",
+                    TBS_NOTICKS | WS_TABSTOP,74,0,100,15
+    EDITTEXT        IDC_METAPARM_EDIT,176,0,50,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_METAPARM_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,217,0,11,
+                    14
+    LTEXT           "",IDC_METAPARM_GROUP,230,0,80,15,SS_NOPREFIX | 
+                    SS_NOTIFY | SS_CENTERIMAGE
+END
+
+IDD_METAPARM_PROPS DIALOG DISCARDABLE  0, 0, 170, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Metaparameter Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Name:",IDC_STATIC,16,7,40,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPARM_NAME,61,7,90,14,ES_AUTOHSCROLL
+    GROUPBOX        "Target",IDC_STATIC,7,26,156,72
+    RTEXT           "Plugin:",IDC_METAPARM_TARG_CAP_PLUG,16,39,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_METAPARM_PLUGIN,61,39,90,100,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Parameter:",IDC_METAPARM_TARG_CAP_PARM,16,57,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_METAPARM_PARAM,61,57,90,100,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Property:",IDC_METAPARM_TARG_CAP_PROP,16,75,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_METAPARM_PROP,61,75,90,100,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Range",IDC_STATIC,7,103,156,48
+    LTEXT           "Start:",IDC_STATIC,30,115,18,8
+    EDITTEXT        IDC_METAPARM_RANGE_START_EDIT,30,127,50,14,
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_METAPARM_RANGE_START_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,72,127,10,
+                    14
+    LTEXT           "End:",IDC_STATIC,90,115,16,8
+    EDITTEXT        IDC_METAPARM_RANGE_END_EDIT,90,127,50,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_METAPARM_RANGE_END_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,132,127,
+                    10,14
+    DEFPUSHBUTTON   "OK",IDOK,50,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,113,161,50,14
+END
+
+IDD_MISSING_FILES_DLG DIALOG DISCARDABLE  0, 0, 316, 28
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Missing Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Search && Proceed",IDOK,7,7,70,14
+    PUSHBUTTON      "Proceed",IDC_MISF_PROCEED,85,7,70,14
+    PUSHBUTTON      "Open Dialog...",IDC_MISF_OPENDLG,162,7,70,14
+    PUSHBUTTON      "Cancel",IDCANCEL,239,7,70,14
+END
+
+IDD_REPLACE_FILES_DLG DIALOG DISCARDABLE  0, 0, 273, 242
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List2",IDC_RPLF_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,7,259,176
+    PUSHBUTTON      "Browse...",IDC_RPLF_BROWSE,14,190,72,14
+    PUSHBUTTON      "Search Folder...",IDC_RPLF_SEARCH_FOLDER,100,190,72,14
+    PUSHBUTTON      "Search All",IDC_RPLF_SEARCH_ALL,186,190,72,14
+    DEFPUSHBUTTON   "OK",IDOK,134,221,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,221,50,14
+END
+
+IDD_FILE_SEARCH_DLG DIALOG DISCARDABLE  0, 0, 154, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File Search"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,52,26,50,14
+    CTEXT           "Searching...",IDC_STATUS,7,7,140,8
+END
+
+IDD_MSG_BOX DIALOG DISCARDABLE  0, 0, 65, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "",IDC_MSG_BOX_ICON,7,7,20,20
+    CONTROL         "",IDC_MSG_BOX_TEXT,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,39,7,18,19
+    DEFPUSHBUTTON   "OK",IDOK,7,37,50,14
+END
+
+IDD_REC_STAT DIALOG DISCARDABLE  0, 0, 159, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Record Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Record duration:",IDC_STATIC,16,7,74,14,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_RST_DURATION,95,7,40,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    RTEXT           "Amount recorded:",IDC_STATIC,16,25,74,14,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_RST_RECORDED,95,25,40,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    RTEXT           "Elapsed time:",IDC_STATIC,16,43,74,14,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_RST_ELAPSED,95,43,40,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    RTEXT           "Remaining time:",IDC_STATIC,16,61,74,14,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_RST_REMAINING,95,61,40,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    CONTROL         "Progress1",IDC_RST_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,7,85,145,14
+    CONTROL         "Shut down computer when done",IDC_RST_SHUTDOWN,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,21,105,119,10
+    DEFPUSHBUTTON   "Abort",IDC_RST_ABORT,54,121,50,14,WS_DISABLED
+END
+
+IDD_RECORD DIALOG DISCARDABLE  0, 0, 226, 218
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Input",IDC_STATIC,7,7,100,80
+    LTEXT           "Frame Size:",IDC_STATIC,18,19,38,8
+    LTEXT           "Static",IDC_REC_INP_FRAME_SIZE,18,30,60,14,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "Frame Rate:",IDC_STATIC,18,51,40,8
+    LTEXT           "Static",IDC_REC_INP_FRAME_RATE,18,62,40,14,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    EDITTEXT        IDC_REC_DURATION,18,108,40,14,ES_AUTOHSCROLL
+    CONTROL         "Time",IDC_REC_DURATION_UNIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,63,105,31,10
+    CONTROL         "Frames",IDC_REC_DURATION_UNIT2,"Button",
+                    BS_AUTORADIOBUTTON,63,118,39,10
+    CONTROL         "Custom",IDC_REC_DURATION_TYPE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,128,39,10
+    CONTROL         "Unlimited",IDC_REC_DURATION_TYPE2,"Button",
+                    BS_AUTORADIOBUTTON,18,141,45,10
+    CONTROL         "Use AVI length",IDC_REC_DURATION_TYPE3,"Button",
+                    BS_AUTORADIOBUTTON,18,154,63,10
+    GROUPBOX        "Duration",IDC_STATIC,7,92,100,81,WS_GROUP
+    GROUPBOX        "Output",IDC_STATIC,117,7,102,167
+    CONTROL         "Use input frame size",IDC_REC_USE_INP_FRAME_SIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,129,19,79,10
+    LTEXT           "Frame Size:",IDC_STATIC,129,32,38,8
+    COMBOBOX        IDC_REC_OUT_FRAME_SIZE,129,43,60,85,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Width:",IDC_STATIC,129,60,22,8
+    EDITTEXT        IDC_REC_OUT_FRAME_WIDTH,129,71,36,14,ES_AUTOHSCROLL
+    LTEXT           "Height:",IDC_STATIC,171,60,24,8
+    EDITTEXT        IDC_REC_OUT_FRAME_HEIGHT,173,71,36,14,ES_AUTOHSCROLL
+    CONTROL         "Use input frame rate",IDC_REC_USE_INP_FRAME_RATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,129,93,79,10
+    LTEXT           "Frame Rate:",IDC_STATIC,129,106,40,8
+    EDITTEXT        IDC_REC_OUT_FRAME_RATE,129,117,36,14,ES_AUTOHSCROLL
+    LTEXT           "Color Depth:",IDC_STATIC,129,139,40,8
+    COMBOBOX        IDC_REC_BIT_COUNT,129,150,50,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,109,197,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,197,50,14
+    CONTROL         "Don't run this job now; add it to job control instead.",
+                    IDC_REC_QUEUE_JOB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    25,180,175,10
+END
+
+IDD_SHUTDOWN_WARN DIALOG DISCARDABLE  0, 0, 186, 77
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Shutdown Warning"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            429,IDC_WARNING_ICON,7,7,20,20
+    LTEXT           "FFRend has finished processing and is about to shutdown your computer.",
+                    IDC_PROGRESS_MSG,40,7,139,20
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,7,35,172,14
+    PUSHBUTTON      "Cancel",IDCANCEL,67,56,50,14
+    RTEXT           "",IDC_PROGRESS_PERCENT,139,55,40,15,SS_CENTERIMAGE
+END
+
+IDD_JOB_CONTROL DIALOG DISCARDABLE  0, 0, 352, 199
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Job Control"
+MENU IDR_JOB_CONTROL
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_JOB_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,276,167
+    DEFPUSHBUTTON   "OK",IDOK,295,7,50,14
+    PUSHBUTTON      "Move &up",IDC_JOB_MOVE_UP,295,33,50,14
+    PUSHBUTTON      "Move d&own",IDC_JOB_MOVE_DOWN,295,50,50,14
+    PUSHBUTTON      "&Postpone",IDC_JOB_POSTPONE,295,80,50,14
+    PUSHBUTTON      "&Delete",IDC_JOB_DELETE,295,96,50,14
+    PUSHBUTTON      "Start",IDC_JOB_START,295,125,50,14
+    PUSHBUTTON      "Abort",IDC_JOB_ABORT,295,141,50,14
+    PUSHBUTTON      "S&kip",IDC_JOB_SKIP,295,157,50,14
+    LTEXT           "Current job",IDC_JOB_PROG_CAP,7,180,37,12,
+                    SS_CENTERIMAGE
+    CONTROL         "Progress1",IDC_JOB_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,49,180,268,12
+    RTEXT           "0%",IDC_JOB_PERCENT,320,180,20,12,SS_CENTERIMAGE
+END
+
+IDD_METAPLUG_DEFAULTS DIALOG DISCARDABLE  0, 0, 256, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Metaplugin Defaults"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Unique ID:",IDC_STATIC,7,7,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_UNIQUE_ID,68,7,39,14,ES_AUTOHSCROLL
+    RTEXT           "Description:",IDC_STATIC,7,26,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_DESCRIP,68,26,175,14,ES_AUTOHSCROLL
+    RTEXT           "Author/License:",IDC_STATIC,7,45,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_ABOUT,68,45,175,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,134,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,69,50,14
+END
+
+IDD_METAPLUG_PROPS DIALOG DISCARDABLE  0, 0, 256, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Metaplugin Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Name:",IDC_STATIC,7,7,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_NAME,68,7,100,14,ES_AUTOHSCROLL
+    RTEXT           "Unique ID:",IDC_STATIC,7,26,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_UNIQUE_ID,68,26,39,14,ES_AUTOHSCROLL
+    RTEXT           "Description:",IDC_STATIC,7,45,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_DESCRIP,68,45,175,14,ES_AUTOHSCROLL
+    RTEXT           "Author/License:",IDC_STATIC,7,64,57,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_METAPLUG_ABOUT,68,64,175,14,ES_AUTOHSCROLL
+    GROUPBOX        "Version",IDC_STATIC,14,84,85,44,WS_GROUP
+    LTEXT           "Major:",IDC_STATIC,24,95,20,8
+    EDITTEXT        IDC_METAPLUG_VERSION_MAJOR,24,106,30,14,ES_AUTOHSCROLL
+    LTEXT           "Minor:",IDC_STATIC,59,95,20,8
+    EDITTEXT        IDC_METAPLUG_VERSION_MINOR,59,106,30,14,ES_AUTOHSCROLL
+    CONTROL         "Effect",IDC_METAPLUG_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,120,96,35,10
+    CONTROL         "Source",IDC_METAPLUG_TYPE2,"Button",BS_AUTORADIOBUTTON,
+                    120,109,39,10
+    GROUPBOX        "Type",IDC_STATIC,110,84,58,44,WS_GROUP
+    CONTROL         "Embed plugins",IDC_METAPLUG_EMBED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,135,62,10
+    PUSHBUTTON      "Edit Inputs...",IDC_METAPLUG_EDIT_INPUTS,183,88,60,14
+    PUSHBUTTON      "Defaults...",IDC_METAPLUG_DEFAULTS,183,110,60,14
+    DEFPUSHBUTTON   "OK",IDOK,134,138,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,138,50,14
+END
+
+IDD_LOAD_BALANCE_ROW DIALOG DISCARDABLE  0, 0, 247, 15
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "",IDC_LBR_PLUGIN_NAME,0,1,76,12,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_LBR_THREAD_COUNT_EDIT,80,1,40,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER | WS_GROUP
+    CONTROL         "Spin1",IDC_LBR_THREAD_COUNT_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,112,1,10,
+                    12
+    CONTROL         "Progress1",IDC_LBR_CPU_PERCENT_BAR,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,122,1,80,12
+    RTEXT           "",IDC_LBR_CPU_TIME,204,1,40,12,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+END
+
+IDD_OPTS_VIEW DIALOG DISCARDABLE  0, 0, 250, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&View Freq:",IDC_STATIC,7,7,34,8
+    EDITTEXT        IDC_OPTS_VIEW_FREQ,7,17,40,14,ES_AUTOHSCROLL
+    LTEXT           "&History Size:",IDC_STATIC,61,7,40,8
+    EDITTEXT        IDC_OPTS_HISTORY_SIZE,61,17,40,14,ES_AUTOHSCROLL
+    LTEXT           "&Undo Levels:",IDC_STATIC,115,7,43,8
+    EDITTEXT        IDC_OPTS_UNDO_LEVELS,115,17,40,14,ES_AUTOHSCROLL
+    CONTROL         "U&nlimited undo",IDC_OPTS_UNDO_UNLIMITED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,163,20,63,10
+    LTEXT           "&Monitor Quality:",IDC_STATIC,7,39,50,8
+    COMBOBOX        IDC_OPTS_MONITOR_QUALITY,7,49,60,44,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Thumbnail Size:",IDC_STATIC,77,39,51,8
+    COMBOBOX        IDC_OPTS_THUMB_SIZE,77,49,60,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Cache thumbnails",IDC_OPTS_CACHE_THUMBS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,38,72,10
+    CONTROL         "&Save changes warning",IDC_OPTS_SAVE_CHGS_WARN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,52,89,10
+    CONTROL         "&Automatically check for updates",
+                    IDC_OPTS_CHECK_FOR_UPDATES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,70,117,10
+END
+
+IDD_OPTS_MIDI DIALOG DISCARDABLE  0, 0, 250, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "MIDI"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Device:",IDC_STATIC,7,7,26,8
+    COMBOBOX        IDC_OPTS_MIDI_DEV,8,18,120,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Refresh",IDC_OPTS_MIDI_REFRESH,136,17,50,14
+END
+
+IDD_PLAYLIST DIALOG DISCARDABLE  0, 0, 246, 200
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Playlist"
+MENU IDR_PLAYLIST
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_PL_PLAY,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,7,7,15,14
+    CONTROL         "",IDC_PL_LOOP,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,27,7,15,14
+    CONTROL         "",IDC_PL_SHUFFLE,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,47,7,15,14
+    EDITTEXT        IDC_PL_PERIOD_EDIT,67,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_PL_PERIOD_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,7,11,
+                    14
+    CONTROL         "List1",IDC_PL_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,26,232,167
+END
+
+IDD_ADV_ENGINE_OPTS DIALOG DISCARDABLE  0, 0, 180, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Advanced Engine Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Run while loading project",IDC_AEOP_RUN_WHILE_LOADING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,95,10
+    LTEXT           "&Limit (MB):",IDC_STATIC,15,35,34,8
+    EDITTEXT        IDC_AEOP_FRAME_MEMORY_LIMIT,15,46,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Used (MB):",IDC_STATIC,63,35,36,8
+    EDITTEXT        IDC_AEOP_FRAME_MEMORY_USED,63,46,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,123,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,25,50,14
+    GROUPBOX        "Frame memory",IDC_STATIC,7,23,105,46
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,2,7,0
+ PRODUCTVERSION 2,2,7,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "FFRend MFC Application\0"
+            VALUE "FileVersion", "2, 2, 7, 0\0"
+            VALUE "InternalName", "FFRend\0"
+            VALUE "LegalCopyright", "Copyright (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "FFRend.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "FFRend Application\0"
+            VALUE "ProductVersion", "2, 2, 7, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTS_ENGINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        VERTGUIDE, 40
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_MULTI_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_FF_PLUGS_ROW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 389
+    END
+
+    IDD_SLIDER_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_PATCH_ROW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 160
+        BOTTOMMARGIN, 15
+    END
+
+    IDD_METAPARM_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_METAPARM_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        VERTGUIDE, 61
+        VERTGUIDE, 151
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+        HORZGUIDE, 127
+    END
+
+    IDD_MISSING_FILES_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_REPLACE_FILES_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+        HORZGUIDE, 204
+    END
+
+    IDD_FILE_SEARCH_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 147
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_MSG_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 57
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_REC_STAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_RECORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_SHUTDOWN_WARN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_JOB_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_METAPLUG_DEFAULTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        VERTGUIDE, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_METAPLUG_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        VERTGUIDE, 64
+        VERTGUIDE, 68
+        VERTGUIDE, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_OPTS_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_OPTS_MIDI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_PLAYLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_ADV_ENGINE_OPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAG_MULTI          CURSOR  DISCARDABLE     "res\\dragmulti.cur"
+IDC_DRAG_SINGLE         CURSOR  DISCARDABLE     "res\\dragsingle.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MIDI_SETUP_ROW DLGINIT
+BEGIN
+    IDC_MS_EVENT, 0x403, 4, 0
+0x464f, 0x0046, 
+    IDC_MS_EVENT, 0x403, 5, 0
+0x5443, 0x4c52, "\000" 
+    IDC_MS_EVENT, 0x403, 5, 0
+0x4f4e, 0x4554, "\000" 
+    IDC_MS_EVENT, 0x403, 6, 0
+0x4950, 0x4354, 0x0048, 
+    0
+END
+
+IDD_OPTS_ENGINE DLGINIT
+BEGIN
+    IDC_OPTS_COLOR_DEPTH, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_OPTS_COLOR_DEPTH, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_OPTS_COLOR_DEPTH, 0x403, 3, 0
+0x3233, "\000" 
+    0
+END
+
+IDD_OPTS_VIEW DLGINIT
+BEGIN
+    IDC_OPTS_MONITOR_QUALITY, 0x403, 5, 0
+0x6146, 0x7473, "\000" 
+    IDC_OPTS_MONITOR_QUALITY, 0x403, 7, 0
+0x6d53, 0x6f6f, 0x6874, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "FFRend\n\nFFRend\nFFRend Project Files (*.ffp)\n.ffp\nFFRend.Document\nFFRend Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_UC_MOD_PW           "Mod Pulse Width"
+    IDS_UC_MOD_RANGE        "Mod Range"
+    IDS_UC_MOD_WAVE         "Mod Waveform"
+    IDS_UC_MONITOR_SOURCE   "Monitor Source"
+    IDS_UC_MOVE             "Move"
+    IDS_UC_OPEN_CLIP        "Open Clip"
+    IDS_UC_PARM             "Parameter"
+    IDS_UC_PASTE            "Paste"
+    IDS_UC_SELECTION        "Selection"
+    IDS_UC_SOLO             "Solo"
+    IDS_UC_SYNC_OSCILLATORS "Sync Oscillators"
+    IDS_UC_UNLOAD           "Unload"
+    IDS_UPCK_CANT_DOWNLOAD_FILE "Can't download file:\n%s\n%s"
+    IDS_UPCK_CANT_GET_TEMP_FILE "Can't get temp file name."
+    IDS_UPCK_CANT_GET_VERSION "Can't download version info:\n%s\n%s"
+    IDS_UPCK_CANT_RUN_INSTALLER "Can't run installer script: error %d."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_UPCK_CANT_UNZIP_DOWNLOAD "Can't unzip download '%s'."
+    IDS_UPCK_DOWNLOADING_CAPTION "Downloading %s"
+    IDS_UPCK_HAVE_LATEST_VERSION "You have the latest version of %s."
+    IDS_UPCK_SCRIPT_NOT_FOUND "Installer script '%s' not found."
+    IDS_UPCK_UPDATE_CANCELED "Update canceled."
+    IDS_UPCK_WANT_NEWER_VERSION 
+                            "A newer version of %s is available.\nDo you want to download and install it?\n\nYour version:\t%d.%d.%d.%d\nLatest version:\t%d.%d.%d.%d"
+    IDS_VIDEO_FILTER        "Video Files (*.avi, *.mpg,*.bmp, *.gif, *.jpg)|*.avi;*.mpg;*.bmp;*.gif;*.jpg|AviSynth Files (*.avs)|*.avs|All Files (*.*)|*.*||"
+    IDS_VIEW_CANT_INSERT_PLUGIN "Can't insert plugin."
+    IDS_VIEW_CANT_LOAD_PLUGIN "Can't load plugin."
+    IDS_VIEW_COL_BYPASS     "Bypass"
+    IDS_VIEW_COL_COPY_PREF  "Copy Pref"
+    IDS_VIEW_COL_DELAY      "Delay"
+    IDS_VIEW_COL_INPUTS     "Inputs"
+    IDS_VIEW_COL_INPUT_A    "Input %c"
+    IDS_VIEW_COL_PLUGIN     "Plugin"
+    IDS_VIEW_COL_PROC_COPY  "Proc Copy"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_VIEW_COL_TYPE       "Type"
+    IDS_VIEW_INSERT_PLUGIN  "Insert Plugin"
+    IDS_VIEW_LOAD_PLUGIN    "Load Plugin"
+    IDS_WAVE_PULSE          "Pulse"
+    IDS_WAVE_RAMP_DOWN      "Ramp Down"
+    IDS_WAVE_RAMP_UP        "Ramp Up"
+    IDS_WAVE_RANDOM         "Random"
+    IDS_WAVE_RANDOM_RAMP    "Rand Ramp"
+    IDS_WAVE_SINE           "Sine"
+    IDS_WAVE_SQUARE         "Square"
+    IDS_WAVE_TRIANGLE       "Triangle"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_MF_CANT_DETACH_MONITOR "Can't detach monitor from plugin."
+    IDS_MF_CANT_GET_PROPS   "Can't get properties."
+    IDS_MF_CANT_HOOK_KEYBD  "Can't hook keyboard."
+    IDS_MF_CANT_OPEN_CLIP   "Can't open clip '%1'."
+    IDS_MF_CANT_PAUSE_ENGINE "Can't pause engine."
+    IDS_MF_CANT_RESUME_ENGINE "Can't resume engine."
+    IDS_MF_CANT_SET_EXCLUSIVE "Can't set exclusive."
+    IDS_MF_CANT_SET_PRIORITY "Can't set thread priority."
+    IDS_MF_CANT_SHUTDOWN    "Can't shutdown, error %d."
+    IDS_MF_CANT_START_ENGINE "Can't start engine."
+    IDS_MF_CANT_STOP_ENGINE "Can't stop engine."
+    IDS_MF_CLIP_PROPS       "Video name:\t%s\nFrame width:\t%d pixels\nFrame height:\t%d pixels\nPlay length:\t%.2f seconds\nFrame count:\t%d\nFrame rate:\t%.2f frames/second\nSample size:\t%d bit\nCompression:\t%s"
+    IDS_MF_COLOR_DEPTH_MISMATCH 
+                            "Engine's color depth doesn't match primary display.\nUse primary display's color depth? (Recommended)"
+    IDS_MF_ENGINE_STALLED   "Engine stalled."
+    IDS_MF_EXPORT           "Export"
+    IDS_MF_HELP_FILE_MISSING "Can't find help file '%1'."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_CBT_LOAD_BALANCE    "Load Balance"
+    IDS_CBT_MASTER          "Master"
+    IDS_CBT_METAPARM        "Metaparameters"
+    IDS_CBT_MIDI_SETUP      "MIDI Setup"
+    IDS_CBT_MONITOR         "Monitor"
+    IDS_CBT_PARAM           "Parameters"
+    IDS_CBT_PATCH           "Patch"
+    IDS_CBT_QUEUE           "Queues"
+    IDS_DOCKABLE            "Dockable"
+    IDS_DOC_BAD_FORMAT      "%1 has a bad format."
+    IDS_EDIT_REDO_FMT       "&Redo %s\tCtrl+Y"
+    IDS_EDIT_UNDO_FMT       "&Undo %s\tCtrl+Z"
+    IDS_ENGERR_CANT_CREATE_EVENT "Can't create event."
+    IDS_ENGERR_CANT_CREATE_QUEUE "Can't create queue."
+    IDS_ENGERR_CANT_CREATE_THREAD "Can't create thread."
+    IDS_ENGERR_CANT_INIT_THREAD "Can't initialize thread '%1'."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_ENGERR_CANT_START_THREAD "Can't start thread '%1'."
+    IDS_ENGERR_CANT_STOP_RENDERER "Can't stop renderer."
+    IDS_ENGERR_CANT_STOP_THREAD "Can't stop thread '%1'."
+    IDS_ENGERR_CANT_WRITE_QUEUE "Can't write queue."
+    IDS_ENGERR_NEED_PROCESS_COPY 
+                            "Plugin '%1' has multiple inputs but doesn't support process copy."
+    IDS_ENGERR_SUCCESS      "Success."
+    IDS_FB_CLIPS            "Clips"
+    IDS_FB_COL_MODIFIED     "Modified"
+    IDS_FB_COL_NAME         "Name"
+    IDS_FB_COL_SIZE         "Size"
+    IDS_FB_COL_TYPE         "Type"
+    IDS_FB_FILE_SUFFIX      "File"
+    IDS_FB_PLUGINS          "Plugins"
+    IDS_FB_PROJECTS         "Projects"
+    IDS_FFERR_BAD_PETE_PLUGIN 
+                            "This version of %1 has a bug which trashes memory.\nDownload the patched version from ffrend.sourceforge.net."
+    IDS_FFERR_CANT_GET_PARAM_NAME "Can't get parameter name for '%1'."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_FFERR_CANT_GET_PLUGIN_INFO "Can't get plugin information for '%1'."
+    IDS_FFERR_CANT_GET_PLUGIN_NAME "Can't get plugin name for '%1'."
+    IDS_FFERR_CANT_INSTANTIATE "Can't instantiate plugin '%1'."
+    IDS_FFERR_CANT_LOAD_PLUGIN "Can't load plugin '%1'."
+    IDS_FFERR_UNSUPP_BIT_DEPTH "Unsupported bit depth in plugin '%1'."
+    IDS_FF_CANT_LOAD_PLUGIN "Error loading plugin '%1'."
+    IDS_FF_CANT_READ        "Error reading project '%1'."
+    IDS_FF_CANT_WRITE       "Error writing project '%1'."
+    IDS_FF_CAPTION_MOD_RANGE "Modulation Range - %1"
+    IDS_FF_INPUT_DEFAULT    "<default>"
+    IDS_FF_INPUT_NONE       "<none>"
+    IDS_FF_MOD_ENAB         "Mod Enable"
+    IDS_FF_MOD_FREQ         "Freq"
+    IDS_FF_MOD_PW           "Pulse W"
+    IDS_FF_MOD_WAVE         "Waveform"
+    IDS_FF_PARM_EDIT        "Value"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_METAPARM_NO_PARM_NAME "Enter a parameter name."
+    IDS_METAPARM_PP_MOD_ENAB "Mod"
+    IDS_METAPARM_PP_MOD_FREQ "Freq"
+    IDS_METAPARM_PP_MOD_PW  "PW"
+    IDS_METAPARM_PP_MOD_WAVE "Wave"
+    IDS_METAPARM_PROP_SUFFIX " Property"
+    IDS_METAPARM_TARG_CAP_PARM "Parameter:"
+    IDS_METAPARM_TARG_CAP_PLUG "Plugin:"
+    IDS_METAPARM_TARG_CAP_PROP "Property:"
+    IDS_METAPARM_TARG_CAP_TYPE "Type:"
+    IDS_METAPARM_UNASSIGNED "<none>"
+    IDS_META_BAD_FORMAT     "'%1' is not a metaplugin."
+    IDS_META_BASE_NOT_FOUND "Can't find base metaplugin '%1'."
+    IDS_META_CANT_CREATE_DIR "Can't create metaplugin folder '%1'."
+    IDS_META_CANT_CREATE_PLUGIN "Can't create metaplugin '%1'."
+    IDS_META_CANT_DEFLATE   "Can't compress embedded plugins."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_META_CANT_EMBED     "Can't embed these non-free plugins:\n"
+    IDS_META_CANT_INFLATE   "Can't uncompress embedded plugins."
+    IDS_META_CANT_OPEN      "Can't open metaplugin '%1'."
+    IDS_META_EXPORT         "Export Metaplugin"
+    IDS_META_IMPORT         "Import Metaplugin"
+    IDS_META_MISSING_PLUGINS "Missing plugins: %1"
+    IDS_META_NO_APP_FOLDER  "Can't find application data folder."
+    IDS_META_NO_PLUGIN_NAME "Enter a metaplugin name."
+    IDS_META_PLUGS_EMBEDDED "\nEmbedded plugins:"
+    IDS_META_PLUGS_LINKED   "\nLinked plugins:"
+    IDS_META_ZLIB_ERROR     "zlib error %d"
+    IDS_MF_ABORT_JOBS       "Abort batch processing jobs?"
+    IDS_MF_CANT_ATTACH_MONITOR "Can't attach monitor to plugin."
+    IDS_MF_CANT_CREATE_ENGINE "Can't create engine."
+    IDS_MF_CANT_CREATE_MIDI_DEV "Can't create MIDI device: %1"
+    IDS_MF_CANT_CREATE_RENDERER "Can't create renderer."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_MF_HINT_MONITOR_SOURCE "Monitor this output"
+    IDS_MF_HINT_PLUGIN_INPUT "Connect input to this source"
+    IDS_MF_NEED_AVISYNTH    "\n\nFFRend needs AviSynth to play this file.\nVerify that AviSynth is correctly installed."
+    IDS_MF_OPEN_VIDEO       "Open Video"
+    IDS_MF_RECORD_AS        "Record As"
+    IDS_MF_STOP_RECORD      "Stop recording?"
+    IDS_MP_BYPASS           "Bypass"
+    IDS_MP_MASTER_SPEED     "Master Speed"
+    IDS_MP_MOD_ENABLE       "Mod Enable"
+    IDS_MP_MOD_FREQ         "Mod Freq"
+    IDS_MP_MOD_PW           "Mod Pulse W"
+    IDS_MP_MOD_WAVE         "Mod Wave"
+    IDS_MP_PARAMETER        "Parameter"
+    IDS_MS_CHAN             "Channel"
+    IDS_MS_CTRL             "Controller"
+    IDS_MS_EVENT            "Event"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_MS_LEARN            "Learn"
+    IDS_MS_RANGE            "Range"
+    IDS_MS_TAB_METAPARM     "Metaparam"
+    IDS_MS_TAB_MISC         "Misc"
+    IDS_MS_TAB_PLUGIN       "Plugin"
+    IDS_MS_VALUE            "Value"
+    IDS_OPTIONS             "Options"
+    IDS_OPTS_CUSTOM         "Custom"
+    IDS_OPTS_NO_MIDI_IN     "No MIDI Input"
+    IDS_OPTS_RESET_ALL      "Reset All"
+    IDS_OPTS_RESTORE_DEFAULTS "Restore all options to default settings?"
+    IDS_OUTPUT              "Output"
+    IDS_PB_INPUT            "Input"
+    IDS_PB_SOURCE           "Source"
+    IDS_PLAYLIST_FILTER     "FFRend Playlist Files (*.ffl)|*.ffl|All Files (*.*)|*.*||"
+    IDS_PLUGIN_FILTER       "Freeframe Plugin Files (*.dll)|*.dll|All Files (*.*)|*.*||"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_PL_COL_PROJECT      "Project"
+    IDS_PL_SAVE_CHANGES     "Save changes to playlist %1?"
+    IDS_PROJECT_FILTER      "FFRend Project Files (*.ffp)|*.ffp|All Files (*.*)|*.*||"
+    IDS_REC_CANT_CREATE_BITMAP "Can't create record bitmap."
+    IDS_REC_CANT_CREATE_DC  "Can't create record device context."
+    IDS_REC_CANT_CREATE_FILTER "%1\n%2"
+    IDS_REC_CANT_CREATE_QUEUE "Can't create record input queue."
+    IDS_REC_CANT_CREATE_THREAD "Can't create record thread."
+    IDS_REC_CANT_GET_SURFACE "Can't get record surface device context."
+    IDS_REC_CANT_HOOK_OUTPUT "Can't hook output for recording."
+    IDS_REC_CANT_QUEUE_UNLIM "Can't queue job with unlimited duration."
+    IDS_REC_CANT_SET_SURFACE "Can't set record surface description."
+    IDS_REC_CANT_START_PLUGIN "Can't start hooked plugin."
+    IDS_REC_CANT_START_THREAD "Can't run record thread."
+    IDS_REC_CANT_STOP_PLUGIN "Can't stop hooked plugin."
+    IDS_REC_CANT_STOP_THREAD "Can't stop record thread."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_REC_CANT_UNHOOK_OUTPUT "Can't unhook output for recording."
+    IDS_REND_CANT_CREATE_BACKBUF "Can't create DirectDraw offscreen surface."
+    IDS_REND_CANT_CREATE_DDRAW "Can't create DirectDraw instance."
+    IDS_REND_CANT_CREATE_SURFACE "Can't create DirectDraw primary surface."
+    IDS_REND_CANT_CREATE_THREAD "Can't create render thread."
+    IDS_REND_CANT_CREATE_TIMER "Can't create timer."
+    IDS_REND_CANT_SET_SURFACE "Can't set DirectDraw surface description."
+    IDS_REND_TIMER_WAIT_ERROR "Render thread timer wait error."
+    IDS_RPLF_FILENAME       "Filename"
+    IDS_RPLF_MISSING        "Missing"
+    IDS_RPLF_REPLACED       "Replaced"
+    IDS_RPLF_STATUS         "Status"
+    IDS_UC_BYPASS           "Bypass"
+    IDS_UC_CONNECT          "Connect"
+    IDS_UC_COPY             "Copy"
+    IDS_UC_CUT              "Cut"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_UC_DELETE           "Delete"
+    IDS_UC_INSERT           "Insert"
+    IDS_UC_INSERT_EMPTY     "Insert Empty"
+    IDS_UC_LOAD             "Load"
+    IDS_UC_LOAD_BALANCE     "Load Balance"
+    IDS_UC_MASTER_SPEED     "Master Speed"
+    IDS_UC_METAPARM_DELETE  "Delete Metaparam"
+    IDS_UC_METAPARM_DRAG    "Drag Metaparam"
+    IDS_UC_METAPARM_GROUP   "Group Metaparams"
+    IDS_UC_METAPARM_INSERT  "Insert Metaparam"
+    IDS_UC_METAPARM_PROPS   "Metaparam Properties"
+    IDS_UC_METAPARM_UNGROUP "Ungroup Metaparams"
+    IDS_UC_METAPARM_VALUE   "Metaparam Value"
+    IDS_UC_MIDI_SETUP       "MIDI Setup"
+    IDS_UC_MOD_ENABLE       "Mod Enable"
+    IDS_UC_MOD_FREQ         "Mod Frequency"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_PLUGIN_MONITOR       "Monitor the selected plugin\nMonitor Plugin"
+    ID_PLUGIN_MRU_FILE1     "Load this plugin"
+    ID_PLUGIN_MRU_FILE2     "Load this plugin"
+    ID_PLUGIN_MRU_FILE3     "Load this plugin"
+    ID_PLUGIN_MRU_FILE4     "Load this plugin"
+    ID_PLUGIN_PROPERTIES    "Display plugin properties\nPlugin Properties"
+    ID_PLUGIN_SOLO          "Solo the selected plugin\nSolo"
+    ID_PLUGIN_UNLOAD        "Unload the selected plugin\nUnload"
+    ID_PL_AUTO_LOOP         "Repeat playlist\nLoop"
+    ID_PL_AUTO_PLAY         "Start/stop playing playlist\nPlay"
+    ID_PL_AUTO_SHUFFLE      "Randomize playlist order\nShuffle"
+    ID_PL_EDIT_ADD          "Add projects to playlist\nAdd"
+    ID_PL_EDIT_DELETE       "Delete selected projects from playlist\nDelete"
+    ID_PL_EDIT_INSERT       "Insert projects into playlist\nInsert"
+    ID_PL_FILE_MRU_FILE1    "Open this playlist"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_PL_FILE_MRU_FILE2    "Open this playlist"
+    ID_PL_FILE_MRU_FILE3    "Open this playlist"
+    ID_PL_FILE_MRU_FILE4    "Open this playlist"
+    ID_PL_FILE_NEW          "Create a new playlist\nNew"
+    ID_PL_FILE_OPEN         "Open an existing playlist\nOpen"
+    ID_PL_FILE_SAVE         "Save the active playlist\nSave"
+    ID_PL_FILE_SAVE_AS      "Save the active playlist with a new name\nSave As"
+    ID_TOOLS_DUMP_STATE     "Display the engine state"
+    ID_TOOLS_FORCE_STALL    "Force the engine to stall\nForce Stall"
+    ID_TOOLS_TEST_REOPEN    "Repeatedly open the current project"
+    ID_VIEW_FILES           "Show or hide the files bar\nToggle Files"
+    ID_VIEW_GRAPH           "Show or hide the graph bar\nToggle Graph"
+    ID_VIEW_HISTORY         "Show or hide the history bar\nToggle History"
+    ID_VIEW_LOAD_BALANCE    "Show or hide the load balance bar\nToggle Load Balance"
+    ID_VIEW_MASTER          "Show or hide the master bar\nToggle Master"
+    ID_VIEW_METAPARM        "Show or hide the metaparameters bar\nToggle Metaparams"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_VIEW_MIDI_SETUP      "Show or hide the MIDI bar\nToggle MIDI"
+    ID_VIEW_MONITOR         "Show or hide the monitor bar\nToggle Monitor"
+    ID_VIEW_OUTPUT          "Show or hide the output window\nToggle Output"
+    ID_VIEW_PATCH           "Show or hide the patch bar\nToggle Patch"
+    ID_VIEW_QUEUES          "Show or hide the queues bar\nToggle Queues"
+    ID_VIEW_RECORD_STATUS   "Show or hide the record status dialog\nToggle Record Status"
+    ID_VIEW_REFRESH         "Refresh the views\nRefresh"
+    ID_VIEW_RESET_ZOOM      "Reset zoom to default\nReset zoom"
+    ID_VIEW_ZOOM_IN         "Zoom in"
+    ID_VIEW_ZOOM_OUT        "Zoom out"
+    ID_WINDOW_FULL_SCREEN   "Display the output full screen\nFull Screen"
+    ID_WINDOW_PAUSE         "Pause the output\nPause"
+    ID_WINDOW_STEP          "Single-step the output\nStep"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_FILE_JOB_CONTROL     "Show or hide job control dialog\nJob Control"
+    ID_FILE_META_EXPORT     "Export project as a metaplugin\nExport Metaplugin"
+    ID_FILE_META_IMPORT     "Export a metaplugin as a project\nImport Metaplugin"
+    ID_FILE_META_PROPS      "Show metaplugin properties\nMetaplugin Properties"
+    ID_FILE_RECORD          "Record the output to an AVI file\nRecord"
+    ID_FILE_VIDEO_MRU_FILE1 "Open this video"
+    ID_FILE_VIDEO_MRU_FILE2 "Open this video"
+    ID_FILE_VIDEO_MRU_FILE3 "Open this video"
+    ID_FILE_VIDEO_MRU_FILE4 "Open this video"
+    ID_FILE_VIDEO_OPEN      "Open a video\nOpen Video"
+    ID_HELP_CHECK_FOR_UPDATES 
+                            "Check for a newer version of FFRend\nCheck for Updates"
+    ID_HISTORY_OPEN         "Open a saved history file"
+    ID_HISTORY_PAUSE        "Pause history\nPause History"
+    ID_HISTORY_SAVE         "Save history to a file"
+    ID_HISTORY_SHOW_TIMES   "Show times in history"
+    ID_INDICATOR_ACTUAL_FRAME_RATE "000.00"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_FF_PARM_NAME        "Parameter"
+    IDS_FF_PARM_SLIDER      "Slider"
+    IDS_FF_PLUG_ABOUT       "\nAuthor/License:\t%s"
+    IDS_FF_PLUG_CAP_16BIT   "16-bit Video"
+    IDS_FF_PLUG_CAP_24BIT   "24-bit Video"
+    IDS_FF_PLUG_CAP_32BIT   "32-bit Video"
+    IDS_FF_PLUG_CAP_COPYINPLACE "Copy/In Place"
+    IDS_FF_PLUG_CAP_MAXFRAMES "Max. Frames"
+    IDS_FF_PLUG_CAP_MINFRAMES "Min. Frames"
+    IDS_FF_PLUG_CAP_NO      "No"
+    IDS_FF_PLUG_CAP_PREF_BOTH "Both"
+    IDS_FF_PLUG_CAP_PREF_COPY "Copy"
+    IDS_FF_PLUG_CAP_PREF_INPLACE "In Place"
+    IDS_FF_PLUG_CAP_PREF_NONE "None"
+    IDS_FF_PLUG_CAP_PROCESSCOPY "Process Copy"
+    IDS_FF_PLUG_CAP_YES     "Yes"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_FF_PLUG_DESCRIP     "\nDescription:\t%s"
+    IDS_FF_PLUG_PROPS       "Plugin Name:\t%s\nUnique ID:\t%s\nAPI Version:\t%.3f\nPlugin Version:\t%.3f\nPlugin Type:\t%s"
+    IDS_FF_PROPERTIES       "Properties"
+    IDS_GRAPH_CANT_GET_OBJECT "Can't get graph object."
+    IDS_GRAPH_CANT_OPEN_PICTURE "Can't open graph picture file."
+    IDS_GRAPH_CANT_RUN_DOT  "Can't create graph: error %d running GraphViz component dot.exe.\nThe GraphViz Graph Visualization package might not be installed.\nDo you want to download the current version from graphviz.org?"
+    IDS_GRAPH_DOT_TIMEOUT   "Timeout waiting for dot.exe to create graph."
+    IDS_HISTORY_FILTER      "FFRend History Files (*.hst)|*.hst|All Files (*.*)|*.*||"";"
+    IDS_HLINK_CANT_LAUNCH   "Can't launch browser."
+    IDS_JOB_ABORTED         "Aborted"
+    IDS_JOB_DEST            "Dest"
+    IDS_JOB_DONE            "Done"
+    IDS_JOB_END             "End"
+    IDS_JOB_FAILED          "Error"
+    IDS_JOB_FILE_CORRUPT    "The job control file is corrupt or was created by a later version. Delete it?"
+    IDS_JOB_FILTER          "FFRend Job Files (*.ffj)|*.ffj|All Files (*.*)|*.*||"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_EDIT_SYNC_OSCILLATORS 
+                            "Synchronize all oscillators in all plugins\nSync Oscillators"
+    ID_FB_DELETE            "Delete the item\nDelete"
+    ID_FB_FILE_OPEN         "Open selected file\nOpen File"
+    ID_FB_FILE_PROPS        "Display properties of selected file\nFile Properties"
+    ID_FB_PARENT_FOLDER     "Go up to parent folder\nParent Folder"
+    ID_FB_RENAME            "Rename the item\nRename"
+    ID_FB_SORT_DATE         "Sort items by date, from oldest to most recent\nArrange by Date"
+    ID_FB_SORT_NAME         "Sort items alphabetically by name\nArrange by Name"
+    ID_FB_SORT_SIZE         "Sort items by size, from smallest to largest\nArrange by Size"
+    ID_FB_SORT_TYPE         "Sort items by type\nArrange by Type"
+    ID_FB_VIEW_ICON         "View items as icons\nIcons"
+    ID_FB_VIEW_LIST         "View items arranged in columns\nList"
+    ID_FB_VIEW_REPORT       "View items with additional info\nDetails"
+    ID_FB_VIEW_SMALL_ICON   "View items as small icons\nSmall Icons"
+    ID_FB_VIEW_THUMBNAIL    "View items as thumbnails\nThumbnails"
+    ID_FILE_EXPORT          "Export current frame as a bitmap\nExport"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_INDICATOR_FRAME_SIZE "0000 x 0000"
+    ID_INDICATOR_PAUSE      "PAUSE"
+    ID_INDICATOR_RECORD     "REC"
+    ID_INDICATOR_TARGET_FRAME_RATE "000.00"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_FB_LIST             " "
+    IDC_FB_TAB              " "
+    IDC_FF_PARM_VIEW        "FFParm"
+    IDC_FF_TAB_CTRL         " "
+    IDC_GRAPH_VIEW          "Graph"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_METAPARM_ADD_ALL_PARAMS 
+                            "Create metaparameters for all plugin parameters"
+    ID_METAPARM_ADD_BYPASS  "Create metaparameter for plugin bypass"
+    ID_METAPARM_ADD_MOD_ENAB "Create metaparameter for modulation enable"
+    ID_METAPARM_ADD_MOD_FREQ "Create metaparameter for modulation frequency"
+    ID_METAPARM_ADD_MOD_PW  "Create metaparameter for modulation pulse width"
+    ID_METAPARM_ADD_MOD_WAVE "Create metaparameter for modulation waveform"
+    ID_METAPARM_ADD_PARAM   "Create metaparameter for parameter value"
+    ID_METAPARM_DELETE      "Delete selected metaparameter\nDelete Metaparameter"
+    ID_METAPARM_GROUP       "Create or edit metaparameter group\nGroup Metaparameter"
+    ID_METAPARM_INSERT      "Insert empty metaparameter\nInsert Metaparameter"
+    ID_METAPARM_PROPS       "Edit metaparameter properties\nMetaparameter properties"
+    ID_METAPARM_UNGROUP     "Ungroup metaparameter\nUngroup Metaparameter"
+    ID_PLUGIN_BYPASS        "Bypass the selected plugin\nBypass"
+    ID_PLUGIN_INPUT         "Input"
+    ID_PLUGIN_LOAD          "Load the selected plugin\nLoad"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ID_APP_HOME_PAGE        "Go to the FFRend home page"
+    ID_EDIT_DELETE          "Delete the selected plugin\nDelete"
+    ID_EDIT_INSERT          "Insert a plugin\nInsert"
+    ID_EDIT_INSERT_EMPTY    "Insert an empty plugin slot\nInsert Empty"
+    ID_EDIT_MOD_RANGE_EDIT  "Edit modulation range\nEdit Range"
+    ID_EDIT_MOD_RANGE_GOTO_END 
+                            "Move to end of modulation range\nGoto Range End"
+    ID_EDIT_MOD_RANGE_GOTO_START 
+                            "Move to start of modulation range\nGoto Range Start"
+    ID_EDIT_MOD_RANGE_REMOVE "Remove modulation range\nRemove Range"
+    ID_EDIT_MOD_RANGE_SET_END 
+                            "Set end of modulation range from current value\nSet Range End"
+    ID_EDIT_MOD_RANGE_SET_START 
+                            "Set start of modulation range from current value\nSet Range Start"
+    ID_EDIT_OPTIONS         "Edit the options\nEdit Options"
+    ID_EDIT_PLAYLIST        "Edit the playlist\nEdit Playlist"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_LOAD_BALANCE_VIEW   "LoadBalance"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_JOB_LOAD_LIST       "Load Job List"
+    IDS_JOB_NAME            "Name"
+    IDS_JOB_POSTPONED       "Postponed"
+    IDS_JOB_RUNNING         "In Progress"
+    IDS_JOB_SAVE_LIST       "Save Job List"
+    IDS_JOB_SOURCE          "Source"
+    IDS_JOB_START           "Start"
+    IDS_JOB_STATUS          "Status"
+    IDS_JOB_STOPPED_ERROR   "Job stopped with the following error:"
+    IDS_JOB_WAITING         "Waiting"
+    IDS_LBR_CPU_PERCENT     "CPU %"
+    IDS_LBR_CPU_TIME        "CPU ms."
+    IDS_LBR_PLUGIN_NAME     "Plugin"
+    IDS_LBR_THREAD_COUNT    "Threads"
+    IDS_METAPARM_GROUP      "Group"
+    IDS_METAPARM_NAME       "Metaparam"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_APP_ABOUT_TEXT      "FFRend Version %d.%d.%d.%d\nCopyleft 2010 Chris Korda"
+    IDS_APP_LICENSE         "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA."
+    IDS_AVI_FILTER          "Video Files (*.avi)|*.avi|All Files (*.*)|*.*||"
+    IDS_BITMAP_FILTER       "Bitmap Files (*.bmp)|*.bmp|All Files (*.*)|*.*||"
+    IDS_BTAE_CREATE_MUX     "Can't create AVI Mux filter."
+    IDS_CBT_FILE_BROWSER    "File Browser"
+    IDS_CBT_GRAPH           "Graph"
+    IDS_CBT_HISTORY         "History"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_METAPARM_VIEW       "Metaparm"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_MIDI_SETUP_VIEW     "MidiSetup"
+    IDC_MONITOR_WND         "Monitor"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_HISTORY_VIEW        "History"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_PATCH_VIEW          "Patch"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDC_QUEUE_VIEW          "Queue"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "FFRend"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "List Help topics\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\FFRend.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
