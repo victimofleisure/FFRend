@@ -1,0 +1,583 @@
+open	close	type	description	rev
+07/31/06	07/31/06	done	invalid project doc causes silent failure; add doc header w/ version	1.0.00
+07/31/06	07/31/06	done	loading a non-freeframe DLL causes crash	1.0.00
+07/31/06	07/31/06	done	if a bypassed plugin is dragged to a different slot, tab highlight doesn't move	1.0.00
+07/29/06	08/02/06	done	blit via DirectDraw instead of GDI	1.0.00
+08/02/06	08/04/06	done	shell open doesn't work due to lack of document implementation	1.0.00
+08/02/06	08/04/06	done	can't drop video files	1.0.00
+08/02/06	08/04/06	done	can't drop files on output window; both windows should support all types	1.0.00
+08/02/06	08/04/06	done	left-click in slider should resync automation	1.0.00
+08/02/06	08/05/06	done	add rendering to an AVI file	1.0.00
+08/05/06	08/06/06	done	help about doesn't work when CPU is saturated; see Whorld	1.0.00
+07/29/06	08/07/06	done	if a source plugin is loaded, ignore video file; get frame size from a setting	1.0.00
+08/02/06	08/07/06	done	opening a video while effects are running shows dry video briefly; doesn't affect record	1.0.00
+08/05/06	08/07/06	done	add frame rate to options dialog	1.0.00
+08/05/06	08/07/06	done	in status bar, show frame size, frame rate (nominal and actual), pause and record	1.0.00
+08/05/06	08/08/06	done	while recording, show elapsed time, and progress bar if possible	1.0.00
+08/06/06	08/08/06	done	allow recording length to be specified in advance	1.0.00
+08/07/06	08/08/06	done	during recording, exit exclusive mode crashes if video was changed via Ctrl+	1.0.00
+08/02/06	08/09/06	done	add veejay mode (single-monitor exclusive)	1.0.00
+08/08/06	08/09/06	done	disable starting a recording unless there's an open video or a source plugin	1.0.00
+08/08/06	08/09/06	done	remaining time estimate is too jumpy; try a running average on actual frame rate	1.0.00
+08/11/06	08/11/06	done	after loading a project, modulated parameters have incorrect initial positions	1.0.00
+08/02/06	08/12/06	done	frame-based and dialog-based row containers can't coexist in same project	1.0.00
+08/02/06	08/12/06	done	add numeric editing for modulation range	1.0.00
+08/11/06	08/12/06	done	add command to reset all oscillators	1.0.00
+08/12/06	08/12/06	done	add option to specify random seed	1.0.00
+08/13/06	08/13/06	done	parameter edit control isn't updating parameter; in CNumEdit, notify aux before parent	1.0.00
+08/13/06	08/13/06	done	when loading a project, don't send parameters needlessly, it screws up WhorldFF	1.0.00
+08/13/06	08/13/06	done	show record status without activation so main frame doesn't lose focus	1.0.00
+08/13/06	08/13/06	done	record fails silently if dest file is already open in another app	1.0.00
+08/08/06	08/14/06	done	when toolbar is docked on left, scrolling header overwrites it	1.0.00
+08/02/06	08/15/06	done	add master speed for oscillators and include in project; add master toolbar	1.0.00
+08/12/06	08/15/06	done	add plugin solo command	1.0.00
+08/02/06	08/31/06	done	allow bitmap or jpeg as source instead of video	1.0.00
+08/21/06	08/31/06	done	use source frame size in all cases, regardless of video/picture size; stretch as needed	1.0.00
+08/31/06	09/13/06	done	add use input size checkbox to record dialog; default to true	1.0.00
+09/14/06	09/14/06	done	add missing files dialog for missing plugins	1.0.00
+09/17/06	09/17/06	done	projects opened via shell aren't added to recent files	1.0.00
+09/18/06	09/19/06	done	disallow negative frequencies	1.0.00
+09/18/06	09/19/06	done	drop files doesn't work for still images	1.0.00
+09/19/06	09/19/06	done	deleting plugins causes memory leaks; dlg's DeletePlugin must delete rows	1.0.00
+09/19/06	09/19/06	done	after repeated drag moves, plugins don't match their titles and parameter rows	1.0.00
+08/02/06	09/22/06	done	include link to video/picture file in project; make opening video optional?	1.0.00
+08/10/06	09/22/06	done	delete key doesn't work in edit controls unless text is selected	1.0.00
+08/20/06	09/23/06	done	add bitmap export for capturing still frames	1.0.00
+10/02/06	10/02/06	done	opening a project should not modify recent plugin list; same for recent video list	1.0.00
+10/02/06	10/02/06	done	add plugin/properties	1.0.01
+10/06/06	10/07/06	done	add modulation enable checkbox for each parameter	1.0.02
+10/06/06	10/07/06	done	minimizing app while in full screen mode deadlocks UI	1.0.02
+10/06/06	10/11/06	done	exclusive mode fails in dual-monitor; all surfaces must be on same display device	1.0.02
+10/14/06	10/16/06	done	show frame number in status bar; reset on new document	1.0.02
+10/15/06	10/16/06	done	Win32 timer can't achieve common frame rates; add multimedia timer option	1.0.02
+10/14/06	10/18/06	done	add option to export specific frames from a list	1.0.02
+10/18/06	10/18/06	done	auto-repeated single step doesn't paint output window if CPU is saturated	1.0.02
+08/15/06	10/25/06	done	add option to shutdown computer when done recording; use ExitWindowsEx	1.0.02
+08/02/06	10/26/06	done	write documentation	1.0.02
+10/27/06	10/27/06	done	separate folders for clips, plugins, and output	1.0.03
+10/27/06	10/27/06	done	option to get record duration from AVI length	1.0.03
+10/06/06	10/28/06	done	if an edit control has focus, menus cause periodic pauses in message loop	1.0.03
+10/27/06	10/28/06	done	add video properties	1.0.03
+10/28/06	10/28/06	done	frame counter clobbers toolbar button hints in status bar	1.0.03
+10/29/06	10/29/06	done	tab order skips mod enable checkbox; uncaptioned checkbox can't show focus	1.0.04
+10/06/06	11/03/06	done	MIDI support: FF params and modulators, bypass, master speed	1.1.00
+10/31/06	11/04/06	done	in version 2 project docs, don't write FFRow tag	1.1.00
+10/30/06	11/05/06	done	frame counter should display as hh:mm:ss (frames)	1.1.00
+10/30/06	11/05/06	done	allow record duration to be specified in either time or frames; add unit selector	1.1.00
+11/04/06	11/05/06	done	frame/time conversions aren't handling floating-point frame rates correctly	1.1.00
+11/03/06	11/06/06	done	wrap video and still image in a clip player object	1.1.00
+11/06/06	11/06/06	done	must call initialise and deInitialise on plugins	1.1.00
+11/06/06	11/06/06	done	allow plugin and info parameter counts to differ	1.1.00
+11/03/06	11/10/06	done	add Video/Go To command for jumping to a specific frame in the clip	1.1.00
+08/02/06	11/23/06	done	add undo support	1.2.00
+11/23/06	11/24/06	done	misc MIDI assignments aren't saved in project	1.2.00
+11/19/06	11/26/06	done	MIDI setup dialog's default size is too small	1.2.00
+11/23/06	11/26/06	done	if a parm is modulating, changing it via edit box while paused causes backsliding	1.2.00
+11/26/06	11/26/06	done	in MIDI setup's plugin page, edits crash app if chain has non-trailing empty slots	1.2.00
+11/26/06	11/26/06	done	video go to dialog's state is not initialized	1.2.00
+11/27/06	11/28/06	done	video object is leaking memory; Close must set a dummy surface	1.2.01
+11/29/06	11/30/06	done	add support for AviSynth scripts	1.2.02
+12/01/06	12/02/06	done	left-clicking slider updates parameter twice; update on button down only	1.2.03
+12/13/06	12/13/06	done	if only one plugin left and it has scroll bars, deleting it doesn't reset bars	1.2.03
+12/13/06	12/13/06	done	if a plugin has scroll bars, unloading it doesn't reset bars; same with undo	1.2.03
+12/17/06	12/18/06	done	most recently used plugin can be loaded when there's no slot; undo causes crash	1.2.04
+10/22/06	12/25/06	done	support multi-input plugins	1.3.00
+10/22/06	12/25/06	done	honor copy frames preference; improves performance for certain plugins	1.3.00
+12/25/06	12/25/06	done	check for buggy PeteMixer plugin; don't allow it unless its file date is acceptable	1.3.00
+10/22/07	12/25/06	done	add patch bay dock bar	1.3.00
+12/25/06	12/26/06	done	in patch bay, visually group inputs by plugin	1.3.01
+12/26/06	12/26/06	done	show empty plugins in patch bay	1.3.01
+12/23/06	12/27/06	done	loading a plugin should preserve existing routing as much as possible	1.3.01
+12/26/06	12/27/06	done	update source frames regardless of bypass	1.3.01
+12/28/06	12/28/06	done	mixer test 2 crashes in 16-bit; Connect must verify that both plugins are loaded	1.3.02
+12/28/06	12/28/06	done	left-click on patchbay row should select plugin	1.3.02
+12/29/06	12/29/06	done	right-click after last patch bay row should display context menu for insert	1.3.03
+12/29/06	12/29/06	done	missing files dlg freezes app if CPU saturated; set visible in resource for modal dlgs	1.3.03
+12/30/06	12/30/06	done	VideoInfoStruct must include orientation	1.3.04
+12/30/06	12/30/06	done	add error message for unsupported bit depth, distinct from invalid bit depth	1.3.04
+01/03/07	01/03/07	done	add enable checkbox to patch bay row	1.3.05
+01/03/07	01/03/07	done	for bypass via MIDI, don't touch document modified flag	1.3.05
+01/09/07	01/09/07	done	if no idle time, floating a control bar doesn't recalc layout; check for idle layout in OnTimer	1.3.06
+01/09/07	01/09/07	done	floating sizing bar's close button doesn't work if no idle time; customize mini dock frame	1.3.06
+01/09/07	01/09/07	done	allocate aux frame on heap to avoid Warning: calling DestroyWindow in CWnd::~CWnd	1.3.06
+01/10/07	01/10/07	done	patch bay's context menu doesn't show hints in status bar	1.3.06
+08/02/06	01/12/07	done	lock out task-switching keys in exclusive mode	1.3.07
+10/06/06	01/12/07	done	add monitor dock bar	1.3.07
+10/06/06	01/12/07	done	add file browser dock bar for plugins/projects/clips	1.3.07
+01/01/07	01/13/07	done	changing an input shouldn't redraw entire patch bay; add OnRoutingChange	1.3.07
+08/02/06	01/18/07	done	make main window full-screen in dual-monitor mode	1.3.08
+01/12/07	01/18/07	done	add option to disable save changes warning	1.3.08
+08/02/06	01/19/07	done	lock out unsafe commands in single-monitor exclusive mode	1.3.08
+01/12/07	01/19/07	done	MIDI setup should be a dock bar instead of a modal dialog	1.3.08
+01/18/07	01/19/07	done	if patch bay is floating, closing app causes IsWindowVisible in OnSlotChange to assert	1.3.08
+01/19/07	01/19/07	done	loading a totally empty project fails to delete parameter rows	1.3.08
+01/21/07	01/21/07	done	replace AfxGetMainWnd with GetThis	1.3.08
+01/24/07	01/24/07	done	open/save project/plugin via main menu doesn't update current folder in file browser	1.3.08
+01/27/07	01/27/07	done	if output is full-screen on secondary monitor but NOT exclusive, Alt+Tab should work	1.3.08
+01/30/07	01/30/07	done	File/New doesn't reset master speed	1.3.08
+12/27/06	01/31/07	done	metaplugin authoring, as in FreeChain	1.4.00
+01/30/07	01/31/07	done	right-click within main view but not on row should show insert context menu	1.4.00
+02/07/07	02/09/07	done	in plugin properties, min and max frames captions are reversed	1.4.01
+02/07/07	02/09/07	done	importing linked metaplugin should use same plugin search method as loading DLL	1.4.01
+02/07/07	02/09/07	done	get number of input frames from plugin's max input frames instead of min	1.4.01
+03/01/07	03/02/07	done	hook keyboard in SetExclusive instead of during startup	1.4.01
+02/21/07	03/05/07	done	make codec settings persistent (mb)	1.4.02
+03/07/07	03/07/07	done	plugins dragged onto patch bay are misplaced if dropped below multi-input plugins 	1.4.03
+03/07/07	03/07/07	done	dragging plugins from Explorer onto patch bay doesn't work as expected	1.4.03
+03/07/07	03/07/07	done	plugins dragged onto patch bay may be misplaced if patch bay is floating over tabs	1.4.03
+03/07/07	03/08/07	done	disable F1 (help) in veejay mode	1.4.03
+03/08/07	03/09/07	done	changing plugin frame size doesn't update centering in monitor control bar	1.4.03
+06/13/07	07/11/07	done	wheel/arrows can move a hidden slider with input focus, potentially crashing app	1.4.04
+07/14/07	07/16/07	done	in file browser, if last item has focus, pressing alpha key crashes app	1.4.05
+07/14/07	07/16/07	done	selecting menu commands via Alt key doesn't work in some cases	1.4.05
+07/21/07	07/21/07	done	in any parameter row, right-clicking on parameter name focuses first row's slider	1.4.06
+06/01/07	07/22/07	done	add global plugin feature for applying effect(s) to all projects	1.5.00
+06/17/07	07/29/07	done	add command to create metaparameters for all of a plugin's parameters at once	1.5.00
+07/28/07	07/29/07	done	in dual-monitor full-screen mode, if cursor is over secondary monitor, hide it	1.5.00
+07/29/07	07/29/07	done	if monitor bar is resized while app is paused, monitor view is not repainted	1.5.00
+07/29/07	07/29/07	done	init project doesn't reset solo state in GUI	1.5.00
+08/05/06	08/02/07	done	add job queue, like VirtualDub's; must restore video compression dialog state	1.5.01
+08/01/07	08/02/07	done	import metaplugin sets m_DocPath to document filename instead of path	1.5.01
+08/02/07	08/02/07	done	when imported metaplugin is saved as a project, project isn't added to recent files	1.5.01
+08/03/07	08/12/07	done	shutdown feature should display warning dialog with progress bar and cancel button	1.5.01
+09/09/07	10/05/07	done	add thumbnail view for clips in file browser; optionally cache thumbnails	1.6.00
+09/09/07	10/05/07	done	file browser's report view column widths should persist in registry	1.6.00
+09/17/07	10/05/07	done	should be able set each file browser pane to a different view type	1.6.00
+11/19/07	11/24/07	done	support Unicode	1.6.01
+11/11/07	11/26/07	done	recent global plugin list only stores three items instead of four; don't add empty paths	1.6.02
+09/20/06	11/28/07	done	DragTabCtrl should set capture, and Esc key should abort drag	1.6.02
+11/19/07	11/28/07	done	during drag from file browser, if browser doesn't have focus, Esc key doesn't cancel	1.6.02
+11/13/07	11/29/07	done	can't undo rename in file browser	1.6.02
+11/29/07	11/30/07	done	closing console crashes app or causes leaks; try SetConsoleCtrlHandler	1.6.02
+11/29/07	12/03/07	done	if file browser bar is floating on startup, list control is not sized	1.6.03
+08/01/07	12/07/07	done	monitor bar should be able to show any plugin's output; selection via context menu	1.6.03
+01/01/07	12/08/07	done	in exclusive mode, starting task manager via Ctrl+Alt+Del crashes app	1.6.03
+01/01/07	12/08/07	done	if output window is minimized, entering exclusive mode doesn't work	1.6.03
+11/19/07	12/17/07	done	support MPEG clips by creating AviSynth script in temporary folder	1.6.03
+03/03/07	12/22/07	done	SetMidiAssignments should check parameter index against NumParams	1.6.04
+12/21/07	12/22/07	done	in dual-monitor exclusive mode, cursor is visible along edges of secondary monitor 	1.6.04
+12/22/07	12/22/07	done	if redo can't load a plugin, redoing metaparameters for that plugin crashes app	1.6.04
+12/22/07	12/22/07	done	can't read project containing unassigned metaparameter(s)	1.6.04
+12/22/07	12/22/07	done	in metaparameter properties dialog, setting target to none doesn't undo correctly	1.6.04
+12/22/07	12/22/07	done	while learning MIDI setup, if UpdateView deletes selected row, MIDI input crashes app	1.6.04
+12/29/07	12/22/07	done	assigning MIDI to Bypass of a plugin that follows an empty slot crashes app	1.6.04
+01/27/07	01/04/08	done	should be able to assign a MIDI controller to multiple targets; use metaparameter groups	1.7.00
+12/20/07	01/04/08	done	metaparameter grouping, so multiple properties can be controlled by one host parameter	1.7.00
+01/05/08	01/07/08	done	for parameters and metaparameters, undoing slider edit truncates value	1.7.01
+01/09/08	01/09/08	done	static text controls display ampersand as underline; check no prefix option in resource	1.7.01
+01/09/08	01/09/08	done	decorate group name to visually distinguish between master and slave metaparameters	1.7.01
+01/15/08	01/15/08	done	replace OnNotify with individual notification handlers	1.7.01
+01/17/08	01/17/08	done	closing app while help is visible causes crash, since version 1.3	1.7.01
+01/29/08	01/29/08	done	increase compiler warning level to W4	1.7.02
+01/30/08	01/30/08	done	in job control dialog, while dragging, Esc should cancel drag instead of closing dialog	1.7.03
+03/29/10	04/15/10	done	use actual plugins, display output	2.0.00.01
+03/29/10	04/16/10	done	add parameters	2.0.00.01
+03/29/10	04/19/10	done	add oscillators	2.0.00.01
+04/17/10	04/19/10	done	file new isn't working	2.0.00.01
+04/19/10	04/19/10	done	mod range in doc doesn't show	2.0.00.01
+04/19/10	04/19/10	done	slider selection	2.0.00.01
+04/19/10	04/19/10	done	slider automation	2.0.00.01
+04/17/10	04/20/10	done	loading metaplugin crashes; enforce min inputs	2.0.00.01
+04/19/10	04/20/10	done	clicking a modulating slider doesn't work	2.0.00.01
+04/19/10	04/20/10	done	plugin tabs in parameters view	2.0.00.01
+04/19/10	04/20/10	done	parameter and patch bay views are reversed	2.0.00.01
+04/19/10	04/21/10	done	render window doesn't paint in pause; can't call Render, m_CurFrame is null while stopped	2.0.00.01
+04/19/10	04/21/10	done	modulation enable icon in view header	2.0.00.01
+04/20/10	04/21/10	done	patchbay click should update rows	2.0.00.01
+04/20/10	04/21/10	done	drag tab doesn't select moved plugin	2.0.00.01
+04/20/10	04/21/10	done	patchbay drag	2.0.00.01
+04/20/10	04/21/10	done	patchbay bypass	2.0.00.01
+04/21/10	04/21/10	done	patchbay drag doesn't update current selection correctly	2.0.00.01
+04/21/10	04/21/10	done	tabs flicker during slot change; update existing tabs instead of recreating them	2.0.00.01
+04/21/10	04/21/10	done	form rows positioned incorrectly if insert when scrolled	2.0.00.01
+04/21/10	04/21/10	done	move currrent selection into derived engine	2.0.00.01
+04/19/10	04/22/10	done	recent plugins	2.0.00.01
+04/19/10	04/22/10	done	export bitmap	2.0.00.01
+04/20/10	04/22/10	done	patchbay context menu	2.0.00.01
+04/20/10	04/22/10	done	context insert past last tab or patch row should append	2.0.00.01
+04/21/10	04/22/10	done	exiting exclusive doesn't set window size	2.0.00.01
+04/22/10	04/22/10	done	if no slots, insert empty doesn't select slot	2.0.00.01
+04/22/10	04/22/10	done	context menu shouldn't select plugin	2.0.00.01
+04/19/10	04/23/10	done	master speed	2.0.00.01
+04/22/10	04/23/10	done	convert to .NET	2.0.00.01
+04/23/10	04/23/10	done	mixer plugins display multiple bypass checkboxes	2.0.00.01
+04/23/10	04/23/10	done	bypass checkboxes of plugins below mixer affect wrong plugins 	2.0.00.01
+04/23/10	04/23/10	done	PlayerFF bank/clip select has no effect; PlayerFF must initialize COM for multithreading	2.0.00.01
+04/19/10	04/24/10	done	disable input drop list for source plugins	2.0.00.01
+04/19/10	04/24/10	done	files bar	2.0.00.01
+04/22/10	04/24/10	done	plugin drop	2.0.00.01
+04/23/10	04/24/10	done	opening doc doesn't update master speed slider	2.0.00.01
+04/23/10	04/24/10	done	read into empty project to avoid partial initialization and subsequent crash	2.0.00.01
+04/23/10	04/24/10	done	tabs sometimes don't display correctly; assume solved by partial project init bug fix	2.0.00.01
+04/24/10	04/24/10	done	in row view, view width is slightly short and column header doesn't line up for last item	2.0.00.01
+04/24/10	04/25/10	done	unpause leaks a frame	2.0.00.01
+04/25/10	04/25/10	done	dump state doesn't show plugin output frames or render current frame	2.0.00.01
+04/25/10	04/25/10	done	grow or shrink frame array as needed instead of recreating all frames every time	2.0.00.01
+04/21/10	04/26/10	done	edit control clipboard commands; HandleDlgKeyMsg, focus edit etc.	2.0.00.02
+04/22/10	04/26/10	done	single-monitor exclusive mode	2.0.00.02
+04/24/10	04/26/10	done	NET debug crash with feed strob2 and related bugs; clear m_OutFrame AFTER stopping thread	2.0.00.02
+04/24/10	04/26/10	done	exiting app in dual monitor exclusive leaves window frame on render monitor; assume m_OutFrame related	2.0.00.02
+04/24/10	04/26/10	done	queue view shouldn't depend on options dialog	2.0.00.02
+04/26/10	04/26/10	done	refactor engine error handling, add OnError	2.0.00.02
+04/24/10	04/27/10	done	exclusive mode task-switch disable	2.0.00.02
+04/24/10	04/27/10	done	maximize main frame in dual-monitor exclusive	2.0.00.02
+04/24/10	04/27/10	done	hide cursor over render window in exclusive	2.0.00.02
+04/26/10	04/27/10	done	if cursor enters render window without crossing caption, resizing cursor is displayed over client area	2.0.00.02
+04/26/10	04/27/10	done	accelerators don't work if master bar has focus	2.0.00.02
+04/27/10	04/27/10	done	saving with leading empty slot results in corrupt project file; get into default project	2.0.00.02
+04/27/10	04/27/10	done	escape while master bar control has focus closes master dialog	2.0.00.02
+04/19/10	04/28/10	done	MIDI support	2.0.00.02
+04/27/10	04/28/10	done	in MIDI setup, tab control flickers like crazy when frame is resized; files bar tab control does it too	2.0.00.02
+04/28/10	04/28/10	done	if app starts with graph view hidden, loading project and showing graph crashes dot	2.0.00.02
+04/28/10	04/28/10	done	main frame can't be resized after exiting dual-monitor exclusive	2.0.00.02
+04/23/10	04/29/10	done	Resolume's Invert RGB plugin fails with process copy, despite reporting support for it; hack plugin, B64E 1->0	2.0.00.02
+04/24/10	04/29/10	done	exiting exclusive gives render window focus; bring main to top	2.0.00.02
+04/24/10	04/29/10	done	escape doesn't cancel file drag if files bar doesn't have focus; see Fractice fix	2.0.00.02
+04/24/10	04/29/10	done	escape should exit single-monitor exclusive	2.0.00.02
+04/26/10	04/29/10	done	since master bar has no gripper, have speed caption enter drag mode	2.0.00.02
+04/27/10	04/29/10	done	if docked master bar shows resize cursor and left edge dragged right, scbar crashes; call base CalcFixedLayout	2.0.00.02
+04/28/10	04/29/10	done	master speed via MIDI doesn't work	2.0.00.02
+04/29/10	04/29/10	done	sizecbar.cpp with miniframe enabled doesn't compile in .NET, afxChNil undefined	2.0.00.02
+04/29/10	04/29/10	done	modulated parameters jump unexpectedly if master speed is set to zero	2.0.00.02
+04/29/10	04/29/10	done	plugin dragged from files bar doesn't get added to recent plugins	2.0.00.02
+04/29/10	04/29/10	done	space key doesn't work if numeric edit has focus	2.0.00.02
+04/29/10	04/29/10	done	derive dock frame from SCB miniframe so floating bar resizes dynamically	2.0.00.02
+04/29/10	04/29/10	done	no need to use interlocked increment when reading frames from free queue; just set ref count = 1	2.0.00.02
+04/19/10	04/30/10	done	edit modulation range commands and slider selection dialog	2.0.00.02
+04/24/10	04/30/10	done	history view crashes opening saved history b/c plugin can't be created; use derived engine to store history doc	2.0.00.02
+04/29/10	04/30/10	done	pause history without stopping engine	2.0.00.02
+04/30/10	04/30/10	done	view and control bar context menus lack status bar help	2.0.00.02
+04/30/10	04/30/10	done	space key doesn't work if non-edit control has focus	2.0.00.02
+04/19/10	05/01/10	done	metaparameters	2.0.00.03
+04/19/10	05/01/10	done	missing files dialog	2.0.00.03
+04/24/10	05/01/10	done	show plugin properties	2.0.00.03
+04/24/10	05/01/10	done	add thumbnail options to options dialog	2.0.00.03
+04/27/10	05/01/10	done	add MIDI device to options dialog	2.0.00.03
+04/29/10	05/01/10	done	in queue view, plugin name overwrites time, and time overwrites input label	2.0.00.03
+05/01/10	05/01/10	done	entering/exiting full screen resets render thread's frame counter; move reset to engine	2.0.00.03
+05/01/10	05/01/10	done	in dual-monitor exclusive, main frame can be moved, occurs in Fractice too; hide caption bar	2.0.00.03
+05/01/10	05/01/10	done	bypass via MIDI doesn't update UI; call Bypass, not SetBypass	2.0.00.03
+05/01/10	05/01/10	done	metaparameter groups	2.0.00.03
+05/01/10	05/01/10	done	if a plugin doesn't load, remainder of project isn't loaded	2.0.00.03
+05/01/10	05/01/10	done	allocate two extra frames for render window (one for queue and one for buffer) to avoid possible staggering	2.0.00.03
+04/19/10	05/02/10	done	monitor bar	2.0.00.03
+05/02/10	05/02/10	done	changing primary monitor's screen resolution freezes output; recreate primary surface	2.0.00.03
+05/02/10	05/02/10	done	monitor window paints incorrectly if resized while paused; OnSize must invalidate 	2.0.00.03
+04/19/10	05/03/10	done	clipboard	2.0.00.03
+04/19/10	05/03/10	done	solo	2.0.00.03
+04/28/10	05/03/10	done	in dual-monitor exclusive, dragging main frame's gripper corrupts status bar; disable status bar	2.0.00.03
+05/02/10	05/03/10	done	color depth	2.0.00.03
+05/02/10	05/03/10	done	in exclusive, Ctrl+Alt+Del followed by Escape causes crash; check for null front/back buffer pointers	2.0.00.03
+05/02/10	05/03/10	done	in exclusive, launching task manager leaves main frame full-screen	2.0.00.03
+05/03/10	05/03/10	done	load plugin file dialog doesn't use plugin folder	2.0.00.03
+05/03/10	05/03/10	done	moving plugin via patch view doesn't set current selection; not calling derived method	2.0.00.03
+05/03/10	05/03/10	done	plugin file dialog changes default folder for projects; override doc manager's DoPromptFileName	2.0.00.03
+04/19/10	05/04/10	done	plugin input popup menu	2.0.00.03
+04/19/10	05/04/10	done	status bar frame counter	2.0.00.03
+05/03/10	05/04/10	done	export bitmap before a project is opened gives no error occurred message	2.0.00.03
+05/03/10	05/04/10	done	status bar message hides when cursor is moved over bar view	2.0.00.03
+04/25/10	05/05/10	done	PlayerFF leaks a frame on each project open/new cycle; must not leave frame attached to surface	2.0.00.03
+04/26/10	05/05/10	done	after 24 load/unload cycles, WhorldFF shows default patch; file handle leak in WhorldFF, never reuse a CFile!	2.0.00.03
+04/19/10	05/06/10	done	open video; need clip player plugin with path support	2.0.00.03
+05/05/10	05/06/10	done	when opening project, delete broken metaparameter links	2.0.00.03
+04/22/10	05/07/10	done	video drop	2.0.00.03
+04/28/10	05/07/10	done	torture test to open projects repeatedly	2.0.00.03
+05/01/10	05/07/10	done	check for buggy Pete plugins	2.0.00.03
+05/05/10	05/07/10	done	set frame size causes plugins to lose their parameter settings; clip player also loses current clip	2.0.00.03
+05/07/10	05/08/10	done	file video pop up and recent videos	2.0.00.03
+05/06/10	05/09/10	done	add clip paths to project doc	2.0.00.03
+05/09/10	05/09/10	done	include clips in missing files search	2.0.00.03
+04/19/10	05/10/10	done	overlap project loading with rendering	2.0.00.03
+05/09/10	05/10/10	done	create freeframe instances before stopping engine to minimize downtime	2.0.00.03
+05/05/10	05/11/10	done	PlayerFF leaks a handle for every XviD video opened; XviD registry handle leak, patched by Michael	2.0.00.03
+05/12/10	05/12/10	done	if multiple instances of a plugin exist, decorate names to differentiate them	2.0.00.03
+04/19/10	05/13/10	done	record; add thread in derived engine, make RunInit virtual and use it to hook last plugin's output	2.0.00.03
+05/15/10	05/16/10	done	move pause into engine	2.0.00.03
+05/14/10	05/18/10	done	record disrupts feedback due to stop/run; hook output without stopping engine	2.0.00.03
+04/23/10	05/19/10	done	frame size drop list in options dialog	2.0.00.03
+05/02/10	05/20/10	done	make color depth an option	2.0.00.03
+04/19/10	05/21/10	done	help	2.0.00.03
+05/13/10	05/21/10	done	record and record info dialogs	2.0.00.03
+05/21/10	05/21/10	done	initializing COM multithreaded causes HTML help to hang and not show topics; don't call HH_INITIALIZE	2.0.00.03
+05/21/10	05/21/10	done	initializing COM multithreaded causes ShellExecute to fail, breaking hyperlink; use FileProtocolHandler	2.0.00.03
+04/19/10	05/22/10	done	random seed options; srand must be called in each plugin thread	2.0.00.03
+04/19/10	05/24/10	done	job control	2.0.00.03
+05/03/10	05/25/10	done	monitor window garbles 16-bit color due to CDib using 5-5-5 instead of 5-6-5; replace with DirectDraw surface	2.0.00.03
+05/03/10	05/25/10	done	halftone makes monitor window's stretch blit nearly take twice as long; make it optional	2.0.00.03
+05/24/10	05/25/10	done	end of recording sometimes stalls engine; hot unhook must pulse record input queue read event	2.0.00.03
+05/25/10	05/25/10	done	resizing monitor window while paused displays all black	2.0.00.03
+05/13/10	05/26/10	done	changing frame size during recording fails or gives garbage output; disallow it	2.0.00.03
+05/17/10	05/26/10	done	monitor bar displays stale frame if shown while engine is paused	2.0.00.03
+05/28/10	05/28/10	done	record status elapsed time runs while paused, causing invalid remaining time	2.0.00.03
+04/19/10	05/31/10	done	undo	2.0.00.03
+04/19/10	06/01/10	done	clip undo	2.0.00.03
+05/12/10	06/01/10	done	dragging clip onto empty slot should load player into that slot instead of inserting	2.0.00.03
+05/31/10	06/01/10	done	metaparameter undo	2.0.00.03
+04/19/10	06/02/10	done	document modified flag	2.0.00.03
+04/19/10	06/02/10	done	save changes warning option	2.0.00.03
+05/31/10	06/02/10	done	automated undo test	2.0.00.03
+06/01/10	06/02/10	done	inserting or deleting metaparameter doesn't update group names	2.0.00.03
+06/02/10	06/02/10	done	refresh MIDI devices button in options dialog	2.0.00.03
+04/19/10	06/03/10	done	master speed undo	2.0.00.03
+06/03/10	06/03/10	done	crash deleting effect that outputs to a preceding mixer, separated from it by an empty slot	2.0.00.03
+04/19/10	06/04/10	done	MIDI undo	2.0.00.03
+06/04/10	06/04/10	done	all row dialogs should clip children	2.0.00.03
+06/05/10	06/05/10	done	persist get/set binary using V1 registry key; use profile name instead of app name	2.0.00.03
+06/05/10	06/05/10	done	add frame timeout to engine options; useful for large frame sizes	2.0.00.03
+08/13/06	06/06/10	done	rendering speed is limited to real-time; V2 adds option to unlock frame rate	2.0.00.03
+08/20/06	06/06/10	done	paused image jitters when rapidly repainted; output blit is slightly inconsistent (V1)	2.0.00.03
+10/26/06	06/06/10	done	need a way to pause only the clip, not the whole application (V1)	2.0.00.03
+10/27/06	06/06/10	done	generate a graph of project's signal routing; could use graphviz (V1)	2.0.00.03
+10/28/06	06/06/10	done	right-clicking on an edit control doesn't always update toolbar's edit buttons (V1)	2.0.00.03
+01/09/07	06/06/10	done	docked sizing bar's close button won't show hover unless NC mouse move is idle msg (V1)	2.0.00.03
+05/01/07	06/06/10	done	long project load delays disrupt performances; overlap plugin instantiation with rendering (V1)	2.0.00.03
+09/10/07	06/06/10	done	rendering loop calls memcpy needlessly in some cases; optimize frame buffer usage (V1)	2.0.00.03
+12/01/07	06/06/10	done	left-clicking on dialog bar frame freezes output (V1)	2.0.00.03
+12/08/07	06/06/10	done	should be able to select clips in PlayerFF by name/thumbnail; extend FreeFrame interface (V1)	2.0.00.03
+12/08/07	06/06/10	done	for PlayerFF, store clip selection as path, so playlist edits don't affect previous projects (V1)	2.0.00.03
+08/11/08	06/06/10	done	canceling at save changes prompt drops doc from file MRU list (V1)	2.0.00.03
+11/03/08	06/06/10	done	help file title is Whorld (V1)	2.0.00.03
+05/08/10	06/06/10	done	video properties	2.0.00.03
+06/01/10	06/06/10	done	editing record duration and pressing Enter while duration has focus doesn't change duration (V1)	2.0.00.03
+04/19/10	06/08/10	done	single step	2.0.00.04
+06/08/10	06/08/10	done	opening doc with missing video doesn't give error message or trigger missing links dialog	2.0.00.04
+06/08/10	06/08/10	done	file dialog doesn't show combo box, due to multithreaded COM init; show file dialog from worker thread	2.0.00.04
+06/20/10	06/20/10	done	on exiting full screen, UI not fully repainted; add no copy bits flag in SetExclusive and FullScreenMain	2.0.01.00
+06/20/10	06/20/10	done	can't run, gives application failed to initialize properly 0xc0150002; non-static version of BmpToAvi.dll	2.0.01.00
+06/20/10	06/20/10	done	render blits were using flip wait flag; may fix full screen frame rate exceeding monitor refresh, TBD	2.0.02.00
+06/22/10	06/24/10	done	end of recording sometimes stalls engine; ignore stall while stopping record thread	2.0.03.00
+06/23/10	06/24/10	done	starting job queue while paused cases jobs to fail with no error message	2.0.03.00
+06/23/10	08/28/10	done	changing frame rate in options can cause incorrect recording frame count if duration is in time (V1)	2.0.04.00
+08/28/10	08/28/10	done	single step doesn't update slider positions for automated parameters	2.0.04.00
+08/28/10	08/29/10	done	views maintain dirty flags but never read them; remove them	2.0.04.00
+09/11/10	09/12/10	done	worker thread's stop event is unnecessary; remove it	2.0.04.00
+04/16/10	09/15/10	done	load balancing via plugin helpers	2.0.05.00
+04/19/10	09/18/10	done	make history zoom persistent	2.0.05.00
+03/04/11	03/04/11	done	convert CRingBuf to unsigned; also optimize PushOver method	2.0.05.00
+03/30/11	03/31/11	done	ganged plugin crashes if frame properties are changed; recreate helpers in plugin SetFrameProps	2.0.05.00
+03/30/11	04/03/11	done	ganged plugin creates one more freeframe than needed; first helper should use plugin's freeframe	2.0.05.01
+03/30/11	04/16/11	done	in history view, make renderer's name consistent with other views	2.0.05.02
+04/28/11	04/29/11	done	file browser list control has extra border in XP and up; remove border from default list style	2.0.05.03
+04/28/11	04/29/11	done	in file browser, editing keys (Del, Ins, Esc, Ctrl+Z) behave unexpectedly during label edit	2.0.05.03
+04/29/11	04/29/11	done	Esc doesn't cancel drag for plugins or metaparameters (V2)	2.0.05.03
+04/29/11	04/29/11	done	Esc doesn't cancel drag if dialog row control has focus	2.0.05.03
+05/24/10	05/02/11	done	if job file can't be read, invalid jobs can result; purge corrupt job data and optionally delete job file	2.1.00.00
+05/03/11	05/03/11	done	resize queues instead of recreating them; more efficient	2.1.00.01
+04/19/10	05/04/11	done	convert options dialog to a property sheet	2.1.00.02
+05/05/11	05/05/11	done	update MIDI device is slow if CPU is saturated; show wait cursor and update frame to erase options dialog	2.1.00.02
+04/19/10	05/07/11	done	bring back sync oscillators (lost in V2)	2.1.00.03
+05/09/11	05/09/11	done	each graph update leaks two handles; close process information handles	2.1.00.03
+05/09/11	05/10/11	done	AllocFrames shrink leaks frames if deleted frames were assigned to DirectDraw surfaces	2.1.00.04
+05/11/11	05/11/11	done	drop files leaks drop info heap memory; OnDropFiles must call DragFinish 	2.1.00.04
+05/05/11	05/12/11	done	left-clicking parameter slider thumb adds undo event even if value is unchanged (V1)	2.1.00.05
+05/11/11	05/12/11	done	if row dialog is deleted while one of its controls has focus, opening recent file causes file menu to stick (V2)	2.1.00.05
+05/11/11	05/12/11	done	if MIDI setup row control has focus, selecting menu via Alt hangs app; remove control style from MIDI setup	2.1.00.05
+05/11/11	05/12/11	done	if metaparameter is added while Metaparams bar is hidden, it doesn't appear in MIDI Setup's Metaparam page	2.1.00.05
+05/14/11	05/14/11	done	in MIDI and metaparameter views, header columns don't line up with controls; row item coord conversion	2.1.00.06
+05/16/11	05/16/11	done	history view's scroll bars should show scroll bar context menus, not view's context menu	2.1.00.06
+05/17/11	05/17/11	done	process copy can set output frame's reference count directly without using interlocked add	2.1.00.06
+05/19/11	05/19/11	done	history disappears when paused; bug in optimized PushOver	2.1.00.06
+05/26/11	05/30/11	done	previous version broke parameter editing via slider; remove FFPlugsRow legacy thumbtrack case	2.1.01.00
+05/31/11	06/01/11	done	ganging a plugin causes strobing if it has parameters that are currently zero but have non-zero defaults	2.1.02.00
+06/28/11	06/29/11	done	reading V2 thumbnail database crashes V1; LastWrite CTime is 64-bit in .NET, bump archive version	2.2.00.02
+06/30/11	06/30/11	done	parameter slider context menu lacks mnemonics	2.2.00.02
+04/25/11	07/19/11	done	file browser context menus triggered via Shift+F10 are incorrectly positioned	2.2.00.02
+07/18/11	07/19/11	done	if engine does a stop/run while paused, views are restarted, making modulated parameters impossible to edit	2.2.00.02
+07/18/11	07/19/11	done	if plugin has no parameters, selecting it in Metaparameter Properties dialog's Type combo crashes app	2.2.00.02
+07/19/11	07/19/11	done	file browser context menu popups should use radios instead of checks	2.2.00.02
+07/19/11	07/19/11	done	add delete to file browser context menu	2.2.00.02
+04/25/11	11/11/11	done	context menus triggered via Shift+F10 are incorrectly positioned (view, slider, metaparameter, job control)	2.2.00.02
+07/14/11	11/18/11	done	load balancing should be a dockable bar instead of a modal dialog (jm)	2.2.01.00
+11/18/11	11/21/11	done	playlist for automatically opening a list of projects in sequential or random order	2.2.01.01
+11/20/11	11/22/11	done	playlist shows wait cursor while opening project in single-monitor exclusive	2.2.01.01
+11/19/11	11/23/11	done	open playlist from command line	2.2.01.01
+11/18/11	11/24/11	done	each plugin should remember its scroll position in parameter and MIDI setup row views	2.2.01.02
+11/19/11	11/24/11	done	command line option to go full screen	2.2.01.02
+11/20/11	11/24/11	done	ending parameter numeric edit by selecting a different plugin in patch view causes loss of edit	2.2.01.02
+11/30/11	11/25/11	done	add transport buttons, edit control, and missing files check to playlist dialog	2.2.01.03
+11/24/11	11/30/11	done	closing document while numeric edit in progress causes loss of edit; take focus in SaveModified	2.2.01.03
+11/30/11	11/30/11	done	use toggle window for tool dialogs including job control and playlist	2.2.01.03
+04/24/10	12/01/11	done	add option to limit frame memory useage	2.2.01.04
+05/26/10	12/01/11	done	running engine while loading project uses lots more memory; make it optional	2.2.01.04
+12/01/11	12/01/11	done	handle out of memory error when allocating frame buffers	2.2.01.04
+12/01/11	12/01/11	done	enable large address aware and verify memory usage up to 3GB	2.2.01.04
+12/01/11	12/01/11	done	disable input popups for source plugins	2.2.01.04
+12/01/11	12/01/11	done	in parameter view, plugin context menu's target is current plugin unless right-click is within tab control	2.2.01.04
+12/15/11	12/15/11	done	playlist options dialog is superfluous	2.2.01.05
+12/15/11	12/15/11	done	playlist period defaults to zero	2.2.01.05
+12/15/11	12/15/11	done	playlist needs a save check	2.2.01.05
+12/16/11	12/16/11	done	restore show state of tool dialogs	2.2.01.05
+12/27/11	12/27/11	done	export creates nonstandard 32-bit bitmaps instead of 24-bit	2.2.02.00
+12/27/11	12/27/11	done	export creates garbled bitmaps if engine color depth is 16-bit	2.2.02.00
+12/27/11	12/27/11	done	continuous single stepping doesn’t update monitor bar	2.2.02.00
+12/29/11	01/11/12	done	restarting engine causes loss of oscillator sync between plugins; rewind oscillators on engine stop	2.2.02.01
+12/30/11	01/11/12	done	saving and reloading project causes loss of oscillator sync between plugins	2.2.02.01
+12/31/11	01/11/12	done	sync oscillators and its corresponding undo cause loss of oscillator sync between plugins	2.2.02.01
+01/05/12	01/11/12	done	sync oscillators while paused doesn't update current plugin's UI to show sync	2.2.02.01
+01/10/12	01/11/12	done	initial pause frame is off by one; pause render thread before creating pause frame	2.2.02.01
+01/10/12	01/11/12	done	in single step, monitor window doesn't match output window for first few frames	2.2.02.01
+01/04/12	01/13/12	done	queue view doesn't show plugin times while paused	2.2.02.02
+01/09/12	01/13/12	done	in load balance bar, move undo notification to a main frame handler	2.2.02.02
+05/10/11	01/16/12	done	if no plugins, output window shows paint artifacts when resized or partially uncovered	2.2.02.02
+01/16/12	01/16/12	done	if all plugins are deleted while paused, unpausing doesn't clear output window	2.2.02.02
+01/16/12	01/16/12	done	if all plugins are deleted while running, output window is cleared but monitor window isn't	2.2.02.02
+01/21/12	01/21/12	done	desktop flashes when a row view is updated; due to lock window update, introduced in 2.2.1.2	2.2.02.03
+01/12/12	01/23/12	done	check for updates / automatic updates	2.2.02.04
+02/19/12	03/17/12	done	stopping a recording stalls engine if last plugin has helper threads	2.2.03.00
+02/19/12	03/17/12	done	fix debug radio button warnings in record dialog	2.2.03.00
+04/19/10	03/26/12	done	bring back monitor source selection (lost in V2)	2.2.03.01
+03/26/12	03/27/12	done	if edit control has focus, menus periodically pause message loop; V2 porting error, originally fixed 10/28/06	2.2.03.01
+02/19/12	03/28/12	done	plugin input and monitor source popups don't show status hints; override GetMessageString	2.2.03.01
+03/30/12	03/30/12	done	monitoring a plugin that can't render should clear the monitor window	2.2.03.01
+03/30/12	03/30/12	done	disable buffer security checks (/GS-); smaller code and significant performance gain	2.2.03.01
+07/14/11	04/06/12	done	long plugin names are clipped in patchbay rows; add column resizing	2.2.04.00
+04/09/12	04/11/12	done	MIDI Setup view resizes incorrectly after selecting Plugin tab and another tab, overwriting droplist; see 4/10/12	2.2.04.00
+04/10/12	04/11/12	done	MIDI Plugin page is always empty; introduced in 2.2.01.04, double negation in SetScrollPos special slot case	2.2.04.00
+04/12/12	04/13/12	done	revert UI thread to default COM single-threaded apartment; keep engine threads in multithreaded apartment	2.2.04.01
+04/13/12	04/13/12	done	if monitor source is deleted, engine tap Detach accesses deleted plugin's CanRender	2.2.04.01
+04/24/12	04/24/12	done	resizing cursor persists unexpectedly over monitor window; window class must specify a cursor	2.2.04.02
+04/25/12	04/24/12	done	single step doesn't update monitor window if source is non-default	2.2.04.02
+04/27/12	04/27/12	done	if Queues view is visible, and a project with less plugins is opened while paused, resuming crashes	2.2.04.02
+05/05/12	05/06/12	done	assigning multiple threads to a plugin can cause reentrance in freeframe plugin instance; crashes clip player	2.2.04.05
+04/23/12	05/07/12	done	reloading slot doesn't attempt to preserve its non-default inputs, unlike V1 (see 1.3.01)	2.2.04.05
+05/06/12	05/07/12	done	clip player's open by path doesn't reset seeking flag, potentially causing invalid seek and crash	2.2.04.05
+05/09/12	05/10/12	done	if output window is maximized, entering and exiting full-screen twice leaves output window's frame unpainted	2.2.04.06
+05/09/12	05/10/12	done	in set exclusive, only recreate surfaces once per mode switch	2.2.04.06
+05/13/12	05/14/12	done	reselecting same monitor source needlessly generates undo notification	2.2.05.00
+05/17/12	05/17/12	done	if plugin tab control is scrolled, loading a project with less plugins can cause missing tabs	2.2.05.00
+05/17/12	05/17/12	done	plugin tab control should support scrolling while drag-reordering plugins	2.2.05.00
+05/17/12	05/17/12	done	tab control should support scrolling via mouse wheel	2.2.05.00
+05/21/12	05/21/12	done	if no project is loaded, starting job queue pauses for 5 seconds	2.2.06.00
+05/21/12	05/21/12	done	if one or more plugins can't render, saving project pauses for 5 seconds	2.2.06.00
+05/21/12	05/21/12	done	if a plugin with parameter modulation(s) is preceded by empty slot(s), saving project crashes	2.2.06.00
+04/23/12	05/23/12	done	reloading monitored slot unmonitors it	2.2.07.00
+05/04/12	05/23/12	done	undoing deletion of monitored plugin doesn't restore monitoring	2.2.07.00
+05/25/12	05/29/12	done	in files bar, changing thumbnail size while view type isn't thumbnail causes blank thumbnails	2.2.07.00
+05/29/12	05/31/12	done	eliminate engine tap's do-nothing worker thread	2.2.07.00
+05/11/12	06/01/12	done	if monitor source is non-default, monitor bar can hoard a frame while hidden	2.2.07.00
+05/11/12	06/01/12	done	changing monitor source while paused restarts engine, destroying feedback state	2.2.07.00
+08/02/06		hold	allow oscillator frequencies to be expressed as fractions of tempo, as in Reason	
+08/02/06		hold	dual-monitor mode should show monitor selection dialog if more than one secondary	
+08/13/06		hold	option to render at lower priority; better to just use task mgr?	
+08/20/06		hold	automation of master speed; fancy	
+08/20/06		hold	print still frames; fancy	
+08/20/06		hold	export can't increase res without re-instantiating plugins and losing state	
+10/06/06		hold	playlist for video clips, with keyboard assignment and automation	
+10/06/06		hold	add master luminance control; global plugin makes this less critical	
+10/06/06		hold	fade from/to black during recording	
+10/06/06		hold	allow wet/dry mix (alpha) for each plugin; requires MMX alpha blend	
+10/13/06		hold	for source plugins, allow input to be blended with output, via raster operation	
+10/14/06		hold	go to specific frame; how to set WhorldFF osc clocks? What about random?	
+10/27/06		hold	Greg reports empty output window, XP SP2	
+10/27/06		hold	group parameters and sync their automations in groups; metaparameter oscillators?	
+10/27/06		hold	apply plugins to individual RGBA color channels	
+10/29/06		hold	frequency/amplitude/pulse width modulation	
+10/29/06		hold	add an oscilloscope window for viewing modulation; fancy	
+10/31/06		hold	make project I/O token-based so it's extensible	
+11/03/06		hold	add modulation amplitude and bias (DC) with MIDI support	
+12/26/06		hold	patch bay and tabs should give hover/mouse-over feedback during drag (sh)	
+12/26/06		hold	middle button should toggle bypass?	
+12/27/06		hold	need way to match output view size to plugin frame size and/or aspect ratio (sh)	
+12/30/06		hold	insert project into current project	
+01/12/07		hold	associate MIDI settings with a plugin, so a plugin can load its own MIDI assignments	
+01/27/07		hold	file browser should watch for changes, via FindFirstChangeNotification or ReadDirectoryChangesW 	
+01/27/07		hold	F5 should refresh directory listing; no need if file browser supports file change notifications	
+01/28/07		hold	support multi-input metaplugins; hard problem	
+01/31/07		hold	undoing metaparam edit of mod freq doesn't restore modulated value	
+01/31/07		hold	can't undo edit metaplugin properties	
+02/09/07		hold	showing metaplugin's properties unpacks embedded plugins; loading DLL is what does it	
+02/09/07		hold	reset frame counter on load project should be optional	
+02/09/07		hold	command to manually reset frame counter	
+05/01/07		hold	project name isn't visible in full-screen dual monitor mode; no caption bar	
+06/18/07		hold	in file browser's plugins pane, item context menu should have import metaplugin item	
+11/09/07		hold	toolbar's clipboard icons shouldn't update while app is modal; it's distracting	
+11/13/07		hold	can't undo job control edits	
+11/17/07		hold	loading a job list erases current jobs without warning	
+12/08/07		hold	oscillator should support one-shot waveforms; useful for automating fades	
+12/08/07		hold	MIDI control of monitor source; requires bumping version numbers of plugin info and project	
+12/10/07		hold	very large MPEGs are slow to load and freeze UI while loading; warning message? (mb)	
+01/01/08		hold	MIDI control should support damping	
+01/09/08		hold	output MIDI when parameters with MIDI assignments are changed	
+01/09/08		hold	output MIDI clocks, so MIDI sequencer can sync with FFRend; one clock per frame?	
+01/09/08		hold	receive and sync to MIDI clocks or SMPT; keep frame rate very low to avoid overrun	
+01/09/08		hold	in MIDI setup, range should consist of start and end, not just a multiplier	
+04/19/10		hold	bring back global plugin (lost in V2)	
+04/23/10		hold	if a plugin has no output, its thread doesn't run, so its oscillators don't run either	
+04/24/10		hold	if multiple players exist, add Open With popup to Clips pane's context menu	
+04/24/10		hold	bypassing source plugin can give unexpected results because routing doesn't change	
+05/01/10		hold	showing main frame full-screen in dual monitor should be optional; useful for debugging	
+05/04/10		hold	feedback stall cases, often sensitive to input ordering, e.g. firestorm solar, trivial stall	
+05/05/10		hold	soloing a plugin doesn't ensure its output will be visible, because routing is unchanged	
+05/11/10		hold	easy MIDI mode; one channel per plugin, assign controllers sequentially (jm)	
+05/17/10		hold	clip player should show path if available; thumbnail would also be nice	
+05/23/10		hold	monitor window's StretchBlt can block render, even in dual-monitor Exclusive; noticeable in high HD	
+06/01/10		hold	video properties doesn't work for MPEGs	
+06/25/10		hold	engine stall message should include staller name; but is it useful information?	
+03/02/11		hold	recording to XviD crashes in Win7	
+03/04/11		hold	file browser should optionally include a folder tree, using a splitter; COM hell	
+03/04/11		hold	file browser's parent folder list item scrolls; button on title bar would be more convenient	
+03/04/11		hold	port clip player to DirectShow, allowing MPEG without AviSynth	
+03/30/11		hold	in history view, plugin names shouldn't scroll when paused; show them on a border and shrink view?	
+04/29/11		hold	graph view's mixer symbol (triangle) is excessively wide for long plugin names	
+04/29/11		hold	add Open in New Player to Clips pane's context menu	
+04/29/11		hold	standardize graph symbols	
+05/05/11		hold	edit modulation range shortcut keys don't work and aren't on edit menu either (V2)	
+05/07/11		hold	triangle/sine modulations that were decreasing when project was saved are increasing when it's opened	
+05/07/11		hold	for triangle/sine modulations, editing value or mod enable/frequency resets direction; same for undo	
+05/17/11		hold	multiple monitor windows would be useful for previewing sources, esp. clip players	
+06/06/11		hold	folder dialog allows selection of virtual folders (e.g. My Computer) but returns false	
+06/09/11		hold	file browser doesn't handle device changes e.g. adding or removing thumb drive; WM_DEVICECHANGE	
+06/09/11		hold	file browser doesn't show or resolve links (shortcuts) to files/folders	
+06/25/11		hold	dropping plugin(s) onto view should append instead of inserting (debatable)	
+07/13/11		hold	add recent folders popup to files bar context menu	
+07/18/11		hold	in 32-bit color mode, clip player outputs 255 in alpha channel for certain clips (e.g. kissing girls)	
+07/19/11		hold	in file browser context menu, view type should be a popup	
+11/25/11		hold	undo should restore scroll positions, or at least ensure undone parameter edits are visible	
+12/29/11		hold	in file browser, optionally pack thumbnails tightly; arrow keys only access first two columns if horz spacing < 16	
+12/31/11		hold	changing master speed sometimes causes slight loss of oscillator sync between plugins	
+01/04/12		hold	in queue view, mixer plugins added while paused/stopped have incorrect height until engine restarts	
+01/14/12		hold	context-sensitive help	
+03/28/12		hold	if monitor source is non-default, resizing monitor window while paused paints incorrectly	
+04/24/12		hold	during continuous single stepping, output monitor occasionally shows frame already reused by plugin	
+05/08/12		hold	control key should modify plugin drag/drop to load instead of insert	
+05/08/12		hold	number of recently used plugins should be an option; same for projects	
+05/09/12		hold	Win7 only: exiting full-screen may fail to fully repaint main window, esp. if it overlaps output window	
+05/09/12		hold	Win7 only: output window doesn't update on secondary monitor if Aero theme is disabled	
+05/11/12		hold	include monitor source(s) in project	
+05/11/12		hold	monitor and preview bars should optionally include source name captions	
+05/23/12		hold	advanced engine option to set feedback priming	
+05/24/12		hold	increasing renderer's priority may reduce output jitter	
+05/29/12		hold	monitor window's StretchBlt can degrade UI responsiveness, especially at high res with smoothing	
+05/29/12		hold	monitoring should be driven by same timer as output, i.e. renderer's frame timer, to avoid time aliasing	
+05/30/12		hold	if slot change makes monitored plugin unable to render, monitor window isn't cleared	
+06/01/07		punt	M-Audio Uno drops input MIDI running status messages in XP; latest driver doesn't help	
+09/10/07		punt	replace memcpy with MMX block prefetch; irrelevant in V2	
+11/19/07		punt	AviSynth works in XP but not in W2K; blit to plugin frame fails	
+01/01/08		punt	if metaparam and its target differ, undoing metaparam change fails to restore target; can't reproduce this	
+03/31/10		punt	stall log; stall info no longer available in release	
+03/31/10		punt	frame counter lacks resolution at low frame rates	
+04/19/10		punt	cache recently used plugins	
+04/24/10		punt	show free queue count in status bar	
+04/27/10		punt	in cooperative mode, dragging control bar freezes output; CDockContext::InitLoop locks desktop window	
+05/03/10		punt	rename command on edit menu; not needed	
+05/03/10		punt	if window has both scroll bars, non-client area between them is erased incorrectly; known bug in XP controls	
+05/04/10		punt	metaparam context menu doesn't show hints in status bar	
+05/07/10		punt	if clip player in project specifies non-zero clip, needless open occurs, or two opens if bank is also non-zero	
+05/07/10		punt	check for presence of clip player on startup	
+05/17/10		punt	if recording to XviD and encoding status dialog is enabled, pause or stop stalls engine	
+05/20/10		punt	Pete's plugins overrun frame buffer in 24-bit mode	
+05/20/10		punt	if engine color depth doesn't match display device, output window shows garbage or doesn't paint; warn user	
+05/31/10		punt	if clip is opened via path, and then changed via bank/clip parameters, undo gives unexpected results	
+08/28/10		punt	slider positions don't indicate currently displayed frame due to latency; especially noticeable in single step	
+08/29/10		punt	oscillators accumulate floating-point error; making clock an integer could cause subtle behavior changes	
+03/04/11		punt	extending desktop onto second monitor while app is running causes bad behavior	
+04/03/11		punt	frame queue size of zero (peek) would reduce memory usage but probably less efficient too	
+05/07/11		punt	if entire undo history is undone, selecting a plugin clears history; select counts as an edit	
+05/11/11		punt	PlayerFF leaks 44K even if no clips loaded and regardless of frame size; SetSurfaceDesc-related?	
+11/24/11		punt	histogram in monitor window	
+04/08/12		punt	if view is scrolled far right and has a vertical scroll bar, restored horizontal scroll position is off by one pixel	
+04/10/12		punt	MIDI Setup special page scroll positions aren't reset on opening new document	
+04/23/12		punt	if app closes before update check's worker thread exits, CWinThread leaks; scary in debug but harmless	
+05/03/12		punt	if resizing app forces control bar to resize, bar's contents clip instead of resizing; stock behavior	
+05/05/12		punt	open clip by path doesn't work if clip player is assigned multiple threads	
+05/23/12		punt	advanced engine option to yield to user interface; no need since input events cause dynamic priority boost	

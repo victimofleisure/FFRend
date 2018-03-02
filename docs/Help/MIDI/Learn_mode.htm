@@ -1,0 +1,20 @@
+<title>Learn mode</title>
+<body>
+
+<h3>Learn mode</h3>
+
+<p>Assigning MIDI messages via <a href="../MIDI/MIDI_editing.htm">editing</a> requires you to know which messages your device sends, and on which channels. FFRend can also "learn" the MIDI assignments, in which case you don't need to worry about those details. To use "learn" mode, do the following:
+
+<ol>
+<li>Check the "Learn" box at the top of the <a href="../MIDI/MIDI_setup.htm">MIDI Setup</a> dialog.
+<li>Select the target you want to control, by left-clicking its row. It's easiest to click on the row's name, but anywhere within the row will do. The row changes color, to green; this helps you keep track of which target is being learned.
+<li>On your MIDI device, twiddle the controller that you want to assign to that target. To assign a note to the target, press and release the note. The target's event, channel, and controller/note number should "snap" to the correct value. Be careful not to accidentally touch controllers or notes that you've already assigned to other targets, otherwise those assignments will have to be redone.
+<li>Repeat steps 2 and 3 for each target you want to control. To switch to a different page, left-click its tab. To change the property, use the drop-list in the upper-left corner of the dialog.
+<li>Uncheck the "Learn" box.
+</ol>
+
+<p>If you close the MIDI setup dialog with the "Learn" box checked, it will still be checked when you reopen the dialog, but no target will be selected. This helps prevent you from accidentally trashing your assignments.
+
+
+
+</body>

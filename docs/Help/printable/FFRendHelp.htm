@@ -1,0 +1,1094 @@
+<html><head><style type="text/css">.cmd {font-style: italic} .key {font-family: Courier}</style><title>FFRend Help</title></head><body>
+<h1>FFRend Help</h1>
+<h2>Contents</h2>
+
+<dl>
+<dt>Getting Started
+<dd><a href="#Introduction">Introduction</a>
+<dd><a href="#New_in_version_2">New in version 2</a>
+<dd><a href="#License">License</a>
+<dd><a href="#Requirements">Requirements</a>
+<dd><a href="#Installing">Installing</a>
+<dd><a href="#Uninstalling">Uninstalling</a>
+<dd><a href="#Demo_project">Demo project</a>
+<dt>Plugins
+<dd><a href="#Plugin_chains">Plugin chains</a>
+<dd><a href="#Input_video">Input video</a>
+<dd><a href="#Plugin_slots">Plugin slots</a>
+<dd><a href="#Loading_plugins">Loading plugins</a>
+<dd><a href="#Reordering_plugins">Reordering plugins</a>
+<dd><a href="#Monitoring_plugins">Monitoring plugins</a>
+<dd><a href="#Bypass_and_solo">Bypass and solo</a>
+<dd><a href="#Patch_Bay">Patch Bay</a>
+<dd><a href="#Obtaining_plugins">Obtaining plugins</a>
+<dt>Parameters
+<dd><a href="#Parameters">Parameters</a>
+<dd><a href="#Editing_parameters">Editing parameters</a>
+<dd><a href="#Automating_parameters">Automating parameters</a>
+<dd><a href="#Oscillator_waveforms">Oscillator waveforms</a>
+<dd><a href="#Modulation_ranges">Modulation ranges</a>
+<dt>Projects
+<dd><a href="#Projects">Projects</a>
+<dd><a href="#Master_speed">Master speed</a>
+<dd><a href="#File_Browser">File Browser</a>
+<dd><a href="#Missing_Files">Missing Files</a>
+<dd><a href="#Replace_Files">Replace Files</a>
+<dt>Recording
+<dd><a href="#Recording">Recording</a>
+<dd><a href="#Record_dialog">Record dialog</a>
+<dd><a href="#Job_Control">Job Control</a>
+<dd><a href="#Exporting_bitmaps">Exporting bitmaps</a>
+<dd><a href="#Export_list">Export list</a>
+<dd><a href="#Pause">Pause</a>
+<dt>MIDI
+<dd><a href="#MIDI_setup">MIDI setup</a>
+<dd><a href="#MIDI_editing">MIDI editing</a>
+<dd><a href="#Learn_mode">Learn mode</a>
+<dt>Options
+<dd><a href="#Frame_size">Frame size</a>
+<dd><a href="#Frame_rate">Frame rate</a>
+<dd><a href="#Color_depth">Color depth</a>
+<dd><a href="#Timeout">Timeout</a>
+<dd><a href="#Lock_frame_rate">Lock frame rate</a>
+<dd><a href="#Multimedia_timer">Multimedia timer</a>
+<dd><a href="#MIDI_device">MIDI device</a>
+<dd><a href="#Random_seed">Random seed</a>
+<dd><a href="#View_frequency">View frequency</a>
+<dd><a href="#History_size">History size</a>
+<dd><a href="#Monitor_quality">Monitor quality</a>
+<dd><a href="#Save_warning">Save warning</a>
+<dd><a href="#Undo_levels">Undo levels</a>
+<dd><a href="#Global_plugin">Global plugin</a>
+<dd><a href="#Thumbnails">Thumbnails</a>
+<dd><a href="#Run_while_loading_project">Run while loading project</a>
+<dd><a href="#Frame_memory">Frame memory</a>
+<dt>Metaplugins
+<dd><a href="#Metaplugins">Metaplugins</a>
+<dd><a href="#Exporting_metaplugins">Exporting metaplugins</a>
+<dd><a href="#Importing_metaplugins">Importing metaplugins</a>
+<dd><a href="#Metaparameters">Metaparameters</a>
+<dd><a href="#Metaparameter_groups">Metaparameter groups</a>
+<dd><a href="#Metaplugin_links">Metaplugin links</a>
+<dd><a href="#Embedding_plugins">Embedding plugins</a>
+<dd><a href="#Nesting_metaplugins">Nesting metaplugins</a>
+<dt>Loose Ends
+<dd><a href="#Full_screen">Full screen</a>
+<dd><a href="#Dual-monitor">Dual-monitor</a>
+<dd><a href="#Tearing">Tearing</a>
+<dd><a href="#Performance">Performance</a>
+<dd><a href="#Load_balance">Load balance</a>
+<dd><a href="#Frame-dropping">Frame-dropping</a>
+<dd><a href="#Playlist">Playlist</a>
+<dd><a href="#Column_resizing">Column resizing</a>
+<dd><a href="#Shortcuts">Shortcuts</a>
+</dl>
+
+<h1>Getting Started</h1>
+<a name="Introduction"><h2>Introduction</h2></a>
+
+<p>FFRend (Freeframe Renderer) is a renderer for Freeframe plugins. It allows you to <a href="#Plugin_chains">chain</a> any number of plugins together, <a href="#Automating_parameters">automate</a> their parameters using oscillators, and <a href="#Recording">record</a> the output to an AVI file. The <a href="#Input_video">input</a> is a video (AVI/MPG), still image (BMP/JPG/GIF), or source plugin.
+
+<p>Most VJ softwares support Freeframe, and can record their output, so what makes FFRend different? FFRend is optimized for content generation, whereas VJ softwares are typically optimized for live performance. The key difference is that FFRend <a href="#Frame-dropping">never drops frames</a>, even when your project is too CPU-intensive to be rendered in real time.
+
+<p>It's also possible to perform with FFRend. The user interface is modular, dual-monitor is fully supported, and all parameters and oscillator settings can be controlled via <a href="#MIDI_setup">MIDI</a>. Version 2 also supports parallel processing on multi-core CPUs, for greatly improved throughput.
+
+<p>FFRend supports plugin authoring, which means you can export a FFRend <a href="#Projects">project</a> as a Freeframe plugin. The exported plugin is called a <a href="#Metaplugins">metaplugin</a>, because it uses other plugins as components. A metaplugin can be used in any Freeframe-compatible host application, and behaves as if you were running the equivalent project in FFRend.
+
+<p>FFRend is free, open-source software for Windows 2000/XP/Vista/Win7. It includes comprehensive help, an installer, and a simple <a href="#Demo_project">demo project</a>. If you want to render complex effects at high resolution, using chains of automated Freeframe plugins, FFRend is for you.
+
+<a name="New_in_version_2"><h2>New in version 2</h2></a>
+
+<p>FFRend 2 is a near-total rewrite, not an upgrade. The application was completely redesigned from the ground up to take advantage of the parallel-processing capabilities of today's multi-core CPUs.
+
+<p><b>Major differences</b>
+
+<ul>
+
+<li>Each plugin now runs in its own thread, and given sufficient cores, each plugin runs on its own core, so that throughput is limited only by the slowest plugin (Amdahl's law).
+
+<li>The user interface is now much more responsive, even when the CPU is heavily loaded, because rendering no longer occurs in the UI thread.
+
+<li>The built-in clip player was replaced by an enhanced version of PlayerFF which allows clips to be opened by path, or by dragging from the Files bar's Clips pane.
+
+<li>Monitor quality has been improved and now has two settings (fast or smooth), specified in the options dialog. Even the fast setting is still an improvement over version 1.
+
+<li>Multiple instances of the same plugin are now differentiated by decorating their names, e.g. PeteMixer-1, PeterMixer-2, etc.
+
+<li>Plugins with more than two inputs are now supported.
+
+<li>A Graph view is now available, which shows a dynamically updated graph of your current routing. Note that you must download and install graphviz to use this feature.
+
+<li>Two additional new views, History and Queues, provide dynamic information about the rendering engine's state, allowing you to easily determine which plugins are limiting throughput.
+
+<li>The frame rate can now be unlocked, so that the engine renders as fast as possible, or at the monitor refresh rate in full-screen mode.
+
+</ul>
+
+<p><b>Minor differences</b>
+
+<ul>
+
+<li>The Record command was moved from the View menu to the File menu, and the Options command moved from the View menu to the Edit menu.
+
+<li>The Export and Record commands no longer automatically pause the output.
+
+<li>The Bypass command no longer alters the routing. This can cause significantly different behavior, particularly when bypassing source plugins.
+
+<li>All sizing control bars now have a system menu option to control whether they're dockable.
+
+<li>There's no longer a distinction between Full-Screen and Exclusive modes, i.e. Full-Screen mode is always Exclusive. Consequently the app's UI is no longer accessible in Full-Screen mode without using a dual-monitor setup.
+
+<li>Metaplugins are still fully supported. Note however that metaplugins are internally single-threaded, i.e. a metaplugin's component plugins do not run in parallel with each other. Consequently, on a multicore machine, a typical metaplugin will run more slowly than the equivalent project.
+
+<li>If a plugin can't render because it's not routed to the output, any parameter modulations it has will not automate their corresponding sliders in the UI.
+
+<li>The Global Plugin and Monitor Source Selection features were removed.
+
+<li>The app now builds in VC++ 9.0.
+
+</ul>
+
+<a name="License"><h2>License</h2></a>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
+
+<a name="Requirements"><h2>Requirements</h2></a>
+
+<p>Recommended:
+
+<p>Intel Core i7 920 Nehalem 2.66GHz Quad-Core Processor
+<br>ASUS Rampage II GENE LGA 1366 Intel X58 Micro ATX Motherboard
+<br>Crucial 6GB (3 x 2GB) 240-Pin DDR3 SDRAM DDR3 1066 Memory
+<br>OCZ ModXStream Pro OCZ700MXSP 700W Modular Power Supply
+<br>Western Digital Caviar WD1001FALS 1TB 7200 RPM SATA Hard Drive
+<br>EVGA 896-P3-1257-AR GeForce GTX 260 Core 216 896MB Video Card
+<br>Windows XP SP2
+<br>DirectX 9
+<br>1024 x 768 / 32-bit color
+
+<p>Minimum (version 1):
+
+<p>Pentium III 833MHz
+<br>256MB RAM
+<br>Windows 2000 SP4
+<br>DirectX 8.1
+<br>640 x 480 / 16-bit color
+
+<a name="Installing"><h2>Installing</h2></a>
+
+<p><b>Installing for the first time:</b>
+
+<p>FFRend is distributed as a .zip file. Unzip the distribution file, using WinZip or an equivalent program, and then double-click on FFRend.msi to launch the installer. The installer is about as simple as an installer can be: just keep hitting "Next." Note that on the "Select Installation Folder" page, you have the option to install for all users, or only for the current user.
+
+<p><b>Upgrading a previous installation:</b>
+
+<ol>
+<li>Unzip the distribution file to a folder, if you haven't already.
+<li>In that folder, double-click Upgrade.bat to launch the installer.
+<li>In the installer, select the "Repair" option.
+</ol>
+
+<p>Note that double-clicking FFRend.msi won't work: you will get the message "Another version of this product is already installed".
+
+<p>It is possible to have both versions 1 and 2 installed on the same machine. However, uninstalling either version may cause the other to fail during <a href="#Recording">recording</a>, with the message "Can't create BmpToAvi filter. Class not registered". To fix this, rerun the installer for the remaining version, and select "Repair".
+
+<a name="Uninstalling"><h2>Uninstalling</h2></a>
+
+<p>To uninstall FFRend, use Add/Remove Programs in the Control Panel, or double-click on FFRend.msi and select the "Remove" option, or in the Task Bar, select Programs/FFRend/Uninstall.
+
+<a name="Demo_project"><h2>Demo project</h2></a>
+
+<p>FFRend's binary distribution includes a simple demonstration <a href="#Projects">project</a>, called DemoBall.ffp. You'll find it in the same folder as the application (typically C:\Program Files\FFRend). DemoBall <a href="#Loading_plugins">loads</a> a Freeframe plugin (FFSrcPlug.dll, also included) which displays a bouncing ball. The plugin has a single <a href="#Parameters">parameter</a>, the ball speed. This parameter is <a href="#Automating_parameters">automated</a>, using a ramp down <a href="#Oscillator_waveforms">waveform</a>, so that the ball gradually slows down and then suddenly speeds up again.
+
+
+<h1>Plugins</h1>
+
+<a name="Plugin_chains"><h2>Plugin chains</h2></a>
+
+<p>A Freeframe plugin processes video frames. FFRend allows you to <a href="#Loading_plugins">load</a> multiple plugins at once. The plugins form a <em>chain</em>, i.e. each plugin takes its <a href="#Input_video">input</a> from the previous plugin's output. By default, video frames flow through the chain from left to right. In this case, the order in which the plugins appear is significant, because it determines the order in which they process video; <a href="#Reordering_plugins">reordering</a> them can have a dramatic effect on the output.
+
+<p>It's also possible to create an explicit routing that overrides the default left-to-right signal flow. This is essential if you're using multi-input plugins; see <a href="#Patch_Bay">Patch Bay</a>.
+
+<a name="Input_video"><h2>Input video</h2></a>
+
+<p>The <a href="#Plugin_chains">plugin chain</a> requires an <em>input</em>, i.e. a source of video frames to process. The input to the plugin chain comes from a video file (AVI/MPG), a still image (BMP/JPG/GIF), or a special type of Freeframe plugin, called a <em>source</em> plugin. Source plugins differ from effect plugins, in that they don't take any input, they only create output.
+
+<p>Note that FFRend needs AviSynth to play MPEG files. If you try to play an MPEG without AviSynth, FFRend displays an error message asking you to verify that AviSynth is correctly installed. AviSynth is free software; you can download it from <a href="http://avisynth.org">http://avisynth.org</a>.
+
+<p>To use an input video or image file, choose <span class="cmd">File/Video/Open</span>, or drag the file from Windows Explorer and drop it onto FFRend's main window, or drag it from the <a href="#File_Browser">File Browser</a>. To use a source plugin, <a href="#Loading_plugins">load</a> it into the plugin chain, in the same way as an effect plugin.
+
+<p>Note that you must have a video or image file open, or have a source plugin in your plugin chain, otherwise you won't get any output. If you have both a video/image <em>and</em> a source plugin, the source plugin wins: the video/image remains hidden unless you <a href="#Bypass_and_solo">bypass</a> (or delete) the source plugin.
+
+<a name="Plugin_slots"><h2>Plugin slots</h2></a>
+
+<p>A <em>slot</em> is a container into which a Freeframe plugin can be <a href="#Loading_plugins">loaded</a>. Plugin slots are represented by tabs along the top of FFRend's main window. To insert a slot, use <span class="cmd">Edit/Insert</span>, or the <span class="key">Ins key</span>. To delete a slot, use <span class="cmd">Edit/Delete</span>, or the <span class="key">Del</span> key. Plugins can also be inserted and deleted using the plugin context menu, which is displayed when you right-click on a tab.
+
+<p>Only one plugin slot can be viewed at a time. This slot is referred to as the <em>selected plugin</em>. To select a slot, left-click on its tab.
+
+<p>A plugin slot can be cut or copied to the clipboard, and then pasted to a different <a href="#Projects">project</a>, or elsewhere within the same project, using the standard Edit commands, or the plugin context menu.
+
+<a name="Loading_plugins"><h2>Loading plugins</h2></a>
+
+<p>Before a plugin can process frames, it must first be <em>loaded</em> into a <a href="#Plugin_slots">slot</a>. Once a plugin is loaded, it displays its parameters and allows you edit or <a href="#Automating_parameters">automate</a> them.
+
+<p>The simplest way to load a plugin is via <span class="cmd">Plugin/Load</span> or <span class="key">Ctrl+L</span>. The command displays a file open dialog; browse for the desired plugin, and press OK. The plugin is loaded into the selected slot. Note that if the selected slot already contained a plugin, the new plugin replaces it.
+
+<p>To load a plugin into a specific slot, you can also right-click on the slot's tab, and select <span class="cmd">Load</span> from the plugin context menu.
+
+<p>Plugins can also be loaded via drag and drop from Windows Explorer or from the <a href="#File_Browser">File Browser</a>. This method allows you to load multiple plugins at once. Note that with this method, existing plugins are <em>not</em> replaced; empty plugin slots are inserted automatically. If you drop on a slot tab, insertion occurs at that position. If you drop elsewhere, insertion occurs at the selected slot.
+
+<p>To unload a plugin, use <span class="cmd">Plugin/Unload</span>, or choose <span class="cmd">Unload</span> from the plugin context menu.
+
+<a name="Reordering_plugins"><h2>Reordering plugins</h2></a>
+
+<p>Unless you create an explicit <a href="#Patch_Bay">routing</a>, the order in which plugins appear in the <a href="#Plugin_chains">plugin chain</a> determines the order in which they process video. The plugins can be reordered at any time, without disrupting their states, via drag and drop. To move a plugin, left-click on its tab, and while holding down the left mouse button, drag the cursor horizontally. The cursor changes, to indicate that you're in drag mode. To drop the plugin, position the cursor over the desired tab and release the left mouse button. The plugin is moved to the new location, and the output is affected immediately.
+
+<a name="Monitoring_plugins"><h2>Monitoring plugins</h2></a>
+
+<p>The Monitor control bar normally displays the output of the entire <a href="#Plugin_chains">plugin chain</a> (i.e. the same image as the output window), but it can be configured to display the output of a specific plugin instead. This feature lets you examine any intermediate stage in your plugin chain, in a nondestructive way, without affecting FFRend's output. It's mostly useful for debugging, but it can also be used for previewing.
+
+<p>Before you try to monitor anything, make sure the Monitor bar is visible. To show or hide the Monitor bar, use <span class="cmd">View/Monitor</span> or <span class="key">Shift+N</span>. To monitor a plugin, select it, and then use <span class="cmd">Plugin/Monitor</span> or <span class="key">F8</span>. A monitor icon is displayed in the plugin's tab, to remind you that the monitor source was changed. To return to monitoring FFRend's output, choose <span class="cmd">Plugin/Monitor</span> again. You can also control the monitor source via the Plugin or Patch Bay context menus, or the Monitor bar's context menu.
+
+<a name="Bypass_and_solo"><h2>Bypass and solo</h2></a>
+
+<p>A plugin can be temporarily <em>bypassed</em>, i.e. disabled so that it has no effect on the output. The bypass state is a toggle: to disable or reenable the selected plugin, use <span class="cmd">Plugin/Bypass</span>, or choose <span class="cmd">Bypass</span> from the plugin context menu.
+
+<p>It's also possible to <span class="cmd">solo</span> a plugin, i.e. bypass all plugins except the selected plugin. This can be useful for isolating problems. Solo is also a toggle: to enter solo mode, use <span class="cmd">Plugin/Solo</span>, or choose <span class="cmd">Solo</span> from the plugin context menu. Choose solo a second time to exit solo mode; this restores the bypass settings that were in effect when solo mode was entered.
+
+<p>Note that Bypass works in solo mode; this allows you to solo a plugin, and then add the other plugins back into the chain one at a time, by un-bypassing them.
+
+<p>Also note that in version 2, bypass/solo doesn't change the routing, therefore it's possible to get unexpected results.
+
+<a name="Patch_Bay"><h2>Patch Bay</h2></a>
+
+<p>As of version 1.3, FFRend supports multi-input plugins. FFRend's default signal flow (linear from left to right) is adequate for single-input plugins, but for multi-input plugins, it's necessary to create explicit connections. This is typically done using the Patch Bay control bar. To show or hide the patch bay, use <span class="cmd">View/Patch Bay</span> or <span class="key">Shift+P</span>.
+
+<p>The patch bay includes a panel for each plugin, and each panel contains one or more source drop-lists, depending on how many inputs the plugin has. The drop-list begins with a default option, followed by a list of the plugins in your project, each of which is a potential input source. A check appears next to the currently connected source. To connect the input to a source, select the source in the drop-list. To break the connection and restore the default signal flow, select &lt;default&gt;.
+
+<p>Connections can also be made using the <span class="cmd">Plugin/Input</span> popup menus, or the plugin context menu (displayed when you right-click on a plugin tab), but the patch bay is more convenient, mainly because it allows you to see all of your connections at once. The patch bay also lets you quickly change the order of the plugins, by dragging them within the patch bay. Each patch bay row also has an Enable checkbox; unchecking it <a href="#Bypass_and_solo">bypasses</a> the corresponding plugin.
+
+<p>The overall layout of connections between plugins is known as the <em>routing</em>. Routing doesn't have to be entirely explicit: it's fine to have a mix of explicit and default routing. Default routing requires less setup, and can be changed by simply reordering the plugins. One strategy is to only use explicit routing when necessary. Note that if you replace a plugin with a different one via <span class="cmd">Plugin/Load</span>, FFRend preserves the existing routing as much as possible; this allows you to audition plugins without having to redo your connections.
+
+<p>It's possible to connect a plugin to itself, resulting in feedback. As with analog feedback, the output may saturate to white or black, or converge on a steady state, or may not get started without a seed, e.g. a video clip. <a href="#Automating_parameters">Automating</a> some of the effect parameters may help prevent a steady state from developing. More complex feedback can be generated by using longer signal loops involving more effects, and by using a mixer plugin to adjust the amount of feedback. For example, in the following setup, the signal flows from Chromium to Mixer, and then from Mixer to PanSpinZoom and back into Mixer; the more Mixer favors input B, the greater the amount of feedback.
+
+<p>Note that in version 2, certain feedback cases can cause the engine to stall. These cases are esoteric and generally involve multiple feedback routes to the same plugin.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><th>Plugin</th><th>Input</th><th>Source</th><th>Comments</th></tr>
+<tr><td>Chromium</td><td>&nbsp;</td><td>&lt;default&gt;</td><td>video clip or whatever</td></tr>
+<tr><td>PanSpinZoom</td><td>&nbsp;</td><td>Mixer</td><td>feedback loop</td></tr>
+<tr><td rowspan=2>Mixer</td><td>A</td><td>Chromium</td><td>routed over PanSpinZoom</tr>
+<tr><td>B</td><td>PanSpinZoom</td><td>more B = more feedback</td></tr>
+</table>
+
+<a name="Obtaining_plugins"><h2>Obtaining plugins</h2></a>
+
+<p>Freeframe plugins are available from various sources on the net, including the Freeframe web site, <a href="http://freeframe.sourceforge.net/">http://freeframe.sourceforge.net/</a>. Paradoxically, not all Freeframe plugins are free, but some of the best ones are. The author recommends the following freeware plugins:
+
+<dl>
+<dt>Pete Warden's plugins
+<dd>Pete's excellent package includes nearly fifty high-quality effects, including kaleidoscope, tile, fish eye, many color effects, and a variety of blurs. See <a href="http://www.petewarden.com/">http://www.petewarden.com/</a>. Note that four of Pete's effects (Mixer, RadialBlur, SpiralBlur and TimeBlur) have a buffer overrun bug; FFRend detects these buggy plugins and refuses to load them. Unofficial patched versions are available at <a href="http://ffrend.sourceforge.net/download.html">http://ffrend.sourceforge.net/download.html</a>.
+<dt>WhorldFF
+<dd>Whorld Freeframe is a source plugin version of the author's Whorld geometric visualizer. For general information about Whorld, see <a href="http://whorld.org">http://whorld.org</a>. Note that unlike most plugins, WhorldFF depends on external patch files, which must reside in a specific location on your hard drive; for details, see <a href="http://whorld.org/WhorldFFReadMe.html"> http://whorld.org/WhorldFFReadMe.html</a>.
+<dt>Chris Korda's plugins
+<dd>This package includes a clip player, a boolean mixer, and a wave generator; to read more about these plugins and download them, see <a href="http://ffrend.sourceforge.net/download.html">http://ffrend.sourceforge.net/download.html</a>.
+<dt>Big Fug's plugins
+<dd>An interesting collection of plugins from Alex May, featuring chroma and luma keying effects, Sobel, MotionMatte, Thermal, etc. See <a href="http://www.frame-runner.com/about/index.php">http://www.frame-runner.com/about/index.php</a>.
+<dt>Resolume
+<dd>Resolume's VJ software isn't free, but you can download a trial version which includes their Freeframe plugins. They have delays, luma effects, and some useful source plugins, e.g. color gradients, shape generators, etc. See <a href="http://www.resolume.com/"> http://www.resolume.com/<a>. Note that a few of these plugins don't work with FFRend.
+</dl>
+
+
+<h1>Parameters</h1>
+
+<a name="Parameters"><h2>Parameters</h2></a>
+
+<p>A Freeframe <a href="#Plugin_chains">plugin</a> can have any number of adjustable settings which affect its behavior; these settings are called <em>parameters</em>. Freeframe parameters are normalized, i.e. they have a fixed range (from 0 to 1). When a plugin is <a href="#Loading_plugins">loaded</a>, FFRend determines what parameters it has, and then automatically creates an appropriate user interface for displaying, <a href="#Editing_parameters">editing</a> or <a href="#Automating_parameters">automating</a> them.
+
+<a name="Editing_parameters"><h2>Editing parameters</h2></a>
+
+<p>FFRend can display the parameters of only one plugin at a time, referred to as the <a href="#Plugin_slots">selected plugin</a>. Only the selected plugin's parameters can be edited; to edit the parameters of a different plugin, you must select it first, by left-clicking its tab.
+
+<p>For each of the selected plugin's parameters, FFRend displays a row in its main window. Each parameter row includes the following columns:
+
+<dl>
+<dt>Parameter
+<dd>This is the name of the parameter, supplied by the plugin itself.
+<dt>Slider
+<dd>This slider represents the parameter's current value. Moving the slider changes the parameter. The parameter can also be edited numerically, using the edit box to the right of the slider; see below. Note that the slider is also used to display and edit the parameter's <a href="#Modulation_ranges">modulation range</a>.
+<dt>Value
+<dd>This edit box also contains the parameter's current value. It allows the parameter to be edited numerically. The parameter can also be changed via the slider; see above.
+</dl>
+
+<p>The remaining columns are used for <a href="#Automating_parameters">automating parameters</a>. Note that a plugin may not have any parameters, in which case no parameter rows will be displayed when that plugin is selected.
+
+<a name="Automating_parameters"><h2>Automating parameters</h2></a>
+
+<p>FFRend provides a way of making a <a href="#Parameters">parameter</a> change by itself. This is referred to as <em>automating</em> the parameter. While a parameter is being automated, its slider and value are updated continuously, so that you can watch the parameter change.
+
+<p>An automated parameter is controlled by a low-frequency oscillator (LFO), using a technique known as <em>modulation</em>. Since each parameter has its own oscillator, multiple parameters can be modulated at once, each in a different way. An oscillator generates an endlessly repeating pattern, determined by its waveform, amplitude, and frequency. The waveform and frequency are specified as explained below. The amplitude defaults to the maximum range of the parameter (0 to 1), but it can also be limited, using a <a href="#Modulation_ranges">modulation range</a>.
+
+<dl>
+<dt>Enable
+<dd>This checkbox enables or disables modulation. Note that for modulation to actually occur, the frequency must also be non-zero; see below. The Enable checkbox allows you to temporarily stop an automation without losing your frequency setting. This is useful for manual overrides.
+<dt>Waveform
+<dd>This drop-list allows you to select an <a href="#Oscillator_waveforms">oscillator waveform</a>, which determines the shape of the modulation. The available waveforms include Triangle, Sine, Ramp Up, Ramp Down, Square, Pulse, Random, and Random Ramp.
+<dt>Frequency
+<dd>This edit control allows you to set the modulation frequency, in Hertz. If the frequency is zero, no modulation occurs. The upper limit is determined by the Nyquist theorem, and depends on the <a href="#Frame_rate">frame rate</a>. Put simply, frequencies greater than half the frame rate won't work, and as the frequency approaches half the frame rate, the modulation becomes less accurate. Note that modulation frequency is affected by the <a href="#Master_speed">master speed</a> control.
+<dt>Pulse Width
+<dd>If the Pulse waveform is selected, this edit control allows you to set the pulse width; otherwise it has no effect. A pulse wave resembles a square wave, except that a square wave has a fixed 50/50 ratio of low to high, whereas a pulse wave has a variable low/high ratio, referred to as its <em>pulse width</em> or <em>duty cycle</em>. Pulse width ranges from 0 (all low) to 1 (all high); if it's 0.5, the pulse wave is identical to a square wave.
+</dl>
+
+<p>An automation can be resynchronized by left-clicking in the parameter's slider track. The slider thumb jumps to the cursor position, and automation continues from that point, though not necessarily in the same direction. To synchronize all of your automations at once, use <span class="cmd">Edit/Sync Oscillators</span>.
+
+<a name="Oscillator_waveforms"><h2>Oscillator waveforms</h2></a>
+
+<p><img src="../images/Waveforms.gif">
+
+<a name="Modulation_ranges"><h2>Modulation ranges</h2></a>
+
+<p>A Freeframe <a href="#Parameters">parameter</a> ranges from 0 to 1, and when a parameter is <a href="#Automating_parameters">automated</a>, its value normally traverses this entire range. Sometimes it's desirable to limit the value to a smaller range, called a <em>modulation range</em>. The range determines the <em>amplitude</em> of the modulation.
+
+<p>A parameter's slider has an unusually wide, open track, which is used to display the modulation range. The range is represented by a dark blue rectangle located within the slider track. During automation, the slider thumb (the part that moves) is confined to this rectangle.
+
+<p>A modulation range can be created in various ways. One method uses the slider's current position to set the range. Move the slider thumb to where the range should start, and choose <span class="cmd">Edit/Modulation Range/Set Start</span>, or press <span class="key">Ctrl+Home</span>. Now move the slider thumb to where the range should end, and choose <span class="cmd">Edit/Modulation Range/Set End</span>, or press <span class="key">Ctrl+End</span>. To remove an existing range, choose <span class="cmd">Edit/Modulation Range/Remove</span>.
+
+<p>It's also possible to create or edit a modulation range numerically, using a dialog. To show the dialog, use <span class="cmd">Edit/Modulation Range/Edit</span>. The dialog displays the current range, and allows you to edit it. To remove an existing range, set either the start or the end to &minus;1.
+
+<p>The commands described above are also accessible via context menu. Note that to display the context menu, you must right-click on the parameter's name, NOT on its slider; right-clicking on the slider is reserved for additional shortcuts, which are explained below.
+
+<p>Shortcuts for creating a new range:
+
+<ul>
+<li>To draw a new range, right-click in the slider track, at the point where the range should start, and drag the cursor horizontally, while keeping the right mouse button pressed. When the range has the desired length, release the right mouse button.
+<li>If you right-click in the slider track without dragging, a range is drawn between the slider's current position and wherever you clicked.
+</ul>
+
+<p>Shortcuts for editing an existing range:
+
+<ul>
+<li>To extend or trim an existing range, right-click near either end of it.
+<li>To remove a range, right-click within the slider, but outside the slider's track.
+<li>You can also drag an existing range: with the Ctrl key held down, right-click the range, and move the cursor horizontally, while keeping the right button and Ctrl held down. The cursor changes to a double-headed arrow to indicate the "drag range" state.
+</ul>
+
+
+<h1>Projects</h1>
+
+<a name="Projects"><h2>Projects</h2></a>
+
+<p>The entire <a href="#Plugin_chains">plugin chain</a>, including all plugin <a href="#Parameters">parameters</a> and their <a href="#Automating_parameters">automations</a>, can be saved in a single document, called a <em>project</em>. To save your work as a project, use <span class="cmd">File/Save</span> or <span class="cmd">File/Save As</span>. To open an existing project, use <span class="cmd">File/Open</span>. To start a new project, use <span class="cmd">File/New</span>.
+
+<p>A project doesn't actually contain plugins; instead it contains <em>links</em> to plugins. Consequently, if plugins are moved or renamed, broken links can occur; see <a href="#Missing_Files">missing files</a>. The project also includes a link to the <a href="#Input_video">input video</a> if applicable. In general all settings are stored in the project, except for those found in the options dialog, which are stored in the registry.
+
+<a name="Master_speed"><h2>Master speed</h2></a>
+
+<p>The Master toolbar allows you to affect the speed of all your <a href="#Automating_parameters">automations</a> at once. The toolbar contains a scaling percentage that's applied to your oscillator frequencies. If the scaling percentage is 100 (the default), the automations are unaffected; at 200 they're double speed, and at 50 they're half speed. To display or hide the toolbar, use <span class="cmd">View/Master</span> or <span class="key">Shift+M</span>. To change the master speed, set the desired percentage, via either the slider or the edit box.
+
+<p>If the CPU is <a href="#Performance">overloaded</a> while you're developing a <a href="#Projects">project</a>, the actual <a href="#Frame_rate">frame rate</a> may be less than the ideal, which means your automations may seem slower than they actually are. You might not discover this problem until you <a href="#Recording">record</a> the project and watch the output video. If this situation occurs, you can use master speed to slow down your automations proportionally, instead of editing them one by one.
+
+<a name="File_Browser"><h2>File Browser</h2></a>
+
+<p>The File Browser control bar allows you to navigate your files without using the File Open dialog or Windows Explorer. To show or hide the file browser, use <span class="cmd">View/File Browser</span> or <span class="key">Shift+F</span>. The browser has separate tabs for your Projects, Plugins and Clips, and remembers the current folder and view settings for each tab. To open a file, double-click its name, or select its name and press Enter, or drag the name onto the main window. The Plugins tab allows multiple selections, but the other two don't.
+
+<p>Note that if you drag plugins onto the <a href="#Plugin_slots">plugin tabs</a>, or onto the <a href="#Patch_Bay">patch bay</a>, they're inserted into the plugin chain at the drop point, i.e. it matters which plugin tab or patch bay row the cursor is over when you release the left mouse button. If you drag plugins elsewhere within the main window, they're inserted at the selected plugin.
+
+<p>The file browser supports five views: Icons, Small Icons, List, Details, and Thumbnails. To change the view, use the browser's context menu, which is displayed when you right-click anywhere within the browser <em>except</em> on a file name. Right-clicking on a file name brings up the file's context menu instead.
+
+<p>Which view you should use depends on how you dock the browser to the main window. In the default layout, it's docked vertically on the right, but if you prefer to dock the browser horizontally along the bottom, the List view lets you see more files at once. In the Details view, you can sort the files in various ways, using the Explorer-style clickable column headers. In the other views, use the context menu's Arrange option to sort the files. The Details view also supports resizing and reordering the columns.
+
+<p>The Thumbnails view is useful for selecting clips visually. Note that video clips will have thumbnails under XP but not under W2K. Thumbnails are created on demand whenever you browse a folder in Thumbnails view. By default, thumbnails are cached on disk, so they only need to be created once, though you can disable this feature via the Options dialog. Creating thumbnails can be CPU-intensive, so if you're performing live, create your thumbnails beforehand if possible.
+
+<p>FFRend's docking behavior is typical for Windows applications. If the bar is docked, double-clicking on its gripper (the two parallel lines) floats it. If the bar is floating, double-clicking on its caption docks it again. Bars can be resized while docked or floating. To move a bar to a new docking position, drag it by its gripper. To move a floating bar and <em>prevent</em> it from docking, drag it by its gripper while holding down the <span class="key">Ctrl</span> key.
+
+<a name="Missing_Files"><h2>Missing Files</h2></a>
+
+<p>A <a href="#Projects">project</a> contains <em>links</em> to plugins. If a project's plugins are moved or renamed, broken links can occur. Broken links must be repaired before the project can be opened. If you try to open a project with broken links, FFRend displays the Missing Files dialog, which gives you the following options:
+
+<dl>
+
+<dt>Search & Proceed
+<dd>Searches ALL folders of ALL hard disks for the missing plugins. This could take a long time, so only use this option when you have no idea where the missing plugins are. If you know where they are, even approximately, it's much faster to use the "Open Dialog" option instead. When the search is complete, the project is opened. Plugins that aren't found are removed from the project; see the warning below.
+
+<dt>Proceed
+<dd>Opens the project immediately, regardless of broken links. The missing plugins are removed from the project; see the warning below.
+
+<dt>Open Dialog
+<dd>Displays the <a href="#Replace_Files">Replace Files</a> dialog, which lists the names of the missing plugins, and allows you to browse for them individually, or search for them in specific folders. If you want more control over the repair process, or if you know where the missing plugins are, even approximately, use this option instead of "Search & Proceed".
+
+<dt>Cancel
+<dd>Cancels opening the project.
+
+</dl>
+
+<p>Warning: In all of the above cases except "Cancel", it's possible to open the project with plugins still missing. If you save the project in this situation, the missing plugins are <em>permanently deleted</em> from the project. To avoid doing this accidentally, save the project under a new name (using <span class="cmd">File/Save As</span>) before proceeding.
+
+<a name="Replace_Files"><h2>Replace Files</h2></a>
+
+<p>If "Open Dialog" is selected in the <a href="#Missing_Files">Missing Files</a> dialog, the Replace Files dialog is displayed. It lists the name and current status of each missing plugin, and gives you the following options:
+
+<dl>
+
+<dt>Browse
+<dd>Allows broken links to be repaired individually. This is useful if a plugin has been renamed rather than moved. To repair a link, select it in the list (left-click its name), and press Browse. A file dialog is displayed. Locate the plugin, select it, and press Open. The link's status is updated from "Missing" to "Replaced".
+
+<dt>Search Folder
+<dd>Allows you to search for missing plugins in a specific folder. The search is recursive, i.e. subfolders of the specified folder are also searched. Use this option when you know where the missing plugins are, even approximately. When you press the button, a folder dialog is displayed; select a folder, and press "OK" to begin searching. As links are repaired, their status changes from "Missing" to "Replaced". The search can be repeated in different folders, until all the missing plugins have been found.
+
+<dt>Search All
+<dd>Searches for missing plugins in ALL folders of ALL hard disks. This can take a long time, so you should only do this if you have no idea where the missing plugins are.
+
+<dt>OK
+<dd>Ends the dialog and opens the project. Plugins that are still missing are removed from the project; see the warning below.
+
+<dt>Cancel
+<dd>Ends the dialog and cancels opening the project.
+
+</dl>
+
+<p>Warning: If plugins are still missing when you press "OK", they are removed from the project. If you save the project in this situation, the missing plugins are <em>permanently deleted</em> from the project. To avoid doing this accidentally, save the project under a new name (using <span class="cmd">File/Save As</span>) before proceeding.
+
+
+<h1>Recording</h1>
+
+<a name="Recording"><h2>Recording</h2></a>
+
+<p>FFRend can record the output of your <a href="#Plugin_chains">plugin chain</a> to an AVI file. The AVI can be compressed or uncompressed. If it's uncompressed, there's no 2 GB limit; the AVI is limited is only by available disk space.
+
+<p>To create a recording, choose <span class="cmd">View/Record</span> or press <span class="key">Ctrl+R</span>. A file dialog is displayed; select a folder and filename for your recording, and press OK to continue. Next, the <a href="#Record_dialog">Record dialog</a> is displayed. This allows you to specify the recording's length, frame size, and frame rate. Again, press OK to continue. Finally, the Video Compression dialog is displayed. This allows you to select and configure a video compressor. Press OK to begin recording.
+
+<p>You may find it convenient to start a recording while <a href="#Pause">paused</a>, to avoid missing the first few frames of your project. If you're trying to make an exact duplicate of a previous recording, and your project makes any use of randomness, you may also want to restart FFRend before each recording, so that the <a href="#Random_seed">random seed</a> is always freshly initialized.
+
+<p>Note that you have the option to defer the recording, instead of starting it immediately. To do this, check the Record dialog's "Don't run this job now; add it to job control instead" checkbox. You can queue any number of jobs, and then run them all at once; see <a href="#Job_Control">Job Control</a>.
+
+<a name="Record_dialog"><h2>Record dialog</h2></a>
+
+<dl>
+<dt>Input frame size and frame rate
+<dd>These read-only fields display the <a href="#Frame_size">frame size</a> and <a href="#Frame_rate">frame rate</a> of the current plugin chain. The recording can have a different frame size or frame rate; see below.
+<dt>Output frame size
+<dd>This allows you to set the frame size of the recording. If the output frame size differs from the input frame size, the output frames are resized as needed. To use the input frame size, check "Use input frame size." Otherwise, select a standard frame size from the Frame Size drop-list, or for other frame sizes, select "Custom" and enter the width and height in pixels.
+<dt>Output frame rate
+<dd>This allows you to set the frame rate of the recording. To use the input frame rate, check "Use input frame rate." Otherwise, enter a frame rate, in frames per second.
+<dt>Output color depth
+<dd>This drop list allows you to select the color depth of the recording, in bits per pixel. The default is 24-bit (True Color).
+<dt>Duration
+<dd>This allows you to specify the length of the recording, using one of the following options:
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr>
+<td>Custom</td><td>Lets you enter the desired length in the edit box. The Time/Frames radio buttons determine the input format. If Time is selected, enter a time in hh:mm:ss format; if Frames is selected, enter a frame count.</td>
+</tr><tr>
+<td>Unlimited</td><td>Records indefinitely, i.e. until you stop the recording manually.</td>
+</tr><tr>
+<td>Use AVI length</td><td>Sets the duration to the exact length of the <a href="#Input_video">input AVI file</a>, and also automatically rewinds the AVI file at the start of the recording. Note that you must have an AVI file open, otherwise this option is disabled.</td>
+</tr>
+</table>
+
+<p><dt>Don't run this job now; add it to job control instead
+<dd>Check this option if you want to defer the recording instead of starting it immediately. To manage deferred recordings, use the <a href="#Job_Control">Job Control</a> dialog.
+
+</dl>
+
+<a name="Job_Control"><h2>Job Control</h2></a>
+
+<p>When you set up a <a href="#Recording">recording</a>, you can choose to <em>defer</em> it instead of starting it immediately. Deferred recordings are called <em>jobs</em>, and they're stored in a <em>job queue</em>. You can queue any number of jobs, and run them all at once while you're doing something else. This is known as <em>batch processing</em>.
+
+<p>The job queue is managed via the Job Control dialog; to show the dialog, use <span class="cmd">File/Job Control</span>, or press <span class="key">F4</span>. The dialog's layout should look very familiar to users of VirtualDub. The dialog contains a list, each row of which corresponds to a queued job. The columns are described below.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr>
+<td>Name</td><td colspan=2>The job name.</td>
+</tr><tr>
+<td>Source</td><td colspan=2>The source file, i.e. the name of the project from which the job was created.</td>
+</tr><tr>
+<td>Dest</td><td colspan=2>The destination file, i.e. the name of the output video file.</td>
+</tr><tr>
+<td>Start</td><td colspan=2>When the job started.
+</tr><tr>
+<td>End</td><td colspan=2>When the job ended.</td>
+</tr><tr>
+<td rowspan=6>Status</td>
+<td>Waiting</td><td>The job is ready to run.</td>
+</tr><tr>
+<td>Postponed</td><td>The job is not ready to run.</td>
+</tr><tr>
+<td>In Progress</td><td>The job is currently running.</td>
+</tr><tr>
+<td>Aborted</td><td>The job was canceled by the user.</td>
+</tr><tr>
+<td>Failed</td><td>The job stopped due to an error.</td>
+</tr><tr>
+<td>Done</td><td>The job completed successfully.</td>
+</tr></table>
+
+<p>To start batch processing, press the Start button. To cancel processing, press the Abort button. To cancel the current job, but continue processing, press the Skip button. Jobs are processed in the order in which they appear in the queue, and only jobs with a status of Waiting are processed.
+
+<p><b>Editing the queue</b>
+
+<p>The job queue can be edited at any time, even during processing. The only restriction is that you can't delete or change the status of a job while it's in progress. The editing commands are as follows:
+
+<dl>
+
+<dt>To move a job
+<dd>Simply drag the job to the desired position, or select the job and use the Move Up/Down buttons.
+
+<dt>To delete a job
+<dd>Select the job and press the Delete button, or right-click the job and choose <span class="cmd">Delete</span> from the context menu.
+
+<dt>To prevent a job from running
+<dd>Select the job, and press the Postpone button, or right-click the job and choose <span class="cmd">Postpone</span> from the context menu. The status is changed to Postponed, unless it already was Postponed, in which case it's changed to Waiting.
+
+<dt>To make a job ready to run
+<dd>Double-click the job. The status is changed to Waiting, unless it already was Waiting, in which case it's changed to Postponed. If the status was Failed, the error message is displayed, and the error is then cleared. To view the error <em>without</em> clearing it, right-click the job and choose <span class="cmd">View Error</span> from the context menu.
+
+</dl>
+
+<p>To change the status of multiple jobs at once, use these commands from the Job Control dialog's <span class="cmd">Edit</span> menu:
+
+<dl>
+<dt>All Waiting =&gt; Postponed
+<dd>Postpones all jobs with Waiting status
+<dt>All Postponed =&gt; Waiting
+<dd>Makes all postponed jobs ready to run
+<dt>All Done =&gt; Waiting
+<dd>Makes all completed jobs ready to run again
+<dt>All Failed =&gt; Postponed
+<dd>Makes all failed jobs ready to run again
+</dl>
+
+<p>To delete all completed jobs, Use <span class="cmd">Edit/Delete done jobs</span>. To delete ALL jobs, use <span class="cmd">Edit/Clear list</span>. The job queue can be saved to a file, or restored from a previously saved file, via <span class="cmd">File/Save job list</span> and <span class="cmd">File/Load job list</span>. To shutdown your computer after all jobs are completed, select <span class="cmd">Options/Shutdown when finished</span>.
+
+<p><b>Job independence</b>
+
+<p>Once a job is queued, it's completely independent of the <a href="#Projects">project</a> from which it was created. This is possible because the queued job contains a <em>copy</em> of the project data. Any subsequent changes made to the project file have <em>no effect</em> on the queued job. The project file can even be renamed or deleted. Note however that the job still depends on the project's <a href="#Plugin_chains">plugins</a> and <a href="#Input_video">input video</a>. Be careful not to rename or delete plugins or clips referenced by a queued job, otherwise the job will fail.
+
+<p>A queued job also contains a snapshot of all application settings that could affect the job's behavior, including those found in the Options dialog and <a href="#Record_dialog">Record dialog</a>. A job runs with the settings that were in effect when the job was queued, NOT the current settings. For example, if the engine <a href="#Frame_size">frame size</a> was 640 x 480 when a job was queued, that job <em>always</em> runs at 640 x 480, regardless of the current frame size.
+
+<a name="Exporting_bitmaps"><h2>Exporting bitmaps</h2></a>
+
+<p>Any frame of FFRend's output can be exported as a bitmap file. The bitmap's size will match the current engine <a href="#Frame_size">frame size</a>. Only 24-bit color is supported. To export a bitmap, choose <span class="cmd">File/Export</span> or press <span class="key">Ctrl+E</span>, select a folder and filename for the bitmap, and press OK.
+
+<a name="Export_list"><h2>Export list</h2></a>
+
+<p>Sometimes you'll make a low-resolution <a href="#Recording">recording</a>, and then discover that certain frames would make nice still images, if only they had higher resolution. Why not just re-record the entire <a href="#Projects">project</a> at higher resolution? Because this might require a very large amount of disk space, especially since for making still images, you would prefer to use uncompressed video.
+
+<p>Instead of re-recording the entire project, you can export a list of specific frames. To do this, you must first create a </em>frame list</em>. This is simply a text file, containing the frame numbers of the still images you're interested in, as integers, one per line. Now set the desired <a href="#Frame_size">resolution</a>, enter <a href="#Pause">pause</a> mode, reload your project, and choose <span class="cmd">File/Export List</span>. A file dialog is displayed; select your frame list, and press OK. FFRend regenerates the project, saving the specified frames as bitmaps, and throwing the rest away.
+
+<p>Note that certain plugins may not behave exactly the same way at different resolutions; you may need to compensate their parameters. Also note that if your project uses randomness, you may not be able to repeat the exact same sequence of frames unless you restart FFRend each time you load your project; see also <a href="#Random_seed">random seed</a>.
+
+<a name="Pause"><h2>Pause</h2></a>
+
+<p>FFRend's processing can be paused at any time, using <span class="cmd">Window/Pause</span>, or by pressing the <span class="key">Space</span> bar. To resume processing, use <span class="cmd">Window/Pause</span> or the <span class="key">Space</span> bar again. While in pause mode, you can step forward frame by frame, via <span class="cmd">Window/Step</span>, or <span class="key">Shift+Space</span>.
+
+
+<h1>MIDI</h1>
+
+<a name="MIDI_setup"><h2>MIDI setup</h2></a>
+
+<p>Before you can control FFRend with MIDI, you must first select a <a href="#MIDI_device">MIDI device</a>. Then you must <em>assign</em> MIDI messages to the things you want to control, using the MIDI Setup dialog. To show or hide the dialog, use <span class="cmd">View/MIDI Setup</span> or <span class="key">Shift+I</span>. MIDI assignments can be created via <a href="#MIDI_editing">editing</a>, or <a href="#Learn_mode">learned</a>.
+
+<p>Things to which MIDI can be assigned are called <em>targets</em>. The most common MIDI targets are plugin <a href="#Parameters">parameters</a>, or <a href="#Automating_parameters">oscillator</a> settings, such as modulation frequency. The list of available targets varies, depending on which plugins are <a href="#Loading_plugins">loaded</a>.
+
+<p>The MIDI Setup dialog contains tabbed pages of rows, much like the main window. There's a page for each plugin, and its rows correspond to the plugin's parameters. Each row lets you assign MIDI to a parameter's <em>properties</em>, which include the parameter itself, and its oscillator settings. Use the drop-list in the upper left corner of the dialog to select which property you're assigning to. If you just want to control parameters, not their oscillators, leave the drop-list set to "Parameter".
+
+<p>Put another way, the parameter pages form a three-dimensional matrix of MIDI targets, in which the axes are plugins, parameters, and properties. The pages correspond to plugins, the rows correspond to parameters, and the drop-list selects a property.
+
+<p>The dialog also includes three additional pages: the Plugin page, the Misc page, and the Metaparam page. The Plugin page is for properties that occur once per plugin, e.g. <a href="#Bypass_and_solo">Bypass</a>; the page contains a row for each plugin. The Misc page is for system-wide properties, e.g. <a href="#Master_speed">Master Speed</a>. The Metaparam page lets you assign MIDI to <a href="#Metaparameters">metaparameters</a>.
+
+<a name="MIDI_editing"><h2>MIDI editing</h2></a>
+
+<p>MIDI assignments can be created and edited using the controls in each row of the <a href="#MIDI_setup">MIDI setup</a> dialog. The controls are described below. To make assignments this way, you must know which messages your device sends, and on which channels. MIDI assignments can also be <a href="#Learn_mode">learned</a>, in which case you don't need to know these details.
+
+<p>Note that a given MIDI message can only be assigned to one target at a time, though you can work around this restriction by using <a href="#Metaparameter_groups">metaparameter groups</a>. When you assign a message, if that message is already assigned to a different target, the previous target automatically (and silently) "loses" the message. Specifically, the previous target has its Event type set to "OFF".
+
+<dl>
+
+<dt>Range
+<dd>This determines how much effect a MIDI message has on its target. The message is interpreted as an unsigned value, and <em>normalized</em>, so that it ranges from 0 to 1. The normalized value is multiplied by Range, and the result is the target's new value. The default range is 1.
+
+<p>Range lets you make a trade-off between the <em>precision</em> and <em>magnitude</em> of a MIDI controller: making Range smaller allows finer adjustment, but reduces the controller's effect. Range can be negative, in which case the controller's effect is inverted.
+
+<p><dt>Event
+<dd>This is the type of MIDI message assigned to the target. The possible values are as follows:
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><td>OFF</td><td>No message is assigned to the target.</td></tr>
+<tr><td>CTRL</td><td>A continuous controller message is assigned to the target; the controller edit box specifies the controller number.</td></tr>
+<tr><td>NOTE</td><td>A note is assigned to the target. In this case the controller edit box displays and understands MIDI note numbers, e.g. F#4. Pressing the note <em>toggles</em> the target, i.e. flips it back and forth between 0 and 1. Releasing the note has no effect. Notes are useful for controlling switches.
+<tr><td>PITCH</td><td>The pitch bend message is assigned to the target. In this case the controller edit box is ignored.</td></tr>
+</table>
+
+<p><dt>Channel
+<dd>This is the channel on which the target's MIDI message is expected to arrive, ranging from 1 to 16.
+
+<dt>Controller
+<dd>For controller messages, this is the controller number, from 0 to 127; be aware that controllers above 120 are normally reserved for channel mode messages. For note messages, this is the note number, from C0 to G10. For pitch bend messages, this value is ignored.
+
+<dt>Value
+<dd>This is the actual data byte from the target's most recently received message, which can be helpful when debugging MIDI problems. It's displayed as a read-only value from 0 to 127.
+
+</dl>
+
+<a name="Learn_mode"><h2>Learn mode</h2></a>
+
+<p>Assigning MIDI messages via <a href="#MIDI_editing">editing</a> requires you to know which messages your device sends, and on which channels. FFRend can also "learn" the MIDI assignments, in which case you don't need to worry about those details. To use "learn" mode, do the following:
+
+<ol>
+<li>Check the "Learn" box at the top of the <a href="#MIDI_setup">MIDI Setup</a> dialog.
+<li>Select the target you want to control, by left-clicking its row. It's easiest to click on the row's name, but anywhere within the row will do. The row changes color, to green; this helps you keep track of which target is being learned.
+<li>On your MIDI device, twiddle the controller that you want to assign to that target. To assign a note to the target, press and release the note. The target's event, channel, and controller/note number should "snap" to the correct value. Be careful not to accidentally touch controllers or notes that you've already assigned to other targets, otherwise those assignments will have to be redone.
+<li>Repeat steps 2 and 3 for each target you want to control. To switch to a different page, left-click its tab. To change the property, use the drop-list in the upper-left corner of the dialog.
+<li>Uncheck the "Learn" box.
+</ol>
+
+<p>If you close the MIDI setup dialog with the "Learn" box checked, it will still be checked when you reopen the dialog, but no target will be selected. This helps prevent you from accidentally trashing your assignments.
+
+
+<h1>Options</h1>
+
+<a name="Frame_size"><h2>Frame size</h2></a>
+
+<p>This option allows you to specify the size of the video frame that's passed along your <a href="#Plugin_chains">plugin chain</a>. This size effectively determines the rendering <em>resolution</em>. Use the drop list to choose a standard frame size; for other sizes, choose "Custom", and then enter the desired width and height in pixels.
+
+<p>The engine frame size can differ from the <a href="#Input_video">input video</a> frame size, in which case the input video is resized to fit. Note that this may cause distortion, which you can avoid by matching the frame size to the input video whenever possible.
+
+<p>The engine frame size can also differ from the output window size, e.g. you could render at 320 x 240 but view the output at 1024 x 768. The output image is generated post-rendering, so the size of the output window doesn't affect rendering quality.
+
+<p>Changing the frame size reinitializes any currently loaded plugins. This may cause glitches in the output, so changing the frame size during a performance is not recommended.
+
+<p>As the resolution increases, more CPU time is required to render each frame. Large frame sizes may cause FFRend to <a href="#Performance">fall behind</a> and no longer be in real time. When you're recording a finished <a href="#Projects">project</a>, staying in real time usually isn't a concern. During development, however, staying in real time is preferable, because otherwise it's hard to judge the <a href="#Master_speed">speed</a> of your <a href="#Automating_parameters">automations</a>.
+
+<p>Consequently, it can make sense to develop your projects at a low resolution, and then record them at a higher resolution. One problem with this approach is that your plugins may not behave exactly the same way at different resolutions. For example a plugin could have a parameter that's specified in pixels. Such a parameter would have to be compensated for changes in frame size.
+
+<p>While FFRend doesn't impose any upper limit on frame size, unfortunately the same can't be said for Freeframe plugins. Many plugins behave unexpectedly above a certain frame size. The limits vary, and can only be determined by trial and error. Most plugins can handle at least 1024 x 768, but above that, expect surprises.
+
+<a name="Frame_rate"><h2>Frame rate</h2></a>
+
+<p>This option specifies the ideal rate at which video frames should be processed and displayed, in frames per second (FPS). The actual frame rate can differ from the ideal. Both the ideal and actual frame rates are displayed in the status bar.
+
+<p>The actual frame rate is an approximation, and may fluctuate slightly around the ideal, but if it's <em>consistently</em> wrong, FFRend is not in real time. Note that FFRend NEVER <a href="#Frame-dropping">drops frames</a>, no matter how incorrect the actual frame rate is. Frame rate errors can be divided into two types: timer-related, and load-related.
+
+<p>Timer-related errors are linked to the way timing is done in Windows, which makes some frame rates easier to approximate than others. Timer-related errors are identified by the fact that they occur even when the CPU is idle. They can often be reduced by using a <a href="#Multimedia_timer">multimedia timer</a>.
+
+<p>Load-related errors occur when the time required to process a frame exceeds the time available. The time available is a function of the frame rate, e.g. at 25 FPS, each frame must be processed in 1/25 of a second or less. If reducing the <a href="#Frame_size">frame size</a> or simplifying your <a href="#Plugin_chains">plugin chain</a> helps, the problem is load-related. For more information, see <a href="#Performance">performance</a>.
+
+<a name="Color_depth"><h2>Color depth</h2></a>
+
+<p>This is the color depth of FFRend's rendering engine, in bits per pixel. Only plugins that support the selected color depth can be loaded. For optimal results, the selected color depth should match the color depth of the display device. If it doesn't, FFRend warns you and gives you an opportunity to fix it. Ignoring this warning may cause the output window to show garbled data.
+
+<a name="Timeout"><h2>Timeout</h2></a>
+
+<p>This is how long FFRend's rendering engine will wait for a plugin to output a frame, in milliseconds. If a plugin takes longer than this, the engine stalls. If you're using a very high resolution, or running on a weak machine, you may need to increase the timeout to prevent the engine from stalling. A reasonable timeout for a given frame rate can be calculated as follows:
+
+<p>Timeout = 1000 / FrameRate &times; 2
+
+<p>The engine can also be stalled by certain types of routing, typically involving multiple feedback paths to the same plugin. In such cases, the timeout determines how long the engine will wait before stalling.
+
+<a name="Lock_frame_rate"><h2>Lock frame rate</h2></a>
+
+<p>Unchecking this option allows the engine to run as fast as it can, instead of being limited to the selected <a href="#Frame_rate">frame rate</a>. In <a href="#Full_screen">full screen</a> mode, the engine will render at the refresh rate of the display device, assuming the engine can keep up. In windowed mode, the engine can render even faster than the display refresh, and is limited only by CPU throughput.
+
+<p>In full-screen mode, rendering exactly one frame per vertical trace gives the smoothest appearance. This can't be achieved by simply setting the frame rate equal to the display frequency, because the engine's frame timer isn't synchronized with the vertical trace. However, unlocking the frame rate CAN achieve one frame per vertical trace, because in this case the engine synchronizes directly to the display hardware, instead of using a timer.
+
+<p>Unlocking the frame rate can potentially cause <a href="#Automating_parameters">automations</a> and video clips to speed up. If this is undesirable, you can compensate for it by adjusting the <a href="#Master_speed">master speed</a> and/or the playback speed of your clip player(s).
+
+<p>During <a href="#Recording">recording</a>, unlocking the frame rate allows FFRend to record faster than real time. This can potentially save a considerable amount of time. Note that the apparent speed-up of automations and video clips has no effect on the recorded output.
+
+<a name="Multimedia_timer"><h2>Multimedia timer</h2></a>
+
+<p>The standard Win32 timer provided by Windows is unable to accurately achieve many common frame rates. For example under XP, if the frame rate is set to 25 FPS, you'll actually get 21.33 FPS, which is a considerable difference. This may not matter if you're <a href="#Recording">recording</a> at high resolution, because you're probably not in real time anyway, due to CPU <a href="#Performance">overload</a>. It's more likely to be a problem when you're previewing your work at low resolution. You want a correct frame rate when you're previewing, because otherwise you won't get an accurate sense of how fast your <a href="#Automating_parameters">parameter automations</a> are.
+
+<p>To make the frame rate more accurate, check the "Use multimedia timer" option. Note that this is a trade-off, because a multimedia timer uses significantly more CPU time.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><th colspan=3>Achievable frame rates</th></tr>
+<tr><th>&nbsp;</th><th>Win32 timer</th><th>Multimedia timer</th></tr>
+<tr><th>2000</th><td>100, 50, 33.33, 25, 20, 16.67, etc.</td><td rowspan=2>100, 90.91, 83.33, 76.92, 71.43, 66.67, 62.5, 58.82, 55.56, 52.63, 50, 47.62, 45.45, 43.48, 41.67, 40, 38.46, 37.03, 35.71, 34.48, 33.33, 32.26, 31.25, 30.3, 29.41, 28.57, 27.78, 27.03, 26.32, 25.64, 25, 24.39, 23.80, etc.</td></tr>
+<tr><th>XP</th><td>64, 32, 21.33, 16, 12.8, etc.</td></tr>
+</table>
+
+<p>A frame rate is normally expressed as a <em>frequency</em>, i.e. 25 FPS is equivalent to 25 Hz. A Windows timer is specified via its <em>period</em>, which is the inverse of the frequency. A timer has a property called <em>granularity</em>, which you can think of as its coarseness. Only timer periods that happen to be multiples of the granularity are supported. Other timer periods are rounded to the nearest multiple of the granularity. This won't make much difference if the granularity is fine compared to the period you want: e.g. a granularity of 10 ms might be acceptable if you're trying to wait a minute, or an hour. Unfortunately the granularity of a Win32 timer is coarse compared to most common frame rates, and worse still, it varies by Windows version.
+
+<p>Under Windows 2000, the timer granularity is 10 ms. If you ask for 25 FPS, you're in luck, because the period is 1/25 = 0.04 or 40 ms, which just happens to be a multiple of the timer granularity. On the other hand, if you ask for 30 FPS, the period is 1/30 = 0.033 or 33 ms, which is definitely not a multiple of 10 ms. The period therefore gets rounded up to the nearest multiple of 10, i.e. 40 ms, so you still get 25 FPS, even though you asked for 30 FPS. Not good.
+
+<p>You might wonder why 33 was rounded up, instead of down, since 33 is closer to 30 than 40. It turns out that timer periods are always rounded up in Windows 2000, whereas in XP they're rounded up or down, depending on which granularity is nearest.
+
+<p>Under XP, the timer granularity is 15.625 ms. If you ask for 25 FPS, the period (40 ms) gets rounded up to the nearest multiple of 15.625 ms, i.e. 46.875 ms (15.625 * 3), giving you a frame rate of 1/.046875 = 21.33 FPS. If you ask for 30 FPS, the period (33 ms) gets rounded down to 31.25 ms (15.625 * 2), giving you a frame rate of 1/.03125 = 32 FPS, which still isn't too helpful.
+
+<p>In summary, with a Win32 timer, 30 FPS is not achievable under Windows 2000, and neither 25 nor 30 FPS are achievable under XP. In contrast, a multimedia timer has one millisecond granularity under both 2000 and XP, which allows reasonable approximations of most common frame rates, though at the cost of increased overhead.
+
+<a name="MIDI_device"><h2>MIDI device</h2></a>
+
+<p>This option allows you to select a MIDI device. The list of devices varies, depending on what MIDI hardware is installed. If your PC doesn't have a MIDI device, the only option is "No MIDI input", which disables FFRend's MIDI support.
+
+<p>The default value is "No MIDI input", which means that in order to use MIDI, you must select a MIDI device at least once. You'll also need to assign specific MIDI messages to FFRend's functions, using the <a href="#MIDI_setup">MIDI Setup</a> dialog.
+
+<p>If you're using a USB MIDI interface, it's better to connect it to the PC <em>before</em> launching FFRend. If you launch FFRend while the interface is disconnected, your device selection will be lost. If you connect the interface while FFRend is running, it won't automatically appear in the device list; you must press the Refresh button to refresh the device list. If that doesn't work, exit FFRend, reconnect the interface, re-launch FFRend, and select the device.
+
+<a name="Random_seed"><h2>Random seed</h2></a>
+
+<p>FFRend uses random numbers for some of its <a href="#Oscillator_waveforms">oscillator waveforms</a>. This option allows you to control the seed value that's used to generate random numbers. You can specify a particular value, or you can use the system time, by checking the "Use time" checkbox, in which case no two runs of the program will generate the same random numbers.
+
+<p>FFRend's random numbers aren't truly random, in the way that tossing a coin is random; they're actually <em>pseudorandom</em>. Pseudorandom numbers form a deterministic sequence, which repeats eventually, but appears random enough to be useful. A pseudorandom sequence evolves from an initial value, called the random <em>seed</em>.
+
+<p>If the random seed is a fixed value, every time the program is run, it generates the exact same sequence of pseudorandom numbers. This can be good or bad, depending on the situation. If you want true randomness, the solution is to have the program use a different seed each time it runs. In practice this is accomplished by using the system time as the seed. This works because the system time is unlikely to ever be the same for any two runs of the program.
+
+<p>In some cases true randomness may not be what you want however. For example, suppose you create a <a href="#Projects">project</a> that does something you like, and you want it to do the exact same thing again in the future, e.g. so that you can make a <a href="#Recording">recording</a> of it. If your project makes any use of randomness, and you were using the system time as a random seed, you're out of luck. Your project will never do exactly the same thing again. This might be a good reason to <em>not</em> use the time as a seed.
+
+<a name="View_frequency"><h2>View frequency</h2></a>
+
+<p>This option specifies the rate at which the user interface is updated, in Hertz. This rate is completely independent of the engine's <a href="#Frame_rate">frame rate</a>. It controls the smoothness of slider motion for <a href="#Automating_parameters">automations</a>, the refresh rate of the Monitor bar, and the speed of the History and Queues views.
+
+<a name="History_size"><h2>History size</h2></a>
+
+<p>This option determines the size of each plugin's event buffer in the History view. To capture a longer history, increase this size. The size is in measured in events. Since there are two events per frame, a size of 256 is enough for 128 frames. Memory usage is 8 bytes per event, times the number of plugins.
+
+<a name="Monitor_quality"><h2>Monitor quality</h2></a>
+
+<p>This option allows you to adjust the trade-off between <a href="#Performance">performance</a> and quality in the <a href="#Monitoring_plugins">monitor bar</a>. For better performance, select "fast". For better quality, select "smooth". The performance impact of "smooth" mode can be significant for large <a href="#Frame_size">frame sizes</a>.
+
+<a name="Save_warning"><h2>Save warning</h2></a>
+
+<p>If the current <a href="#Projects">project</a> has been modified, opening a different project normally causes the application to display a Save Changes warning dialog. In some cases this behavior may be undesirable, e.g. during a live performance. To suppress the warning, uncheck the Save Warning checkbox.
+
+<a name="Undo_levels"><h2>Undo levels</h2></a>
+
+<p>This option allows you to set the number of undo levels. For unlimited undo, check Unlimited; otherwise, uncheck it, and enter the desired number of levels in the edit box. To disable undo, set the number of levels to zero. By default, undo is unlimited. The undo history is cleared whenever you start a new <a href="#Projects">project</a> or opening an existing one. Note that unlimited undo can consume a significant amount of memory over time.
+
+<a name="Global_plugin"><h2>Global plugin</h2></a>
+
+<b>This option was removed in version 2.</b>
+
+<p>The global plugin option allows you to apply a post-process to all of your existing <a href="#Projects">projects</a> <em>without</em> editing the projects. This can be useful during a live performance, e.g. you might want to adjust the brightness/contrast globally, or display your projects through a matte. When you open an existing project, the global plugin is automatically appended to the <a href="#Plugin_chains">plugin chain</a>. The global plugin is NOT included when you save the project.
+
+<p>To set a global plugin, open the Options dialog, go to the Global plugin group, and press the Browse button. A file dialog is displayed. Select a plugin, and press OK. The selected plugin is added to the drop list. Press OK again to save your changes and close the Options dialog. Now open an existing project, and the global plugin should appear at the end of the plugin chain. Note that nothing happens until you open a project; selecting a global plugin has no effect on the current project.
+
+<p>The drop list contains the most recently used global plugins, so that you can select one of them quickly without browsing. To disable the global plugin, select &lt;none&gt; in the drop list. Again, note that you must open a project before global plugin changes take effect.
+
+<p>If you edit the global plugin's parameters, the edits persist until you select a different global plugin, or exit the application; the global plugin's state is not affected by opening projects. The same is true if you <a href="#Bypass_and_solo">bypass</a> the global plugin, or <a href="#Automating_parameters">automate</a> its parameters.
+
+<p>It is possible to apply multiple effects at once, even though there's only one global plugin. To do this, encapsulate the desired effects in a <a href="#Metaplugins">metaplugin</a>, and then select the metaplugin as the global plugin.
+
+<a name="Thumbnails"><h2>Thumbnails</h2></a>
+
+<p>The <a href="#File_Browser">File Browser</a> supports a Thumbnails view for selecting clips visually. The thumbnails can be created in various sizes. To change the thumbnail size, select a different size in the "Thumbnail Size" drop list.
+
+<p>Thumbnails are created on demand whenever you browse a folder in Thumbnails view. By default, thumbnails are cached on disk, so they only need to be created once; to disable this feature, uncheck the "Cache thumbnails" checkbox.
+
+<p>FFRend stores thumbnails in the folder to which they apply, in a database file. The database files are named according to a specific convention, e.g. for 96 x 72 in 32-bit color, the database name is ckThumbs96x72x32.db.
+
+<a name="Run_while_loading_project"><h2>Run while loading project</h2></a>
+
+<p>This advanced engine option controls whether the current project should continue to run while a new one is being loaded. It's enabled by default. Enabling this option reduces downtime (i.e. frozen output) while switching between projects, but at the cost of increased memory usage: during the transition, sufficient memory must exist to accommodate the current project's Freeframe instances and frame buffers, plus the new project's Freeframe instances. Disabling this option conserves memory, which can be useful when working with large frame sizes.
+
+<a name="Frame_memory"><h2>Frame memory</h2></a>
+
+<p>This advanced engine option limits the amount FFRend can use for its frame buffers. This is helpful when working with large frame sizes. By default the engine optimizes for speed over memory conservation, i.e. it allocates enough frame buffers for the worst possible case, regardless of memory limits. The engine can function with considerably less memory, though allocating too little may reduce throughput, or cause the engine to stall. Note that this option has no effect on memory allocated by Freeframe plugins.
+
+<p>The limit is specified in megabytes, and defaults to 4096, or 4 gigabytes, the maximum amount of memory a 32-bit application can address. The amount of memory  currently used for frame buffers is also shown. Note that FFRend is Large Address Aware, meaning it can access up to 4GB of memory on 64-bit operating systems, and up to 3GB on 32-bit operating systems provided boot.ini specifies the /3GB switch.
+
+
+<h1>Metaplugins</h1>
+
+<a name="Metaplugins"><h2>Metaplugins</h2></a>
+
+<p>FFRend supports plugin authoring, which means you can <a href="#Exporting_metaplugins">export</a> a FFRend <a href="#Projects">project</a> as a Freeframe plugin. The exported plugin is called a <em>metaplugin</em>, because it uses other plugins as components. A metaplugin can be used in any Freeframe-compatible host application, and behaves as if you were running the equivalent project in FFRend.
+
+<p>A metaplugin preserves all project attributes, including <a href="#Automating_parameters">parameter automations</a> and <a href="#Patch_Bay">signal routing</a>. The only significant exception is MIDI assignments; these are ignored, to avoid interfering with the host's MIDI implementation.
+
+<p>A metaplugin can expose parameters to the host; such parameters are called <a href="#Metaparameters">metaparameters</a>. A metaparameter can directly control a parameter in a component plugin, or it can control other targets, such as a modulator property, or a plugin's bypass switch.
+
+<p>A metaplugin normally contains <a href="#Metaplugin_links">links</a> to its component plugins, but it's also possible to <a href="#Embedding_plugins">embed</a> the components within the metaplugin's DLL. Embedding makes it easier to distribute the metaplugin, by avoiding dependence on external files. Since embedding could potentially encourage piracy, only <em>copyleft</em> plugins can be embedded.
+
+<p>It's possible to <a href="#Importing_metaplugins">import</a> a metaplugin back into FFRend as a project. This allows you to edit and re-export a metaplugin, even if you don't have the project file from which the metaplugin was originally created.
+
+<p>Metaplugins can be <a href="#Nesting_metaplugins">nested</a>, i.e. a metaplugin can use other metaplugins. The depth of nesting is unlimited.
+
+<a name="Exporting_metaplugins"><h2>Exporting metaplugins</h2></a>
+
+<p>To export the current <a href="#Projects">project</a> as a <a href="#Metaplugins">metaplugin</a>, choose <span class="cmd">File/Metaplugin/Export</span>. Select a destination folder and filename, and press OK. The Metaplugin Properties dialog is displayed.  Customize the properties as needed, and then press OK to export the metaplugin. The Metaplugin Properties dialog can also be shown via <span class="cmd">File/Metaplugin/Properties</span>. The properties are described below.
+
+<dl>
+<dt>Name
+<dd>This is the name of the plugin, which will be displayed in the host application. It's limited to 16 characters, and defaults to the metaplugin's file name.
+
+<dt>Unique ID
+<dd>Theoretically every Freeframe plugin is supposed to have a unique four-character ID, but in practice this hasn't worked out too well, since there's no centralized coordination. As far as I know, only Resolume pays any attention to the ID. You should at least try to give your <em>own</em> metaplugins unique IDs, especially if you plan to distribute them.
+
+<dt>Description
+<dd>This should contain a one-line description of what the metaplugin does. It defaults to "Metaplugin", but you can change the default, by pressing the Default button. FFRend doesn't limit the length, but most hosts probably will, so be reasonable. Don't put your name here; it belongs in the Author/License field (see below).
+
+<dt>Author/License
+<dd>This should contain your name and copyright/copyleft notice, e.g. "Copyleft 2007 Chris Korda". It defaults to "Copyleft", but you can change the default, by pressing the Default button. Note that if you want to allow your metaplugin to be <a href="#Embedding_plugins">embedded</a> within other metaplugins, your Author/License information MUST contain the string "copyleft" (case doesn't matter). Using copyleft makes it easy for others to distribute metaplugins that contain your metaplugin, thereby encouraging <em>derived works</em>.
+
+<dt>Version (Major/Minor)
+<dd>Note that this is the <em>plugin</em> version number, not the API version number. You can and should change this version number when you revise existing metaplugins.
+
+<dt>Type (Effect/Source)
+<dd>Whether the metaplugin is an effect or a source is up to you. This means <em>you</em> have to decide whether your metaplugin processes its input frames (effect) or completely overwrites them (source). If your metaplugin pays <em>any</em> attention to its input, it should be considered an effect. Just because your metaplugin contains a source plugin, doesn't mean the metaplugin is automatically a source plugin too. For example you could have a metaplugin that mixes a source plugin with the input frames: that's still an effect. If the input frames <em>never</em> affect the metaplugin's behavior, the metaplugin is a source plugin, otherwise it's an effect.
+
+<dt>Embed Plugins
+<dd>Check this box to embed the component plugins within the metaplugin DLL. Note that only <em>copyleft</em> plugins can be embedded. For details, see <a href="#Embedding_plugins">embedding plugins</a>.
+
+<dt>Edit Inputs
+<dd>This feature is not supported yet.
+
+<dt>Defaults
+<dd>You can change the defaults for Unique ID, Description, and Author/License, using the Defaults button. The defaults are saved in the registry. Note that unless Author/License contains the string "copyleft" (case-insensitive), it will not be possible to embed your metaplugin within other metaplugins.
+
+</dl>
+
+<p>Note that FFRend automatically decides which video modes the metaplugin supports, as follows: the metaplugin will support a given video mode only if that mode is supported by ALL of the metaplugin's component plugins.
+
+<a name="Importing_metaplugins"><h2>Importing metaplugins</h2></a>
+
+<p>It's possible to import a <a href="#Metaplugins">metaplugin</a> back into FFRend as a <a href="#Projects">project</a>. This allows you to edit and <a href="#Exporting_metaplugins">re-export</a> a metaplugin, even if you don't have the project file from which it was originally created. To import a metaplugin, use <span class="cmd">File/Metaplugin/Import</span>. Select a filename, and press OK.
+
+<p>Note that if you only want to know which plugins a metaplugin uses, it's not necessary to import the metaplugin; it's easier to use the <a href="#File_Browser">file browser</a>. Find the metaplugin in the file browser's Plugins pane, right-click the metaplugin's name, and select Properties. The properties dialog lists the component plugins, and tells you whether they're linked or embedded.
+
+<a name="Metaparameters"><h2>Metaparameters</h2></a>
+
+<p>Like any other Freeframe plugin, a <a href="#Metaplugins">metaplugin</a> can expose <a href="#Parameters">parameters</a> to the host application; such parameters are called <em>metaparameters</em>. A metaparameter can directly control a parameter in a component plugin, or it can control other target types, such as a <a href="#Automating_parameters">modulator</a> property, a plugin's <a href="#Bypass_and_solo">bypass</a> switch, or a global property (e.g. <a href="#Master_speed">Master Speed</a>). Metaparameters can also be <a href="#Metaparameter_groups">grouped</a> so that a single metaparameter controls multiple targets.
+
+<p>Metaparameters allow you to design your metaplugin's <em>interface</em>. Part of creating a metaplugin is deciding which things to expose. Since hosts often severely limit the number of parameters a Freeframe plugin can have, it's a good idea to <a href="#Metaparmeters_Reordering">order</a> your metaparameters, so that the most essential ones come first. FFRend allows a Freeframe plugin to have unlimited parameters, so if you're only going to use the metaplugin in FFRend, you can expose as many metaparameters as you like, though you still may find it helpful to be selective.
+
+<p><b>Creating a metaparameter</b>
+
+<p>To create a metaparameter, first show the Metaparams control bar (<span class="cmd">View/Metaparams</span> or <span class="key">Shift+E</span>), otherwise you won't be able to see what you're doing. Select the plugin, by right-clicking on its tab, and now in the main view (beneath the plugin tabs, where the plugin automations are), right-click on the NAME of the parameter. You'll see the following context menu:
+
+<ul>Mod Range &gt;
+<br>Metaparam &gt;
+</ul>
+
+<p>Select Metaparam, and you'll see a popup menu like this:
+
+<ul>Parameter
+<br>Mod Enable
+<br>Mod Waveform
+<br>Mod Frequency
+<br>Mod PW
+<br>Plugin Bypass
+</ul>
+
+<p>To expose the parameter itself, select Parameter. You can select one of its modulation properties instead, or to expose the plugin's bypass switch, select Plugin Bypass. The metaparameter magically appears as a row in the Metaparams control bar, with the slider and edit box already set to the target's current value. If you move the slider, or type a new value in the edit box, you'll see the target property change in sync.
+
+<p><b>Name and range</b>
+
+<p>The metaparameter's name is generated automatically, but if you don't like the name, right-click it and select Properties, to show the Metaparameter Properties dialog. Now you can enter a custom name. You can also use this dialog to map the Freeframe parameter range [0..1] to whatever range you want. This is especially useful when the target is a modulation frequency. The range can also be inverted, e.g. to turn a "bypass" control into an "enable" control, use a range of [1..0] instead of [0..1].
+
+<p><b>Alternate method</b>
+
+<p>Metaparameters can also be created via the Metaparameter Properties dialog, though the method described above is more convenient. This alternate method is the ONLY way to create a metaparameter for Master Speed. Right-click in the Metaparams control bar and select Insert. Now right-click the Metaparameter row you just created, and select Properties. In the properties dialog, go to the Plugin combo box, select Misc Properties, and you'll find Master Speed. You can use the combo boxes to select any target in FFRend. To control multiple targets, use <a href="#Metaparameter_groups">metaparameter groups</a>.
+
+<p><a name="Metaparmeters_Reordering"><b>Reordering</b>
+
+<p>The order of the rows in the Metaparms control bar determines the order in which the metaparameters will appear in the host. The order can be changed by dragging rows. To drag a row, position the cursor over the metaparameter name, press and hold down the left mouse button, drag the row to the desired location, and release the left mouse button.
+
+<a name="Metaparameter_groups"><h2>Metaparameter groups</h2></a>
+
+<p><a href="#Metaparameters">Metaparameters</a> can be <em>grouped</em>, so that one metaparameter controls multiple targets. This allows you to create metaplugins in which a single host parameter has multiple effects. Each group consists of a master and one or more slaves. When a master is updated (manually or via MIDI), its slaves follow it. Only masters are exposed to the host, i.e. when the metaplugin is loaded in a host application, any slave metaparameters are hidden.
+
+<p>Group members can control targets in different plugins, or different types of targets, e.g. a mix of parameters and <a href="#Automating_parameters">modulation</a> properties. Group members can also have different ranges. By inverting one of the ranges, it's possible to create a metaparameter whose targets move in opposite directions, as in a crossfader.
+
+<p>Metaparameter groups have another use unrelated to metaplugins: they allow you to assign a single MIDI controller to multiple targets. The <a href="#MIDI_setup">MIDI Setup</a> dialog limits you to one target per controller, but metaparameter groups provide a way around this restriction. To assign a single MIDI controller to multiple targets, do the following:
+
+<ol>
+<li>Create a metaparameter for each target.
+<li>Group the metaparameters.
+<li>Assign a MIDI controller to the group's master, using the Metaparam page in the MIDI Setup dialog.
+</ol>
+
+<p>To create a new group, right-click the metaparameter that should be the master, and select <span class="cmd">Group</span> from the context menu. The Metaparam Group dialog is displayed. The dialog lists the names of every metaparameter that could potentially be a slave of this group. Each name has a checkbox next to it. Use the checkboxes to select which metaparameters should belong to this group, and then press OK to save your changes. Metaparameters that already belong to a different group aren't shown, because metaparameter groups can't be nested.
+
+<p>To edit an existing group, right-click any member of the group, and select <span class="cmd">Group</span> from the context menu. Again, the Metaparam Group dialog is displayed. Check or uncheck group members as desired, and then press OK to save your changes.
+
+<p>To destroy an existing group, right-click any member of the group, and select <span class="cmd">Ungroup</span> from the context menu.
+
+<a name="Metaplugin_links"><h2>Metaplugin links</h2></a>
+
+<p>A <a href="#Metaplugins">metaplugin</a> won't function unless all of its component plugins are available. There are two possible scenarios: the metaplugin can contain <em>links</em> to its components, or the plugins can be <a href="#Embedding_plugins">embedded</a> within the metaplugin DLL. This topic deals with the first scenario, a linked metaplugin.
+
+<p>Since a link is an absolute path to a component DLL, links can break, e.g. if you move your plugins around, or rename folders. This is very likely to happen if you distribute a linked metaplugin, because the recipients probably won't have organized their hard drives in the same way as you.
+
+<p>When a linked metaplugin is loaded, it checks for broken links. If components aren't where they're supposed to be, the metaplugin searches for them, using a specific strategy. A linked metaplugin looks for its component plugins in the following places, in order:
+
+<ol>
+<li>The absolute path, as specified in project data.
+<li>The folder that the metaplugin DLL was loaded from.
+<li>The profile folder Application Data\FFRend\Plugins.
+<li>The METAFFREND_PATH environment variable path(s).
+</ol>
+
+<p>Option #1 is the most efficient. Option #2 is useful with hosts that require all Freeframe plugins to reside in a specific folder. Regarding option #3, note that Application Data\FFRend\Plugins is also used for unpacking embedded plugins. The environment variable is discussed <a href="#Metaplugin_links_env_var">below</a>.
+
+<p><b>Error handling</b>
+
+<p>If one or more components aren't found in any of these places, the metaplugin disables itself. A disabled metaplugin has no effect on its input, and doesn't expose any parameters to the host. The metaplugin also writes an error message to a log file indicating which plugins are missing. The log file (Application Data\FFRend\MetaFFRend.log) is a text file, and can be viewed with Notepad or any text editor.
+
+<p>Broken links can be repaired by <a href="#Importing_metaplugins">importing</a> the metaplugin as a project. The import displays the <a href="#Missing_Files">missing files</a> dialog, which allows you to search your hard drive for the missing plugins. If the plugins are found, you can save the repaired links by <a href="#Exporting_metaplugins">re-exporting</a> the metaplugin.
+
+<p><a name="Metaplugin_links_env_var"><b>Environment variable</b>
+
+<p>The advantage of the METAFFREND_PATH environment variable is that it allows you to direct the metaplugin to any folder(s) you like. So for example if you keep your plugins in a folder hierarchy separated by author, you can leave them right where they are, instead of copying them to App Data. Multiple paths MUST be separated by semicolons.
+
+<p>If you've never set an environment variable, consult your Windows documentation, but generally the following should work: On the desktop, right-click My Computer, select Properties, select the Advanced tab, click Environment Variables, and in User Variables, select New. For Variable Name, enter METAFFREND_PATH, and for Variable Value, enter the search path(s), separated by semicolons if there are more than one. Don't use quotes, and be careful to avoid leading or trailing spaces. Press OK a few times and you're done. You can use other variables as examples, but don't change them or stuff will break.
+
+<a name="Embedding_plugins"><h2>Embedding plugins</h2></a>
+
+<p>By default, a <a href="#Metaplugins">metaplugin</a> contains <a href="#Metaplugin_links">links</a> to its component plugins, but it's also possible to <em>embed</em> the components within the metaplugin DLL. To enable embedding, check the "Embed Plugins" checkbox in the <a href="#Exporting_metaplugins">Metaplugin Properties</a> dialog.
+
+<p>The advantage of embedding is that the metaplugin doesn't depend on any external files. This is especially useful if the metaplugin is being distributed to other users, because it avoids the whole problem of broken links. The user doesn't have to worry about having all the necessary component plugins in the correct locations on their hard drive; they just load the metaplugin into their host application, and it works.
+
+<p>The disadvantage of embedding is that it can significantly increase the size of the metaplugin DLL. On the other hand, the plugins are stored in a compressed format, which helps keep the size down.
+
+<p>Embedding is only allowed if ALL of the metaplugin's components are <em>copyleft</em>. A plugin is considered copyleft if the string "copyleft" (case-insensitive) appears in its Author/License field. The only exception to this rule is for Pete Warden's plugins. Embedding is restricted to prevent inadvertent distribution of commercial plugins. Note that this restriction also applies to metaplugins used as components; see <a href="#Nesting_metaplugins">nesting metaplugins</a>.
+
+<p><b>How it works</b>
+
+<p>When you load an embedded metaplugin into a host for the first time, the metaplugin <em>unpacks</em> its component plugins into a special folder in your profile: Application Data\FFRend\Plugins. If a given component is already present in this folder, it isn't unpacked. Since components aren't deleted, a metaplugin only needs to unpack itself once; the next time you run it, all of its components will already be present. This means the slight delay associated with unpacking only occurs the first time you use the metaplugin.
+
+<p>A metaplugin may not even need to unpack itself the first time you use it, e.g. if you've previously used a different metaplugin that shares the same components. Note that an unpacked component plugin is an exact binary copy of the original; even the file times are preserved.
+
+<a name="Nesting_metaplugins"><h2>Nesting metaplugins</h2></a>
+
+<p>A <a href="#Metaplugins">metaplugin</a> can use other metaplugins as components. This is possible because from the host's point of view, a metaplugin is simply a Freeframe plugin, like any other. No special procedure is required; nesting occurs naturally when you include one or more metaplugins in a <a href="#Projects">project</a>, and then <a href="#Exporting_metaplugins">export</a> that project as a metaplugin.
+
+<p>A metaplugin can use a combination of metaplugins and ordinary plugins, e.g. you could make a metaplugin that uses a mixer plugin to automatically crossfade between two metaplugins.
+
+<p>There's no limit on how deeply metaplugins can be nested. Each level of nesting results in some additional overhead, but the amount is insignificant compared to the overhead of the ordinary plugins that are actually doing the work.
+
+<p>Nesting lends itself to an object-oriented approach, in which simpler metaplugins are used as building blocks in higher-level metaplugins. This encourages iterative composition, and distributed creation. For example, if I make a metaplugin that does something you like, and send it to you, you can add value to it, by using it inside one of your own metaplugins.
+
+<p>Nesting can also be used to create modulations more complex than FFRend's built-in <a href="#Oscillator_waveforms">oscillator waveforms</a>. For example, suppose a metaplugin exposes a parameter's modulation frequency as a <a href="#Metaparameters">metaparameter</a>. If the metaplugin is nested within another metaplugin, the top-level metaplugin can modulate the frequency. The same technique applies to pulse width.
+
+<p>Nested metaplugins can be <a href="#Embedding_plugins">embedded</a>, but only if all the plugins at each level are <em>copyleft</em>, i.e. have the string "copyleft" in their Author/License information (see <a href="#Exporting_metaplugins">exporting metaplugins</a>). For example, if I send you a copyleft embedded metaplugin, you can embed it inside one of your metaplugins; if your metaplugin is also copyleft, it can be embedded by someone else, and so forth. When the top-level metaplugin is loaded into a host, it unpacks itself recursively.
+
+
+<h1>Loose Ends</h1>
+
+<a name="Full_screen"><h2>Full screen</h2></a>
+
+<p>FFRend's output can be displayed full-screen, so that the output window fills the entire display, and all other windows are hidden. The other main advantage of full-screen is that it uses DirectDraw Exclusive to eliminate <a href="#Tearing">tearing</a>.
+
+<p>To enable or disable full-screen mode, use <span class="cmd">Window/Full Screen</span> or <span class="key">Ctrl+F11</span>.
+
+<a name="Dual-monitor"><h2>Dual-monitor</h2></a>
+
+<p>FFRend supports a dual-monitor setup, in which its main window and output are displayed on two different monitors. In the usual case, the main window is on the primary monitor (the built-in display on laptops), and the output is on the secondary monitor, but the reverse also works.
+
+<p>To make FFRend use a secondary monitor, you must first extend your Windows desktop onto the secondary monitor. This is typically done using Control Panel/Display/Settings, or in some cases via software that came with your graphics card. Once you've extended the desktop, you can drag FFRend's output window onto the secondary monitor. Now when you enable <a href="#Full_screen">full screen</a> mode, the output window fills the secondary monitor.
+
+<a name="Tearing"><h2>Tearing</h2></a>
+
+<p>Tearing is a distracting visual artifact. It typically looks like horizontal lines running up and down the image. Tearing occurs if the display is refreshed while the CPU is in the middle of writing a new frame to the graphics hardware. At that moment, both the old and new frames are partially visible, and if they differ (as is likely), the eye perceives a discontinuity (a tear) in the image.
+
+<p>Tearing can be only prevented by using <a href="#Full_screen">full screen</a> mode; this allows DirectDraw to synchronize access to the graphics hardware. In normal windowed mode, tearing is unavoidable.
+
+<a name="Performance"><h2>Performance</h2></a>
+
+<p>FFRend attempts to maintain a constant <a href="#Frame_rate">frame rate</a>, but if the CPU is overloaded, the frame rate will drop, sometimes drastically. CPU overload typically results from a large <a href="#Frame_size">frame size</a>, a long <a href="#Plugin_chains">plugin chain</a>, or especially CPU-intensive plugins. It isn't necessarily a concern when you're <a href="#Recording">recording</a> a finished <a href="#Projects">project</a>. It's more likely to be a problem when the perceived frame rate matters, e.g. during development, or during a live show.
+
+<p>The simplest way to improve performance is by reducing the frame size. You may find it convenient to develop your projects at a low resolution, and then increase the resolution for the final recording, but be aware that some plugins won't behave exactly the same way at different resolutions. If you have a multi-core CPU, you may also be able to improve throughput by <a href="#Load_balance">load balancing</a>.
+
+<p>The Monitor, Graph, History and Queues views all potentially reduce performance. The <a href="#Monitor_quality">monitor quality</a> setting can also affect performance, though only if the monitor bar is visible. Reducing the <a href="#View_frequency">view frequency</a> may increase performance slightly, at the cost of making the user interface choppier.
+
+<p>If you're creating complex effects at high resolution, it may not be possible to stay in real time, except by using a more powerful computer. FFRend is compute-bound, i.e. its performance is limited primarily by CPU power, rather than graphics power, memory size, or disk speed.
+
+<a name="Load_balance"><h2>Load balance</h2></a>
+
+<p>Given sufficient cores, FFRend runs each plugin on its own core, but this only maximizes throughput for symmetrical loads, i.e. the rare ideal case where each plugin requires the same amount of CPU time to render a frame. In practice it's common for some of a project's plugins to require significantly more CPU time than others. This situation is governed by Amdahl's law, which basically states that in a parallel system, throughput is limited by the slowest sequential task. FFRend provides a workaround, called <em>load balancing</em>, which can greatly improve the throughput of asymmetrical loads in some (but not all) cases.
+
+<p>The main limitation of load balancing is that it only works for <em>stateless filters</em>, i.e. plugins that don't store any type of history. Plugins that won't work include source plugins, time blurs, feedbacks, and plugins with internal oscillators. The reason they don't work can be illustrated as follows. Suppose we have a crude time blur that simply outputs the average of the current frame and the previous frame. Allocating two threads to a plugin results in two instances of it, one processing even-numbered frames, and the other processing odd-numbered frames. Since each instance has its own previous frame, we now have two different versions of the average, and the output alternates rapidly between them. This appears as strobing and clearly isn't what we want. The good news is that many useful but CPU-intensive plugins are stateless, including most blurs and keys. Note that if a plugin is only stateful because of its internal oscillators, it may be possible to make it stateless by disabling the oscillators.
+
+<p>To show the Load Balance control bar, use <span class="cmd">View/Load Balance</span> or <span class="key">Shift+L</span>. The bar allows you to specify the number of threads allocated to each plugin. Plugins are initially allocated one thread apiece. The bar also shows the current CPU usage of each plugin thread, both as a percentage and in milliseconds. The percentage indicates how much of one core the corresponding thread is using. If it's 100%, the thread is saturating a core and may be limiting throughput.
+
+<p>To change the number of threads allocated to a plugin, edit its thread count and press <span class="key">Tab</span>, or left-click the edit control's up/down buttons. Changes are applied immediately, but the load balance statistics can take up to a second to update. Load balance settings are project-specific and are therefore saved in the project file.
+
+<p>Successful load balancing often involves trial and error. The following example may be helpful. Suppose a project has three plugins: A, B, and C, connected in series. B takes twice as long as A, and C takes twice as long as B. Assume the frame size is big enough so that we're not achieving the desired frame rate, and also assume we have eight cores to play with. The load balance dialog shows that A is using a negligible amount of CPU, B is using about 50%, and C is using 100%. C appears to be the bottleneck, so we allocate two threads to C. B now increases to 100%, and C's two threads each use about 100%, but the frame rate is still unsatisfactory, so we add another thread to C. C now has three threads, but they each use only 65%, and the frame rate doesn't improve. Surprise! This means C is starved for input. Since B is now the limiting factor, we add a second thread to B. B's two threads use 75%, and C's three threads increase to 100%. We're back to C being the bottleneck, so we add one more thread to C. B now has two threads at 100%, while C has four threads at 100%, and that's the best we can do with eight cores.
+
+<p>If adding extra threads to a plugin fails to increase throughput, it's because either that plugin is starved for input, or the CPU is fully loaded. In the former case the solution is to identify and address the bottleneck; in the second case, there's no solution, other than a new CPU. Both cases exhibit the same symptom: more threads doing less work. The cases can be distinguished by examining the task manager. If you're not achieving your requested frame rate, but the CPU isn't fully loaded according to the task manager, one or more plugins must be starved for input. It's also possible to determine this from the percentages in the Load Balance dialog. The sum of all the percentages can't exceed 100% times the number of cores. If you have four cores, but the percentages only add up to 300%, a core must be idle (assuming no other CPU-intensive applications are running), and tweaking the balance could yield further gains. The ultimate proof of success is improved frame rate.
+
+<p>Note that running all cores at 100% can potentially make the GUI sluggish, and may worsen MIDI latency. This is an important factor if you're using FFRend for live performances, but it might not matter if you're only recording movies.
+
+<a name="Frame-dropping"><h2>Frame-dropping</h2></a>
+
+<p>FFRend solves the frame-dropping problem which occurs in some VJ softwares. To understand why frame-dropping is a problem, you need a little background about Microsoft DirectShow.
+
+<p>DirectShow is a component of Windows that deals with playing video and audio. Windows VJ softwares often use DirectShow to display video. DirectShow is a "streaming" technology, which means it tries to keep the video in real time at any cost. If the video falls behind (e.g. due to CPU-intensive effects, high resolution, or limited disk bandwidth), DirectShow <em>drops</em> (i.e. omits) as many frames as necessary to catch up. The advantage of DirectShow is that the application doesn't have to worry about keeping its video and audio synchronized.
+
+<p>The problem is that DirectShow-based VJ softwares typically record the same output that's being displayed. This means that if dropped frames occur in the displayed output, the recording will also contain dropped frames. The result is that in certain situations--e.g. if you're using many CPU-intensive effects, or a high output resolution--it can be impossible to make a clean recording. This is the very frustrating problem that FFRend was designed to solve.
+
+<p>Since FFRend doesn't use DirectShow, it isn't restricted to a fixed <a href="#Frame_rate">frame rate</a>. Instead, it allows the frame rate to vary as needed. If the CPU is overloaded, the frame rate slows down, but frames are NEVER dropped, either in the displayed output or in the recording.
+
+<a name="Playlist"><h2>Playlist</h2></a>
+
+<p>FFRend can automatically open a list of projects, also known as a <em>playlist</em>. This is useful if you're VJing and need a break. It also makes it easier to use FFRend in an installation (see below). The Playlist dialog allows you to specify the list of projects, the interval between project changes, whether the list should be played in sequential or random order, and whether it should loop. Use <span class="cmd">Edit/Playlist</span> or <span class="key">Shift+A</span> to show the Playlist dialog.
+
+<p>The Playlist dialog has its own menus. To add projects to the playlist, use <span class="cmd">Edit/Add</span> or <span class="cmd">Edit/Insert</span>. To delete projects from the playlist, use <span class="cmd">Edit/Delete</span>. You can also drag projects onto the Playlist dialog from the Projects pane of the Files Bar, or from Windows Explorer. To save the playlist use <span class="cmd">File/Save</span> or <span class="cmd">File/Save As</span>. To start a new playlist, use <span class="cmd">File/New</span>. To open an existing playlist, use <span class="cmd">File/Open</span>.
+
+<p>To play the current playlist, use <span class="cmd">Auto/Play</span>, or press the dialog's Play button. While playing, the current project indicator (in the playlist's leftmost column) changes from a black square to a green arrow. To stop playing the playlist, press the Play button again. To loop the playlist, use <span class="cmd">Auto/Loop</span>, or press the Loop button. To randomize the order of the playlist, use <span class="cmd">Auto/Shuffle</span>, or press the Shuffle button. To specify the interval between project changes in seconds, use the edit box to the right of the buttons.
+
+<p>A playlist file contains links (paths) to project files, and these links can break if project files are moved or deleted. If this occurs, FFRend displays the <a href="#Missing_Files">missing files</a> dialog when the playlist is opened.
+
+<p>When creating an installation, it may be desirable to have FFRend start up playing a playlist. This is accomplished by passing FFRend the playlist via the command line. It may also be helpful to specify the /fullscreen command-line option, which causes FFRend to start up full-screen on whichever monitor contains the output window. Here's an example command line:
+
+<p><tt>ffrend myplaylist.ffl /fullscreen</tt>
+
+<a name="Column_resizing"><h2>Column resizing</h2></a>
+
+<p>The parameter view and some of the control bar views have resizable columns. The columns are resized via the column header, just as in a standard list control. To resize a column, move the cursor to the column header and position it over the divider to the right of the column you want to resize. The cursor changes to a vertical bar with two arrows. Press and hold down the left mouse button, and drag the divider horizontally until the column has the desired width.
+
+<p>It's possible to hide a column by reducing its width to zero. A column hidden in this manner can be restored as follows: move the cursor to the column header and position it slightly to the right of the divider where the hidden column used to be. The cursor changes to a double vertical bar with two arrows. Press and hold down the left mouse button, and drag the cursor to the right to restore the hidden column.
+
+<p>To reset a column to its default width, double-click the divider to the right of the column. To reset all columns to their default widths, first ensure the view has input focus, e.g. by left-clicking anywhere within its column header, and then while holding down the <span class="key">Ctrl</span> key, press the <span class="key">+</span> key on the numeric keypad. If you're using a laptop, it may not have a dedicated numeric keypad, in which case you may need to also hold down a function key that enables numeric keypad mode.
+
+<a name="Shortcuts"><h2>Shortcuts</h2></a>
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><td>Shift+A</td><td>Edit Playlist</td><td>Edit the playlist</td></tr>
+<tr><td>Ctrl+C</td><td>Copy</td><td>Copy the selection and put it on the Clipboard</td></tr>
+<tr><td>Ctrl+E</td><td>Export</td><td>Export current frame as a bitmap</td></tr>
+<tr><td>Shift+E</td><td>Toggle Metaparams</td><td>Show or hide the metaparameters bar</td></tr>
+<tr><td>Shift+F</td><td>Toggle Files</td><td>Show or hide the files bar</td></tr>
+<tr><td>Shift+G</td><td>Toggle Graph</td><td>Show or hide the graph bar</td></tr>
+<tr><td>Shift+H</td><td>Toggle History</td><td>Show or hide the history bar</td></tr>
+<tr><td>Shift+I</td><td>Toggle MIDI</td><td>Show or hide the MIDI bar</td></tr>
+<tr><td>Ctrl+L</td><td>Load</td><td>Load the selected plugin</td></tr>
+<tr><td>Shift+L</td><td>Toggle Load Balance</td><td>Show or hide the load balance bar</td></tr>
+<tr><td>Shift+M</td><td>Toggle Master</td><td>Show or hide the master bar</td></tr>
+<tr><td>Ctrl+N</td><td>New</td><td>Create a new document</td></tr>
+<tr><td>Shift+N</td><td>Toggle Monitor</td><td>Show or hide the monitor bar</td></tr>
+<tr><td>Ctrl+O</td><td>Open</td><td>Open an existing document</td></tr>
+<tr><td>Shift+O</td><td>Edit Options</td><td>Edit the options</td></tr>
+<tr><td>Ctrl+P</td><td>Print</td><td>Print the active document</td></tr>
+<tr><td>Shift+P</td><td>Toggle Patch</td><td>Show or hide the patch bar</td></tr>
+<tr><td>Shift+Q</td><td>Toggle Queues</td><td>Show or hide the queues bar</td></tr>
+<tr><td>Ctrl+R</td><td>Record</td><td>Record the output to an AVI file</td></tr>
+<tr><td>Shift+R</td><td>Toggle Record Status</td><td>Show or hide the record status dialog</td></tr>
+<tr><td>Ctrl+S</td><td>Save</td><td>Save the active document</td></tr>
+<tr><td>Shift+U</td><td>Toggle Output</td><td>Show or hide the output window</td></tr>
+<tr><td>Ctrl+V</td><td>Paste</td><td>Insert Clipboard contents</td></tr>
+<tr><td>Alt+Backspace</td><td>Undo</td><td>Undo the last action</td></tr>
+<tr><td>Delete</td><td>Delete</td><td>Delete the selected plugin</td></tr>
+<tr><td>Shift+Delete</td><td>Cut</td><td>Cut the selection and put it on the Clipboard</td></tr>
+<tr><td>F1</td><td>Help</td><td>List Help topics</td></tr>
+<tr><td>Ctrl+F11</td><td>Full Screen</td><td>Display the output full screen</td></tr>
+<tr><td>F4</td><td>Job Control</td><td>Show or hide job control dialog</td></tr>
+<tr><td>F5</td><td>Refresh</td><td>Refresh the views</td></tr>
+<tr><td>F6</td><td>Next Pane</td><td>Switch to the next window pane</td></tr>
+<tr><td>Shift+F6</td><td>Previous Pane</td><td>Switch back to the previous window pane</td></tr>
+<tr><td>F8</td><td>Monitor Plugin</td><td>Monitor the selected plugin</td></tr>
+<tr><td>F9</td><td>Bypass</td><td>Bypass the selected plugin</td></tr>
+<tr><td>Insert</td><td>Insert</td><td>Insert a plugin</td></tr>
+<tr><td>Ctrl+Insert</td><td>Copy</td><td>Copy the selection and put it on the Clipboard</td></tr>
+<tr><td>Alt+Insert</td><td>Insert Empty</td><td>Insert an empty plugin slot</td></tr>
+<tr><td>Shift+Insert</td><td>Paste</td><td>Insert Clipboard contents</td></tr>
+<tr><td>Space</td><td>Pause</td><td>Pause the output</td></tr>
+<tr><td>Shift+Space</td><td>Step</td><td>Single-step the output</td></tr>
+<tr><td>Ctrl+X</td><td>Cut</td><td>Cut the selection and put it on the Clipboard</td></tr>
+<tr><td>Ctrl+Y</td><td>Redo</td><td>Redo the previously undone action</td></tr>
+<tr><td>Ctrl+Z</td><td>Undo</td><td>Undo the last action</td></tr>
+</table>
+
+</body></html>

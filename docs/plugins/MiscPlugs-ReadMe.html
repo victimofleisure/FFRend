@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Chris Korda's Freeframe Plugins</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h2>Chris Korda's Freeframe Plugins</h2>
+
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<TR>
+  <TD>UID</TD>
+  <TD>Name</TD>
+  <TD>Description</TD>
+</TR>
+<TR>
+  <TD>AlpX</TD>
+  <TD><a href="#AlphaMix">AlphaMix</a></TD>
+  <TD>Alpha mixer.</TD>
+</TR>
+<TR>
+  <TD>BLKN</TD>
+  <TD><a href="#Blacken">Blacken</a></TD>
+  <TD>Fade to black.</TD>
+</TR>
+<TR>
+  <TD>BOOL</TD>
+  <TD><a href="BoolMix-ReadMe.html">BoolMix</a></TD>
+  <TD>Boolean mixer.</TD>
+</TR>
+<TR>
+  <TD>BRGT</TD>
+  <TD><a href="#Brightness">Brightness</a></TD>
+  <TD>Brightness filter.</TD>
+</TR>
+<TR>
+  <TD>CHRG</TD>
+  <TD><a href="#CharGen">CharGen</a></TD>
+  <TD>Character generator (single character).</TD>
+</TR>
+<TR>
+  <TD>CGAA</TD>
+  <TD><a href="#CharGenAA">CharGenAA</a></TD>
+  <TD>Anti-aliased character generator (single character only).</TD>
+</TR>
+<TR>
+  <TD>BCPS</TD>
+  <TD><a href="#ContrastPS">ContrastPS</a></TD>
+  <TD>Photoshop-style brightness/contrast filter.</TD>
+</TR>
+<TR>
+  <TD>Fauv</TD>
+  <TD><a href="#Fauve">Fauve</TD>
+  <TD>Colorizes</a> input in the style of Fauvism.</TD>
+</TR>
+<TR>
+  <TD>DSRC</TD>
+  <TD><a href="FFSrcPlug-ReadMe.html">FFSrcPlug</a></TD>
+  <TD>MFC template project for developing Freeframe source plugins.</TD>
+</TR>
+<TR>
+  <TD>Hsto</TD>
+  <TD><a href="#Histogram">Histogram</a></TD>
+  <TD>Displays a continuous histogram of the input video.</TD>
+</TR>
+<TR>
+  <TD>INVT</TD>
+  <TD><a href="#Invert">Invert</a></TD>
+  <TD>Inverts RGB values.</TD>
+</TR>
+<TR>
+  <TD>MskX</TD>
+  <TD><a href="#MaskMix">MaskMix</a></TD>
+  <TD>Mixes two inputs according to a third mask input.</TD>
+</TR>
+<TR>
+  <TD>Mult</TD>
+  <TD><a href="#Multiply">Multiply</a></TD>
+  <TD>Multiplies two inputs.</TD>
+</TR>
+<TR>
+  <TD>PLYR</TD>
+  <TD><a href="PlayerFF-ReadMe.html">PlayerFF</a></TD>
+  <TD>Freeframe clip player.</TD>
+</TR>
+<TR>
+  <TD>PLLB</TD>
+  <TD><a href="PlayerFF-ReadMe.html">PlayerFFLB</a></TD>
+  <TD>Freeframe clip player with letterboxing.</TD>
+</TR>
+<TR>
+  <TD>RADR</TD>
+  <TD><a href="#Radar">Radar</a></TD>
+  <TD>Source plugin to simulate a radar sweep.</TD>
+</TR>
+<TR>
+  <TD>TXTG</TD>
+  <TD><a href="#TextGen">TextGen</a></TD>
+  <TD>Text generator.</TD>
+</TR>
+<TR>
+  <TD>TGAA</TD>
+  <TD><a href="#TextGenAA">TextGenAA</a></TD>
+  <TD>Anti-aliased text generator.</TD>
+</TR>
+<TR>
+  <TD>UWHO</TD>
+  <TD><a href="http://whorld.org/UltraWhorldReadMe.html">UltraWhorld</a></TD>
+  <TD>Enhanced version of Whorld geometric visualizer.</TD>
+</TR>
+<TR>
+  <TD>WVGN</TD>
+  <TD><a href="WaveGen-ReadMe.html">WaveGen</a></TD>
+  <TD>Wave generator.</TD>
+</TR>
+<TR>
+  <TD>WHTN</TD>
+  <TD><a href="#Whiten">Whiten</a></TD>
+  <TD>Fade to white.</TD>
+</TR>
+<TR>
+  <TD>WHOR</TD>
+  <TD><a href="http://whorld.org/WhorldFFReadMe.html">WhorldFF</a></TD>
+  <TD>Whorld geometric visualizer.</TD>
+</TR>
+
+</TABLE>
+
+<dl>
+
+<a name="AlphaMix"><dt><b>AlphaMix</b>
+
+<dd>Alpha mixes two inputs.
+
+<br><br>PARAMETERS
+<ol>
+<li>
+<dl>
+<dt>Mix Value
+<dd>0 = input B, .5 = 50/50 mix, 1 = input A
+</dl>
+</ol>
+
+<p>MMX optimized. Supports 32-bit color only.
+
+<a name="Blacken"><dt><b>Blacken</b>
+
+<dd>Fade to black.
+
+<br><br>PARAMETERS
+<ol>
+<li>
+<dl>
+<dt>Brightness
+<dd>0 = all black, 1 = normal
+</dl>
+</ol>
+
+<p>MMX optimized. Supports 32-bit color only.
+
+<a name="BoolMix"><dt><b>BoolMix</b>
+
+<dd>Boolean mixer.
+
+<p>Supports all color modes. Has its own <a href="BoolMix-ReadMe.html">ReadMe</a>.
+
+<a name="Brightness"><dt><b>Brightness</b>
+
+<dd>Brightness filter.
+
+<br><br>PARAMETERS
+<ol>
+<dl>
+<li>
+<dt>Brightness
+<dd>0 = all black, .5 = normal, 1 = all white
+</dl>
+</ol>
+
+<p>MMX optimized. Supports 32-bit color only.
+
+<a name="CharGen"><dt><b>CharGen</b>
+
+<dd>Character generator (single character).
+
+<br><br>PARAMETERS
+<ol>
+<dl>
+<li><dl>
+<dt>Character	
+<dd>ASCII character to display, from 0x21 to 0x7E
+</dl><li><dl>
+<dt>Font		
+<dd>which font to use; depends on installed fonts
+</dl><li><dl>
+<dt>Font Size	
+<dd>font size
+</dl><li><dl>
+<dt>Horz Scale	
+<dd>horizontal scaling: 0 = narrow, .5 = none, 1 = wide
+</dl><li><dl>
+<dt>Pos X		
+<dd>X position
+</dl><li><dl>
+<dt>Pos Y		
+<dd>Y position
+</dl><li><dl>
+<dt>Rotation	
+<dd>rotation: 0 to 360 degrees
+</dl><li><dl>
+<dt>Red		
+<dd>red channel of text color
+</dl><li><dl>
+<dt>Green		
+<dd>green channel of text color
+</dl><li><dl>
+<dt>Blue		
+<dd>blue channel of text color
+</dl><li><dl>
+<dt>Background	
+<dd>if zero, background is transparent, else it's black
+</dl><li><dl>
+<dt>Bold		
+<dd>if non-zero, text is bold
+</dl><li><dl>
+<dt>Italic		
+<dd>if non-zero, text is italic
+</dl><li><dl>
+<dt>Underline	
+<dd>if non-zero, text is underlined
+</dl>
+</ol>
+
+<p>For anti-aliasing, use CharGenAA instead. To display lines of text, 
+use <a href="#TextGen">TextGen</a> or TextGenAA.
+
+<a name="CharGenAA"><dt><b>CharGenAA</b>
+
+<dd>Anti-aliased character generator (single character only).
+
+<br><br>PARAMETERS
+
+<ul>
+Same as CharGen.
+</ul>
+
+<p>This plugin uses GDI+ instead GDI, and therefore requires the GDI+ DLL.
+To use this plugin under versions of Windows earlier than XP, you must
+install the GDI+ redistributable.
+
+<a name="ContrastPS"><dt><b>ContrastPS</b>
+
+<dd>Photoshop-style brightness/contrast filter.
+
+<br><br>PARAMETERS
+<ol>
+<li>
+<dl>
+<dt>Brightness
+<dd>0 = minimum, .5 = normal, 1 = maximum
+</dl>
+<li>
+<dl>
+<dt>Contrast
+<dd>0 = all gray, .5 = normal, 1 = thresholding
+</dl>
+</ol>
+
+<p>MMX optimized. Supports 32-bit color only.
+
+<p>To exactly emulate Photoshop's behavior, the brightness parameter is
+scaled by 40%, and therefore does not saturate to black/white. Note
+that when reducing Contrast, Brightness is applied first, whereas when
+increasing Contrast, Brightness is applied afterwards. Also note that
+maximum Contrast (thresholding) is handled as a special case, since it
+would otherwise cause a divide by zero.
+
+<a name="Fauve"><dt><b>Fauve</b>
+
+<dd>Colorizes input in the style of Fauvism.
+
+<br><br>PARAMETERS
+<ol>
+<li>
+<dl>
+<dt>Mode
+<dd>0 = Luma, .5 = RGB
+</dl>
+</ol>
+
+<p>The plugin is a visualization of a histogram but using pseudocolor
+instead of the customary graph. Pixels are colored according to the
+popularity of their original colors in the input image, such that more
+common input colors translate to brighter output colors. The effect
+enhances edges, adds texture, simplifies and drastically alters the
+palette, and reduces spatial cohesion. In Luma mode, the plugin:
+
+<p><ol>
+<li>Calculates the frame's luma histogram.
+<li>Replaces each pixel with a greyscale value corresponding to that
+pixel's rank in the luma histogram. The histogram is normalized so
+that pixels in the top rank are assigned white in the output, while
+pixels in lower ranks receive proportionally darker values.
+</ol>
+
+<p>RGB mode is similar, but does the above operations separately for each
+color channel, resulting in color output instead of greyscale.
+
+<p>Supports all color modes. Assembler optimized.
+
+<a name="FFSrcPlug"><dt><b>FFSrcPlug</b>
+
+<dd>MFC template project for developing Freeframe source plugins.
+
+<p>Supports all color modes. Has its own <a href="FFSrcPlug-ReadMe.html">ReadMe</a>.
+
+<a name="Histogram"><dt><b>Histogram</b>
+
+<dd>Displays a continuous histogram of the input video.
+
+<br><br>PARAMETERS
+
+<ol>
+<li>
+<dl>
+<dt>Mode
+<dd>0 = Luma, .25 = RGB, .5 = RGB + Luma, .75 = RGB Overlay
+</dl>
+<li>
+<dl>
+<dt>Fill
+<dd>if non-zero, use fill, else draw lines
+</dl>
+<li>
+<dl>
+<dt>Erase Bkgnd
+<dd>if non-zero, erase background, else background is input video
+</dl>
+<li>
+<dl>
+<dt>Scale
+<dd>vertical scaling: 0 = minimum, 1 = maximum (frame height)
+</dl>
+<li>
+<dl>
+<dt>Origin
+<dd>0 = top, 1 = bottom; ignored if Scale is maximum
+</dl>
+<li>
+<dl>
+<dt>Line Width
+<dd>0 = one pixel, 1 = maximum; only applies to line draw mode
+</dl>
+</ol>
+
+<p>Supports all color modes. Assembler optimized.
+
+<a name="Invert"><dt><b>Invert</b>
+
+<dd>Inverts RGB values.
+
+<br><br>PARAMETERS
+
+<ol>
+<li>
+<dl>
+<dt>Enable
+<dd>0 = disabled, non-zero = enabled
+</dl>
+</ol>
+
+<p>Supports all color modes.
+
+<a name="PlayerFF"><dt><b>PlayerFF</b>
+
+<dd>Freeframe clip player.
+
+<p>Supports all color modes. Has its own <a href="PlayerFF-ReadMe.html">ReadMe</a>.
+Included with FFRend V2.
+
+<a name="MaskMix"><dt><b>MaskMix</b>
+
+<dd>Mixes two inputs according to a third mask input.
+
+<br><br>PARAMETERS
+
+<ol>
+<li><dl>
+<dt>Mask Mode	
+<dd>controls input roles: see table below
+
+<p>
+<table border=1 cellpadding=2 cellspacing=0>
+<tr>
+<th>#</th><th>ch1 </th><th>ch2 </th><th>mask</th>
+</tr>
+<tr>
+<td>0</td><td>src1</td><td>src2</td><td>src3</td>
+</tr>
+<tr>
+<td>1</td><td>src1</td><td>src3</td><td>src2</td>
+</tr>
+<tr>
+<td>2</td><td>src2</td><td>src3</td><td>src1</td>
+</tr>
+<tr>
+<td>3</td><td>src2</td><td>src1</td><td>src3</td>
+</tr>
+<tr>
+<td>4</td><td>src3</td><td>src1</td><td>src2</td>
+</tr>
+<tr>
+<td>5</td><td>src3</td><td>src2</td><td>src1</td>
+</tr>
+</table>
+
+</dl><li><dl>
+<dt>Mask Opacity	
+<dd>opacity of mask: 0 = none, 1 = max
+</dl><li><dl>
+<dt>Negate Mask	
+<dd>if non-zero, invert mask input
+</dl>
+</ol>
+
+<p>Same behavior as vvDynaMask, but an order of magnitude faster.
+MMX optimized. Supports 32-bit color only.
+
+<a name="Multiply"><dt><b>Multiply</b>
+
+<dd>Multiplies two inputs.
+
+<br><br>PARAMETERS
+
+<ol>
+<li><dl>
+<dt>Blend		
+<dd>alpha mixes between input A and multiply result
+</dl><li><dl>
+<dt>Invert		
+<dd>if non-zero, invert input B before multiply
+</dl><li><dl>
+<dt>Swap 
+<dd>inputs	if non-zero, swap inputs
+</dl>
+</ol>
+
+<p>Multiplies the two inputs, and blends the result with input A.
+MMX optimized. Supports 32-bit color only.
+
+<a name="Radar"><dt><b>Radar</b>
+
+<dd>Source plugin to simulate a radar sweep.
+
+<p>PARAMETERS
+
+<ol>
+<li><dl>
+<dt>Speed		<dd>auto-rotation rate: 0 = none, 1 = max
+</dl><li><dl>
+<dt>Decay		<dd>sweep width: 0 = min, .5 = fit to frame, 1 = max
+</dl><li><dl>
+<dt>Radius		<dd>sweep radius: 0 = min, 1 = max
+</dl><li><dl>
+<dt>Color		<dd>selects sweep color: white, R, G, B, C, M, Y
+</dl><li><dl>
+<dt>Origin X	<dd>sweep origin X: 0 = left, 1 = right
+</dl><li><dl>
+<dt>Origin Y	<dd>sweep origin Y: 0 = top, 1 = bottom
+</dl><li><dl>
+<dt>Angle		<dd>angle: 0 = 0 degrees, 1 = 360 degrees
+</dl><li><dl>
+<dt>Scale		<dd>radius scaling: 0 = none, 1 = max
+</dl><li><dl>
+<dt>Reverse		<dd>if non-zero, reverse sweep direction
+</dl>
+</ol>
+
+<p>Assembler optimized. Supports 32-bit color only.
+
+The Angle parameter is more useful with auto-rotate off (Speed = 0).
+The Scale parameter is useful for ensuring that the sweep fills the
+entire frame, e.g. if the frame has an unusual aspect ratio, or the
+origin is moved to a corner of the frame. The fit to frame behavior
+(Radius = .5) assumes Scale = 0.
+
+<a name="TextGen"><dt><b>TextGen</b>
+
+<dd>Text generator.
+
+<br><br>PARAMETERS
+
+<ol>
+<li><dl>
+<dt>Document	
+<dd>which document to display
+</dl><li><dl>
+<dt>Line		
+<dd>which line of current document to display
+</dl><li><dl>
+<dt>Font		
+<dd>which font to use; depends on installed fonts
+</dl><li><dl>
+<dt>Font Size	
+<dd>font size
+</dl><li><dl>
+<dt>Leading		
+<dd>line spacing: 0 = min, .5 = default, 1 = max
+</dl><li><dl>
+<dt>Horz Scale	
+<dd>horizontal scaling: 0 = narrow, .5 = none, 1 = wide
+</dl><li><dl>
+<dt>Pos X		
+<dd>X position
+</dl><li><dl>
+<dt>Pos Y		
+<dd>Y position
+</dl><li><dl>
+<dt>Rotation	
+<dd>rotation: 0 to 360 degrees
+</dl><li><dl>
+<dt>Red		
+<dd>red channel of text color
+</dl><li><dl>
+<dt>Green		
+<dd>green channel of text color
+</dl><li><dl>
+<dt>Blue		
+<dd>blue channel of text color
+</dl><li><dl>
+<dt>Background	
+<dd>if zero, background is transparent, else it's black
+</dl><li><dl>
+<dt>Bold		
+<dd>if non-zero, text is bold
+</dl><li><dl>
+<dt>Italic		
+<dd>if non-zero, text is italic
+</dl><li><dl>
+<dt>Underline	
+<dd>if non-zero, text is underlined
+</dl><li><dl>
+<dt>Horz Margins	
+<dd>horizontal margins, as percentage of frame width
+</dl>
+</ol>
+
+<p>The plugin looks for text files in the folder "My Documents\TextGen".
+If there's a text file in My Documents\TextGen called playlist.txt, it's
+assumed to contain a list of paths to text files; for details, see below.
+If there's no playlist, any text files (files with the .txt extension)
+found in My Documents\TextGen are loaded, in alphabetical order. If
+there's no playlist and no text files are found either, the plugin
+displays "NO TEXT".
+
+<p>If playlist.txt exists, it's assumed to contain a list of absolute
+(fully-qualified) paths to other text files. Each line of the playlist 
+should contain exactly one path. Do not enclose paths in quotes, even
+if they contain spaces. The text files are loaded in the order they 
+appear in the playlist. The playlist method requires more setup, but
+allows you to link to existing documents instead of copying them
+to the TextGen folder, and also lets you specify the document order.
+
+<p>Text files may be ASCII or Unicode UTF-16LE (16-bit little-endian).
+Unicode text files must have the BOM (Byte Order Mark) 0xFF, 0xFE
+in the first two bytes.
+
+<p>For anti-aliasing, use TextGenAA instead. To display single characters,
+use <a href="#CharGen">CharGen</a> or CharGenAA.
+
+<a name="TextGenAA"><dt><b>TextGenAA</b>
+
+<dd>Anti-aliased text generator.
+
+<br><br>PARAMETERS
+
+<ul>
+Same as TextGen.
+</ul>
+
+<p>The plugin looks for text files in the folder "My Documents\TextGen".
+For details, see TextGen.
+
+<p>This plugin uses GDI+ instead GDI, and therefore requires the GDI+ DLL.
+To use this plugin under versions of Windows earlier than XP, you must
+install the GDI+ redistributable.
+
+<a name="UltraWhorld"><dt><b>UltraWhorld</b>
+
+<dd>Enhanced version of Whorld geometric visualizer.
+
+<p>Supports all color modes. This plugin is not included in the ckffplugs package, and is only listed here for
+completeness. You can download it <a href="http://whorld.org/download.html">here</a>,
+and it's documented <a href="http://whorld.org/UltraWhorldReadMe.html">here</a>.
+
+<a name="WaveGen"><dt><b>WaveGen</b>
+
+<dd>Wave generator.
+
+<p>Supports all color modes. Has its own <a href="WaveGen-ReadMe.html">ReadMe</a>.
+
+<a name="Whiten"><dt><b>Whiten</b>
+
+<dd>Fade to white.
+
+<p>PARAMETERS
+
+<ol>
+<li>
+<dl>
+<dt>Brightness
+<dd>0 = normal, 1 = all white
+</dl>
+</ol>
+
+<p>MMX optimized. Supports 32-bit color only.
+
+<a name="WhorldFF"><dt><b>WhorldFF</b>
+
+<dd>Whorld geometric visualizer.
+
+<p>Supports all color modes. This plugin is not included in the ckffplugs package, and is only listed here for
+completeness. You can download it <a href="http://whorld.org/download.html">here</a>,
+and it's documented <a href="http://whorld.org/WhorldFFReadMe.html">here</a>.
+
+</dl>
+
+<h3>NOTES</h3>
+
+<p>The source code and binaries for this release are available from the FFRend web site, <a href="http://ffrend.sourceforge.net/">http://ffrend.sourceforge.net/</a>.
+
+<h3>LICENSE</h3>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
+
+<p>Kopyleft 2007 Chris Korda, All Rites Reversed.
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

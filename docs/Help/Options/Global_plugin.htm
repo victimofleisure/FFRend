@@ -1,0 +1,18 @@
+<title>Global plugin</title>
+<body>
+
+<h3>Global plugin</h3>
+
+<b>This option was removed in version 2.</b>
+
+<p>The global plugin option allows you to apply a post-process to all of your existing <a href="../Projects/Projects.htm">projects</a> <em>without</em> editing the projects. This can be useful during a live performance, e.g. you might want to adjust the brightness/contrast globally, or display your projects through a matte. When you open an existing project, the global plugin is automatically appended to the <a href="../Plugins/Plugin_chains.htm">plugin chain</a>. The global plugin is NOT included when you save the project.
+
+<p>To set a global plugin, open the Options dialog, go to the Global plugin group, and press the Browse button. A file dialog is displayed. Select a plugin, and press OK. The selected plugin is added to the drop list. Press OK again to save your changes and close the Options dialog. Now open an existing project, and the global plugin should appear at the end of the plugin chain. Note that nothing happens until you open a project; selecting a global plugin has no effect on the current project.
+
+<p>The drop list contains the most recently used global plugins, so that you can select one of them quickly without browsing. To disable the global plugin, select &lt;none&gt; in the drop list. Again, note that you must open a project before global plugin changes take effect.
+
+<p>If you edit the global plugin's parameters, the edits persist until you select a different global plugin, or exit the application; the global plugin's state is not affected by opening projects. The same is true if you <a href="../Plugins/Bypass_and_solo.htm">bypass</a> the global plugin, or <a href="../Parameters/Automating_parameters.htm">automate</a> its parameters.
+
+<p>It is possible to apply multiple effects at once, even though there's only one global plugin. To do this, encapsulate the desired effects in a <a href="../Metaplugins/Metaplugins.htm">metaplugin</a>, and then select the metaplugin as the global plugin.
+
+</body>

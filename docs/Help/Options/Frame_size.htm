@@ -1,0 +1,20 @@
+<title>Frame size</title>
+<body>
+
+<h3>Frame size</h3>
+
+<p>This option allows you to specify the size of the video frame that's passed along your <a href="../Plugins/Plugin_chains.htm">plugin chain</a>. This size effectively determines the rendering <em>resolution</em>. Use the drop list to choose a standard frame size; for other sizes, choose "Custom", and then enter the desired width and height in pixels.
+
+<p>The engine frame size can differ from the <a href="../Plugins/Input_video.htm">input video</a> frame size, in which case the input video is resized to fit. Note that this may cause distortion, which you can avoid by matching the frame size to the input video whenever possible.
+
+<p>The engine frame size can also differ from the output window size, e.g. you could render at 320 x 240 but view the output at 1024 x 768. The output image is generated post-rendering, so the size of the output window doesn't affect rendering quality.
+
+<p>Changing the frame size reinitializes any currently loaded plugins. This may cause glitches in the output, so changing the frame size during a performance is not recommended.
+
+<p>As the resolution increases, more CPU time is required to render each frame. Large frame sizes may cause FFRend to <a href="../Loose_Ends/Performance.htm">fall behind</a> and no longer be in real time. When you're recording a finished <a href="../Projects/Projects.htm">project</a>, staying in real time usually isn't a concern. During development, however, staying in real time is preferable, because otherwise it's hard to judge the <a href="../Projects/Master_speed.htm">speed</a> of your <a href="../Parameters/Automating_parameters.htm">automations</a>.
+
+<p>Consequently, it can make sense to develop your projects at a low resolution, and then record them at a higher resolution. One problem with this approach is that your plugins may not behave exactly the same way at different resolutions. For example a plugin could have a parameter that's specified in pixels. Such a parameter would have to be compensated for changes in frame size.
+
+<p>While FFRend doesn't impose any upper limit on frame size, unfortunately the same can't be said for Freeframe plugins. Many plugins behave unexpectedly above a certain frame size. The limits vary, and can only be determined by trial and error. Most plugins can handle at least 1024 x 768, but above that, expect surprises.
+
+</body>

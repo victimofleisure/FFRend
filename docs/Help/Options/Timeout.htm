@@ -1,0 +1,12 @@
+<title>Timeout</title>
+<body>
+
+<h3>Timeout</h3>
+
+<p>This is how long FFRend's rendering engine will wait for a plugin to output a frame, in milliseconds. If a plugin takes longer than this, the engine stalls. If you're using a very high resolution, or running on a weak machine, you may need to increase the timeout to prevent the engine from stalling. A reasonable timeout for a given frame rate can be calculated as follows:
+
+<p>Timeout = 1000 / FrameRate &times; 2
+
+<p>The engine can also be stalled by certain types of routing, typically involving multiple feedback paths to the same plugin. In such cases, the timeout determines how long the engine will wait before stalling.
+
+</body>

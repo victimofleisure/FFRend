@@ -1,0 +1,33 @@
+<title>Modulation ranges</title>
+<body>
+
+<h3>Modulation ranges</h3>
+
+<p>A Freeframe <a href="../Parameters/Parameters.htm">parameter</a> ranges from 0 to 1, and when a parameter is <a href="../Parameters/Automating_parameters.htm">automated</a>, its value normally traverses this entire range. Sometimes it's desirable to limit the value to a smaller range, called a <em>modulation range</em>. The range determines the <em>amplitude</em> of the modulation.
+
+<p>A parameter's slider has an unusually wide, open track, which is used to display the modulation range. The range is represented by a dark blue rectangle located within the slider track. During automation, the slider thumb (the part that moves) is confined to this rectangle.
+
+<p>A modulation range can be created in various ways. One method uses the slider's current position to set the range. Move the slider thumb to where the range should start, and choose <span class="cmd">Edit/Modulation Range/Set Start</span>, or press <span class="key">Ctrl+Home</span>. Now move the slider thumb to where the range should end, and choose <span class="cmd">Edit/Modulation Range/Set End</span>, or press <span class="key">Ctrl+End</span>. To remove an existing range, choose <span class="cmd">Edit/Modulation Range/Remove</span>.
+
+<p>It's also possible to create or edit a modulation range numerically, using a dialog. To show the dialog, use <span class="cmd">Edit/Modulation Range/Edit</span>. The dialog displays the current range, and allows you to edit it. To remove an existing range, set either the start or the end to &minus;1.
+
+<p>The commands described above are also accessible via context menu. Note that to display the context menu, you must right-click on the parameter's name, NOT on its slider; right-clicking on the slider is reserved for additional shortcuts, which are explained below.
+
+<p>Shortcuts for creating a new range:
+
+<ul>
+<li>To draw a new range, right-click in the slider track, at the point where the range should start, and drag the cursor horizontally, while keeping the right mouse button pressed. When the range has the desired length, release the right mouse button.
+<li>If you right-click in the slider track without dragging, a range is drawn between the slider's current position and wherever you clicked.
+</ul>
+
+<p>Shortcuts for editing an existing range:
+
+<ul>
+<li>To extend or trim an existing range, right-click near either end of it.
+<li>To remove a range, right-click within the slider, but outside the slider's track.
+<li>You can also drag an existing range: with the Ctrl key held down, right-click the range, and move the cursor horizontally, while keeping the right button and Ctrl held down. The cursor changes to a double-headed arrow to indicate the "drag range" state.
+</ul>
+
+
+
+</body>

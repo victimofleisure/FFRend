@@ -1,0 +1,33 @@
+<title>Record dialog</title>
+<body>
+
+<h3>Record dialog</h3>
+
+<dl>
+<dt>Input frame size and frame rate
+<dd>These read-only fields display the <a href="../Options/Frame_size.htm">frame size</a> and <a href="../Options/Frame_rate.htm">frame rate</a> of the current plugin chain. The recording can have a different frame size or frame rate; see below.
+<dt>Output frame size
+<dd>This allows you to set the frame size of the recording. If the output frame size differs from the input frame size, the output frames are resized as needed. To use the input frame size, check "Use input frame size." Otherwise, select a standard frame size from the Frame Size drop-list, or for other frame sizes, select "Custom" and enter the width and height in pixels.
+<dt>Output frame rate
+<dd>This allows you to set the frame rate of the recording. To use the input frame rate, check "Use input frame rate." Otherwise, enter a frame rate, in frames per second.
+<dt>Output color depth
+<dd>This drop list allows you to select the color depth of the recording, in bits per pixel. The default is 24-bit (True Color).
+<dt>Duration
+<dd>This allows you to specify the length of the recording, using one of the following options:
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr>
+<td>Custom</td><td>Lets you enter the desired length in the edit box. The Time/Frames radio buttons determine the input format. If Time is selected, enter a time in hh:mm:ss format; if Frames is selected, enter a frame count.</td>
+</tr><tr>
+<td>Unlimited</td><td>Records indefinitely, i.e. until you stop the recording manually.</td>
+</tr><tr>
+<td>Use AVI length</td><td>Sets the duration to the exact length of the <a href="../Plugins/Input_video.htm">input AVI file</a>, and also automatically rewinds the AVI file at the start of the recording. Note that you must have an AVI file open, otherwise this option is disabled.</td>
+</tr>
+</table>
+
+<p><dt>Don't run this job now; add it to job control instead
+<dd>Check this option if you want to defer the recording instead of starting it immediately. To manage deferred recordings, use the <a href="../Recording/Job_Control.htm">Job Control</a> dialog.
+
+</dl>
+
+</body>

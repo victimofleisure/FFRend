@@ -1,0 +1,33 @@
+<title>Metaplugin links</title>
+<body>
+
+<h3>Metaplugin links</h3>
+
+<p>A <a href="../Metaplugins/Metaplugins.htm">metaplugin</a> won't function unless all of its component plugins are available. There are two possible scenarios: the metaplugin can contain <em>links</em> to its components, or the plugins can be <a href="../Metaplugins/Embedding_plugins.htm">embedded</a> within the metaplugin DLL. This topic deals with the first scenario, a linked metaplugin.
+
+<p>Since a link is an absolute path to a component DLL, links can break, e.g. if you move your plugins around, or rename folders. This is very likely to happen if you distribute a linked metaplugin, because the recipients probably won't have organized their hard drives in the same way as you.
+
+<p>When a linked metaplugin is loaded, it checks for broken links. If components aren't where they're supposed to be, the metaplugin searches for them, using a specific strategy. A linked metaplugin looks for its component plugins in the following places, in order:
+
+<ol>
+<li>The absolute path, as specified in project data.
+<li>The folder that the metaplugin DLL was loaded from.
+<li>The profile folder Application Data\FFRend\Plugins.
+<li>The METAFFREND_PATH environment variable path(s).
+</ol>
+
+<p>Option #1 is the most efficient. Option #2 is useful with hosts that require all Freeframe plugins to reside in a specific folder. Regarding option #3, note that Application Data\FFRend\Plugins is also used for unpacking embedded plugins. The environment variable is discussed <a href="#Metaplugin_links_env_var">below</a>.
+
+<p><b>Error handling</b>
+
+<p>If one or more components aren't found in any of these places, the metaplugin disables itself. A disabled metaplugin has no effect on its input, and doesn't expose any parameters to the host. The metaplugin also writes an error message to a log file indicating which plugins are missing. The log file (Application Data\FFRend\MetaFFRend.log) is a text file, and can be viewed with Notepad or any text editor.
+
+<p>Broken links can be repaired by <a href="../Metaplugins/Importing_metaplugins.htm">importing</a> the metaplugin as a project. The import displays the <a href="../Projects/Missing_Files.htm">missing files</a> dialog, which allows you to search your hard drive for the missing plugins. If the plugins are found, you can save the repaired links by <a href="../Metaplugins/Exporting_metaplugins.htm">re-exporting</a> the metaplugin.
+
+<p><a name="Metaplugin_links_env_var"><b>Environment variable</b>
+
+<p>The advantage of the METAFFREND_PATH environment variable is that it allows you to direct the metaplugin to any folder(s) you like. So for example if you keep your plugins in a folder hierarchy separated by author, you can leave them right where they are, instead of copying them to App Data. Multiple paths MUST be separated by semicolons.
+
+<p>If you've never set an environment variable, consult your Windows documentation, but generally the following should work: On the desktop, right-click My Computer, select Properties, select the Advanced tab, click Environment Variables, and in User Variables, select New. For Variable Name, enter METAFFREND_PATH, and for Variable Value, enter the search path(s), separated by semicolons if there are more than one. Don't use quotes, and be careful to avoid leading or trailing spaces. Press OK a few times and you're done. You can use other variables as examples, but don't change them or stuff will break.
+
+</body>

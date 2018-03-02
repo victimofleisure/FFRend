@@ -1,0 +1,79 @@
+<title>Job Control</title>
+<body>
+
+<h3>Job Control</h3>
+
+<p>When you set up a <a href="../Recording/Recording.htm">recording</a>, you can choose to <em>defer</em> it instead of starting it immediately. Deferred recordings are called <em>jobs</em>, and they're stored in a <em>job queue</em>. You can queue any number of jobs, and run them all at once while you're doing something else. This is known as <em>batch processing</em>.
+
+<p>The job queue is managed via the Job Control dialog; to show the dialog, use <span class="cmd">File/Job Control</span>, or press <span class="key">F4</span>. The dialog's layout should look very familiar to users of VirtualDub. The dialog contains a list, each row of which corresponds to a queued job. The columns are described below.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr>
+<td>Name</td><td colspan=2>The job name.</td>
+</tr><tr>
+<td>Source</td><td colspan=2>The source file, i.e. the name of the project from which the job was created.</td>
+</tr><tr>
+<td>Dest</td><td colspan=2>The destination file, i.e. the name of the output video file.</td>
+</tr><tr>
+<td>Start</td><td colspan=2>When the job started.
+</tr><tr>
+<td>End</td><td colspan=2>When the job ended.</td>
+</tr><tr>
+<td rowspan=6>Status</td>
+<td>Waiting</td><td>The job is ready to run.</td>
+</tr><tr>
+<td>Postponed</td><td>The job is not ready to run.</td>
+</tr><tr>
+<td>In Progress</td><td>The job is currently running.</td>
+</tr><tr>
+<td>Aborted</td><td>The job was canceled by the user.</td>
+</tr><tr>
+<td>Failed</td><td>The job stopped due to an error.</td>
+</tr><tr>
+<td>Done</td><td>The job completed successfully.</td>
+</tr></table>
+
+<p>To start batch processing, press the Start button. To cancel processing, press the Abort button. To cancel the current job, but continue processing, press the Skip button. Jobs are processed in the order in which they appear in the queue, and only jobs with a status of Waiting are processed.
+
+<p><b>Editing the queue</b>
+
+<p>The job queue can be edited at any time, even during processing. The only restriction is that you can't delete or change the status of a job while it's in progress. The editing commands are as follows:
+
+<dl>
+
+<dt>To move a job
+<dd>Simply drag the job to the desired position, or select the job and use the Move Up/Down buttons.
+
+<dt>To delete a job
+<dd>Select the job and press the Delete button, or right-click the job and choose <span class="cmd">Delete</span> from the context menu.
+
+<dt>To prevent a job from running
+<dd>Select the job, and press the Postpone button, or right-click the job and choose <span class="cmd">Postpone</span> from the context menu. The status is changed to Postponed, unless it already was Postponed, in which case it's changed to Waiting.
+
+<dt>To make a job ready to run
+<dd>Double-click the job. The status is changed to Waiting, unless it already was Waiting, in which case it's changed to Postponed. If the status was Failed, the error message is displayed, and the error is then cleared. To view the error <em>without</em> clearing it, right-click the job and choose <span class="cmd">View Error</span> from the context menu.
+
+</dl>
+
+<p>To change the status of multiple jobs at once, use these commands from the Job Control dialog's <span class="cmd">Edit</span> menu:
+
+<dl>
+<dt>All Waiting =&gt; Postponed
+<dd>Postpones all jobs with Waiting status
+<dt>All Postponed =&gt; Waiting
+<dd>Makes all postponed jobs ready to run
+<dt>All Done =&gt; Waiting
+<dd>Makes all completed jobs ready to run again
+<dt>All Failed =&gt; Postponed
+<dd>Makes all failed jobs ready to run again
+</dl>
+
+<p>To delete all completed jobs, Use <span class="cmd">Edit/Delete done jobs</span>. To delete ALL jobs, use <span class="cmd">Edit/Clear list</span>. The job queue can be saved to a file, or restored from a previously saved file, via <span class="cmd">File/Save job list</span> and <span class="cmd">File/Load job list</span>. To shutdown your computer after all jobs are completed, select <span class="cmd">Options/Shutdown when finished</span>.
+
+<p><b>Job independence</b>
+
+<p>Once a job is queued, it's completely independent of the <a href="../Projects/Projects.htm">project</a> from which it was created. This is possible because the queued job contains a <em>copy</em> of the project data. Any subsequent changes made to the project file have <em>no effect</em> on the queued job. The project file can even be renamed or deleted. Note however that the job still depends on the project's <a href="../Plugins/Plugin_chains.htm">plugins</a> and <a href="../Plugins/Input_video.htm">input video</a>. Be careful not to rename or delete plugins or clips referenced by a queued job, otherwise the job will fail.
+
+<p>A queued job also contains a snapshot of all application settings that could affect the job's behavior, including those found in the Options dialog and <a href="../Recording/Record_dialog.htm">Record dialog</a>. A job runs with the settings that were in effect when the job was queued, NOT the current settings. For example, if the engine <a href="../Options/Frame_size.htm">frame size</a> was 640 x 480 when a job was queued, that job <em>always</em> runs at 640 x 480, regardless of the current frame size.
+
+</body>

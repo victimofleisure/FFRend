@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FFRend - Development</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><b>Development</b></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h1>Development</h1>
+
+<a name="horizon">
+<h3>On the Horizon</h3>
+
+<ul>
+<li>Preview bar with multiple monitor instances, for clip preview etc.
+<li>One shot oscillator waveforms
+<li>Frequency/amplitude/pulse width modulation
+<li>Native MPEG support via DirectShow, eliminating need for AviSynth
+<li>Optional folder tree in Files bar
+<li>Handle file/folder change notifications
+<li>Improve feedback detection and handling
+</ul>
+
+<h3>Compiling</h3>
+
+<p>FFRend is designed to be an .NET 2008 project.  It may or may not compile correctly in other versions of MFC. You'll need the following files from the 
+<a href="http://www.zoneprog.com/directx/dxsdk.php">DirectX 8.1 SDK</a>:
+
+<p>ddraw.h
+<br>ddrawex.h
+<br>ddraw.lib
+<br>dxguid.lib
+<br>dshow.h (and all of its dependencies)
+<br>strmbase.lib
+<br>quartz.lib
+
+<p>Note that FFRend may not be compatible with later versions of the SDK.
+
+<p>You'll also need the following files from 
+<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/htmlhelp/html/hwMicrosoftHTMLHelpDownloads.asp">HTML help</a>:
+
+<p>htmlhelp.h
+<br>htmlhelp.lib
+
+<a name="issues">
+<h3>Revision History</h3>
+
+<p>The revision history is a spreadsheet containing all past, current, and future issues with FFRend.  The issues are ordered by category, close date, and open date.  The categories are as follows:
+
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<colgroup>
+<col width=75>
+</colgroup>
+<tr>
+<td>bug</td>
+<td>outstanding issue, to be fixed ASAP</td>
+</tr>
+<tr>
+<td>done</td>
+<td>resolved issue or completed enhancement</td>
+</tr>
+<tr>
+<td>hold</td>
+<td>issue or enhancement that's being deferred</td>
+</tr>
+<tr>
+<td>punt</td>
+<td>issue or enhancement that's been abandoned</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>issue to be addressed in the next version</td>
+</tr>
+<tr>
+<td>wip</td>
+<td>work in progress</td>
+</tr>
+</table>
+
+<ul>
+<li><a href="issues.html">FFRend issues (HTML table)</a>
+<li><a href="issues.txt">FFRend issues (tab-delimited text file)</a>
+</ul>
+
+<h3>Blog</h3>
+
+<p><a href="http://ffrend.blogspot.com/">FFRend development notes</a>
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

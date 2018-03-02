@@ -1,0 +1,14 @@
+<title>Frame rate</title>
+<body>
+
+<h3>Frame rate</h3>
+
+<p>This option specifies the ideal rate at which video frames should be processed and displayed, in frames per second (FPS). The actual frame rate can differ from the ideal. Both the ideal and actual frame rates are displayed in the status bar.
+
+<p>The actual frame rate is an approximation, and may fluctuate slightly around the ideal, but if it's <em>consistently</em> wrong, FFRend is not in real time. Note that FFRend NEVER <a href="../Loose_Ends/Frame-dropping.htm">drops frames</a>, no matter how incorrect the actual frame rate is. Frame rate errors can be divided into two types: timer-related, and load-related.
+
+<p>Timer-related errors are linked to the way timing is done in Windows, which makes some frame rates easier to approximate than others. Timer-related errors are identified by the fact that they occur even when the CPU is idle. They can often be reduced by using a <a href="../Options/Multimedia_timer.htm">multimedia timer</a>.
+
+<p>Load-related errors occur when the time required to process a frame exceeds the time available. The time available is a function of the frame rate, e.g. at 25 FPS, each frame must be processed in 1/25 of a second or less. If reducing the <a href="../Options/Frame_size.htm">frame size</a> or simplifying your <a href="../Plugins/Plugin_chains.htm">plugin chain</a> helps, the problem is load-related. For more information, see <a href="../Loose_Ends/Performance.htm">performance</a>.
+
+</body>

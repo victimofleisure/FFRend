@@ -1,0 +1,40 @@
+<title>Exporting metaplugins</title>
+<body>
+
+<h3>Exporting metaplugins</h3>
+
+<p>To export the current <a href="../Projects/Projects.htm">project</a> as a <a href="../Metaplugins/Metaplugins.htm">metaplugin</a>, choose <span class="cmd">File/Metaplugin/Export</span>. Select a destination folder and filename, and press OK. The Metaplugin Properties dialog is displayed.  Customize the properties as needed, and then press OK to export the metaplugin. The Metaplugin Properties dialog can also be shown via <span class="cmd">File/Metaplugin/Properties</span>. The properties are described below.
+
+<dl>
+<dt>Name
+<dd>This is the name of the plugin, which will be displayed in the host application. It's limited to 16 characters, and defaults to the metaplugin's file name.
+
+<dt>Unique ID
+<dd>Theoretically every Freeframe plugin is supposed to have a unique four-character ID, but in practice this hasn't worked out too well, since there's no centralized coordination. As far as I know, only Resolume pays any attention to the ID. You should at least try to give your <em>own</em> metaplugins unique IDs, especially if you plan to distribute them.
+
+<dt>Description
+<dd>This should contain a one-line description of what the metaplugin does. It defaults to "Metaplugin", but you can change the default, by pressing the Default button. FFRend doesn't limit the length, but most hosts probably will, so be reasonable. Don't put your name here; it belongs in the Author/License field (see below).
+
+<dt>Author/License
+<dd>This should contain your name and copyright/copyleft notice, e.g. "Copyleft 2007 Chris Korda". It defaults to "Copyleft", but you can change the default, by pressing the Default button. Note that if you want to allow your metaplugin to be <a href="../Metaplugins/Embedding_plugins.htm">embedded</a> within other metaplugins, your Author/License information MUST contain the string "copyleft" (case doesn't matter). Using copyleft makes it easy for others to distribute metaplugins that contain your metaplugin, thereby encouraging <em>derived works</em>.
+
+<dt>Version (Major/Minor)
+<dd>Note that this is the <em>plugin</em> version number, not the API version number. You can and should change this version number when you revise existing metaplugins.
+
+<dt>Type (Effect/Source)
+<dd>Whether the metaplugin is an effect or a source is up to you. This means <em>you</em> have to decide whether your metaplugin processes its input frames (effect) or completely overwrites them (source). If your metaplugin pays <em>any</em> attention to its input, it should be considered an effect. Just because your metaplugin contains a source plugin, doesn't mean the metaplugin is automatically a source plugin too. For example you could have a metaplugin that mixes a source plugin with the input frames: that's still an effect. If the input frames <em>never</em> affect the metaplugin's behavior, the metaplugin is a source plugin, otherwise it's an effect.
+
+<dt>Embed Plugins
+<dd>Check this box to embed the component plugins within the metaplugin DLL. Note that only <em>copyleft</em> plugins can be embedded. For details, see <a href="../Metaplugins/Embedding_plugins.htm">embedding plugins</a>.
+
+<dt>Edit Inputs
+<dd>This feature is not supported yet.
+
+<dt>Defaults
+<dd>You can change the defaults for Unique ID, Description, and Author/License, using the Defaults button. The defaults are saved in the registry. Note that unless Author/License contains the string "copyleft" (case-insensitive), it will not be possible to embed your metaplugin within other metaplugins.
+
+</dl>
+
+<p>Note that FFRend automatically decides which video modes the metaplugin supports, as follows: the metaplugin will support a given video mode only if that mode is supported by ALL of the metaplugin's component plugins.
+
+</body>

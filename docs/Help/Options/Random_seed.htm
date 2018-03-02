@@ -1,0 +1,14 @@
+<title>Random seed</title>
+<body>
+
+<h3>Random seed</h3>
+
+<p>FFRend uses random numbers for some of its <a href="../Parameters/Oscillator_waveforms.htm">oscillator waveforms</a>. This option allows you to control the seed value that's used to generate random numbers. You can specify a particular value, or you can use the system time, by checking the "Use time" checkbox, in which case no two runs of the program will generate the same random numbers.
+
+<p>FFRend's random numbers aren't truly random, in the way that tossing a coin is random; they're actually <em>pseudorandom</em>. Pseudorandom numbers form a deterministic sequence, which repeats eventually, but appears random enough to be useful. A pseudorandom sequence evolves from an initial value, called the random <em>seed</em>.
+
+<p>If the random seed is a fixed value, every time the program is run, it generates the exact same sequence of pseudorandom numbers. This can be good or bad, depending on the situation. If you want true randomness, the solution is to have the program use a different seed each time it runs. In practice this is accomplished by using the system time as the seed. This works because the system time is unlikely to ever be the same for any two runs of the program.
+
+<p>In some cases true randomness may not be what you want however. For example, suppose you create a <a href="../Projects/Projects.htm">project</a> that does something you like, and you want it to do the exact same thing again in the future, e.g. so that you can make a <a href="../Recording/Recording.htm">recording</a> of it. If your project makes any use of randomness, and you were using the system time as a random seed, you're out of luck. Your project will never do exactly the same thing again. This might be a good reason to <em>not</em> use the time as a seed.
+
+</body>

@@ -1,0 +1,16 @@
+<title>Loading plugins</title>
+<body>
+
+<h3>Loading plugins</h3>
+
+<p>Before a plugin can process frames, it must first be <em>loaded</em> into a <a href="../Plugins/Plugin_slots.htm">slot</a>. Once a plugin is loaded, it displays its parameters and allows you edit or <a href="../Parameters/Automating_parameters.htm">automate</a> them.
+
+<p>The simplest way to load a plugin is via <span class="cmd">Plugin/Load</span> or <span class="key">Ctrl+L</span>. The command displays a file open dialog; browse for the desired plugin, and press OK. The plugin is loaded into the selected slot. Note that if the selected slot already contained a plugin, the new plugin replaces it.
+
+<p>To load a plugin into a specific slot, you can also right-click on the slot's tab, and select <span class="cmd">Load</span> from the plugin context menu.
+
+<p>Plugins can also be loaded via drag and drop from Windows Explorer or from the <a href="../Projects/File_Browser.htm">File Browser</a>. This method allows you to load multiple plugins at once. Note that with this method, existing plugins are <em>not</em> replaced; empty plugin slots are inserted automatically. If you drop on a slot tab, insertion occurs at that position. If you drop elsewhere, insertion occurs at the selected slot.
+
+<p>To unload a plugin, use <span class="cmd">Plugin/Unload</span>, or choose <span class="cmd">Unload</span> from the plugin context menu.
+
+</body>

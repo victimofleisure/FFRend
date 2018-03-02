@@ -1,0 +1,14 @@
+<title>Lock frame rate</title>
+<body>
+
+<h3>Lock frame rate</h3>
+
+<p>Unchecking this option allows the engine to run as fast as it can, instead of being limited to the selected <a href="../Options/Frame_rate.htm">frame rate</a>. In <a href="../Loose_Ends/Full_screen.htm">full screen</a> mode, the engine will render at the refresh rate of the display device, assuming the engine can keep up. In windowed mode, the engine can render even faster than the display refresh, and is limited only by CPU throughput.
+
+<p>In full-screen mode, rendering exactly one frame per vertical trace gives the smoothest appearance. This can't be achieved by simply setting the frame rate equal to the display frequency, because the engine's frame timer isn't synchronized with the vertical trace. However, unlocking the frame rate CAN achieve one frame per vertical trace, because in this case the engine synchronizes directly to the display hardware, instead of using a timer.
+
+<p>Unlocking the frame rate can potentially cause <a href="../Parameters/Automating_parameters.htm">automations</a> and video clips to speed up. If this is undesirable, you can compensate for it by adjusting the <a href="../Projects/Master_speed.htm">master speed</a> and/or the playback speed of your clip player(s).
+
+<p>During <a href="../Recording/Recording.htm">recording</a>, unlocking the frame rate allows FFRend to record faster than real time. This can potentially save a considerable amount of time. Note that the apparent speed-up of automations and video clips has no effect on the recorded output.
+
+</body>

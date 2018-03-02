@@ -1,0 +1,24 @@
+<title>Metaparameter groups</title>
+<body>
+
+<h3>Metaparameter groups</h3>
+
+<p><a href="../Metaplugins/Metaparameters.htm">Metaparameters</a> can be <em>grouped</em>, so that one metaparameter controls multiple targets. This allows you to create metaplugins in which a single host parameter has multiple effects. Each group consists of a master and one or more slaves. When a master is updated (manually or via MIDI), its slaves follow it. Only masters are exposed to the host, i.e. when the metaplugin is loaded in a host application, any slave metaparameters are hidden.
+
+<p>Group members can control targets in different plugins, or different types of targets, e.g. a mix of parameters and <a href="../Parameters/Automating_parameters.htm">modulation</a> properties. Group members can also have different ranges. By inverting one of the ranges, it's possible to create a metaparameter whose targets move in opposite directions, as in a crossfader.
+
+<p>Metaparameter groups have another use unrelated to metaplugins: they allow you to assign a single MIDI controller to multiple targets. The <a href="../MIDI/MIDI_setup.htm">MIDI Setup</a> dialog limits you to one target per controller, but metaparameter groups provide a way around this restriction. To assign a single MIDI controller to multiple targets, do the following:
+
+<ol>
+<li>Create a metaparameter for each target.
+<li>Group the metaparameters.
+<li>Assign a MIDI controller to the group's master, using the Metaparam page in the MIDI Setup dialog.
+</ol>
+
+<p>To create a new group, right-click the metaparameter that should be the master, and select <span class="cmd">Group</span> from the context menu. The Metaparam Group dialog is displayed. The dialog lists the names of every metaparameter that could potentially be a slave of this group. Each name has a checkbox next to it. Use the checkboxes to select which metaparameters should belong to this group, and then press OK to save your changes. Metaparameters that already belong to a different group aren't shown, because metaparameter groups can't be nested.
+
+<p>To edit an existing group, right-click any member of the group, and select <span class="cmd">Group</span> from the context menu. Again, the Metaparam Group dialog is displayed. Check or uncheck group members as desired, and then press OK to save your changes.
+
+<p>To destroy an existing group, right-click any member of the group, and select <span class="cmd">Ungroup</span> from the context menu.
+
+</body>

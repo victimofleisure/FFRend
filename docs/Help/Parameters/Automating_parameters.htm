@@ -1,0 +1,23 @@
+<title>Automating parameters</title>
+<body>
+
+<h3>Automating parameters</h3>
+
+<p>FFRend provides a way of making a <a href="../Parameters/Parameters.htm">parameter</a> change by itself. This is referred to as <em>automating</em> the parameter. While a parameter is being automated, its slider and value are updated continuously, so that you can watch the parameter change.
+
+<p>An automated parameter is controlled by a low-frequency oscillator (LFO), using a technique known as <em>modulation</em>. Since each parameter has its own oscillator, multiple parameters can be modulated at once, each in a different way. An oscillator generates an endlessly repeating pattern, determined by its waveform, amplitude, and frequency. The waveform and frequency are specified as explained below. The amplitude defaults to the maximum range of the parameter (0 to 1), but it can also be limited, using a <a href="../Parameters/Modulation_ranges.htm">modulation range</a>.
+
+<dl>
+<dt>Enable
+<dd>This checkbox enables or disables modulation. Note that for modulation to actually occur, the frequency must also be non-zero; see below. The Enable checkbox allows you to temporarily stop an automation without losing your frequency setting. This is useful for manual overrides.
+<dt>Waveform
+<dd>This drop-list allows you to select an <a href="../Parameters/Oscillator_waveforms.htm">oscillator waveform</a>, which determines the shape of the modulation. The available waveforms include Triangle, Sine, Ramp Up, Ramp Down, Square, Pulse, Random, and Random Ramp.
+<dt>Frequency
+<dd>This edit control allows you to set the modulation frequency, in Hertz. If the frequency is zero, no modulation occurs. The upper limit is determined by the Nyquist theorem, and depends on the <a href="../Options/Frame_rate.htm">frame rate</a>. Put simply, frequencies greater than half the frame rate won't work, and as the frequency approaches half the frame rate, the modulation becomes less accurate. Note that modulation frequency is affected by the <a href="../Projects/Master_speed.htm">master speed</a> control.
+<dt>Pulse Width
+<dd>If the Pulse waveform is selected, this edit control allows you to set the pulse width; otherwise it has no effect. A pulse wave resembles a square wave, except that a square wave has a fixed 50/50 ratio of low to high, whereas a pulse wave has a variable low/high ratio, referred to as its <em>pulse width</em> or <em>duty cycle</em>. Pulse width ranges from 0 (all low) to 1 (all high); if it's 0.5, the pulse wave is identical to a square wave.
+</dl>
+
+<p>An automation can be resynchronized by left-clicking in the parameter's slider track. The slider thumb jumps to the cursor position, and automation continues from that point, though not necessarily in the same direction. To synchronize all of your automations at once, use <span class="cmd">Edit/Sync Oscillators</span>.
+
+</body>

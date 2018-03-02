@@ -1,0 +1,20 @@
+<title>Embedding plugins</title>
+<body>
+
+<h3>Embedding plugins</h3>
+
+<p>By default, a <a href="../Metaplugins/Metaplugins.htm">metaplugin</a> contains <a href="../Metaplugins/Metaplugin_links.htm">links</a> to its component plugins, but it's also possible to <em>embed</em> the components within the metaplugin DLL. To enable embedding, check the "Embed Plugins" checkbox in the <a href="../Metaplugins/Exporting_metaplugins.htm">Metaplugin Properties</a> dialog.
+
+<p>The advantage of embedding is that the metaplugin doesn't depend on any external files. This is especially useful if the metaplugin is being distributed to other users, because it avoids the whole problem of broken links. The user doesn't have to worry about having all the necessary component plugins in the correct locations on their hard drive; they just load the metaplugin into their host application, and it works.
+
+<p>The disadvantage of embedding is that it can significantly increase the size of the metaplugin DLL. On the other hand, the plugins are stored in a compressed format, which helps keep the size down.
+
+<p>Embedding is only allowed if ALL of the metaplugin's components are <em>copyleft</em>. A plugin is considered copyleft if the string "copyleft" (case-insensitive) appears in its Author/License field. The only exception to this rule is for Pete Warden's plugins. Embedding is restricted to prevent inadvertent distribution of commercial plugins. Note that this restriction also applies to metaplugins used as components; see <a href="../Metaplugins/Nesting_metaplugins.htm">nesting metaplugins</a>.
+
+<p><b>How it works</b>
+
+<p>When you load an embedded metaplugin into a host for the first time, the metaplugin <em>unpacks</em> its component plugins into a special folder in your profile: Application Data\FFRend\Plugins. If a given component is already present in this folder, it isn't unpacked. Since components aren't deleted, a metaplugin only needs to unpack itself once; the next time you run it, all of its components will already be present. This means the slight delay associated with unpacking only occurs the first time you use the metaplugin.
+
+<p>A metaplugin may not even need to unpack itself the first time you use it, e.g. if you've previously used a different metaplugin that shares the same components. Note that an unpacked component plugin is an exact binary copy of the original; even the file times are preserved.
+
+</body>

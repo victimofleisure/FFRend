@@ -1,0 +1,14 @@
+<title>Frame-dropping</title>
+<body>
+
+<h3>Frame-dropping</h3>
+
+<p>FFRend solves the frame-dropping problem which occurs in some VJ softwares. To understand why frame-dropping is a problem, you need a little background about Microsoft DirectShow.
+
+<p>DirectShow is a component of Windows that deals with playing video and audio. Windows VJ softwares often use DirectShow to display video. DirectShow is a "streaming" technology, which means it tries to keep the video in real time at any cost. If the video falls behind (e.g. due to CPU-intensive effects, high resolution, or limited disk bandwidth), DirectShow <em>drops</em> (i.e. omits) as many frames as necessary to catch up. The advantage of DirectShow is that the application doesn't have to worry about keeping its video and audio synchronized.
+
+<p>The problem is that DirectShow-based VJ softwares typically record the same output that's being displayed. This means that if dropped frames occur in the displayed output, the recording will also contain dropped frames. The result is that in certain situations--e.g. if you're using many CPU-intensive effects, or a high output resolution--it can be impossible to make a clean recording. This is the very frustrating problem that FFRend was designed to solve.
+
+<p>Since FFRend doesn't use DirectShow, it isn't restricted to a fixed <a href="../Options/Frame_rate.htm">frame rate</a>. Instead, it allows the frame rate to vary as needed. If the CPU is overloaded, the frame rate slows down, but frames are NEVER dropped, either in the displayed output or in the recording.
+
+</body>

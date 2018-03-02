@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WaveGen ReadMe</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h3>INTRODUCTION</h3>
+
+<p>WaveGen is a wave generator Freeframe effect for Windows 2000/XP. If you have any experience with analog synthesizers (or their virtual equivalent), the parameters should be familiar.
+
+<h3>PARAMETERS</h3>
+
+<ol>
+
+<li><b>Car Waveform</b>
+</br>Carrier waveform: 0 = Triangle, .125 = Sine, .25 = Ramp Up, .375 = Ramp Down, .5 = Square, .625 = Pulse, .75 = Random, .875 = Random Ramp.
+
+<li><b>Car Frequency</b>
+</br>Carrier frequency, on a logarithmic scale: 0 = .001 Hz, .25 = .01 Hz, .5 = .1 Hz, .75 = 1 Hz, 1 = 10 Hz.
+
+<li><b>Car Amplitude</b>
+</br>Carrier amplitude, from 0 to 1. At 0, there's no output; at 1, the output fills the entire frame.
+
+<li><b>Car Pulse Width</b>
+</br>Carrier pulse width (duty cycle): 0 = all low, .5 = 50%, 1 = all high. Only affects the output when the carrier waveform is "Pulse".
+
+<li><b>Car Phase Shift</b>
+</br>Shift the carrier phase by this much per frame. The unit is time, not degrees. Effectively sets the amount of scrolling: 0 = maximum reverse, .5 = no scrolling, 1 = maximum forward.
+
+<li><b>Mod Type</b>
+</br>Modulation type: 0 = None, .25 = AM (Amplitude Modulation), .5 = FM (Frequency Modulation), .75 = PM (Pulse Width Modulation). Note that when PM is selected, the carrier's waveform is automatically forced to "Pulse".
+
+<li><b>Mod Waveform</b>
+</br>Modulator waveform: 0 = Triangle, .125 = Sine, .25 = Ramp Up, .375 = Ramp Down, .5 = Square, .625 = Pulse, .75 = Random, .875 = Random Ramp.
+
+<li><b>Mod Frequency</b>
+</br>Modulator frequency, on a logarithmic scale: 0 = .001 Hz, .25 = .01 Hz, .5 = .1 Hz, .75 = 1 Hz, 1 = 10 Hz.
+
+<li><b>Mod Amplitude</b>
+</br>Modulator amplitude, from 0 to 1. At 0, there's no modulation; at 1, the modulation's "swing" is at unity.
+
+<li><b>Mod Pulse Width</b>
+</br>Modulator pulse width (duty cycle): 0 = all low, .5 = 50%, 1 = all high. Only affects the output when the modulator waveform is "Pulse".
+
+<li><b>Mod Phase Shift</b>
+</br>Shift the modulator phase by this much per frame. The unit is time, not degrees. Effectively sets the amount of scrolling: 0 = maximum reverse, .5 = no scrolling, 1 = maximum forward.
+
+<li><b>Zoom</b>
+</br>Magnification in the horizontal axis, on a logarithmic scale: 0 = x0.1, .5 = x1, 1 = x10. Note that in vertical mode, Zoom affects the vertical axis instead.
+
+<li><b>Vertical</b>
+</br>If non-zero, draw the output wave vertically instead of horizontally.
+
+<li><b>Fill</b>
+</br>If non-zero, fill in the wave instead drawing it as a line.
+
+<li><b>Erase Bkgnd</b>
+</br>If non-zero, erase the background to black; otherwise, the frame's previous contents are the background.
+
+<li><b>Line Width</b>
+</br>The width of the line, as a scaled percentage of the frame height: 0 = 1 pixel, .5 = 5% of frame height, 1 = 10% of frame height. Only affects the output in line-drawing mode.
+
+<li><b>Show Origin</b>
+</br>If non-zero, show the origin vector.
+
+<li><b>Red</b>
+</br>Sets the red component of the drawing color.
+
+<li><b>Green</b>
+</br>Sets the green component of the drawing color.
+
+<li><b>Blue</b>
+</br>Sets the blue component of the drawing color.
+
+<li><b>Invert</b>
+</br>If non-zero, invert the filled area, i.e. what was background is now filled and vice versa; only affects the output in fill mode.
+
+</ol>
+
+<h3>NOTES</h3>
+
+<p>Try doing AM or PM with the carrier and modulator phase shifts set to scroll slowly in opposite directions.
+
+<p>Also try setting carrier and modulator frequencies nearly the same for nice interference.
+
+<p>Warning: be careful with zoom < .5, as zooming too far out may overload your CPU!
+
+<p>The source code and binaries for this release are available from the FFRend web site, <a href="http://ffrend.sourceforge.net/">http://ffrend.sourceforge.net/</a>.
+
+<h3>LICENSE</h3>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
+
+<p>Kopyleft 2006 Chris Korda, All Rites Reversed.
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

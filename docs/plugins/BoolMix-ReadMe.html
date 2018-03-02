@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BoolMix ReadMe</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h3>INTRODUCTION</h3>
+
+<p>BoolMix is a boolean mixer Freeframe effect for Windows 2000/XP. It blends two input frames together using a boolean operation. This type of graphical blending is known in the Windows world as a ROP or Raster OPeration. The plugin takes a single parameter, which selects the blending mode to use.
+
+<p>The available blending modes are listed in the table below. Each blending mode is a boolean operator (OR, AND, XOR) optionally combined with an inversion of one of the inputs, or the output.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><th>Parameter</th><th>Boolean</th><th>Description</th><th>ROP code</th><th>GDI name</th></tr>
+<td>0.0 to 0.1</td><td>~A & B</td><td>AND inverted A with B</td><td>DSna</td><td>&nbsp;</td></tr>
+<td>0.1 to 0.2</td><td>~A | B</td><td>OR inverted A with B</td><td>DSno</td><td>MERGEPAINT</td></tr>
+<td>0.2 to 0.3</td><td>A & ~B</td><td>AND A with inverted B</td><td>SDna</td><td>SRCERASE</td></tr>
+<td>0.3 to 0.4</td><td>A & ~B</td><td>OR A with inverted B</td><td>SDno</td><td>&nbsp;</td></tr>
+<td>0.4 to 0.5</td><td>A & B</td><td>AND A with B</td><td>DSa</td><td>SRCAND</td></tr>
+<td>0.5 to 0.6</td><td>A | B</td><td>OR A with B</td><td>DSo</td><td>SRCPAINT</td></tr>
+<td>0.6 to 0.7</td><td>A ^ B</td><td>XOR A with B</td><td>DSx</td><td>SRCINVERT</td></tr>
+<td>0.7 to 0.8</td><td>~(A & B)</td><td>AND A with B, invert result</td><td>DSan</td><td>&nbsp;</td></tr>
+<td>0.8 to 0.9</td><td>~(A | B)</td><td>OR A with B, invert result</td><td>DSon</td><td>NOTSRCERASE</td></tr>
+<td>0.9 to 1.0</td><td>~(A ^ B)</td><td>XOR A with B, invert result</td><td>DSxn</td><td>&nbsp;</td></tr>
+</table>
+
+<p>The XOR modes alter the colors drastically, giving a psychedelic effect. The other modes don't alter the colors as much, but they're also more sensitive to very dark or very light inputs. SRCPAINT is similar to transparency, and causes the least amount of color distortion. SRCAND is similar to luma-keying: the video is only visible in non-black portions of the animation. The default blending mode is SRCINVERT.
+
+<h3>PARAMETERS</h3>
+
+<ol>
+
+<li><b>Blending mode</b>
+<br>Selects one of the blending modes listed above.
+
+</ol>
+
+<h3>NOTES</h3>
+
+<p>The source code and binaries for this release are available from the FFRend web site, <a href="http://ffrend.sourceforge.net/">http://ffrend.sourceforge.net/</a>.
+
+<h3>LICENSE</h3>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
+
+<p>Kopyleft 2006 Chris Korda, All Rites Reversed.
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<title>MIDI editing</title>
+<body>
+
+<h3>MIDI editing</h3>
+
+<p>MIDI assignments can be created and edited using the controls in each row of the <a href="../MIDI/MIDI_setup.htm">MIDI setup</a> dialog. The controls are described below. To make assignments this way, you must know which messages your device sends, and on which channels. MIDI assignments can also be <a href="../MIDI/Learn_mode.htm">learned</a>, in which case you don't need to know these details.
+
+<p>Note that a given MIDI message can only be assigned to one target at a time, though you can work around this restriction by using <a href="../Metaplugins/Metaparameter_groups.htm">metaparameter groups</a>. When you assign a message, if that message is already assigned to a different target, the previous target automatically (and silently) "loses" the message. Specifically, the previous target has its Event type set to "OFF".
+
+<dl>
+
+<dt>Range
+<dd>This determines how much effect a MIDI message has on its target. The message is interpreted as an unsigned value, and <em>normalized</em>, so that it ranges from 0 to 1. The normalized value is multiplied by Range, and the result is the target's new value. The default range is 1.
+
+<p>Range lets you make a trade-off between the <em>precision</em> and <em>magnitude</em> of a MIDI controller: making Range smaller allows finer adjustment, but reduces the controller's effect. Range can be negative, in which case the controller's effect is inverted.
+
+<p><dt>Event
+<dd>This is the type of MIDI message assigned to the target. The possible values are as follows:
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><td>OFF</td><td>No message is assigned to the target.</td></tr>
+<tr><td>CTRL</td><td>A continuous controller message is assigned to the target; the controller edit box specifies the controller number.</td></tr>
+<tr><td>NOTE</td><td>A note is assigned to the target. In this case the controller edit box displays and understands MIDI note numbers, e.g. F#4. Pressing the note <em>toggles</em> the target, i.e. flips it back and forth between 0 and 1. Releasing the note has no effect. Notes are useful for controlling switches.
+<tr><td>PITCH</td><td>The pitch bend message is assigned to the target. In this case the controller edit box is ignored.</td></tr>
+</table>
+
+<p><dt>Channel
+<dd>This is the channel on which the target's MIDI message is expected to arrive, ranging from 1 to 16.
+
+<dt>Controller
+<dd>For controller messages, this is the controller number, from 0 to 127; be aware that controllers above 120 are normally reserved for channel mode messages. For note messages, this is the note number, from C0 to G10. For pitch bend messages, this value is ignored.
+
+<dt>Value
+<dd>This is the actual data byte from the target's most recently received message, which can be helpful when debugging MIDI problems. It's displayed as a read-only value from 0 to 127.
+
+</dl>
+
+</body>

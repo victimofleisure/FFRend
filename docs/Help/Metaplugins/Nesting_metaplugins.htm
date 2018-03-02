@@ -1,0 +1,20 @@
+<title>Nesting metaplugins</title>
+<body>
+
+<h3>Nesting metaplugins</h3>
+
+<p>A <a href="../Metaplugins/Metaplugins.htm">metaplugin</a> can use other metaplugins as components. This is possible because from the host's point of view, a metaplugin is simply a Freeframe plugin, like any other. No special procedure is required; nesting occurs naturally when you include one or more metaplugins in a <a href="../Projects/Projects.htm">project</a>, and then <a href="../Metaplugins/Exporting_metaplugins.htm">export</a> that project as a metaplugin.
+
+<p>A metaplugin can use a combination of metaplugins and ordinary plugins, e.g. you could make a metaplugin that uses a mixer plugin to automatically crossfade between two metaplugins.
+
+<p>There's no limit on how deeply metaplugins can be nested. Each level of nesting results in some additional overhead, but the amount is insignificant compared to the overhead of the ordinary plugins that are actually doing the work.
+
+<p>Nesting lends itself to an object-oriented approach, in which simpler metaplugins are used as building blocks in higher-level metaplugins. This encourages iterative composition, and distributed creation. For example, if I make a metaplugin that does something you like, and send it to you, you can add value to it, by using it inside one of your own metaplugins.
+
+<p>Nesting can also be used to create modulations more complex than FFRend's built-in <a href="../Parameters/Oscillator_waveforms.htm">oscillator waveforms</a>. For example, suppose a metaplugin exposes a parameter's modulation frequency as a <a href="../Metaplugins/Metaparameters.htm">metaparameter</a>. If the metaplugin is nested within another metaplugin, the top-level metaplugin can modulate the frequency. The same technique applies to pulse width.
+
+<p>Nested metaplugins can be <a href="../Metaplugins/Embedding_plugins.htm">embedded</a>, but only if all the plugins at each level are <em>copyleft</em>, i.e. have the string "copyleft" in their Author/License information (see <a href="../Metaplugins/Exporting_metaplugins.htm">exporting metaplugins</a>). For example, if I send you a copyleft embedded metaplugin, you can embed it inside one of your metaplugins; if your metaplugin is also copyleft, it can be embedded by someone else, and so forth. When the top-level metaplugin is loaded into a host, it unpacks itself recursively.
+
+
+
+</body>

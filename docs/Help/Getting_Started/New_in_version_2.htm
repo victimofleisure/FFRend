@@ -1,0 +1,56 @@
+<title>New in version 2</title>
+<body>
+
+<h3>New in version 2</h3>
+
+<p>FFRend 2 is a near-total rewrite, not an upgrade. The application was completely redesigned from the ground up to take advantage of the parallel-processing capabilities of today's multi-core CPUs.
+
+<p><b>Major differences</b>
+
+<ul>
+
+<li>Each plugin now runs in its own thread, and given sufficient cores, each plugin runs on its own core, so that throughput is limited only by the slowest plugin (Amdahl's law).
+
+<li>The user interface is now much more responsive, even when the CPU is heavily loaded, because rendering no longer occurs in the UI thread.
+
+<li>The built-in clip player was replaced by an enhanced version of PlayerFF which allows clips to be opened by path, or by dragging from the Files bar's Clips pane.
+
+<li>Monitor quality has been improved and now has two settings (fast or smooth), specified in the options dialog. Even the fast setting is still an improvement over version 1.
+
+<li>Multiple instances of the same plugin are now differentiated by decorating their names, e.g. PeteMixer-1, PeterMixer-2, etc.
+
+<li>Plugins with more than two inputs are now supported.
+
+<li>A Graph view is now available, which shows a dynamically updated graph of your current routing. Note that you must download and install graphviz to use this feature.
+
+<li>Two additional new views, History and Queues, provide dynamic information about the rendering engine's state, allowing you to easily determine which plugins are limiting throughput.
+
+<li>The frame rate can now be unlocked, so that the engine renders as fast as possible, or at the monitor refresh rate in full-screen mode.
+
+</ul>
+
+<p><b>Minor differences</b>
+
+<ul>
+
+<li>The Record command was moved from the View menu to the File menu, and the Options command moved from the View menu to the Edit menu.
+
+<li>The Export and Record commands no longer automatically pause the output.
+
+<li>The Bypass command no longer alters the routing. This can cause significantly different behavior, particularly when bypassing source plugins.
+
+<li>All sizing control bars now have a system menu option to control whether they're dockable.
+
+<li>There's no longer a distinction between Full-Screen and Exclusive modes, i.e. Full-Screen mode is always Exclusive. Consequently the app's UI is no longer accessible in Full-Screen mode without using a dual-monitor setup.
+
+<li>Metaplugins are still fully supported. Note however that metaplugins are internally single-threaded, i.e. a metaplugin's component plugins do not run in parallel with each other. Consequently, on a multicore machine, a typical metaplugin will run more slowly than the equivalent project.
+
+<li>If a plugin can't render because it's not routed to the output, any parameter modulations it has will not automate their corresponding sliders in the UI.
+
+<li>The Global Plugin and Monitor Source Selection features were removed.
+
+<li>The app now builds in VC++ 9.0.
+
+</ul>
+
+</body>

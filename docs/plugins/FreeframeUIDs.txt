@@ -1,0 +1,23 @@
+UID	Name	Description
+AlpX	<a href="#AlphaMix">AlphaMix</a>	Alpha mixer.
+BLKN	<a href="#Blacken">Blacken</a>	Fade to black.
+BOOL	<a href="BoolMix-ReadMe.html">BoolMix</a>	Boolean mixer.
+BRGT	<a href="#Brightness">Brightness</a>	Brightness filter.
+CHRG	<a href="#CharGen">CharGen</a>	Character generator (single character).
+CGAA	<a href="#CharGenAA">CharGenAA</a>	Anti-aliased character generator (single character only).
+BCPS	<a href="#ContrastPS">ContrastPS</a>	Photoshop-style brightness/contrast filter.
+Fauv	<a href="#Fauve">Fauve	Colorizes</a> input in the style of Fauvism.
+DSRC	<a href="FFSrcPlug-ReadMe.html">FFSrcPlug</a>	MFC template project for developing Freeframe source plugins.
+Hsto	<a href="#Histogram">Histogram</a>	Displays a continuous histogram of the input video.
+INVT	<a href="#Invert">Invert</a>	Inverts RGB values.
+MskX	<a href="#MaskMix">MaskMix</a>	Mixes two inputs according to a third mask input.
+Mult	<a href="#Multiply">Multiply</a>	Multiplies two inputs.
+PLYR	<a href="PlayerFF-ReadMe.html">PlayerFF</a>	Freeframe clip player.
+PLLB	<a href="PlayerFF-ReadMe.html">PlayerFFLB</a>	Freeframe clip player with letterboxing.
+RADR	<a href="#Radar">Radar</a>	Source plugin to simulate a radar sweep.
+TXTG	<a href="#TextGen">TextGen</a>	Text generator.
+TGAA	<a href="#TextGenAA">TextGenAA</a>	Anti-aliased text generator.
+UWHO	<a href="http://whorld.org/UltraWhorldReadMe.html">UltraWhorld</a>	Enhanced version of Whorld geometric visualizer.
+WVGN	<a href="WaveGen-ReadMe.html">WaveGen</a>	Wave generator.
+WHTN	<a href="#Whiten">Whiten</a>	Fade to white.
+WHOR	<a href="http://whorld.org/WhorldFFReadMe.html">WhorldFF</a>	Whorld geometric visualizer.

@@ -1,0 +1,12 @@
+<title>Frame memory</title>
+<body>
+
+<h3>Frame memory</h3>
+
+<p>This advanced engine option limits the amount FFRend can use for its frame buffers. This is helpful when working with large frame sizes. By default the engine optimizes for speed over memory conservation, i.e. it allocates enough frame buffers for the worst possible case, regardless of memory limits. The engine can function with considerably less memory, though allocating too little may reduce throughput, or cause the engine to stall. Note that this option has no effect on memory allocated by Freeframe plugins.
+
+<p>The limit is specified in megabytes, and defaults to 4096, or 4 gigabytes, the maximum amount of memory a 32-bit application can address. The amount of memory  currently used for frame buffers is also shown. Note that FFRend is Large Address Aware, meaning it can access up to 4GB of memory on 64-bit operating systems, and up to 3GB on 32-bit operating systems provided boot.ini specifies the /3GB switch.
+
+
+
+</body>

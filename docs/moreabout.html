@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>More about FFRend</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h2>More about FFRend</h2>
+
+<h3>Frame-dropping</h3>
+
+<p>FFRend solves the frame-dropping problem which occurs in some VJ softwares. To understand why frame-dropping is a problem, you need a little background about Microsoft DirectShow.
+
+<p>DirectShow is a component of Windows that deals with playing video and audio. Windows VJ softwares often use DirectShow to display video. DirectShow is a "streaming" technology, which means it tries to keep the video in real time at any cost. If the video falls behind (e.g. due to CPU-intensive effects, high resolution, or limited disk bandwidth), DirectShow drops as many frames as necessary to catch up. The advantage of DirectShow is that the application doesn't have to worry about keeping its video and audio synchronized.
+
+<p>The problem is that DirectShow-based VJ softwares typically record the same output that's being displayed. This means that if dropped frames occur in the displayed output, the recording will also contain dropped frames. The result is that in certain situations--e.g. if you're using many CPU-intensive effects, or a high output resolution--it can be impossible to make a clean recording. This is the very frustrating problem that FFRend was designed to solve.
+
+<p>Since FFRend doesn't use DirectShow, it isn't restricted to a fixed frame rate. Instead, it allows the frame rate to vary as needed. If the CPU is overloaded, the frame rate slows down, but frames are NEVER dropped, either in the displayed output or in the recording. Of course not using DirectShow has a down side too: FFRend can't play MPEGs, only AVI files (unless you use <a href="http://www.avisynth.org/">AviSynth</a>). Sometimes you can't have everything.
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

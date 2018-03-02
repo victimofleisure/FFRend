@@ -1,0 +1,4112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FFRend Issues</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=0>
+<TR VALIGN=TOP>
+<TD>open</TD>
+<TD>close</TD>
+<TD>type</TD>
+<TD>description</TD>
+<TD>rev</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/31/06</TD>
+<TD>07/31/06</TD>
+<TD>done</TD>
+<TD>invalid project doc causes silent failure; add doc header w/ version</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/31/06</TD>
+<TD>07/31/06</TD>
+<TD>done</TD>
+<TD>loading a non-freeframe DLL causes crash</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/31/06</TD>
+<TD>07/31/06</TD>
+<TD>done</TD>
+<TD>if a bypassed plugin is dragged to a different slot, tab highlight doesn't move</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/29/06</TD>
+<TD>08/02/06</TD>
+<TD>done</TD>
+<TD>blit via DirectDraw instead of GDI</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/04/06</TD>
+<TD>done</TD>
+<TD>shell open doesn't work due to lack of document implementation</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/04/06</TD>
+<TD>done</TD>
+<TD>can't drop video files</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/04/06</TD>
+<TD>done</TD>
+<TD>can't drop files on output window; both windows should support all types</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/04/06</TD>
+<TD>done</TD>
+<TD>left-click in slider should resync automation</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/05/06</TD>
+<TD>done</TD>
+<TD>add rendering to an AVI file</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/05/06</TD>
+<TD>08/06/06</TD>
+<TD>done</TD>
+<TD>help about doesn't work when CPU is saturated; see Whorld</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/29/06</TD>
+<TD>08/07/06</TD>
+<TD>done</TD>
+<TD>if a source plugin is loaded, ignore video file; get frame size from a setting</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/07/06</TD>
+<TD>done</TD>
+<TD>opening a video while effects are running shows dry video briefly; doesn't affect record</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/05/06</TD>
+<TD>08/07/06</TD>
+<TD>done</TD>
+<TD>add frame rate to options dialog</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/05/06</TD>
+<TD>08/07/06</TD>
+<TD>done</TD>
+<TD>in status bar, show frame size, frame rate (nominal and actual), pause and record</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/05/06</TD>
+<TD>08/08/06</TD>
+<TD>done</TD>
+<TD>while recording, show elapsed time, and progress bar if possible</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/06/06</TD>
+<TD>08/08/06</TD>
+<TD>done</TD>
+<TD>allow recording length to be specified in advance</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/07/06</TD>
+<TD>08/08/06</TD>
+<TD>done</TD>
+<TD>during recording, exit exclusive mode crashes if video was changed via Ctrl+</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/09/06</TD>
+<TD>done</TD>
+<TD>add veejay mode (single-monitor exclusive)</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/08/06</TD>
+<TD>08/09/06</TD>
+<TD>done</TD>
+<TD>disable starting a recording unless there's an open video or a source plugin</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/08/06</TD>
+<TD>08/09/06</TD>
+<TD>done</TD>
+<TD>remaining time estimate is too jumpy; try a running average on actual frame rate</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/11/06</TD>
+<TD>08/11/06</TD>
+<TD>done</TD>
+<TD>after loading a project, modulated parameters have incorrect initial positions</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/12/06</TD>
+<TD>done</TD>
+<TD>frame-based and dialog-based row containers can't coexist in same project</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/12/06</TD>
+<TD>done</TD>
+<TD>add numeric editing for modulation range</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/11/06</TD>
+<TD>08/12/06</TD>
+<TD>done</TD>
+<TD>add command to reset all oscillators</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/12/06</TD>
+<TD>08/12/06</TD>
+<TD>done</TD>
+<TD>add option to specify random seed</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>08/13/06</TD>
+<TD>done</TD>
+<TD>parameter edit control isn't updating parameter; in CNumEdit, notify aux before parent</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>08/13/06</TD>
+<TD>done</TD>
+<TD>when loading a project, don't send parameters needlessly, it screws up WhorldFF</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>08/13/06</TD>
+<TD>done</TD>
+<TD>show record status without activation so main frame doesn't lose focus</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>08/13/06</TD>
+<TD>done</TD>
+<TD>record fails silently if dest file is already open in another app</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/08/06</TD>
+<TD>08/14/06</TD>
+<TD>done</TD>
+<TD>when toolbar is docked on left, scrolling header overwrites it</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/15/06</TD>
+<TD>done</TD>
+<TD>add master speed for oscillators and include in project; add master toolbar</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/12/06</TD>
+<TD>08/15/06</TD>
+<TD>done</TD>
+<TD>add plugin solo command</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>08/31/06</TD>
+<TD>done</TD>
+<TD>allow bitmap or jpeg as source instead of video</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/21/06</TD>
+<TD>08/31/06</TD>
+<TD>done</TD>
+<TD>use source frame size in all cases, regardless of video/picture size; stretch as needed</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/31/06</TD>
+<TD>09/13/06</TD>
+<TD>done</TD>
+<TD>add use input size checkbox to record dialog; default to true</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/14/06</TD>
+<TD>09/14/06</TD>
+<TD>done</TD>
+<TD>add missing files dialog for missing plugins</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/17/06</TD>
+<TD>09/17/06</TD>
+<TD>done</TD>
+<TD>projects opened via shell aren't added to recent files</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/18/06</TD>
+<TD>09/19/06</TD>
+<TD>done</TD>
+<TD>disallow negative frequencies</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/18/06</TD>
+<TD>09/19/06</TD>
+<TD>done</TD>
+<TD>drop files doesn't work for still images</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/19/06</TD>
+<TD>09/19/06</TD>
+<TD>done</TD>
+<TD>deleting plugins causes memory leaks; dlg's DeletePlugin must delete rows</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/19/06</TD>
+<TD>09/19/06</TD>
+<TD>done</TD>
+<TD>after repeated drag moves, plugins don't match their titles and parameter rows</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>09/22/06</TD>
+<TD>done</TD>
+<TD>include link to video/picture file in project; make opening video optional?</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/10/06</TD>
+<TD>09/22/06</TD>
+<TD>done</TD>
+<TD>delete key doesn't work in edit controls unless text is selected</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/20/06</TD>
+<TD>09/23/06</TD>
+<TD>done</TD>
+<TD>add bitmap export for capturing still frames</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/02/06</TD>
+<TD>10/02/06</TD>
+<TD>done</TD>
+<TD>opening a project should not modify recent plugin list; same for recent video list</TD>
+<TD>1.0.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/02/06</TD>
+<TD>10/02/06</TD>
+<TD>done</TD>
+<TD>add plugin/properties</TD>
+<TD>1.0.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>10/07/06</TD>
+<TD>done</TD>
+<TD>add modulation enable checkbox for each parameter</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>10/07/06</TD>
+<TD>done</TD>
+<TD>minimizing app while in full screen mode deadlocks UI</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>10/11/06</TD>
+<TD>done</TD>
+<TD>exclusive mode fails in dual-monitor; all surfaces must be on same display device</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/14/06</TD>
+<TD>10/16/06</TD>
+<TD>done</TD>
+<TD>show frame number in status bar; reset on new document</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/15/06</TD>
+<TD>10/16/06</TD>
+<TD>done</TD>
+<TD>Win32 timer can't achieve common frame rates; add multimedia timer option</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/14/06</TD>
+<TD>10/18/06</TD>
+<TD>done</TD>
+<TD>add option to export specific frames from a list</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/18/06</TD>
+<TD>10/18/06</TD>
+<TD>done</TD>
+<TD>auto-repeated single step doesn't paint output window if CPU is saturated</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/15/06</TD>
+<TD>10/25/06</TD>
+<TD>done</TD>
+<TD>add option to shutdown computer when done recording; use ExitWindowsEx</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>10/26/06</TD>
+<TD>done</TD>
+<TD>write documentation</TD>
+<TD>1.0.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>10/27/06</TD>
+<TD>done</TD>
+<TD>separate folders for clips, plugins, and output</TD>
+<TD>1.0.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>10/27/06</TD>
+<TD>done</TD>
+<TD>option to get record duration from AVI length</TD>
+<TD>1.0.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>10/28/06</TD>
+<TD>done</TD>
+<TD>if an edit control has focus, menus cause periodic pauses in message loop</TD>
+<TD>1.0.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>10/28/06</TD>
+<TD>done</TD>
+<TD>add video properties</TD>
+<TD>1.0.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/28/06</TD>
+<TD>10/28/06</TD>
+<TD>done</TD>
+<TD>frame counter clobbers toolbar button hints in status bar</TD>
+<TD>1.0.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/29/06</TD>
+<TD>10/29/06</TD>
+<TD>done</TD>
+<TD>tab order skips mod enable checkbox; uncaptioned checkbox can't show focus</TD>
+<TD>1.0.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>11/03/06</TD>
+<TD>done</TD>
+<TD>MIDI support: FF params and modulators, bypass, master speed</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/31/06</TD>
+<TD>11/04/06</TD>
+<TD>done</TD>
+<TD>in version 2 project docs, don't write FFRow tag</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/30/06</TD>
+<TD>11/05/06</TD>
+<TD>done</TD>
+<TD>frame counter should display as hh:mm:ss (frames)</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/30/06</TD>
+<TD>11/05/06</TD>
+<TD>done</TD>
+<TD>allow record duration to be specified in either time or frames; add unit selector</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/04/06</TD>
+<TD>11/05/06</TD>
+<TD>done</TD>
+<TD>frame/time conversions aren't handling floating-point frame rates correctly</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/03/06</TD>
+<TD>11/06/06</TD>
+<TD>done</TD>
+<TD>wrap video and still image in a clip player object</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/06/06</TD>
+<TD>11/06/06</TD>
+<TD>done</TD>
+<TD>must call initialise and deInitialise on plugins</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/06/06</TD>
+<TD>11/06/06</TD>
+<TD>done</TD>
+<TD>allow plugin and info parameter counts to differ</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/03/06</TD>
+<TD>11/10/06</TD>
+<TD>done</TD>
+<TD>add Video/Go To command for jumping to a specific frame in the clip</TD>
+<TD>1.1.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>11/23/06</TD>
+<TD>done</TD>
+<TD>add undo support</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/23/06</TD>
+<TD>11/24/06</TD>
+<TD>done</TD>
+<TD>misc MIDI assignments aren't saved in project</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/06</TD>
+<TD>11/26/06</TD>
+<TD>done</TD>
+<TD>MIDI setup dialog's default size is too small</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/23/06</TD>
+<TD>11/26/06</TD>
+<TD>done</TD>
+<TD>if a parm is modulating, changing it via edit box while paused causes backsliding</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/26/06</TD>
+<TD>11/26/06</TD>
+<TD>done</TD>
+<TD>in MIDI setup's plugin page, edits crash app if chain has non-trailing empty slots</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/26/06</TD>
+<TD>11/26/06</TD>
+<TD>done</TD>
+<TD>video go to dialog's state is not initialized</TD>
+<TD>1.2.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/27/06</TD>
+<TD>11/28/06</TD>
+<TD>done</TD>
+<TD>video object is leaking memory; Close must set a dummy surface</TD>
+<TD>1.2.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/29/06</TD>
+<TD>11/30/06</TD>
+<TD>done</TD>
+<TD>add support for AviSynth scripts</TD>
+<TD>1.2.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/06</TD>
+<TD>12/02/06</TD>
+<TD>done</TD>
+<TD>left-clicking slider updates parameter twice; update on button down only</TD>
+<TD>1.2.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/13/06</TD>
+<TD>12/13/06</TD>
+<TD>done</TD>
+<TD>if only one plugin left and it has scroll bars, deleting it doesn't reset bars</TD>
+<TD>1.2.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/13/06</TD>
+<TD>12/13/06</TD>
+<TD>done</TD>
+<TD>if a plugin has scroll bars, unloading it doesn't reset bars; same with undo</TD>
+<TD>1.2.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/17/06</TD>
+<TD>12/18/06</TD>
+<TD>done</TD>
+<TD>most recently used plugin can be loaded when there's no slot; undo causes crash</TD>
+<TD>1.2.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/22/06</TD>
+<TD>12/25/06</TD>
+<TD>done</TD>
+<TD>support multi-input plugins</TD>
+<TD>1.3.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/22/06</TD>
+<TD>12/25/06</TD>
+<TD>done</TD>
+<TD>honor copy frames preference; improves performance for certain plugins</TD>
+<TD>1.3.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/25/06</TD>
+<TD>12/25/06</TD>
+<TD>done</TD>
+<TD>check for buggy PeteMixer plugin; don't allow it unless its file date is acceptable</TD>
+<TD>1.3.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/22/07</TD>
+<TD>12/25/06</TD>
+<TD>done</TD>
+<TD>add patch bay dock bar</TD>
+<TD>1.3.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/25/06</TD>
+<TD>12/26/06</TD>
+<TD>done</TD>
+<TD>in patch bay, visually group inputs by plugin</TD>
+<TD>1.3.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/26/06</TD>
+<TD>12/26/06</TD>
+<TD>done</TD>
+<TD>show empty plugins in patch bay</TD>
+<TD>1.3.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/23/06</TD>
+<TD>12/27/06</TD>
+<TD>done</TD>
+<TD>loading a plugin should preserve existing routing as much as possible</TD>
+<TD>1.3.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/26/06</TD>
+<TD>12/27/06</TD>
+<TD>done</TD>
+<TD>update source frames regardless of bypass</TD>
+<TD>1.3.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/28/06</TD>
+<TD>12/28/06</TD>
+<TD>done</TD>
+<TD>mixer test 2 crashes in 16-bit; Connect must verify that both plugins are loaded</TD>
+<TD>1.3.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/28/06</TD>
+<TD>12/28/06</TD>
+<TD>done</TD>
+<TD>left-click on patchbay row should select plugin</TD>
+<TD>1.3.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/29/06</TD>
+<TD>12/29/06</TD>
+<TD>done</TD>
+<TD>right-click after last patch bay row should display context menu for insert</TD>
+<TD>1.3.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/29/06</TD>
+<TD>12/29/06</TD>
+<TD>done</TD>
+<TD>missing files dlg freezes app if CPU saturated; set visible in resource for modal dlgs</TD>
+<TD>1.3.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/30/06</TD>
+<TD>12/30/06</TD>
+<TD>done</TD>
+<TD>VideoInfoStruct must include orientation</TD>
+<TD>1.3.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/30/06</TD>
+<TD>12/30/06</TD>
+<TD>done</TD>
+<TD>add error message for unsupported bit depth, distinct from invalid bit depth</TD>
+<TD>1.3.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/03/07</TD>
+<TD>01/03/07</TD>
+<TD>done</TD>
+<TD>add enable checkbox to patch bay row</TD>
+<TD>1.3.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/03/07</TD>
+<TD>01/03/07</TD>
+<TD>done</TD>
+<TD>for bypass via MIDI, don't touch document modified flag</TD>
+<TD>1.3.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/07</TD>
+<TD>01/09/07</TD>
+<TD>done</TD>
+<TD>if no idle time, floating a control bar doesn't recalc layout; check for idle layout in OnTimer</TD>
+<TD>1.3.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/07</TD>
+<TD>01/09/07</TD>
+<TD>done</TD>
+<TD>floating sizing bar's close button doesn't work if no idle time; customize mini dock frame</TD>
+<TD>1.3.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/07</TD>
+<TD>01/09/07</TD>
+<TD>done</TD>
+<TD>allocate aux frame on heap to avoid Warning: calling DestroyWindow in CWnd::~CWnd</TD>
+<TD>1.3.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/10/07</TD>
+<TD>01/10/07</TD>
+<TD>done</TD>
+<TD>patch bay's context menu doesn't show hints in status bar</TD>
+<TD>1.3.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>01/12/07</TD>
+<TD>done</TD>
+<TD>lock out task-switching keys in exclusive mode</TD>
+<TD>1.3.07</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>01/12/07</TD>
+<TD>done</TD>
+<TD>add monitor dock bar</TD>
+<TD>1.3.07</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>01/12/07</TD>
+<TD>done</TD>
+<TD>add file browser dock bar for plugins/projects/clips</TD>
+<TD>1.3.07</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/01/07</TD>
+<TD>01/13/07</TD>
+<TD>done</TD>
+<TD>changing an input shouldn't redraw entire patch bay; add OnRoutingChange</TD>
+<TD>1.3.07</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>01/18/07</TD>
+<TD>done</TD>
+<TD>make main window full-screen in dual-monitor mode</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/12/07</TD>
+<TD>01/18/07</TD>
+<TD>done</TD>
+<TD>add option to disable save changes warning</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>01/19/07</TD>
+<TD>done</TD>
+<TD>lock out unsafe commands in single-monitor exclusive mode</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/12/07</TD>
+<TD>01/19/07</TD>
+<TD>done</TD>
+<TD>MIDI setup should be a dock bar instead of a modal dialog</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/18/07</TD>
+<TD>01/19/07</TD>
+<TD>done</TD>
+<TD>if patch bay is floating, closing app causes IsWindowVisible in OnSlotChange to assert</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/19/07</TD>
+<TD>01/19/07</TD>
+<TD>done</TD>
+<TD>loading a totally empty project fails to delete parameter rows</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/21/07</TD>
+<TD>01/21/07</TD>
+<TD>done</TD>
+<TD>replace AfxGetMainWnd with GetThis</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/24/07</TD>
+<TD>01/24/07</TD>
+<TD>done</TD>
+<TD>open/save project/plugin via main menu doesn't update current folder in file browser</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/27/07</TD>
+<TD>01/27/07</TD>
+<TD>done</TD>
+<TD>if output is full-screen on secondary monitor but NOT exclusive, Alt+Tab should work</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/30/07</TD>
+<TD>01/30/07</TD>
+<TD>done</TD>
+<TD>File/New doesn't reset master speed</TD>
+<TD>1.3.08</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/27/06</TD>
+<TD>01/31/07</TD>
+<TD>done</TD>
+<TD>metaplugin authoring, as in FreeChain</TD>
+<TD>1.4.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/30/07</TD>
+<TD>01/31/07</TD>
+<TD>done</TD>
+<TD>right-click within main view but not on row should show insert context menu</TD>
+<TD>1.4.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/07/07</TD>
+<TD>02/09/07</TD>
+<TD>done</TD>
+<TD>in plugin properties, min and max frames captions are reversed</TD>
+<TD>1.4.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/07/07</TD>
+<TD>02/09/07</TD>
+<TD>done</TD>
+<TD>importing linked metaplugin should use same plugin search method as loading DLL</TD>
+<TD>1.4.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/07/07</TD>
+<TD>02/09/07</TD>
+<TD>done</TD>
+<TD>get number of input frames from plugin's max input frames instead of min</TD>
+<TD>1.4.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/01/07</TD>
+<TD>03/02/07</TD>
+<TD>done</TD>
+<TD>hook keyboard in SetExclusive instead of during startup</TD>
+<TD>1.4.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/21/07</TD>
+<TD>03/05/07</TD>
+<TD>done</TD>
+<TD>make codec settings persistent (mb)</TD>
+<TD>1.4.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/07/07</TD>
+<TD>03/07/07</TD>
+<TD>done</TD>
+<TD>plugins dragged onto patch bay are misplaced if dropped below multi-input plugins </TD>
+<TD>1.4.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/07/07</TD>
+<TD>03/07/07</TD>
+<TD>done</TD>
+<TD>dragging plugins from Explorer onto patch bay doesn't work as expected</TD>
+<TD>1.4.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/07/07</TD>
+<TD>03/07/07</TD>
+<TD>done</TD>
+<TD>plugins dragged onto patch bay may be misplaced if patch bay is floating over tabs</TD>
+<TD>1.4.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/07/07</TD>
+<TD>03/08/07</TD>
+<TD>done</TD>
+<TD>disable F1 (help) in veejay mode</TD>
+<TD>1.4.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/08/07</TD>
+<TD>03/09/07</TD>
+<TD>done</TD>
+<TD>changing plugin frame size doesn't update centering in monitor control bar</TD>
+<TD>1.4.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/13/07</TD>
+<TD>07/11/07</TD>
+<TD>done</TD>
+<TD>wheel/arrows can move a hidden slider with input focus, potentially crashing app</TD>
+<TD>1.4.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/14/07</TD>
+<TD>07/16/07</TD>
+<TD>done</TD>
+<TD>in file browser, if last item has focus, pressing alpha key crashes app</TD>
+<TD>1.4.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/14/07</TD>
+<TD>07/16/07</TD>
+<TD>done</TD>
+<TD>selecting menu commands via Alt key doesn't work in some cases</TD>
+<TD>1.4.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/21/07</TD>
+<TD>07/21/07</TD>
+<TD>done</TD>
+<TD>in any parameter row, right-clicking on parameter name focuses first row's slider</TD>
+<TD>1.4.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/01/07</TD>
+<TD>07/22/07</TD>
+<TD>done</TD>
+<TD>add global plugin feature for applying effect(s) to all projects</TD>
+<TD>1.5.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/17/07</TD>
+<TD>07/29/07</TD>
+<TD>done</TD>
+<TD>add command to create metaparameters for all of a plugin's parameters at once</TD>
+<TD>1.5.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/28/07</TD>
+<TD>07/29/07</TD>
+<TD>done</TD>
+<TD>in dual-monitor full-screen mode, if cursor is over secondary monitor, hide it</TD>
+<TD>1.5.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/29/07</TD>
+<TD>07/29/07</TD>
+<TD>done</TD>
+<TD>if monitor bar is resized while app is paused, monitor view is not repainted</TD>
+<TD>1.5.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/29/07</TD>
+<TD>07/29/07</TD>
+<TD>done</TD>
+<TD>init project doesn't reset solo state in GUI</TD>
+<TD>1.5.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/05/06</TD>
+<TD>08/02/07</TD>
+<TD>done</TD>
+<TD>add job queue, like VirtualDub's; must restore video compression dialog state</TD>
+<TD>1.5.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/01/07</TD>
+<TD>08/02/07</TD>
+<TD>done</TD>
+<TD>import metaplugin sets m_DocPath to document filename instead of path</TD>
+<TD>1.5.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/07</TD>
+<TD>08/02/07</TD>
+<TD>done</TD>
+<TD>when imported metaplugin is saved as a project, project isn't added to recent files</TD>
+<TD>1.5.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/03/07</TD>
+<TD>08/12/07</TD>
+<TD>done</TD>
+<TD>shutdown feature should display warning dialog with progress bar and cancel button</TD>
+<TD>1.5.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/09/07</TD>
+<TD>10/05/07</TD>
+<TD>done</TD>
+<TD>add thumbnail view for clips in file browser; optionally cache thumbnails</TD>
+<TD>1.6.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/09/07</TD>
+<TD>10/05/07</TD>
+<TD>done</TD>
+<TD>file browser's report view column widths should persist in registry</TD>
+<TD>1.6.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/17/07</TD>
+<TD>10/05/07</TD>
+<TD>done</TD>
+<TD>should be able set each file browser pane to a different view type</TD>
+<TD>1.6.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/07</TD>
+<TD>11/24/07</TD>
+<TD>done</TD>
+<TD>support Unicode</TD>
+<TD>1.6.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/11/07</TD>
+<TD>11/26/07</TD>
+<TD>done</TD>
+<TD>recent global plugin list only stores three items instead of four; don't add empty paths</TD>
+<TD>1.6.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/20/06</TD>
+<TD>11/28/07</TD>
+<TD>done</TD>
+<TD>DragTabCtrl should set capture, and Esc key should abort drag</TD>
+<TD>1.6.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/07</TD>
+<TD>11/28/07</TD>
+<TD>done</TD>
+<TD>during drag from file browser, if browser doesn't have focus, Esc key doesn't cancel</TD>
+<TD>1.6.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/13/07</TD>
+<TD>11/29/07</TD>
+<TD>done</TD>
+<TD>can't undo rename in file browser</TD>
+<TD>1.6.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/29/07</TD>
+<TD>11/30/07</TD>
+<TD>done</TD>
+<TD>closing console crashes app or causes leaks; try SetConsoleCtrlHandler</TD>
+<TD>1.6.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/29/07</TD>
+<TD>12/03/07</TD>
+<TD>done</TD>
+<TD>if file browser bar is floating on startup, list control is not sized</TD>
+<TD>1.6.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/01/07</TD>
+<TD>12/07/07</TD>
+<TD>done</TD>
+<TD>monitor bar should be able to show any plugin's output; selection via context menu</TD>
+<TD>1.6.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/01/07</TD>
+<TD>12/08/07</TD>
+<TD>done</TD>
+<TD>in exclusive mode, starting task manager via Ctrl+Alt+Del crashes app</TD>
+<TD>1.6.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/01/07</TD>
+<TD>12/08/07</TD>
+<TD>done</TD>
+<TD>if output window is minimized, entering exclusive mode doesn't work</TD>
+<TD>1.6.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/07</TD>
+<TD>12/17/07</TD>
+<TD>done</TD>
+<TD>support MPEG clips by creating AviSynth script in temporary folder</TD>
+<TD>1.6.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/03/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>SetMidiAssignments should check parameter index against NumParams</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/21/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>in dual-monitor exclusive mode, cursor is visible along edges of secondary monitor </TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/22/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>if redo can't load a plugin, redoing metaparameters for that plugin crashes app</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/22/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>can't read project containing unassigned metaparameter(s)</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/22/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>in metaparameter properties dialog, setting target to none doesn't undo correctly</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/22/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>while learning MIDI setup, if UpdateView deletes selected row, MIDI input crashes app</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/29/07</TD>
+<TD>12/22/07</TD>
+<TD>done</TD>
+<TD>assigning MIDI to Bypass of a plugin that follows an empty slot crashes app</TD>
+<TD>1.6.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/27/07</TD>
+<TD>01/04/08</TD>
+<TD>done</TD>
+<TD>should be able to assign a MIDI controller to multiple targets; use metaparameter groups</TD>
+<TD>1.7.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/20/07</TD>
+<TD>01/04/08</TD>
+<TD>done</TD>
+<TD>metaparameter grouping, so multiple properties can be controlled by one host parameter</TD>
+<TD>1.7.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/05/08</TD>
+<TD>01/07/08</TD>
+<TD>done</TD>
+<TD>for parameters and metaparameters, undoing slider edit truncates value</TD>
+<TD>1.7.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>01/09/08</TD>
+<TD>done</TD>
+<TD>static text controls display ampersand as underline; check no prefix option in resource</TD>
+<TD>1.7.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>01/09/08</TD>
+<TD>done</TD>
+<TD>decorate group name to visually distinguish between master and slave metaparameters</TD>
+<TD>1.7.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/15/08</TD>
+<TD>01/15/08</TD>
+<TD>done</TD>
+<TD>replace OnNotify with individual notification handlers</TD>
+<TD>1.7.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/17/08</TD>
+<TD>01/17/08</TD>
+<TD>done</TD>
+<TD>closing app while help is visible causes crash, since version 1.3</TD>
+<TD>1.7.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/29/08</TD>
+<TD>01/29/08</TD>
+<TD>done</TD>
+<TD>increase compiler warning level to W4</TD>
+<TD>1.7.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/30/08</TD>
+<TD>01/30/08</TD>
+<TD>done</TD>
+<TD>in job control dialog, while dragging, Esc should cancel drag instead of closing dialog</TD>
+<TD>1.7.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/29/10</TD>
+<TD>04/15/10</TD>
+<TD>done</TD>
+<TD>use actual plugins, display output</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/29/10</TD>
+<TD>04/16/10</TD>
+<TD>done</TD>
+<TD>add parameters</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/29/10</TD>
+<TD>04/19/10</TD>
+<TD>done</TD>
+<TD>add oscillators</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/17/10</TD>
+<TD>04/19/10</TD>
+<TD>done</TD>
+<TD>file new isn't working</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/19/10</TD>
+<TD>done</TD>
+<TD>mod range in doc doesn't show</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/19/10</TD>
+<TD>done</TD>
+<TD>slider selection</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/19/10</TD>
+<TD>done</TD>
+<TD>slider automation</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/17/10</TD>
+<TD>04/20/10</TD>
+<TD>done</TD>
+<TD>loading metaplugin crashes; enforce min inputs</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/20/10</TD>
+<TD>done</TD>
+<TD>clicking a modulating slider doesn't work</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/20/10</TD>
+<TD>done</TD>
+<TD>plugin tabs in parameters view</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/20/10</TD>
+<TD>done</TD>
+<TD>parameter and patch bay views are reversed</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>render window doesn't paint in pause; can't call Render, m_CurFrame is null while stopped</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>modulation enable icon in view header</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>patchbay click should update rows</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>drag tab doesn't select moved plugin</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>patchbay drag</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>patchbay bypass</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>patchbay drag doesn't update current selection correctly</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>tabs flicker during slot change; update existing tabs instead of recreating them</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>form rows positioned incorrectly if insert when scrolled</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/21/10</TD>
+<TD>done</TD>
+<TD>move currrent selection into derived engine</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>recent plugins</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>export bitmap</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>patchbay context menu</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/20/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>context insert past last tab or patch row should append</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>exiting exclusive doesn't set window size</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>if no slots, insert empty doesn't select slot</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>04/22/10</TD>
+<TD>done</TD>
+<TD>context menu shouldn't select plugin</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/23/10</TD>
+<TD>done</TD>
+<TD>master speed</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>04/23/10</TD>
+<TD>done</TD>
+<TD>convert to .NET</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/23/10</TD>
+<TD>done</TD>
+<TD>mixer plugins display multiple bypass checkboxes</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/23/10</TD>
+<TD>done</TD>
+<TD>bypass checkboxes of plugins below mixer affect wrong plugins </TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/23/10</TD>
+<TD>done</TD>
+<TD>PlayerFF bank/clip select has no effect; PlayerFF must initialize COM for multithreading</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>disable input drop list for source plugins</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>files bar</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>plugin drop</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>opening doc doesn't update master speed slider</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>read into empty project to avoid partial initialization and subsequent crash</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>tabs sometimes don't display correctly; assume solved by partial project init bug fix</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/24/10</TD>
+<TD>done</TD>
+<TD>in row view, view width is slightly short and column header doesn't line up for last item</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/25/10</TD>
+<TD>done</TD>
+<TD>unpause leaks a frame</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/10</TD>
+<TD>04/25/10</TD>
+<TD>done</TD>
+<TD>dump state doesn't show plugin output frames or render current frame</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/10</TD>
+<TD>04/25/10</TD>
+<TD>done</TD>
+<TD>grow or shrink frame array as needed instead of recreating all frames every time</TD>
+<TD>2.0.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/21/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>edit control clipboard commands; HandleDlgKeyMsg, focus edit etc.</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>single-monitor exclusive mode</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>NET debug crash with feed strob2 and related bugs; clear m_OutFrame AFTER stopping thread</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>exiting app in dual monitor exclusive leaves window frame on render monitor; assume m_OutFrame related</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>queue view shouldn't depend on options dialog</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/26/10</TD>
+<TD>04/26/10</TD>
+<TD>done</TD>
+<TD>refactor engine error handling, add OnError</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>exclusive mode task-switch disable</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>maximize main frame in dual-monitor exclusive</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>hide cursor over render window in exclusive</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/26/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>if cursor enters render window without crossing caption, resizing cursor is displayed over client area</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/26/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>accelerators don't work if master bar has focus</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>saving with leading empty slot results in corrupt project file; get into default project</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>04/27/10</TD>
+<TD>done</TD>
+<TD>escape while master bar control has focus closes master dialog</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/28/10</TD>
+<TD>done</TD>
+<TD>MIDI support</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>04/28/10</TD>
+<TD>done</TD>
+<TD>in MIDI setup, tab control flickers like crazy when frame is resized; files bar tab control does it too</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/10</TD>
+<TD>04/28/10</TD>
+<TD>done</TD>
+<TD>if app starts with graph view hidden, loading project and showing graph crashes dot</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/10</TD>
+<TD>04/28/10</TD>
+<TD>done</TD>
+<TD>main frame can't be resized after exiting dual-monitor exclusive</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>Resolume's Invert RGB plugin fails with process copy, despite reporting support for it; hack plugin, B64E 1->0</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>exiting exclusive gives render window focus; bring main to top</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>escape doesn't cancel file drag if files bar doesn't have focus; see Fractice fix</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>escape should exit single-monitor exclusive</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/26/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>since master bar has no gripper, have speed caption enter drag mode</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>if docked master bar shows resize cursor and left edge dragged right, scbar crashes; call base CalcFixedLayout</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>master speed via MIDI doesn't work</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>sizecbar.cpp with miniframe enabled doesn't compile in .NET, afxChNil undefined</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>modulated parameters jump unexpectedly if master speed is set to zero</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>plugin dragged from files bar doesn't get added to recent plugins</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>space key doesn't work if numeric edit has focus</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>derive dock frame from SCB miniframe so floating bar resizes dynamically</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/29/10</TD>
+<TD>done</TD>
+<TD>no need to use interlocked increment when reading frames from free queue; just set ref count = 1</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>04/30/10</TD>
+<TD>done</TD>
+<TD>edit modulation range commands and slider selection dialog</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>04/30/10</TD>
+<TD>done</TD>
+<TD>history view crashes opening saved history b/c plugin can't be created; use derived engine to store history doc</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>04/30/10</TD>
+<TD>done</TD>
+<TD>pause history without stopping engine</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/30/10</TD>
+<TD>04/30/10</TD>
+<TD>done</TD>
+<TD>view and control bar context menus lack status bar help</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/30/10</TD>
+<TD>04/30/10</TD>
+<TD>done</TD>
+<TD>space key doesn't work if non-edit control has focus</TD>
+<TD>2.0.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>metaparameters</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>missing files dialog</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>show plugin properties</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>add thumbnail options to options dialog</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>add MIDI device to options dialog</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>in queue view, plugin name overwrites time, and time overwrites input label</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>entering/exiting full screen resets render thread's frame counter; move reset to engine</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>in dual-monitor exclusive, main frame can be moved, occurs in Fractice too; hide caption bar</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>bypass via MIDI doesn't update UI; call Bypass, not SetBypass</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>metaparameter groups</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>if a plugin doesn't load, remainder of project isn't loaded</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/01/10</TD>
+<TD>done</TD>
+<TD>allocate two extra frames for render window (one for queue and one for buffer) to avoid possible staggering</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/02/10</TD>
+<TD>done</TD>
+<TD>monitor bar</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/02/10</TD>
+<TD>done</TD>
+<TD>changing primary monitor's screen resolution freezes output; recreate primary surface</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/02/10</TD>
+<TD>done</TD>
+<TD>monitor window paints incorrectly if resized while paused; OnSize must invalidate </TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>clipboard</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>solo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>in dual-monitor exclusive, dragging main frame's gripper corrupts status bar; disable status bar</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>color depth</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>in exclusive, Ctrl+Alt+Del followed by Escape causes crash; check for null front/back buffer pointers</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>in exclusive, launching task manager leaves main frame full-screen</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>load plugin file dialog doesn't use plugin folder</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>moving plugin via patch view doesn't set current selection; not calling derived method</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/03/10</TD>
+<TD>done</TD>
+<TD>plugin file dialog changes default folder for projects; override doc manager's DoPromptFileName</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/04/10</TD>
+<TD>done</TD>
+<TD>plugin input popup menu</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/04/10</TD>
+<TD>done</TD>
+<TD>status bar frame counter</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/04/10</TD>
+<TD>done</TD>
+<TD>export bitmap before a project is opened gives no error occurred message</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/04/10</TD>
+<TD>done</TD>
+<TD>status bar message hides when cursor is moved over bar view</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/10</TD>
+<TD>05/05/10</TD>
+<TD>done</TD>
+<TD>PlayerFF leaks a frame on each project open/new cycle; must not leave frame attached to surface</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/26/10</TD>
+<TD>05/05/10</TD>
+<TD>done</TD>
+<TD>after 24 load/unload cycles, WhorldFF shows default patch; file handle leak in WhorldFF, never reuse a CFile!</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/06/10</TD>
+<TD>done</TD>
+<TD>open video; need clip player plugin with path support</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/10</TD>
+<TD>05/06/10</TD>
+<TD>done</TD>
+<TD>when opening project, delete broken metaparameter links</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/22/10</TD>
+<TD>05/07/10</TD>
+<TD>done</TD>
+<TD>video drop</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/10</TD>
+<TD>05/07/10</TD>
+<TD>done</TD>
+<TD>torture test to open projects repeatedly</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>05/07/10</TD>
+<TD>done</TD>
+<TD>check for buggy Pete plugins</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/10</TD>
+<TD>05/07/10</TD>
+<TD>done</TD>
+<TD>set frame size causes plugins to lose their parameter settings; clip player also loses current clip</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/10</TD>
+<TD>05/08/10</TD>
+<TD>done</TD>
+<TD>file video pop up and recent videos</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/06/10</TD>
+<TD>05/09/10</TD>
+<TD>done</TD>
+<TD>add clip paths to project doc</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/10</TD>
+<TD>05/09/10</TD>
+<TD>done</TD>
+<TD>include clips in missing files search</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/10/10</TD>
+<TD>done</TD>
+<TD>overlap project loading with rendering</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/10</TD>
+<TD>05/10/10</TD>
+<TD>done</TD>
+<TD>create freeframe instances before stopping engine to minimize downtime</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/10</TD>
+<TD>05/11/10</TD>
+<TD>done</TD>
+<TD>PlayerFF leaks a handle for every XviD video opened; XviD registry handle leak, patched by Michael</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/12/10</TD>
+<TD>05/12/10</TD>
+<TD>done</TD>
+<TD>if multiple instances of a plugin exist, decorate names to differentiate them</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/13/10</TD>
+<TD>done</TD>
+<TD>record; add thread in derived engine, make RunInit virtual and use it to hook last plugin's output</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/15/10</TD>
+<TD>05/16/10</TD>
+<TD>done</TD>
+<TD>move pause into engine</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/14/10</TD>
+<TD>05/18/10</TD>
+<TD>done</TD>
+<TD>record disrupts feedback due to stop/run; hook output without stopping engine</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>05/19/10</TD>
+<TD>done</TD>
+<TD>frame size drop list in options dialog</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/02/10</TD>
+<TD>05/20/10</TD>
+<TD>done</TD>
+<TD>make color depth an option</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/21/10</TD>
+<TD>done</TD>
+<TD>help</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/13/10</TD>
+<TD>05/21/10</TD>
+<TD>done</TD>
+<TD>record and record info dialogs</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/21/10</TD>
+<TD>05/21/10</TD>
+<TD>done</TD>
+<TD>initializing COM multithreaded causes HTML help to hang and not show topics; don't call HH_INITIALIZE</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/21/10</TD>
+<TD>05/21/10</TD>
+<TD>done</TD>
+<TD>initializing COM multithreaded causes ShellExecute to fail, breaking hyperlink; use FileProtocolHandler</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/22/10</TD>
+<TD>done</TD>
+<TD>random seed options; srand must be called in each plugin thread</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/24/10</TD>
+<TD>done</TD>
+<TD>job control</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/25/10</TD>
+<TD>done</TD>
+<TD>monitor window garbles 16-bit color due to CDib using 5-5-5 instead of 5-6-5; replace with DirectDraw surface</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>05/25/10</TD>
+<TD>done</TD>
+<TD>halftone makes monitor window's stretch blit nearly take twice as long; make it optional</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/24/10</TD>
+<TD>05/25/10</TD>
+<TD>done</TD>
+<TD>end of recording sometimes stalls engine; hot unhook must pulse record input queue read event</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/25/10</TD>
+<TD>05/25/10</TD>
+<TD>done</TD>
+<TD>resizing monitor window while paused displays all black</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/13/10</TD>
+<TD>05/26/10</TD>
+<TD>done</TD>
+<TD>changing frame size during recording fails or gives garbage output; disallow it</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/10</TD>
+<TD>05/26/10</TD>
+<TD>done</TD>
+<TD>monitor bar displays stale frame if shown while engine is paused</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/28/10</TD>
+<TD>05/28/10</TD>
+<TD>done</TD>
+<TD>record status elapsed time runs while paused, causing invalid remaining time</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/31/10</TD>
+<TD>done</TD>
+<TD>undo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/01/10</TD>
+<TD>done</TD>
+<TD>clip undo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/12/10</TD>
+<TD>06/01/10</TD>
+<TD>done</TD>
+<TD>dragging clip onto empty slot should load player into that slot instead of inserting</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/31/10</TD>
+<TD>06/01/10</TD>
+<TD>done</TD>
+<TD>metaparameter undo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/02/10</TD>
+<TD>done</TD>
+<TD>document modified flag</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/02/10</TD>
+<TD>done</TD>
+<TD>save changes warning option</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/31/10</TD>
+<TD>06/02/10</TD>
+<TD>done</TD>
+<TD>automated undo test</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/01/10</TD>
+<TD>06/02/10</TD>
+<TD>done</TD>
+<TD>inserting or deleting metaparameter doesn't update group names</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/02/10</TD>
+<TD>06/02/10</TD>
+<TD>done</TD>
+<TD>refresh MIDI devices button in options dialog</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/03/10</TD>
+<TD>done</TD>
+<TD>master speed undo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/03/10</TD>
+<TD>06/03/10</TD>
+<TD>done</TD>
+<TD>crash deleting effect that outputs to a preceding mixer, separated from it by an empty slot</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/04/10</TD>
+<TD>done</TD>
+<TD>MIDI undo</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/04/10</TD>
+<TD>06/04/10</TD>
+<TD>done</TD>
+<TD>all row dialogs should clip children</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/05/10</TD>
+<TD>06/05/10</TD>
+<TD>done</TD>
+<TD>persist get/set binary using V1 registry key; use profile name instead of app name</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/05/10</TD>
+<TD>06/05/10</TD>
+<TD>done</TD>
+<TD>add frame timeout to engine options; useful for large frame sizes</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>rendering speed is limited to real-time; V2 adds option to unlock frame rate</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/20/06</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>paused image jitters when rapidly repainted; output blit is slightly inconsistent (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/26/06</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>need a way to pause only the clip, not the whole application (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>generate a graph of project's signal routing; could use graphviz (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/28/06</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>right-clicking on an edit control doesn't always update toolbar's edit buttons (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>docked sizing bar's close button won't show hover unless NC mouse move is idle msg (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>long project load delays disrupt performances; overlap plugin instantiation with rendering (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/10/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>rendering loop calls memcpy needlessly in some cases; optimize frame buffer usage (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>left-clicking on dialog bar frame freezes output (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/08/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>should be able to select clips in PlayerFF by name/thumbnail; extend FreeFrame interface (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/08/07</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>for PlayerFF, store clip selection as path, so playlist edits don't affect previous projects (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/11/08</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>canceling at save changes prompt drops doc from file MRU list (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/03/08</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>help file title is Whorld (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/08/10</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>video properties</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/01/10</TD>
+<TD>06/06/10</TD>
+<TD>done</TD>
+<TD>editing record duration and pressing Enter while duration has focus doesn't change duration (V1)</TD>
+<TD>2.0.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>06/08/10</TD>
+<TD>done</TD>
+<TD>single step</TD>
+<TD>2.0.00.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/08/10</TD>
+<TD>06/08/10</TD>
+<TD>done</TD>
+<TD>opening doc with missing video doesn't give error message or trigger missing links dialog</TD>
+<TD>2.0.00.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/08/10</TD>
+<TD>06/08/10</TD>
+<TD>done</TD>
+<TD>file dialog doesn't show combo box, due to multithreaded COM init; show file dialog from worker thread</TD>
+<TD>2.0.00.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/20/10</TD>
+<TD>06/20/10</TD>
+<TD>done</TD>
+<TD>on exiting full screen, UI not fully repainted; add no copy bits flag in SetExclusive and FullScreenMain</TD>
+<TD>2.0.01.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/20/10</TD>
+<TD>06/20/10</TD>
+<TD>done</TD>
+<TD>can't run, gives application failed to initialize properly 0xc0150002; non-static version of BmpToAvi.dll</TD>
+<TD>2.0.01.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/20/10</TD>
+<TD>06/20/10</TD>
+<TD>done</TD>
+<TD>render blits were using flip wait flag; may fix full screen frame rate exceeding monitor refresh, TBD</TD>
+<TD>2.0.02.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/22/10</TD>
+<TD>06/24/10</TD>
+<TD>done</TD>
+<TD>end of recording sometimes stalls engine; ignore stall while stopping record thread</TD>
+<TD>2.0.03.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/23/10</TD>
+<TD>06/24/10</TD>
+<TD>done</TD>
+<TD>starting job queue while paused cases jobs to fail with no error message</TD>
+<TD>2.0.03.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/23/10</TD>
+<TD>08/28/10</TD>
+<TD>done</TD>
+<TD>changing frame rate in options can cause incorrect recording frame count if duration is in time (V1)</TD>
+<TD>2.0.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/28/10</TD>
+<TD>08/28/10</TD>
+<TD>done</TD>
+<TD>single step doesn't update slider positions for automated parameters</TD>
+<TD>2.0.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/28/10</TD>
+<TD>08/29/10</TD>
+<TD>done</TD>
+<TD>views maintain dirty flags but never read them; remove them</TD>
+<TD>2.0.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/11/10</TD>
+<TD>09/12/10</TD>
+<TD>done</TD>
+<TD>worker thread's stop event is unnecessary; remove it</TD>
+<TD>2.0.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/16/10</TD>
+<TD>09/15/10</TD>
+<TD>done</TD>
+<TD>load balancing via plugin helpers</TD>
+<TD>2.0.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>09/18/10</TD>
+<TD>done</TD>
+<TD>make history zoom persistent</TD>
+<TD>2.0.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/04/11</TD>
+<TD>03/04/11</TD>
+<TD>done</TD>
+<TD>convert CRingBuf to unsigned; also optimize PushOver method</TD>
+<TD>2.0.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/11</TD>
+<TD>03/31/11</TD>
+<TD>done</TD>
+<TD>ganged plugin crashes if frame properties are changed; recreate helpers in plugin SetFrameProps</TD>
+<TD>2.0.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/11</TD>
+<TD>04/03/11</TD>
+<TD>done</TD>
+<TD>ganged plugin creates one more freeframe than needed; first helper should use plugin's freeframe</TD>
+<TD>2.0.05.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/11</TD>
+<TD>04/16/11</TD>
+<TD>done</TD>
+<TD>in history view, make renderer's name consistent with other views</TD>
+<TD>2.0.05.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/11</TD>
+<TD>04/29/11</TD>
+<TD>done</TD>
+<TD>file browser list control has extra border in XP and up; remove border from default list style</TD>
+<TD>2.0.05.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/28/11</TD>
+<TD>04/29/11</TD>
+<TD>done</TD>
+<TD>in file browser, editing keys (Del, Ins, Esc, Ctrl+Z) behave unexpectedly during label edit</TD>
+<TD>2.0.05.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/11</TD>
+<TD>04/29/11</TD>
+<TD>done</TD>
+<TD>Esc doesn't cancel drag for plugins or metaparameters (V2)</TD>
+<TD>2.0.05.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/11</TD>
+<TD>04/29/11</TD>
+<TD>done</TD>
+<TD>Esc doesn't cancel drag if dialog row control has focus</TD>
+<TD>2.0.05.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/24/10</TD>
+<TD>05/02/11</TD>
+<TD>done</TD>
+<TD>if job file can't be read, invalid jobs can result; purge corrupt job data and optionally delete job file</TD>
+<TD>2.1.00.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/11</TD>
+<TD>05/03/11</TD>
+<TD>done</TD>
+<TD>resize queues instead of recreating them; more efficient</TD>
+<TD>2.1.00.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/04/11</TD>
+<TD>done</TD>
+<TD>convert options dialog to a property sheet</TD>
+<TD>2.1.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/11</TD>
+<TD>05/05/11</TD>
+<TD>done</TD>
+<TD>update MIDI device is slow if CPU is saturated; show wait cursor and update frame to erase options dialog</TD>
+<TD>2.1.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>05/07/11</TD>
+<TD>done</TD>
+<TD>bring back sync oscillators (lost in V2)</TD>
+<TD>2.1.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/11</TD>
+<TD>05/09/11</TD>
+<TD>done</TD>
+<TD>each graph update leaks two handles; close process information handles</TD>
+<TD>2.1.00.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/11</TD>
+<TD>05/10/11</TD>
+<TD>done</TD>
+<TD>AllocFrames shrink leaks frames if deleted frames were assigned to DirectDraw surfaces</TD>
+<TD>2.1.00.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/11</TD>
+<TD>05/11/11</TD>
+<TD>done</TD>
+<TD>drop files leaks drop info heap memory; OnDropFiles must call DragFinish </TD>
+<TD>2.1.00.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/11</TD>
+<TD>05/12/11</TD>
+<TD>done</TD>
+<TD>left-clicking parameter slider thumb adds undo event even if value is unchanged (V1)</TD>
+<TD>2.1.00.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/11</TD>
+<TD>05/12/11</TD>
+<TD>done</TD>
+<TD>if row dialog is deleted while one of its controls has focus, opening recent file causes file menu to stick (V2)</TD>
+<TD>2.1.00.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/11</TD>
+<TD>05/12/11</TD>
+<TD>done</TD>
+<TD>if MIDI setup row control has focus, selecting menu via Alt hangs app; remove control style from MIDI setup</TD>
+<TD>2.1.00.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/11</TD>
+<TD>05/12/11</TD>
+<TD>done</TD>
+<TD>if metaparameter is added while Metaparams bar is hidden, it doesn't appear in MIDI Setup's Metaparam page</TD>
+<TD>2.1.00.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/14/11</TD>
+<TD>05/14/11</TD>
+<TD>done</TD>
+<TD>in MIDI and metaparameter views, header columns don't line up with controls; row item coord conversion</TD>
+<TD>2.1.00.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/16/11</TD>
+<TD>05/16/11</TD>
+<TD>done</TD>
+<TD>history view's scroll bars should show scroll bar context menus, not view's context menu</TD>
+<TD>2.1.00.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/11</TD>
+<TD>05/17/11</TD>
+<TD>done</TD>
+<TD>process copy can set output frame's reference count directly without using interlocked add</TD>
+<TD>2.1.00.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/19/11</TD>
+<TD>05/19/11</TD>
+<TD>done</TD>
+<TD>history disappears when paused; bug in optimized PushOver</TD>
+<TD>2.1.00.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/26/11</TD>
+<TD>05/30/11</TD>
+<TD>done</TD>
+<TD>previous version broke parameter editing via slider; remove FFPlugsRow legacy thumbtrack case</TD>
+<TD>2.1.01.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/31/11</TD>
+<TD>06/01/11</TD>
+<TD>done</TD>
+<TD>ganging a plugin causes strobing if it has parameters that are currently zero but have non-zero defaults</TD>
+<TD>2.1.02.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/28/11</TD>
+<TD>06/29/11</TD>
+<TD>done</TD>
+<TD>reading V2 thumbnail database crashes V1; LastWrite CTime is 64-bit in .NET, bump archive version</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/30/11</TD>
+<TD>06/30/11</TD>
+<TD>done</TD>
+<TD>parameter slider context menu lacks mnemonics</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/11</TD>
+<TD>07/19/11</TD>
+<TD>done</TD>
+<TD>file browser context menus triggered via Shift+F10 are incorrectly positioned</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/18/11</TD>
+<TD>07/19/11</TD>
+<TD>done</TD>
+<TD>if engine does a stop/run while paused, views are restarted, making modulated parameters impossible to edit</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/18/11</TD>
+<TD>07/19/11</TD>
+<TD>done</TD>
+<TD>if plugin has no parameters, selecting it in Metaparameter Properties dialog's Type combo crashes app</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/19/11</TD>
+<TD>07/19/11</TD>
+<TD>done</TD>
+<TD>file browser context menu popups should use radios instead of checks</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/19/11</TD>
+<TD>07/19/11</TD>
+<TD>done</TD>
+<TD>add delete to file browser context menu</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/11</TD>
+<TD>11/11/11</TD>
+<TD>done</TD>
+<TD>context menus triggered via Shift+F10 are incorrectly positioned (view, slider, metaparameter, job control)</TD>
+<TD>2.2.00.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/14/11</TD>
+<TD>11/18/11</TD>
+<TD>done</TD>
+<TD>load balancing should be a dockable bar instead of a modal dialog (jm)</TD>
+<TD>2.2.01.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/18/11</TD>
+<TD>11/21/11</TD>
+<TD>done</TD>
+<TD>playlist for automatically opening a list of projects in sequential or random order</TD>
+<TD>2.2.01.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/20/11</TD>
+<TD>11/22/11</TD>
+<TD>done</TD>
+<TD>playlist shows wait cursor while opening project in single-monitor exclusive</TD>
+<TD>2.2.01.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/11</TD>
+<TD>11/23/11</TD>
+<TD>done</TD>
+<TD>open playlist from command line</TD>
+<TD>2.2.01.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/18/11</TD>
+<TD>11/24/11</TD>
+<TD>done</TD>
+<TD>each plugin should remember its scroll position in parameter and MIDI setup row views</TD>
+<TD>2.2.01.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/11</TD>
+<TD>11/24/11</TD>
+<TD>done</TD>
+<TD>command line option to go full screen</TD>
+<TD>2.2.01.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/20/11</TD>
+<TD>11/24/11</TD>
+<TD>done</TD>
+<TD>ending parameter numeric edit by selecting a different plugin in patch view causes loss of edit</TD>
+<TD>2.2.01.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/30/11</TD>
+<TD>11/25/11</TD>
+<TD>done</TD>
+<TD>add transport buttons, edit control, and missing files check to playlist dialog</TD>
+<TD>2.2.01.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/24/11</TD>
+<TD>11/30/11</TD>
+<TD>done</TD>
+<TD>closing document while numeric edit in progress causes loss of edit; take focus in SaveModified</TD>
+<TD>2.2.01.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/30/11</TD>
+<TD>11/30/11</TD>
+<TD>done</TD>
+<TD>use toggle window for tool dialogs including job control and playlist</TD>
+<TD>2.2.01.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>add option to limit frame memory useage</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/26/10</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>running engine while loading project uses lots more memory; make it optional</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/11</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>handle out of memory error when allocating frame buffers</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/11</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>enable large address aware and verify memory usage up to 3GB</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/11</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>disable input popups for source plugins</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/01/11</TD>
+<TD>12/01/11</TD>
+<TD>done</TD>
+<TD>in parameter view, plugin context menu's target is current plugin unless right-click is within tab control</TD>
+<TD>2.2.01.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/15/11</TD>
+<TD>12/15/11</TD>
+<TD>done</TD>
+<TD>playlist options dialog is superfluous</TD>
+<TD>2.2.01.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/15/11</TD>
+<TD>12/15/11</TD>
+<TD>done</TD>
+<TD>playlist period defaults to zero</TD>
+<TD>2.2.01.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/15/11</TD>
+<TD>12/15/11</TD>
+<TD>done</TD>
+<TD>playlist needs a save check</TD>
+<TD>2.2.01.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/16/11</TD>
+<TD>12/16/11</TD>
+<TD>done</TD>
+<TD>restore show state of tool dialogs</TD>
+<TD>2.2.01.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/27/11</TD>
+<TD>12/27/11</TD>
+<TD>done</TD>
+<TD>export creates nonstandard 32-bit bitmaps instead of 24-bit</TD>
+<TD>2.2.02.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/27/11</TD>
+<TD>12/27/11</TD>
+<TD>done</TD>
+<TD>export creates garbled bitmaps if engine color depth is 16-bit</TD>
+<TD>2.2.02.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/27/11</TD>
+<TD>12/27/11</TD>
+<TD>done</TD>
+<TD>continuous single stepping doesn’t update monitor bar</TD>
+<TD>2.2.02.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/29/11</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>restarting engine causes loss of oscillator sync between plugins; rewind oscillators on engine stop</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/30/11</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>saving and reloading project causes loss of oscillator sync between plugins</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/31/11</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>sync oscillators and its corresponding undo cause loss of oscillator sync between plugins</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/05/12</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>sync oscillators while paused doesn't update current plugin's UI to show sync</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/10/12</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>initial pause frame is off by one; pause render thread before creating pause frame</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/10/12</TD>
+<TD>01/11/12</TD>
+<TD>done</TD>
+<TD>in single step, monitor window doesn't match output window for first few frames</TD>
+<TD>2.2.02.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/04/12</TD>
+<TD>01/13/12</TD>
+<TD>done</TD>
+<TD>queue view doesn't show plugin times while paused</TD>
+<TD>2.2.02.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/12</TD>
+<TD>01/13/12</TD>
+<TD>done</TD>
+<TD>in load balance bar, move undo notification to a main frame handler</TD>
+<TD>2.2.02.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/10/11</TD>
+<TD>01/16/12</TD>
+<TD>done</TD>
+<TD>if no plugins, output window shows paint artifacts when resized or partially uncovered</TD>
+<TD>2.2.02.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/16/12</TD>
+<TD>01/16/12</TD>
+<TD>done</TD>
+<TD>if all plugins are deleted while paused, unpausing doesn't clear output window</TD>
+<TD>2.2.02.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/16/12</TD>
+<TD>01/16/12</TD>
+<TD>done</TD>
+<TD>if all plugins are deleted while running, output window is cleared but monitor window isn't</TD>
+<TD>2.2.02.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/21/12</TD>
+<TD>01/21/12</TD>
+<TD>done</TD>
+<TD>desktop flashes when a row view is updated; due to lock window update, introduced in 2.2.1.2</TD>
+<TD>2.2.02.03</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/12/12</TD>
+<TD>01/23/12</TD>
+<TD>done</TD>
+<TD>check for updates / automatic updates</TD>
+<TD>2.2.02.04</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/19/12</TD>
+<TD>03/17/12</TD>
+<TD>done</TD>
+<TD>stopping a recording stalls engine if last plugin has helper threads</TD>
+<TD>2.2.03.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/19/12</TD>
+<TD>03/17/12</TD>
+<TD>done</TD>
+<TD>fix debug radio button warnings in record dialog</TD>
+<TD>2.2.03.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>03/26/12</TD>
+<TD>done</TD>
+<TD>bring back monitor source selection (lost in V2)</TD>
+<TD>2.2.03.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/26/12</TD>
+<TD>03/27/12</TD>
+<TD>done</TD>
+<TD>if edit control has focus, menus periodically pause message loop; V2 porting error, originally fixed 10/28/06</TD>
+<TD>2.2.03.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/19/12</TD>
+<TD>03/28/12</TD>
+<TD>done</TD>
+<TD>plugin input and monitor source popups don't show status hints; override GetMessageString</TD>
+<TD>2.2.03.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/12</TD>
+<TD>03/30/12</TD>
+<TD>done</TD>
+<TD>monitoring a plugin that can't render should clear the monitor window</TD>
+<TD>2.2.03.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/12</TD>
+<TD>03/30/12</TD>
+<TD>done</TD>
+<TD>disable buffer security checks (/GS-); smaller code and significant performance gain</TD>
+<TD>2.2.03.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/14/11</TD>
+<TD>04/06/12</TD>
+<TD>done</TD>
+<TD>long plugin names are clipped in patchbay rows; add column resizing</TD>
+<TD>2.2.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/09/12</TD>
+<TD>04/11/12</TD>
+<TD>done</TD>
+<TD>MIDI Setup view resizes incorrectly after selecting Plugin tab and another tab, overwriting droplist; see 4/10/12</TD>
+<TD>2.2.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/10/12</TD>
+<TD>04/11/12</TD>
+<TD>done</TD>
+<TD>MIDI Plugin page is always empty; introduced in 2.2.01.04, double negation in SetScrollPos special slot case</TD>
+<TD>2.2.04.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/12/12</TD>
+<TD>04/13/12</TD>
+<TD>done</TD>
+<TD>revert UI thread to default COM single-threaded apartment; keep engine threads in multithreaded apartment</TD>
+<TD>2.2.04.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/13/12</TD>
+<TD>04/13/12</TD>
+<TD>done</TD>
+<TD>if monitor source is deleted, engine tap Detach accesses deleted plugin's CanRender</TD>
+<TD>2.2.04.01</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/12</TD>
+<TD>04/24/12</TD>
+<TD>done</TD>
+<TD>resizing cursor persists unexpectedly over monitor window; window class must specify a cursor</TD>
+<TD>2.2.04.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/25/12</TD>
+<TD>04/24/12</TD>
+<TD>done</TD>
+<TD>single step doesn't update monitor window if source is non-default</TD>
+<TD>2.2.04.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/12</TD>
+<TD>04/27/12</TD>
+<TD>done</TD>
+<TD>if Queues view is visible, and a project with less plugins is opened while paused, resuming crashes</TD>
+<TD>2.2.04.02</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/12</TD>
+<TD>05/06/12</TD>
+<TD>done</TD>
+<TD>assigning multiple threads to a plugin can cause reentrance in freeframe plugin instance; crashes clip player</TD>
+<TD>2.2.04.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/12</TD>
+<TD>05/07/12</TD>
+<TD>done</TD>
+<TD>reloading slot doesn't attempt to preserve its non-default inputs, unlike V1 (see 1.3.01)</TD>
+<TD>2.2.04.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/06/12</TD>
+<TD>05/07/12</TD>
+<TD>done</TD>
+<TD>clip player's open by path doesn't reset seeking flag, potentially causing invalid seek and crash</TD>
+<TD>2.2.04.05</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/12</TD>
+<TD>05/10/12</TD>
+<TD>done</TD>
+<TD>if output window is maximized, entering and exiting full-screen twice leaves output window's frame unpainted</TD>
+<TD>2.2.04.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/12</TD>
+<TD>05/10/12</TD>
+<TD>done</TD>
+<TD>in set exclusive, only recreate surfaces once per mode switch</TD>
+<TD>2.2.04.06</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/13/12</TD>
+<TD>05/14/12</TD>
+<TD>done</TD>
+<TD>reselecting same monitor source needlessly generates undo notification</TD>
+<TD>2.2.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/12</TD>
+<TD>05/17/12</TD>
+<TD>done</TD>
+<TD>if plugin tab control is scrolled, loading a project with less plugins can cause missing tabs</TD>
+<TD>2.2.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/12</TD>
+<TD>05/17/12</TD>
+<TD>done</TD>
+<TD>plugin tab control should support scrolling while drag-reordering plugins</TD>
+<TD>2.2.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/12</TD>
+<TD>05/17/12</TD>
+<TD>done</TD>
+<TD>tab control should support scrolling via mouse wheel</TD>
+<TD>2.2.05.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/21/12</TD>
+<TD>05/21/12</TD>
+<TD>done</TD>
+<TD>if no project is loaded, starting job queue pauses for 5 seconds</TD>
+<TD>2.2.06.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/21/12</TD>
+<TD>05/21/12</TD>
+<TD>done</TD>
+<TD>if one or more plugins can't render, saving project pauses for 5 seconds</TD>
+<TD>2.2.06.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/21/12</TD>
+<TD>05/21/12</TD>
+<TD>done</TD>
+<TD>if a plugin with parameter modulation(s) is preceded by empty slot(s), saving project crashes</TD>
+<TD>2.2.06.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/12</TD>
+<TD>05/23/12</TD>
+<TD>done</TD>
+<TD>reloading monitored slot unmonitors it</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/04/12</TD>
+<TD>05/23/12</TD>
+<TD>done</TD>
+<TD>undoing deletion of monitored plugin doesn't restore monitoring</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/25/12</TD>
+<TD>05/29/12</TD>
+<TD>done</TD>
+<TD>in files bar, changing thumbnail size while view type isn't thumbnail causes blank thumbnails</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/29/12</TD>
+<TD>05/31/12</TD>
+<TD>done</TD>
+<TD>eliminate engine tap's do-nothing worker thread</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/12</TD>
+<TD>06/01/12</TD>
+<TD>done</TD>
+<TD>if monitor source is non-default, monitor bar can hoard a frame while hidden</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/12</TD>
+<TD>06/01/12</TD>
+<TD>done</TD>
+<TD>changing monitor source while paused restarts engine, destroying feedback state</TD>
+<TD>2.2.07.00</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>allow oscillator frequencies to be expressed as fractions of tempo, as in Reason</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/02/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>dual-monitor mode should show monitor selection dialog if more than one secondary</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/13/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>option to render at lower priority; better to just use task mgr?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/20/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>automation of master speed; fancy</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/20/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>print still frames; fancy</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/20/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>export can't increase res without re-instantiating plugins and losing state</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>playlist for video clips, with keyboard assignment and automation</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>add master luminance control; global plugin makes this less critical</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>fade from/to black during recording</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/06/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>allow wet/dry mix (alpha) for each plugin; requires MMX alpha blend</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/13/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>for source plugins, allow input to be blended with output, via raster operation</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/14/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>go to specific frame; how to set WhorldFF osc clocks? What about random?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>Greg reports empty output window, XP SP2</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>group parameters and sync their automations in groups; metaparameter oscillators?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/27/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>apply plugins to individual RGBA color channels</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/29/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>frequency/amplitude/pulse width modulation</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/29/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>add an oscilloscope window for viewing modulation; fancy</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>10/31/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>make project I/O token-based so it's extensible</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/03/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>add modulation amplitude and bias (DC) with MIDI support</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/26/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>patch bay and tabs should give hover/mouse-over feedback during drag (sh)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/26/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>middle button should toggle bypass?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/27/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>need way to match output view size to plugin frame size and/or aspect ratio (sh)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/30/06</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>insert project into current project</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/12/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>associate MIDI settings with a plugin, so a plugin can load its own MIDI assignments</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/27/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>file browser should watch for changes, via FindFirstChangeNotification or ReadDirectoryChangesW </TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/27/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>F5 should refresh directory listing; no need if file browser supports file change notifications</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/28/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>support multi-input metaplugins; hard problem</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/31/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>undoing metaparam edit of mod freq doesn't restore modulated value</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/31/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>can't undo edit metaplugin properties</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/09/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>showing metaplugin's properties unpacks embedded plugins; loading DLL is what does it</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/09/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>reset frame counter on load project should be optional</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>02/09/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>command to manually reset frame counter</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>project name isn't visible in full-screen dual monitor mode; no caption bar</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/18/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in file browser's plugins pane, item context menu should have import metaplugin item</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/09/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>toolbar's clipboard icons shouldn't update while app is modal; it's distracting</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/13/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>can't undo job control edits</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/17/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>loading a job list erases current jobs without warning</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/08/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>oscillator should support one-shot waveforms; useful for automating fades</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/08/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>MIDI control of monitor source; requires bumping version numbers of plugin info and project</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/10/07</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>very large MPEGs are slow to load and freeze UI while loading; warning message? (mb)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/01/08</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>MIDI control should support damping</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>output MIDI when parameters with MIDI assignments are changed</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>output MIDI clocks, so MIDI sequencer can sync with FFRend; one clock per frame?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>receive and sync to MIDI clocks or SMPT; keep frame rate very low to avoid overrun</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/09/08</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in MIDI setup, range should consist of start and end, not just a multiplier</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>bring back global plugin (lost in V2)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>if a plugin has no output, its thread doesn't run, so its oscillators don't run either</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>if multiple players exist, add Open With popup to Clips pane's context menu</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>bypassing source plugin can give unexpected results because routing doesn't change</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/01/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>showing main frame full-screen in dual monitor should be optional; useful for debugging</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/04/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>feedback stall cases, often sensitive to input ordering, e.g. firestorm solar, trivial stall</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>soloing a plugin doesn't ensure its output will be visible, because routing is unchanged</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>easy MIDI mode; one channel per plugin, assign controllers sequentially (jm)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>clip player should show path if available; thumbnail would also be nice</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/23/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>monitor window's StretchBlt can block render, even in dual-monitor Exclusive; noticeable in high HD</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/01/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>video properties doesn't work for MPEGs</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/25/10</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>engine stall message should include staller name; but is it useful information?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/02/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>recording to XviD crashes in Win7</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/04/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>file browser should optionally include a folder tree, using a splitter; COM hell</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/04/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>file browser's parent folder list item scrolls; button on title bar would be more convenient</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/04/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>port clip player to DirectShow, allowing MPEG without AviSynth</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/30/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in history view, plugin names shouldn't scroll when paused; show them on a border and shrink view?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>graph view's mixer symbol (triangle) is excessively wide for long plugin names</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>add Open in New Player to Clips pane's context menu</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/29/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>standardize graph symbols</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>edit modulation range shortcut keys don't work and aren't on edit menu either (V2)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>triangle/sine modulations that were decreasing when project was saved are increasing when it's opened</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>for triangle/sine modulations, editing value or mod enable/frequency resets direction; same for undo</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>multiple monitor windows would be useful for previewing sources, esp. clip players</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/06/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>folder dialog allows selection of virtual folders (e.g. My Computer) but returns false</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/09/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>file browser doesn't handle device changes e.g. adding or removing thumb drive; WM_DEVICECHANGE</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/09/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>file browser doesn't show or resolve links (shortcuts) to files/folders</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/25/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>dropping plugin(s) onto view should append instead of inserting (debatable)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/13/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>add recent folders popup to files bar context menu</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/18/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in 32-bit color mode, clip player outputs 255 in alpha channel for certain clips (e.g. kissing girls)</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>07/19/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in file browser context menu, view type should be a popup</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/25/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>undo should restore scroll positions, or at least ensure undone parameter edits are visible</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/29/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in file browser, optionally pack thumbnails tightly; arrow keys only access first two columns if horz spacing < 16</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>12/31/11</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>changing master speed sometimes causes slight loss of oscillator sync between plugins</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/04/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>in queue view, mixer plugins added while paused/stopped have incorrect height until engine restarts</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/14/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>context-sensitive help</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/28/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>if monitor source is non-default, resizing monitor window while paused paints incorrectly</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>during continuous single stepping, output monitor occasionally shows frame already reused by plugin</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/08/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>control key should modify plugin drag/drop to load instead of insert</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/08/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>number of recently used plugins should be an option; same for projects</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>Win7 only: exiting full-screen may fail to fully repaint main window, esp. if it overlaps output window</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/09/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>Win7 only: output window doesn't update on secondary monitor if Aero theme is disabled</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>include monitor source(s) in project</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>monitor and preview bars should optionally include source name captions</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/23/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>advanced engine option to set feedback priming</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/24/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>increasing renderer's priority may reduce output jitter</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/29/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>monitor window's StretchBlt can degrade UI responsiveness, especially at high res with smoothing</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/29/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>monitoring should be driven by same timer as output, i.e. renderer's frame timer, to avoid time aliasing</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/30/12</TD>
+<TD>&nbsp;</TD>
+<TD>hold</TD>
+<TD>if slot change makes monitored plugin unable to render, monitor window isn't cleared</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>06/01/07</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>M-Audio Uno drops input MIDI running status messages in XP; latest driver doesn't help</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>09/10/07</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>replace memcpy with MMX block prefetch; irrelevant in V2</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/19/07</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>AviSynth works in XP but not in W2K; blit to plugin frame fails</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>01/01/08</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if metaparam and its target differ, undoing metaparam change fails to restore target; can't reproduce this</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/31/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>stall log; stall info no longer available in release</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/31/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>frame counter lacks resolution at low frame rates</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/19/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>cache recently used plugins</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/24/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>show free queue count in status bar</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/27/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>in cooperative mode, dragging control bar freezes output; CDockContext::InitLoop locks desktop window</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>rename command on edit menu; not needed</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if window has both scroll bars, non-client area between them is erased incorrectly; known bug in XP controls</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/04/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>metaparam context menu doesn't show hints in status bar</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if clip player in project specifies non-zero clip, needless open occurs, or two opens if bank is also non-zero</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>check for presence of clip player on startup</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/17/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if recording to XviD and encoding status dialog is enabled, pause or stop stalls engine</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/20/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>Pete's plugins overrun frame buffer in 24-bit mode</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/20/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if engine color depth doesn't match display device, output window shows garbage or doesn't paint; warn user</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/31/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if clip is opened via path, and then changed via bank/clip parameters, undo gives unexpected results</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/28/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>slider positions don't indicate currently displayed frame due to latency; especially noticeable in single step</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>08/29/10</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>oscillators accumulate floating-point error; making clock an integer could cause subtle behavior changes</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>03/04/11</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>extending desktop onto second monitor while app is running causes bad behavior</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/03/11</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>frame queue size of zero (peek) would reduce memory usage but probably less efficient too</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/07/11</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if entire undo history is undone, selecting a plugin clears history; select counts as an edit</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/11/11</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>PlayerFF leaks 44K even if no clips loaded and regardless of frame size; SetSurfaceDesc-related?</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>11/24/11</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>histogram in monitor window</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/08/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if view is scrolled far right and has a vertical scroll bar, restored horizontal scroll position is off by one pixel</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/10/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>MIDI Setup special page scroll positions aren't reset on opening new document</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>04/23/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if app closes before update check's worker thread exits, CWinThread leaks; scary in debug but harmless</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/03/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>if resizing app forces control bar to resize, bar's contents clip instead of resizing; stock behavior</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/05/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>open clip by path doesn't work if clip player is assigned multiple threads</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>05/23/12</TD>
+<TD>&nbsp;</TD>
+<TD>punt</TD>
+<TD>advanced engine option to yield to user interface; no need since input events cause dynamic priority boost</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE><!--  content stops HERE  -->
+</div>
+</body>
+</html>

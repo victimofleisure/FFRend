@@ -1,0 +1,18 @@
+<title>Metaplugins</title>
+<body>
+
+<h3>Metaplugins</h3>
+
+<p>FFRend supports plugin authoring, which means you can <a href="../Metaplugins/Exporting_metaplugins.htm">export</a> a FFRend <a href="../Projects/Projects.htm">project</a> as a Freeframe plugin. The exported plugin is called a <em>metaplugin</em>, because it uses other plugins as components. A metaplugin can be used in any Freeframe-compatible host application, and behaves as if you were running the equivalent project in FFRend.
+
+<p>A metaplugin preserves all project attributes, including <a href="../Parameters/Automating_parameters.htm">parameter automations</a> and <a href="../Plugins/Patch_Bay.htm">signal routing</a>. The only significant exception is MIDI assignments; these are ignored, to avoid interfering with the host's MIDI implementation.
+
+<p>A metaplugin can expose parameters to the host; such parameters are called <a href="../Metaplugins/Metaparameters.htm">metaparameters</a>. A metaparameter can directly control a parameter in a component plugin, or it can control other targets, such as a modulator property, or a plugin's bypass switch.
+
+<p>A metaplugin normally contains <a href="../Metaplugins/Metaplugin_links.htm">links</a> to its component plugins, but it's also possible to <a href="../Metaplugins/Embedding_plugins.htm">embed</a> the components within the metaplugin's DLL. Embedding makes it easier to distribute the metaplugin, by avoiding dependence on external files. Since embedding could potentially encourage piracy, only <em>copyleft</em> plugins can be embedded.
+
+<p>It's possible to <a href="../Metaplugins/Importing_metaplugins.htm">import</a> a metaplugin back into FFRend as a project. This allows you to edit and re-export a metaplugin, even if you don't have the project file from which the metaplugin was originally created.
+
+<p>Metaplugins can be <a href="../Metaplugins/Nesting_metaplugins.htm">nested</a>, i.e. a metaplugin can use other metaplugins. The depth of nesting is unlimited.
+
+</body>

@@ -1,0 +1,12 @@
+<title>Export list</title>
+<body>
+
+<h3>Export list</h3>
+
+<p>Sometimes you'll make a low-resolution <a href="../Recording/Recording.htm">recording</a>, and then discover that certain frames would make nice still images, if only they had higher resolution. Why not just re-record the entire <a href="../Projects/Projects.htm">project</a> at higher resolution? Because this might require a very large amount of disk space, especially since for making still images, you would prefer to use uncompressed video.
+
+<p>Instead of re-recording the entire project, you can export a list of specific frames. To do this, you must first create a </em>frame list</em>. This is simply a text file, containing the frame numbers of the still images you're interested in, as integers, one per line. Now set the desired <a href="../Options/Frame_size.htm">resolution</a>, enter <a href="../Recording/Pause.htm">pause</a> mode, reload your project, and choose <span class="cmd">File/Export List</span>. A file dialog is displayed; select your frame list, and press OK. FFRend regenerates the project, saving the specified frames as bitmaps, and throwing the rest away.
+
+<p>Note that certain plugins may not behave exactly the same way at different resolutions; you may need to compensate their parameters. Also note that if your project uses randomness, you may not be able to repeat the exact same sequence of frames unless you restart FFRend each time you load your project; see also <a href="../Options/Random_seed.htm">random seed</a>.
+
+</body>

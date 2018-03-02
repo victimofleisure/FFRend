@@ -1,0 +1,681 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FFRend - Release Notes</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h1>Release Notes</h1>
+
+<p>If you want the plugin release notes, they're <a href="#plugins">here</a>. For more detail, see the <a href="development.html#issues">revision history</a>.
+
+<h2>FFRend Application</h2>
+
+<h3>2.2.07</h3>
+
+FFRend 2.2.07 fixes some issues with monitoring.
+
+<ol>
+<li>If a plugin slot was monitored, loading that slot with a different plugin unmonitored the slot and reverted to the default monitor source. Fixed.
+
+<li>Undoing the deletion of a monitored plugin didn't restore its monitoring. Fixed.
+
+<li>If the monitor source was non-default, hiding the monitor bar could cause it to hoard a frame until the bar was shown again. Fixed.
+
+<li>Changing the monitor source while paused needlessly restarted the engine, causing loss of feedback state. Fixed.
+
+<li>The monitoring implementation was streamlined by eliminating the engine tap's do-nothing worker thread.
+
+<li>Changing the thumbnail size while the files bar's view type wasn't thumbnail caused blank thumbnails. Fixed.
+</ol>
+
+<h3>2.2.06</h3>
+
+FFRend 2.2.06 fixes some serious bugs which were introduced in version 2.2.02, as side effects of improving oscillator synchronization between plugins.
+
+<ol>
+
+<li>If a plugin with at least one parameter modulation is preceded by one or more empty plugin slots, saving the project crashes.
+
+<li>Saving a project that's empty or contains only empty plugin slots pauses unexpectedly for five seconds. The pause is a different length if Options/Engine/Timeout was changed from its default value of 5000.
+
+<li>If there's currently no project and/or no plugins loaded, starting the job queue locks up the app for five seconds (or however long the engine timeout is set for), without displaying a wait cursor.
+
+<li>If one or more plugins can't render, saving the project pauses for five seconds, or however long the engine timeout is set for. A plugin can't render if it has no output sink, e.g. if it's placed before a source plugin and isn't explicitly connected to any inputs.
+
+</ol>
+
+<h3>2.2.05</h3>
+
+<p>FFRend 2.2.05 fixes some fairly minor UI bugs.
+
+<ol>
+
+<li>If the Parameter view's tab control was scrolled, loading a project with less plugins could corrupt the tab control. This is actually a common control bug which can occur when unwanted tabs are removed, instead of deleting them all and re-adding the wanted ones. If the tab control is sufficiently scrolled, and enough tabs are removed so that the scroll position exceeds the resulting tab count, the control may be corrupted, resulting in missing tabs, i.e. gaps where tabs should be. The workaround is to reset the scroll position before removing tabs. Introduced in V2. Fixed.
+
+<li>The Parameter view's tab control now automatically scrolls during drag reordering of plugin tabs.
+
+<li>All tab controls now support scrolling via mouse wheel.
+
+<li>Reselecting the same monitor source was needlessly generating an undo notification. Fixed.
+
+</ol>
+
+<h3>2.2.04</h3>
+
+FFRend 2.2.04 adds column resizing, and fixes some bugs.
+
+<ol>
+
+<li>All row views now support column resizing. This affects the main (Parameter) view, Patch bar, MIDI Setup bar, and Metaparameters Bar.
+
+<li>MIDI Setup's Plugin page was always empty, since version 2.2.01.04. The MIDI Setup view would also resize incorrectly (overwriting its droplist) after selecting its Plugin tab, followed by any other tab. Both fixed.
+
+<li>The COM architecture was incorrect, causing various subtle problems. FFRend now uses a single-threaded apartment (STA) for the UI thread and a multi-threaded apartment (MTA) for all other threads.
+
+<li>The resizing cursor was persisting unexpectedly over the monitor window. Fixed.
+
+<li>Single-stepping failed to update the monitor window if the monitor source was non-default. Fixed.
+
+<li>If the Queues view was visible, and a project with less plugins than the current one was opened while paused, resuming could crash. Resuming could also crash if plugins were deleted while paused, and the remaining plugins included at least one with multiple threads (again only if the Queues view was visible). Both fixed.
+
+<li>After assigning multiple threads to a plugin, changing its parameters potentially caused reentrance into the freeframe plugin instance. Some plugins can handle this, but it crashed the clip player. Fixed.
+
+<li>Opening a clip by its path (as opposed to via the player's Bank/Clip parameters) could potentially crash if seeking was done on the previous clip. The bug was demonstrable by opening a clip, pausing the app, setting the player's Position parameter to one, opening a SHORTER clip via drag/drop, and unpausing the app. This same bug also applied to opening clips via the Recent Clips parameter. Fixed in FFPlayer version 2.100.
+
+<li>If a plugin-containing slot is reloaded with a different plugin (via Plugin/Load), FFRend now attempts to preserve the previous plugin's non-default inputs. This is a V1 feature that was lost in V2.
+
+<li>If the output window was maximized, entering and exiting full-screen mode TWICE would leave the output window's frame unpainted, resulting in a vertical strip of desktop along the right edge. Fixed.
+
+<li>Entering/exiting full-screen mode was needlessly recreating DirectDraw surfaces, potentially causing artifacts such as partially painted windows. Fixed.
+
+</ol>
+
+<h3>2.2.03</h3>
+
+<p>FFRend 2.2.03 brings back monitor source selection (lost in V2) and fixes some bugs.
+
+<ol>
+
+<li>Monitor source selection allows the monitor bar to display the output of any plugin, not just the final one. This handy feature was difficult to implement in V2, so it was omitted, until now. To change the monitor source, use Plugin/Monitor (F8), the plugin context menu, or the monitor bar's context menu.
+
+<li>Stopping a recording would stall the engine if the final plugin had multiple threads assigned to it. Fixed.
+
+<li>While an edit control had focus, showing any menu (main or context) would periodically pause the message loop, causing the UI to become jerky. This was a V2 porting error; the bug was originally fixed in version 1.0.03. Fixed again.
+
+<li>The plugin input and monitor source popup menus now show hints in the status bar.
+
+<li>Buffer security checks were inadvertently enabled; they're now disabled (/GS-), resulting in smaller code and a significant performance gain.
+
+<li>Due to an embarassing oversight, the auto-update feature introduced in 2.2.02 fails with "installer script 'C:\Program Files\FFRend 2\reinstall.bat' not found". Sorry! Fixed.
+
+</ol>
+
+<h3>2.2.02</h3>
+
+<p>FFRend 2.2.02 fixes several problems related to synchronization of oscillators between plugins. These problems appeared in V2 as side effects of parallel processing. This version also fixes other bugs, including a serious bug introduced in the previous version which causes the entire desktop to flicker whenever a row view is updated.
+
+<ol>
+
+<li>Parameter modulations (AKA oscillators) which were synchronized between different plugins could easily become unsynchronized, as a side effect of the parallel processing architecture intoduced in V2. In particular, sync loss could occur as a result of inserting, deleting, or reordering plugins, undoing such commands, or saving and reloading a project. Undoing the Sync Oscillators command also caused sync loss. Fixed.
+
+<li>The bitmap export was creating a non-standard 32-bit bitmap when the engine's color depth was set to 32 bits. The bitmap export was also creating a garbled 16-bit bitmap when the engine's color depth was set to 16 bits. A standard 24-bit bitmap is now created in both cases.
+
+<li>Continuous single stepping (by holding down Shift+Space while paused) wasn't continuously updating the monitor bar. Also for the first few single steps after pausing, the monitor bar didn't match the output window. Both fixed.
+
+<li>If all plugins were deleted while paused, unpausing didn't clear the output window. Also if all plugins were deleted while running, the output window was cleared but the monitor bar wasn't. Both fixed.
+
+<li>In the previous version, the Parameter and MIDI Setup row views were modified to remember each plugin's scroll position separately. This minor enhancement introduced a serious bug which caused the entire desktop to flicker whenever a row view was updated. Since nearly every menu command updates one or more row views, the desktop flickered frequently. It wasn't noticed during testing because FFRend is normally run full-screen. Fixed.
+
+<li>A check for updates feature was added. The application automatically checks for updates when it starts up, unless this is disabled via the Options dialog. To check explicitly, use the Help menu command <em>Check for updates</em>.
+
+</ol>
+
+<h3>2.2.01</h3>
+
+<p>FFRend 2.2.01 introduces a playlist, better integrates the load-balancing feature, improves memory management, and fixes a number of bugs.
+
+<ol>
+
+<li>A playlist feature was added, which can automatically open a series of FFRend projects. The user specifies the list of projects, the interval between project changes, whether the list should be played in sequential or random order, and whether it should loop. A playlist can also be passed via the command line, in which case FFRend starts up with the playlist playing. This makes it easier to use FFRend in an installation, particularly when combined with the new /fullscreen command-line option. To edit the playlist, use Edit/Playlist.
+
+<li>A /fullscreen command-line option was added, which if specified causes FFRend to start in full-screen mode, in either single or dual monitor configuration, depending on the location of the output window.
+
+<li>FFRend is now Large Address Aware, meaning it can access up to 4GB of memory on 64-bit operating systems, and up to 3GB on 32-bit operating systems provided boot.ini specifies the /3GB switch.
+
+<li>The Load Balance feature was converted from a modal dialog to a control bar, allowing load to be monitored continuously during normal operation. The command is now View/Load Balance instead of Edit/Load Balance.
+
+<li>An Advanced button was added to the Engine Options dialog. It brings up the Advanced Engine Options dialog, the features of which are described below.
+
+<li>An advanced engine option called "Frame memory" was added, to limit the amount of memory FFRend allocates for its frame buffers. This is helpful when working with large frame sizes. By default the engine optimizes for speed over memory conservation, i.e. it allocates enough frame buffers for the worst possible case, regardless of memory limits. FFRend can operate with much less memory, though allocating too little may reduce throughput, or cause the engine to stall. Note that this option has no effect on memory allocated by Freeframe plugins.
+ 
+<li>An advanced engine option called "Run while loading project" was added, to control whether FFRend should continue to run the current project while opening a new one. Enabling this option reduces downtime (i.e. frozen output) when switching between projects, but at the cost of increased memory usage. The downtime-minimizing feature was introduced in V2, but it was always enabled. Disabling it conserves memory which can be useful when working with large frame sizes.
+
+<li>FFRend now attempts to handle running out of memory, by displaying an "Out of memory" message box and pausing the engine, instead of crashing.
+
+<li>A numeric edit (via edit box) could be lost in certain cases, e.g. if the edit was ended by selecting a different plugin, or by closing the project, instead of by setting the input focus to another child control. Fixed.
+
+<li>The input popup menu is now disabled for source plugins, as it should be.
+
+<li>The Parameter and MIDI Setup views now remember each plugin's scroll position separately.
+
+</ol>
+
+<h3>2.2.00</h3>
+
+<p>FFRend 2.2.00 is a bug fix release which addresses a number of relatively minor issues.
+
+<ol>
+
+<li>If FFRend was paused, editing modulated parameters via edit box didn't work after a plugin was inserted or deleted: text couldn't be selected in the edit box, and any characters typed didn't appear. Modulated parameters aren't editable via edit box while FFRend is rendering, because their values are constantly changing, but they're supposed to be editable while paused. Fixed.
+
+<li>If a plugin had no parameters, selecting the plugin in the Metaparameter Properties dialog's Type drop-down list crashed FFRend when the dialog was closed (by clicking the OK button or pressing Enter). The situation is illogical: a plugin with no parameters can't have metaparameters. Now if a plugin with no parameters is selected, the OK button is disabled. Fixed.
+
+<li>A thumbnail database created by V2 would crash V1. Fixed by increasing the version number of FFRend's thumbnail database format. Note that reverting from 2.2.00 to a previous version may cause FFRend to regenerate the thumbnails after displaying a 'bad format' error message.
+
+<li>Context menus were incorrectly positioned if they were triggered via the keyboard (Shift+F10) instead of the mouse. Fixed.
+
+<li>The file browser context menu now uses radio buttons instead of checks to indicate the current view and sort order.
+
+<li>The file browser list control context menu now includes a Delete item for deleting files.
+
+</ol>
+
+<h3>2.1.02</h3>
+
+<p>FFRend 2.1.02 is a bug fix release. It fixes a bug in the load balancing feature which can cause stateless plugins to behave as though they're stateful, resulting in unexpected strobing.
+
+<ol>
+
+<li>Assigning multiple threads to a plugin can cause strobing if the plugin has one or more parameters that are currently zero, but have non-zero defaults. Strobing is when the output alternates between two or more distinct states. To demonstrate the bug: a) start a new project and insert the PeteGaussianBlur plugin, b) load a still image via File/Video/Open, c) set GaussianBlur's Radius parameter to zero, and d) use Edit/Load Balance to assign two threads to GaussianBlur. The strobing can seen more clearly by lowering the frame rate. Fixed.
+
+</ol>
+
+<h3>2.1.01</h3>
+
+<p>FFRend 2.1.01 is a bug fix release. It fixes a serious bug which can cause incorrect behavior when editing plugin parameters via their sliders.
+
+<ol>
+
+<li>The previous version (2.1.00) introduced a serious parameter-related bug which can cause the parameter value shown in the GUI and the parameter value seen by the plugin to differ significantly. The bug only affects editing parameters via slider, not via edit control. The bug can be demonstrated by loading a plugin and left-clicking within one of its parameter sliders (within the slider track) such that the slider thumb jumps to a new position. The slider thumb moves and the edit box shows an updated value, but the plugin's behavior is unchanged. The edit also doesn't get added to the undo history, because it didn't actually occur. In effect the GUI is lying. Fixed.
+
+<li>The help file was updated to include load balancing.
+
+</ol>
+
+<h3>2.1.00</h3>
+
+<p>FFRend 2.1.00 adds an important performance-related feature (<a href="help.php?topic=Help/Loose_Ends/Load_balance.htm">load balancing</a>), and fixes a large number of bugs, some of them serious. Issues marked (V2) are specific to version 2.
+
+<ol>
+<li>A load balancing dialog was added, which allows multiple threads to be assigned to a plugin. Given sufficient cores, load balancing can greatly improve throughput in the common case where some plugins require significantly more CPU time than others (asymmetrical loading). The dialog is accessed via Edit/Load Balance or Shift+L. Load balance settings are stored in the project. Note that load balancing is only effective for stateless filters: assigning multiple threads to a stateful filter may cause output strobing.
+
+<li>Changing the frame rate in the Options dialog caused an incorrect recording length if the record duration was specified in time (as opposed to frames). Fixed.
+
+<li>The single step command wasn't updating the slider positions of modulated parameters. Fixed. (V2)
+
+<li>In the history view, the zoom setting now persists in the registry. (V2)
+
+<li>In the history view, the renderer's display name was changed from Output to Renderer, to be consistent with the other views. (V2)
+
+<li>The file browser's list control had an extra border (in XP and up) which appeared as a thin black outline. Fixed.
+
+<li>In the file browser, some editing keys (Delete, Insert, Escape, Ctrl+Z) behaved unexpectedly during label editing: they triggered app behaviors instead of edit control behaviors. Fixed.
+
+<li>Pressing the Escape key while dragging a plugin tab, patch row, or metaparameter row failed to cancel the drag operation. Fixed. (V2)
+
+<li>Pressing the Escape key failed to cancel a drag operation if a dialog row control had focus. Fixed.
+
+<li>If an error occurred while restoring the job control state, invalid jobs could result and persist. Partial data is now purged, and the user is given the option to delete the potentially corrupt job control file.
+
+<li>Restarting the engine caused frame queues to be destroyed and recreated, incurring needless overhead; the queues are now resized instead. (V2)
+
+<li>The options dialog was converted from a dialog to a property sheet, allowing related options to be grouped into pages for easier comprehension.
+
+<li>Changing the MIDI device can be slow if the CPU is heavily loaded, so a wait cursor is now shown, and the main frame is explicitly updated to ensure that the options dialog erases cleanly.
+
+<li>The sync oscillators command (Edit/Sync Oscillators) was initially removed in V2, but it's been restored. (V2)
+
+<li>The graph view was causing a handle leak, in which each graph update would leak two process information handles. The bug could be demonstrated by resizing the graph view. Fixed. (V2)
+
+<li>Deleting a plugin or opening a new project could cause a serious memory leak, which would occur while shrinking the frame buffer pool. As many as two frames could leak, depending on whether any of the deleted frames were currently assigned to a DirectDraw surface. Repeatedly undoing and redoing a plugin deletion would eventually demonstrate the bug. Fixed. (V2)
+
+<li>Dropping files onto the app from Explorer would leak heap memory, due to OnDropFiles failing to call DragFinish. Fixed.
+
+<li>Left-clicking a parameter slider's thumb without moving it added an undo event, even though the parameter value was unchanged. Fixed.
+
+<li>Opening a recent file via the file menu could cause the file menu to bounce, i.e. redisplay unexpectedly. This occurred after deleting a row in the Parameter, Patch, MIDI Setup, or Metaparameter views, while one its controls had focus, which would cause a hidden form view to receive focus. Fixed. (V2)
+
+<li>If MIDI Setup was showing a plugin-specific page, and one of the page's row controls had focus, attempting to select a main menu command via the Alt key would cause an infinite loop, permanently hanging the app. This is the infamous WM_GETDLGCODE bug, solved by removing the DS_CONTROL style from the MIDI Setup dialog. Fixed.
+
+<li>If a metaparameter was added while the Metaparams view was hidden, and the MIDI Setup view was visible and showing its Metaparam page, the new metaparameter wouldn't immediately appear in MIDI Setup. It would appear when  the MIDI Setup view was next updated, e.g. by hiding and reshowing it or selecting a different page. This could occur when creating a metaparameter via the main view's context menu. Fixed. (V2)
+
+<li>In the MIDI and Metaparameter views, the header columns didn't line up correctly with their corresponding controls, due to a row item coordinate conversion error. Fixed. (V2)
+
+<li>Right-clicking the History view's scroll bars showed the view's context menu, instead of the scroll bar context menu. Fixed. (V2)
+</ol>
+
+<h3>2.0.03</h3>
+
+<p>FFRend 2.0.03 is a bugfix version. It fixes some minor bugs related to recording.
+
+<ol>
+<li>The engine sometimes stalled at the end of a recording. This could also occur when when running queued jobs. Fixed.
+<li>Starting the job queue while the app was paused caused all jobs to fail immediately with no error message. Fixed.
+</ol>
+
+<h3>2.0.02</h3>
+
+<p>FFRend 2.0.02 is a bugfix version. It definitely fixes an important installation bug, and may also fix some other relatively minor bugs.
+
+<ol>
+<li>The previous version fails to run on machines lacking the .NET 2.0 framework, giving the error "The application failed to initialize properly (0xc0150002)." Also, in some cases the installer fails to install the BmpToAvi.ax DirectShow filter. Both errors are due to incorrect versions of BmpToAvi. The .NET framework is NOT required. Fixed.
+<li>On exiting full-screen mode, the previous version doesn't always fully repaint the UI. This is probably due to SetWindowPos not discarding the entire client area. Hopefully fixed.
+<li>In full-screen mode with "Lock frame rate" unchecked, the frame rate should match the monitor refresh frequency, but under Vista and Win7, it doesn't. This may be due to blits incorrectly using the flip wait flag. Hopefully fixed.
+</ol>
+
+<h3>2.0.00</h3>
+
+<p>FFRend 2.0.00 is a near-total rewrite, not an upgrade. The application was completely redesigned from the ground up to take advantage of the parallel-processing capabilities of today's multi-core CPUs.
+
+<p><b>Major differences</b>
+
+<ol>
+
+<li>Each plugin now runs in its own thread, and given sufficient cores, each plugin runs on its own core, so that throughput is limited only by the slowest plugin (Amdahl's law).
+
+<li>The user interface is now much more responsive, even when the CPU is heavily loaded, because rendering no longer occurs in the UI thread.
+
+<li>The built-in clip player was replaced by an enhanced version of PlayerFF which allows clips to be opened by path, or by dragging from the Files bar's Clips pane.
+
+<li>Monitor quality has been improved and now has two settings (fast or smooth), specified in the options dialog. Even the fast setting is still an improvement over version 1.
+
+<li>Multiple instances of the same plugin are now differentiated by decorating their names, e.g. PeteMixer-1, PeterMixer-2, etc.
+
+<li>Plugins with more than two inputs are now supported.
+
+<li>A Graph view is now available, which shows a dynamically updated graph of your current routing. Note that you must download and install graphviz to use this feature.
+
+<li>Two additional new views, History and Queues, provide dynamic information about the rendering engine, allowing you to easily determine which plugins are limiting throughput.
+
+<li>The frame rate can now be unlocked, so that the engine renders as fast as possible, or at the monitor refresh rate in full-screen mode.
+
+</ol>
+
+<p><b>Minor differences</b>
+
+<ol>
+
+<li>The Record command was moved from the View menu to the File menu, and the Options command moved from the View menu to the Edit menu.
+
+<li>The Export and Record commands no longer automatically pause the output.
+
+<li>The Bypass command no longer alters the routing. This can cause significantly different behavior, particularly when bypassing source plugins.
+
+<li>All sizing control bars now have a system menu option to control whether they're dockable.
+
+<li>There's no longer a distinction between Full-Screen and Exclusive modes, i.e. Full-Screen mode is always Exclusive. Consequently the app's UI is no longer accessible in Full-Screen mode without using a dual-monitor setup.
+
+<li>Metaplugins are still fully supported. Note however that metaplugins are internally single-threaded, i.e. a metaplugin's component plugins do not run in parallel with each other. Consequently, on a multicore machine, a typical metaplugin will run more slowly than the equivalent project.
+
+<li>If a plugin can't render because it's not routed to the output, any parameter modulations it has will not automate their corresponding sliders in the UI.
+
+<li>The Global Plugin and Monitor Source Selection features were removed.
+
+<li>The app now builds in VC++ 9.0.
+
+</ol>
+
+<h3>1.7.01</h3>
+
+<p>FFRend 1.7.01 adds metaparameter grouping, and fixes some bugs.
+
+<ol>
+<li>Metaparameters can now be grouped, so that one metaparameter controls multiple targets.
+<li>A metaparameter can now have a MIDI controller assigned to it.
+<li>A single MIDI controller can now control multiple targets, via metaparameter groups.
+<li>If a metaparameter name contained an ampersand, it didn't display correctly; fixed.
+<li>Undoing a parameter slider edit truncated the value to two decimal places; fixed.
+<li>Closing the app while the help window was visible caused a crash; fixed.
+</ol>
+
+<h3>1.6.04</h3>
+
+<p>FFRend 1.6.04 is a bug fix release. The following issues were fixed:
+<ol>
+<li>In dual-monitor exclusive mode, the cursor was still visible along the edges of the secondary monitor. The cursor is now completely hidden.
+<li>If redo failed to load a plugin, redoing metaparameters for that plugin crashed the app.
+<li>FFRend was unable to read a project that contained unassigned metaparameter(s).
+<li>In the Metaparameter Properties dialog, unassigning the target (i.e. setting the target plugin to &lt;none&gt;) didn't undo correctly.
+<li>While learning MIDI setup, if the selected row was deleted (e.g. as a result of deleting a plugin), subsequent MIDI input could crash the app.
+<li>Assigning MIDI to Bypass of a plugin that followed an empty slot could crash the app.
+</ol>
+
+<h3>1.6.03</h3>
+
+<p>FFRend 1.6.03 adds some new features: MPEG support via AviSynth, clip thumbnails in the file browser, and the ability to monitor the output of any plugin. This version also fixes some bugs.
+
+<ol>
+<li>FFRend now supports MPEG clips via AviSynth. The clips must have the .mpg extension, and AviSynth must be installed.
+
+<li>The file browser has been completely overhauled, and now supports all the standard views, including thumbnails. Note that video clips have thumbnails in XP but not in W2K. The new browser also supports renaming files and folders.
+
+<li>The monitor control bar can now monitor the output of any plugin. This is useful for previewing and debugging. To monitor a plugin, use Plugin/Monitor or F8, or use the plugin, patch bay, or monitor bar context menus.
+
+<li>The Global Plugin drop list (in the Options dialog) sometimes stored one less recent plugin than expected. This is fixed.
+
+<li>In previous versions, dragging sometimes couldn't be canceled via the Esc key. The Esc key now cancels drag operations in all cases.
+
+<li>In previous versions, if the output window was minimized, entering Exclusive mode would not work correctly. This is fixed.
+
+<li>In previous versions, if FFRend was in Exclusive mode, starting the Task Manager via Ctrl+Alt+Del would crash FFRend. This is fixed.
+
+<li>The source project now includes working Unicode configurations. The binary distribution is still ANSI however.
+</ol>
+
+<h3>1.5.01</h3>
+
+<p>FFRend 1.5.01 adds two new features: a job queue for batch rendering, and a global plugin that can be applied to all projects. This version also fixes some bugs.
+
+<ol>
+<li>FFRend now supports batch rendering. The Record dialog now includes a "Don't run this job now; add it to job control instead" checkbox, and there's a Job Control dialog which will look very familiar to users of VirtualDub.
+
+<li>FFRend now supports an optional global plugin, which is automatically appended to the plugin chain when you open an existing project. This allows you to apply a post-process to all of your projects without manually editing them.
+
+<li>In dual-monitor exclusive mode, the cursor is now hidden while it's over the output monitor.
+
+<li>It's now possible to create metaparameters for all of a plugin's parameters at once. This makes it easy to expose a plugin's entire interface from a metaplugin. Right-click on one of the plugin's parameters, select Metaparam, and then select All Parameters.
+
+<li>In previous versions, if the "Shutdown computer when done" option was checked in the Record Status dialog, the computer was shut down immediately when the recording ended. A Shutdown Warning dialog with a progress bar is now displayed, giving the user an opportunity to cancel the shutdown.
+
+<li>In previous versions, opening a new project did not reset the Solo state. This is fixed.
+
+<li>In previous versions, if the Monitor control bar was resized while the app was paused, the monitor displayed garbage. This is fixed.
+
+<li>In previous versions, if a metaplugin was imported and then saved as a project, the project was not added to the recent files list. This is fixed.
+
+<li>In previous versions, if the record duration was specified in time (as opposed to frames), and the input and output frame rates differed, the recording would not have the expected length. This occurred because the duration in frames was computed using the input frame rate, instead of the output frame rate. This is fixed.
+</ol>
+
+<h3>1.4.06</h3>
+
+<p>FFRend 1.4.06 is a bug fix release.
+
+<ol>
+<li>Version 1.4.05 broke the context menu for plugin parameter rows; right-clicking a parameter name would set focus to the first row's slider, no matter which row's name you right-clicked. Fixed.
+</ol>
+
+<h3>1.4.05</h3>
+
+<p>FFRend 1.4.05 is a bug fix release.
+
+<ol>
+<li>In previous versions, if the last item was selected in the file browser's current pane, pressing any alphanumeric key would crash the application. This is fixed.
+<li>In previous versions, selecting menu commands via the Alt key might not work under certain circumstances. This is fixed.
+</ol>
+
+<h3>1.4.04</h3>
+
+<p>FFRend 1.4.04 is a bug fix release.
+
+<ol>
+<li>In previous versions, loading a plugin that has no parameters could cause a delayed crash, particularly if the plugin was loaded via drag/drop. To demonstrate the bug in version 1.4.03, do the following: 1) load (via drag/drop) a plugin that has at least one parameter, 2) load (again via drag/drop) a plugin that has no parameters, and 3) spin the mouse wheel, or press an arrow key or editing key. The crash could also result from other similar sequences of events involving a plugin with no parameters. It was caused by a hidden control retaining input focus; for details, see the <a href="http://ffrend.blogspot.com/">blog</a>. This bug is fixed.
+</ol>
+
+<h3>1.4.03</h3>
+
+<p>FFRend 1.4.03 is a bug fix release.
+
+<ol>
+<li>In previous versions, dragging a plugin from the file browser onto the patch bay could cause the plugin to be inserted in an unexpected position. This could potentially crash the application, particularly in the following specific circumstance: if one or more multi-input plugins exist in the project, and the new plugin is dropped BELOW them. This is fixed.
+
+<li>In previous versions, if the plugin frame was resized (via the Options dialog) such that its aspect ratio changed, the Monitor control bar was not updated to reflect this. This is fixed.
+
+<li>In previous versions, pressing the help key (F1) in single-monitor Exclusive mode caused the application to become unresponsive or exit Exclusive mode. F1 is now ignored in single-monitor Exclusive mode.
+</ol>
+
+<h3>1.4.02</h3>
+
+<p>FFRend 1.4.02 is a maintenance release: it fixes a minor issue with recording.
+
+<ol>
+<li>FFRend now remembers the last codec used for recording, and also remembers that codec's settings. The codec state is stored in the profile, in Application Data\FFRend\ComprState.dat.
+</ol>
+
+<h3>1.4.01</h3>
+
+<p>FFRend 1.4.01 adds metaplugins, a plugin authoring capability.
+
+<ol>
+<li>FFRend now supports plugin authoring, which means you can export a FFRend project as a Freeframe plugin. The exported plugin is called a metaplugin, because it uses other plugins as components. A metaplugin can be used in any Freeframe-compatible host application, and behaves as if you were running the equivalent project in FFRend.
+
+<li>For multi-input plugins, FFRend now uses the plugin's maximum number of inputs, instead of its minimum.
+
+<li>FFRend now hooks the keyboard only while in Exclusive mode, instead of hooking it during startup.
+</ol>
+
+<h3>1.3.08</h3>
+
+<p>FFRend 1.3.08 fixes some issues with the dual-monitor support, and makes MIDI Setup a control bar instead of a modal dialog.
+
+<ol>
+<li>When performing live in dual-monitor mode, an option to disable the "Save Changes" warning is helpful, since otherwise the warning will probably occur every time a project is opened. A "Save changes warning" checkbox has been added to the Options dialog; unchecking it disables the warning.
+
+<li>In previous versions, dual-monitor Exclusive mode didn't make the main window full-screen. As a result, it was possible to accidentally click on the Windows desktop or Taskbar, resulting in a task switch. This forced FFRend to exit Exclusive mode, and caused the output monitor to unexpectedly display the desktop instead of FFRend's output. The main window is now full-screen in dual-monitor Exclusive mode.
+
+<li>In previous versions, if the output was full-screen on a secondary monitor, but not in Exclusive mode, the Windows task-switching keys (Alt+Tab, Alt+Esc) didn't work. This is fixed.
+
+<li>MIDI Setup is now a control bar instead of a modal dialog. This improves the ergonomics, and is in keeping with the new control bar-based design.
+
+<li>In previous versions, File/New did not reset the master speed. This is fixed.
+</ol>
+
+<h3>1.3.07</h3>
+
+<p>FFRend 1.3.07 adds support for multi-input (mixer) plugins. It also adds new sizable control bars, including a patch bay, a file browser, and an output monitor.
+
+<ol>
+<li>FFRend now supports multi-input plugins. And there was much rejoicing...
+
+<li>In previous versions, the routing of video between plugins was always linear, from left to right. This is inadequate for multi-input plugins, so a patch bay dock bar was added, allowing non-linear routing to be created and edited.
+
+<li>In previous versions, the output could only be viewed via the output window. This was a problem in dual-monitor setups, e.g. if the output was projected but the user's view of it was blocked. The problem was solved by adding a Monitor dock bar, which shows the same image as the output window.
+
+<li>A Explorer-style file browser dock bar was added, with tabs for projects, plugins, and clips. The bar supports both Vertical and Horizontal views, and in Vertical view, it has a Details option, with sorting via clickable header buttons.
+
+<li>In previous versions, left-clicking a parameter slider would update the corresponding parameter twice: once on button down, and once on button up. The parameter is now updated on button down only.
+
+<li>In previous versions, FFRend's main window showed inappropriate scroll bars in some situations. For example, if the project contained only one plugin slot, which was loaded and needed scroll bars, deleting that plugin didn't hide the scroll bars. Similarly, if a loaded plugin needed scroll bars, unloading it didn't hide the scroll bars, nor did undoing the load. All of these issues are fixed.
+
+<li>In previous versions, if the project was empty (i.e. contained no plugin slots), loading a plugin via the Plugin menu's MRU (most recently used plugins) would work, but undoing it would crash FFRend. This is fixed.
+
+<li>In previous versions, if FFRend was saturating the CPU (no idle time), opening a project that had missing files would freeze FFRend instead of displaying the Missing Files dialog. This is fixed.
+
+<li>In previous versions, plugins could potentially display their output upside-down. FFRend now passes its vertical origin to all plugins, via the VideoInfoStruct orientation member, which was added to the FreeFrame specification in August 2004.
+
+<li>Four of Pete Warden's plugins (Mixer, RadialBlur, SpiralBlur, and TimeBlur) contain an output buffer overrun bug which can cause FFRend (and other hosts) to fail in a spectacular manner. FFRend now checks for these plugins by file name, and refuses to load them unless their modified dates are at least Dec. 24, 2006 (the date the bug was first discovered). Unofficial patched versions of these plugins are available <a href="download.html">here</a>.
+
+<li>The Windows task-switching keys (Windows key, Ctrl+Esc, Alt+Esc, Alt+Tab) are now locked out in Exclusive mode.
+
+<li>The plugin's copy frames preference is now honored. This improves performance for some plugins, including Pete's.
+
+<li>In previous versions, bypassing a plugin via MIDI would set the project's modified flag, resulting in a "save changes" prompt on exiting FFRend or opening a new project. MIDI operations should never affect the document's modified status. This is fixed.
+</ol>
+
+<h3>1.2.02</h3>
+
+<p>FFRend 1.2.02 adds undo, and also fixes some minor problems.
+
+<ol>
+<li>FFRend now supports unlimited undo. If memory usage is a concern, undo can also be limited to a specific number of levels via the Options dialog, or disabled entirely by setting the number of levels to zero.
+
+<li>In the previous version, editing the MIDI Setup dialog's "Plugin" page could cause the application to crash. The crash would only occur if the plugin chain contained non-trailing empty slots. This is fixed.
+
+<li>In the previous version, the miscellaneous MIDI assignments (e.g. Master Speed) weren't saved in the project. This is fixed.
+
+<li>In the previous version, if a parameter is being modulated, and the parameter is adjusted via edit box while the application is paused, un-pausing causes the parameter to jump back to the pre-edit value. This is fixed.
+
+<li>In the previous version, the Video/Go To position dialog was not initialized, potentially causing garbage to appear in the dialog's controls. This is fixed.
+
+<li>In all previous versions, closing an AVI file did not release its DirectDraw surface, resulting in a memory leak. The leak was the size of one frame buffer, and was therefore worse with larger frame sizes. This is fixed.
+
+<li>FFRend can now open an AviSynth script in place of an AVI file. This allows FFRend to play MPEGs. Note that for AVS files to be visible in the Open Video dialog, you must set the filter to "All Files".
+</ol>
+
+<h3>1.1.00</h3>
+
+<p>FFRend 1.1.00 adds MIDI support, and also fixes some minor problems.
+
+<ol>
+<li>FFRend now supports MIDI control of all Freeframe parameters. Parameter automations can also be controlled via MIDI. Assignments can be created via editing, or "learned".
+
+<li>The format of the status bar's frame counter is now hh:mm:ss (frame).
+
+<li>The record duration can now be specified in either time (hh:mm:ss) or frames.
+
+<li>The previous version wasn't handling fractional frame rates correctly; this is fixed.
+
+<li>The previous version wasn't calling initialise and deInitialise on plugins; this is fixed.
+
+<li>A File/Video/Go To command was added for jumping to a specific frame in the source video.
+</ol>
+
+<h3>1.0.04</h3>
+
+<p>FFRend 1.0.04 fixes some problems with the initial release, and adds a video properties dialog.
+
+<ol>
+
+<li>In the previous version, there was no easy way to make a recording exactly the same length as the input AVI file. This has been solved by adding a "Use AVI length" option to the Record dialog. Selecting this option makes the duration "snap" to the length of the AVI file, and also rewinds the AVI file. Note that you must have an AVI file open, otherwise the option will be disabled.
+
+<li>In the previous version, there was only one current folder setting, which led to excessive navigating in the file dialogs. FFRend now maintains a separate current folder setting for each of the following file types: projects, plugins, input videos/images, and recordings. The folder settings are persistent, i.e. stored in the registry.
+
+<li>In the previous version, if an edit control had focus, displaying any type of menu (e.g. main menu, context menu, system menu) would cause the output and automations to become jerky until the menu was closed. The behavior didn't occur if a multimedia timer was used. This bug is now fixed.
+
+<li>FFRend now includes two additional video-related commands: File/Video/Rewind, and File/Video/Properties. The video properties dialog works for both AVI files and still images.
+
+</ol>
+
+<h3>1.0.02</h3>
+
+<p>This is the initial release.
+
+<a name="plugins"><h2>Chris Korda's Freeframe Plugins</h2>
+
+<h3>1.0.14</h3>
+
+<p>The clip player was updated to fix a potential crash which only applied to FFRend.
+
+<ol>
+<li>Opening a clip by its path in FFRend (as opposed to via the player's Bank/Clip parameters) could potentially crash if seeking was done on the previous clip. The bug was demonstrable by opening a clip, pausing FFRend, setting the player's Position parameter to one, opening a SHORTER clip via drag/drop, and unpausing FFRend. This same bug also applied to opening clips via the Recent Clips parameter. Fixed in FFPlayer version 2.100.
+</ol>
+
+<h3>1.0.13</h3>
+
+<p>The Fauve plugin was added, and some bugs were fixed in the Histogram plugin.
+
+<ol>
+<li>The Fauve plugin was added. It colorizes input in the style of Fauvism.
+<li>The Histogram plugin was crashing in 24-bit mode. Fixed.
+<li>In the Histogram plugin, the first and last bars had incorrect widths. The bug occurred in all modes but was more noticeable in 16-bit mode. Fixed.
+</ol>
+
+<h3>1.0.12</h3>
+
+<ol>
+<li>The Histogram plugin was added. It displays a continuous histogram of the input video in one of four modes: Luma, RGB, RGB + Luma, or RGB Overlay. No other changes were made.
+</ol>
+
+<h3>1.0.11</h3>
+
+<ol>
+<li>The initial release of CharGenAA was accidentally shipped with debug code enabled that displayed a blue crosshair and a red box around the character. This is fixed. No other changes were made.
+</ol>
+
+<h3>1.0.10</h3>
+
+<ol>
+<li>This version adds the following plugins: AlphaMix, CharGen, CharGenAA, MaskMix, Multiply, TextGen, and TextGenAA. The new plugins are documented <a href="plugins/MiscPlugs-ReadMe.html">here</a>.
+In addition WhorldFF and UltraWhorld are now included for convenience though they're also available from <a href="http://whorld.org/download.html">whorld.org</a> and from <a href="http://sourceforge.net/projects/whorld/files/">SourceForge</a>.
+
+</ol>
+
+<h3>1.0.08</h3>
+
+<ol>
+<li>This version adds the Radar plugin, which simulates a radar sweep. It's documented <a href="plugins/MiscPlugs-ReadMe.html">here</a>.
+
+</ol>
+
+<h3>1.0.07</h3>
+
+<ol>
+
+<li>This version adds some new MMX-optimized plugins. Also, two parameters were added to the PlayerFF plugin: Recent Clips, and Defer Bank Change. The new plugins are Blacken, Brightness, ContrastPS, Invert, and Whiten, and they're documented <a href="plugins/MiscPlugs-ReadMe.html">here</a>.
+
+</ol>
+
+<h3>1.0.06</h3>
+
+<ol>
+
+<li>In previous versions of all plugins except BoolMix, the frame was flipped vertically. This was correct behavior for some hosts, but not for others (e.g. in FlowMotion, PlayerFF displayed the video upside-down). The plugins now get the orientation from the host, which passes it in via the VideoInfoStruct. Note that older versions of freeframe.h didn't include orientation, and it's not clear exactly when it was added, though according to the CVS it's been there since at least Aug 2004. It's possible that some hosts may still use the older definition of VideoInfoStruct, which could cause upside-down frames, or possibly even an access violation, though this is unlikely.
+
+</ol>
+
+<h3>1.0.05</h3>
+
+<ol>
+
+<li>This release adds <a href="plugins/BoolMix-ReadMe.html">BoolMix</a>, a boolean mixer. It blends two inputs using a user-selected boolean operation.
+
+<li>WaveGen now supports 16-bit mode.
+
+<li>The MFC source plugin template <a href="plugins/FFSrcPlug-ReadMe.html">FFSrcPlug</a> was added to this package for completeness. FFSrcPlug was also updated to support 16-bit mode.
+
+</ol>
+
+<h3>1.0.04</h3>
+
+<ol>
+
+<li>In WaveGen, some parameter defaults were changed. The Erase Bkgnd parameter now defaults to off, which allows the plugin to be used for compositing even if the host doesn't provide access to the parameter. Also, Modulation Type now defaults to Amplitude instead of None.
+
+<li>In WaveGen, an Invert parameter was added.
+
+</ol>
+
+<h3>1.0.02</h3>
+
+<p>This release adds <a href="plugins/WaveGen-ReadMe.html">WaveGen</a>, a wave generator plugin.
+
+<h3>1.0.01</h3>
+
+<p>This is the initial release, containing only <a href="plugins/PlayerFF-ReadMe.html">PlayerFF</a>, a clip player plugin.
+
+</ol>
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

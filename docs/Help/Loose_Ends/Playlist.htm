@@ -1,0 +1,18 @@
+<title>Playlist</title>
+<body>
+
+<h3>Playlist</h3>
+
+<p>FFRend can automatically open a list of projects, also known as a <em>playlist</em>. This is useful if you're VJing and need a break. It also makes it easier to use FFRend in an installation (see below). The Playlist dialog allows you to specify the list of projects, the interval between project changes, whether the list should be played in sequential or random order, and whether it should loop. Use <span class="cmd">Edit/Playlist</span> or <span class="key">Shift+A</span> to show the Playlist dialog.
+
+<p>The Playlist dialog has its own menus. To add projects to the playlist, use <span class="cmd">Edit/Add</span> or <span class="cmd">Edit/Insert</span>. To delete projects from the playlist, use <span class="cmd">Edit/Delete</span>. You can also drag projects onto the Playlist dialog from the Projects pane of the Files Bar, or from Windows Explorer. To save the playlist use <span class="cmd">File/Save</span> or <span class="cmd">File/Save As</span>. To start a new playlist, use <span class="cmd">File/New</span>. To open an existing playlist, use <span class="cmd">File/Open</span>.
+
+<p>To play the current playlist, use <span class="cmd">Auto/Play</span>, or press the dialog's Play button. While playing, the current project indicator (in the playlist's leftmost column) changes from a black square to a green arrow. To stop playing the playlist, press the Play button again. To loop the playlist, use <span class="cmd">Auto/Loop</span>, or press the Loop button. To randomize the order of the playlist, use <span class="cmd">Auto/Shuffle</span>, or press the Shuffle button. To specify the interval between project changes in seconds, use the edit box to the right of the buttons.
+
+<p>A playlist file contains links (paths) to project files, and these links can break if project files are moved or deleted. If this occurs, FFRend displays the <a href="../Projects/Missing_Files.htm">missing files</a> dialog when the playlist is opened.
+
+<p>When creating an installation, it may be desirable to have FFRend start up playing a playlist. This is accomplished by passing FFRend the playlist via the command line. It may also be helpful to specify the /fullscreen command-line option, which causes FFRend to start up full-screen on whichever monitor contains the output window. Here's an example command line:
+
+<p><tt>ffrend myplaylist.ffl /fullscreen</tt>
+
+</body>

@@ -1,0 +1,14 @@
+<title>Performance</title>
+<body>
+
+<h3>Performance</h3>
+
+<p>FFRend attempts to maintain a constant <a href="../Options/Frame_rate.htm">frame rate</a>, but if the CPU is overloaded, the frame rate will drop, sometimes drastically. CPU overload typically results from a large <a href="../Options/Frame_size.htm">frame size</a>, a long <a href="../Plugins/Plugin_chains.htm">plugin chain</a>, or especially CPU-intensive plugins. It isn't necessarily a concern when you're <a href="../Recording/Recording.htm">recording</a> a finished <a href="../Projects/Projects.htm">project</a>. It's more likely to be a problem when the perceived frame rate matters, e.g. during development, or during a live show.
+
+<p>The simplest way to improve performance is by reducing the frame size. You may find it convenient to develop your projects at a low resolution, and then increase the resolution for the final recording, but be aware that some plugins won't behave exactly the same way at different resolutions. If you have a multi-core CPU, you may also be able to improve throughput by <a href="../Loose_Ends/Load_balance.htm">load balancing</a>.
+
+<p>The Monitor, Graph, History and Queues views all potentially reduce performance. The <a href="../Options/Monitor_quality.htm">monitor quality</a> setting can also affect performance, though only if the monitor bar is visible. Reducing the <a href="../Options/View_frequency.htm">view frequency</a> may increase performance slightly, at the cost of making the user interface choppier.
+
+<p>If you're creating complex effects at high resolution, it may not be possible to stay in real time, except by using a more powerful computer. FFRend is compute-bound, i.e. its performance is limited primarily by CPU power, rather than graphics power, memory size, or disk speed.
+
+</body>

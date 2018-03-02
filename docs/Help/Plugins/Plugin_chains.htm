@@ -1,0 +1,10 @@
+<title>Plugin chains</title>
+<body>
+
+<h3>Plugin chains</h3>
+
+<p>A Freeframe plugin processes video frames. FFRend allows you to <a href="../Plugins/Loading_plugins.htm">load</a> multiple plugins at once. The plugins form a <em>chain</em>, i.e. each plugin takes its <a href="../Plugins/Input_video.htm">input</a> from the previous plugin's output. By default, video frames flow through the chain from left to right. In this case, the order in which the plugins appear is significant, because it determines the order in which they process video; <a href="../Plugins/Reordering_plugins.htm">reordering</a> them can have a dramatic effect on the output.
+
+<p>It's also possible to create an explicit routing that overrides the default left-to-right signal flow. This is essential if you're using multi-input plugins; see <a href="../Plugins/Patch_Bay.htm">Patch Bay</a>.
+
+</body>

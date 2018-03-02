@@ -1,0 +1,27 @@
+<title>Multimedia timer</title>
+<body>
+
+<h3>Multimedia timer</h3>
+
+<p>The standard Win32 timer provided by Windows is unable to accurately achieve many common frame rates. For example under XP, if the frame rate is set to 25 FPS, you'll actually get 21.33 FPS, which is a considerable difference. This may not matter if you're <a href="../Recording/Recording.htm">recording</a> at high resolution, because you're probably not in real time anyway, due to CPU <a href="../Loose_Ends/Performance.htm">overload</a>. It's more likely to be a problem when you're previewing your work at low resolution. You want a correct frame rate when you're previewing, because otherwise you won't get an accurate sense of how fast your <a href="../Parameters/Automating_parameters.htm">parameter automations</a> are.
+
+<p>To make the frame rate more accurate, check the "Use multimedia timer" option. Note that this is a trade-off, because a multimedia timer uses significantly more CPU time.
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr><th colspan=3>Achievable frame rates</th></tr>
+<tr><th>&nbsp;</th><th>Win32 timer</th><th>Multimedia timer</th></tr>
+<tr><th>2000</th><td>100, 50, 33.33, 25, 20, 16.67, etc.</td><td rowspan=2>100, 90.91, 83.33, 76.92, 71.43, 66.67, 62.5, 58.82, 55.56, 52.63, 50, 47.62, 45.45, 43.48, 41.67, 40, 38.46, 37.03, 35.71, 34.48, 33.33, 32.26, 31.25, 30.3, 29.41, 28.57, 27.78, 27.03, 26.32, 25.64, 25, 24.39, 23.80, etc.</td></tr>
+<tr><th>XP</th><td>64, 32, 21.33, 16, 12.8, etc.</td></tr>
+</table>
+
+<p>A frame rate is normally expressed as a <em>frequency</em>, i.e. 25 FPS is equivalent to 25 Hz. A Windows timer is specified via its <em>period</em>, which is the inverse of the frequency. A timer has a property called <em>granularity</em>, which you can think of as its coarseness. Only timer periods that happen to be multiples of the granularity are supported. Other timer periods are rounded to the nearest multiple of the granularity. This won't make much difference if the granularity is fine compared to the period you want: e.g. a granularity of 10 ms might be acceptable if you're trying to wait a minute, or an hour. Unfortunately the granularity of a Win32 timer is coarse compared to most common frame rates, and worse still, it varies by Windows version.
+
+<p>Under Windows 2000, the timer granularity is 10 ms. If you ask for 25 FPS, you're in luck, because the period is 1/25 = 0.04 or 40 ms, which just happens to be a multiple of the timer granularity. On the other hand, if you ask for 30 FPS, the period is 1/30 = 0.033 or 33 ms, which is definitely not a multiple of 10 ms. The period therefore gets rounded up to the nearest multiple of 10, i.e. 40 ms, so you still get 25 FPS, even though you asked for 30 FPS. Not good.
+
+<p>You might wonder why 33 was rounded up, instead of down, since 33 is closer to 30 than 40. It turns out that timer periods are always rounded up in Windows 2000, whereas in XP they're rounded up or down, depending on which granularity is nearest.
+
+<p>Under XP, the timer granularity is 15.625 ms. If you ask for 25 FPS, the period (40 ms) gets rounded up to the nearest multiple of 15.625 ms, i.e. 46.875 ms (15.625 * 3), giving you a frame rate of 1/.046875 = 21.33 FPS. If you ask for 30 FPS, the period (33 ms) gets rounded down to 31.25 ms (15.625 * 2), giving you a frame rate of 1/.03125 = 32 FPS, which still isn't too helpful.
+
+<p>In summary, with a Win32 timer, 30 FPS is not achievable under Windows 2000, and neither 25 nor 30 FPS are achievable under XP. In contrast, a multimedia timer has one millisecond granularity under both 2000 and XP, which allows reasonable approximations of most common frame rates, though at the cost of increased overhead.
+
+</body>

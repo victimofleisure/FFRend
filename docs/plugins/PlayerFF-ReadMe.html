@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PlayerFF ReadMe</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><a href="./index.html">Home</a></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<h3>INTRODUCTION</h3>
+
+<p>PlayerFF is a free, open-source Freeframe clip player for Windows 2000/XP. It's a source plugin, and it reads AVI files or still images (BMP/JPG/GIF).
+
+<p>The player has two ways of finding your clips. In either case, the player looks for a special folder called "My Documents\PlayerFF". If the special folder contains a playlist file, the player uses it to locate your clips, as described below. Otherwise, the player expects to find your clips in the special folder. Any clips it finds there can be selected, via the "Clip" parameter. The clips are distributed evenly over the parameter's range, in alphabetical order. If no clips are found, or the special folder doesn't exist, the plugin displays the message "NO CLIP".
+
+<h3>PLAYLISTS</h3>
+
+<p>A playlist is a file you create which contains links to your clips. Using a playlist has several advantages: your clips can be located wherever you like, you specify their order explicitly, and the clips can be arbitrarily grouped into banks. The playlist must be called "playlist.txt", and must reside in the special folder "My Documents\PlayerFF".
+
+<p>The playlist is a plain text file, in which each line consists either of a path to a clip, or a bank prefix. All clips following a bank prefix are placed in that bank. Clips without a bank prefix are placed in the first bank. A bank prefix consists of a colon followed by a bank index. Note that bank indices are zero-origin, i.e. the first bank is bank zero. Here's a sample playlist, which places three clips in bank zero, and two clips in bank one:
+
+<big><pre>:0
+C:\temp\avi files\earth1.avi
+C:\temp\avi files\kissinggirls.avi
+C:\temp\avi files\Night Traffic.avi
+:1
+C:\temp\spoo\spy1.avi
+C:\Chris\images\debbie\DSC_0080.jpg
+</pre></big>
+
+<p>Empty lines are ignored. The banks can appear in any order, though it's easier to keep them in ascending order. It's legal to skip banks, though it's not obvious why you would want to. You can also define a bank more than once, in which case the definitions are concatenated.
+
+<h3>PARAMETERS</h3>
+
+<ol>
+
+<li><b>Bank</b>
+<br>This parameter allows you to select one of the banks defined in your playlist (see above). The banks are distributed evenly over the parameter's range, i.e. if two banks are available, 0 to .5 selects the first, and .5 to 1 selects the second. When a new bank is selected, the current value of the "Clip" parameter determines which clip in that bank will play. Note that if your playlist only has one bank, or if you're not using a playlist, the Bank parameter has no effect.
+
+<li><b>Clip</b>
+<br>This parameter allows you to select a clip from the current bank. The clips are distributed evenly over the parameter's range, i.e. if two clips are available, 0 to .5 selects the first, and .5 to 1 selects the second.
+
+<li><b>Position</b>
+<br>This parameter allows you to seek any position within the current video clip. Zero seeks the beginning of the clip, and one seeks the end. For still images, this parameter has no effect. Seek performance varies, depending on how your clip was encoded. Some codecs exhibit substantial delays, making scratching impractical. Seek performance may be improved by avoiding temporal compression, e.g. by making every frame a key frame. MJPEG codecs are generally recommended for fast seeking.
+ 
+<li><b>Speed</b>
+<br>This parameter allows you to set the playback speed for all video clips. For still images, this parameter has no effect. Zero is fast reverse, one is fast forward, .5 is pause, and .6 is normal playback (x1 forward). The following table shows the relationship between the Speed parameter and playback:
+
+<p><table border=1 cellpadding=2 cellspacing=0>
+<tr align=center><td>0.0</td><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td><td>0.5</td><td>0.6</td><td>0.7</td><td>0.8</td><td>0.9</td><td>1.0</td</tr>
+<tr align=center><td>&times;16</td><td>&times;8</td><td>&times;4</td><td>&times;2</td><td>&times;1</td><td>0</td><td>&times;1</td><td>&times;2</td><td>&times;4</td><td>&times;8</td><td>&times;16</td></tr>
+<tr align=center><td colspan=5>reverse</td><td>pause</td><td colspan=5>forward</td></tr>
+</table>
+
+<li><b>Play</b>
+<br>This parameter is a play/pause switch. Zero pauses, and any non-zero value enables playback. While paused, the Bank, Clip, and Position parameters all work as expected, but Speed has no effect.
+
+<li><b>Auto-Rewind</b>
+<br>The plugin can have up to 10 clips open at once, and it normally maintains its current position separately for each of them. Put another way, the 10 most recently used clips are cached, and when you select a cached clip, it plays from wherever it was, instead of playing from the beginning. Setting Auto-Rewind to a non-zero value disables this feature, i.e. selecting a clip always rewinds it, even if it's already open.
+
+<li><b>Recent Clips</b>
+<br>This parameter allows you to select one of the ten most recently used clips. The order of the recent clips is not affected. When a recent clip is selected, it plays from wherever it was, instead of playing from the beginning, unless Auto-Rewind is set; see above.
+
+<li><b>Defer Bank Chg</b>
+<br>This parameter defers Bank changes until the next Clip change. when Defer Bank Chg is non-zero, changing the Bank parameter has no effect until you change the Clip parameter. This can be useful when selecting clips via MIDI.
+
+</ol>
+
+<h3>NOTES</h3>
+
+<p>The source code and binaries for this release are available from the FFRend web site, <a href="http://ffrend.sourceforge.net/">http://ffrend.sourceforge.net/</a>.
+
+<h3>LICENSE</h3>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
+
+<p>Kopyleft 2006 Chris Korda, All Rites Reversed.
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>

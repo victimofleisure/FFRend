@@ -1,0 +1,16 @@
+<title>MIDI setup</title>
+<body>
+
+<h3>MIDI setup</h3>
+
+<p>Before you can control FFRend with MIDI, you must first select a <a href="../Options/MIDI_device.htm">MIDI device</a>. Then you must <em>assign</em> MIDI messages to the things you want to control, using the MIDI Setup dialog. To show or hide the dialog, use <span class="cmd">View/MIDI Setup</span> or <span class="key">Shift+I</span>. MIDI assignments can be created via <a href="../MIDI/MIDI_editing.htm">editing</a>, or <a href="../MIDI/Learn_mode.htm">learned</a>.
+
+<p>Things to which MIDI can be assigned are called <em>targets</em>. The most common MIDI targets are plugin <a href="../Parameters/Parameters.htm">parameters</a>, or <a href="../Parameters/Automating_parameters.htm">oscillator</a> settings, such as modulation frequency. The list of available targets varies, depending on which plugins are <a href="../Plugins/Loading_plugins.htm">loaded</a>.
+
+<p>The MIDI Setup dialog contains tabbed pages of rows, much like the main window. There's a page for each plugin, and its rows correspond to the plugin's parameters. Each row lets you assign MIDI to a parameter's <em>properties</em>, which include the parameter itself, and its oscillator settings. Use the drop-list in the upper left corner of the dialog to select which property you're assigning to. If you just want to control parameters, not their oscillators, leave the drop-list set to "Parameter".
+
+<p>Put another way, the parameter pages form a three-dimensional matrix of MIDI targets, in which the axes are plugins, parameters, and properties. The pages correspond to plugins, the rows correspond to parameters, and the drop-list selects a property.
+
+<p>The dialog also includes three additional pages: the Plugin page, the Misc page, and the Metaparam page. The Plugin page is for properties that occur once per plugin, e.g. <a href="../Plugins/Bypass_and_solo.htm">Bypass</a>; the page contains a row for each plugin. The Misc page is for system-wide properties, e.g. <a href="../Projects/Master_speed.htm">Master Speed</a>. The Metaparam page lets you assign MIDI to <a href="../Metaplugins/Metaparameters.htm">metaparameters</a>.
+
+</body>

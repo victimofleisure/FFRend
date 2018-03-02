@@ -1,0 +1,42 @@
+<title>Metaparameters</title>
+<body>
+
+<h3>Metaparameters</h3>
+
+<p>Like any other Freeframe plugin, a <a href="../Metaplugins/Metaplugins.htm">metaplugin</a> can expose <a href="../Parameters/Parameters.htm">parameters</a> to the host application; such parameters are called <em>metaparameters</em>. A metaparameter can directly control a parameter in a component plugin, or it can control other target types, such as a <a href="../Parameters/Automating_parameters.htm">modulator</a> property, a plugin's <a href="../Plugins/Bypass_and_solo.htm">bypass</a> switch, or a global property (e.g. <a href="../Projects/Master_speed.htm">Master Speed</a>). Metaparameters can also be <a href="../Metaplugins/Metaparameter_groups.htm">grouped</a> so that a single metaparameter controls multiple targets.
+
+<p>Metaparameters allow you to design your metaplugin's <em>interface</em>. Part of creating a metaplugin is deciding which things to expose. Since hosts often severely limit the number of parameters a Freeframe plugin can have, it's a good idea to <a href="#Metaparmeters_Reordering">order</a> your metaparameters, so that the most essential ones come first. FFRend allows a Freeframe plugin to have unlimited parameters, so if you're only going to use the metaplugin in FFRend, you can expose as many metaparameters as you like, though you still may find it helpful to be selective.
+
+<p><b>Creating a metaparameter</b>
+
+<p>To create a metaparameter, first show the Metaparams control bar (<span class="cmd">View/Metaparams</span> or <span class="key">Shift+E</span>), otherwise you won't be able to see what you're doing. Select the plugin, by right-clicking on its tab, and now in the main view (beneath the plugin tabs, where the plugin automations are), right-click on the NAME of the parameter. You'll see the following context menu:
+
+<ul>Mod Range &gt;
+<br>Metaparam &gt;
+</ul>
+
+<p>Select Metaparam, and you'll see a popup menu like this:
+
+<ul>Parameter
+<br>Mod Enable
+<br>Mod Waveform
+<br>Mod Frequency
+<br>Mod PW
+<br>Plugin Bypass
+</ul>
+
+<p>To expose the parameter itself, select Parameter. You can select one of its modulation properties instead, or to expose the plugin's bypass switch, select Plugin Bypass. The metaparameter magically appears as a row in the Metaparams control bar, with the slider and edit box already set to the target's current value. If you move the slider, or type a new value in the edit box, you'll see the target property change in sync.
+
+<p><b>Name and range</b>
+
+<p>The metaparameter's name is generated automatically, but if you don't like the name, right-click it and select Properties, to show the Metaparameter Properties dialog. Now you can enter a custom name. You can also use this dialog to map the Freeframe parameter range [0..1] to whatever range you want. This is especially useful when the target is a modulation frequency. The range can also be inverted, e.g. to turn a "bypass" control into an "enable" control, use a range of [1..0] instead of [0..1].
+
+<p><b>Alternate method</b>
+
+<p>Metaparameters can also be created via the Metaparameter Properties dialog, though the method described above is more convenient. This alternate method is the ONLY way to create a metaparameter for Master Speed. Right-click in the Metaparams control bar and select Insert. Now right-click the Metaparameter row you just created, and select Properties. In the properties dialog, go to the Plugin combo box, select Misc Properties, and you'll find Master Speed. You can use the combo boxes to select any target in FFRend. To control multiple targets, use <a href="../Metaplugins/Metaparameter_groups.htm">metaparameter groups</a>.
+
+<p><a name="Metaparmeters_Reordering"><b>Reordering</b>
+
+<p>The order of the rows in the Metaparms control bar determines the order in which the metaparameters will appear in the host. The order can be changed by dragging rows. To drag a row, position the cursor over the metaparameter name, press and hold down the left mouse button, drag the row to the desired location, and release the left mouse button.
+
+</body>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FFRend - Home</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<link href="./style.css" rel=stylesheet title=default type=text/css>
+</head>
+<body>
+<div class=menu>
+<a href="./index.html"><img src="./images/ffrend-icon-32x32.gif" width="32" height="32" alt="icon"></a>
+<div class=title>FFRend</div><p>
+<div class=menuitem0 title="Overview"><b>Home</b></div>
+<div class=menuitem0 title="Movies"><a href="./movies.html">Movies</a></div>
+<div class=menuitem0 title="Gallery"><a href="./gallery/bifurcations.html">Gallery</a></div>
+<div class=menuitem0 title="Screenshots"><a href="./screenshots.html">Screenshots</a></div>
+<div class=menuitem0 title="Features"><a href="./features.html">Features</a></div>
+<div class=menuitem0 title="Download"><a href="./download.html">Download</a></div>
+<div class=menuitem0 title="Documentation"><a href="./helpframe.html">Documentation</a></div>
+<div class=menuitem0 title="Development"><a href="./development.html">Development</a></div>
+<div class=menuitem0 title="Forums"><a href="./forums.html">Forums</a></div>
+<div class=menuitem0 title="Links"><a href="./links.html">Links</a></div>
+<div class=menuitem0 title="Contact"><a href="./contact.html">Contact</a></div><br>
+</div>
+<div id=body>
+<!--  content goes HERE  -->
+
+<img src="images/hex18604w.jpg" width="640" height="350" alt="frontpage">
+<h2>Overview</h2>
+
+<p>FFRend (Freeframe Renderer) is a renderer for Freeframe plugins. It allows you to <a href="help.php?topic=Help/Plugins/Plugin_chains.htm">chain</a> any number of plugins together, <a href="help.php?topic=Help/Parameters/Automating_parameters.htm">automate</a> their parameters using oscillators, and <a href="help.php?topic=Help/Recording/Recording.htm">record</a> the output to an AVI file. The <a href="help.php?topic=Help/Plugins/Input_video.htm">input</a> is a video (AVI/MPG), still image (BMP/JPG/GIF), or source plugin.
+
+<p>Most VJ softwares support Freeframe, and can record their output, so what makes FFRend different? FFRend is optimized for <b>content generation</b>, whereas VJ softwares are typically optimized for live performance. The key difference is that FFRend <a href="help.php?topic=Help/Loose_Ends/Frame-dropping.htm"><b>never drops frames</b></a>, even when your project is too CPU-intensive to be rendered in real time.
+
+<p>It's also possible to perform with FFRend. The user interface is modular, dual-monitor is fully supported, and all parameters and oscillator settings can be controlled via <a href="help.php?topic=Help/MIDI/MIDI_setup.htm">MIDI</a>. Version 2 also supports parallel processing on multi-core CPUs, for greatly improved <a href="help.php?topic=Help/Options/Frame_rate.htm">frame rates</a>.
+
+<p>FFRend supports <b>plugin authoring</b>, which means you can export a FFRend <a href="help.php?topic=Help/Projects/Projects.htm">project</a> as a Freeframe plugin. The exported plugin is called a <a href="help.php?topic=Help/Metaplugins/Metaplugins.htm">metaplugin</a>, because it uses other plugins as components. A metaplugin can be used in any Freeframe-compatible host application, and behaves as if you were running the equivalent project in FFRend.
+
+<p>FFRend is free, open-source software for Windows XP/Vista/Win7. It includes comprehensive help, an installer, and a simple <a href="help.php?topic=Help/Getting_Started/Demo_project.htm">demo project</a>. If you want to render complex effects at high resolution, using chains of automated Freeframe plugins, FFRend is your friend.
+
+<h2>News</h2>
+
+<p><b>June 5, 2012</b>
+
+<p>FFRend 2.2.07 fixes some issues with monitoring. Please <a href="download.html">download</a> the latest version, and check the <a href="relnotes.html">release notes</a>.
+
+<p><b>May 22, 2012</b>
+
+<p>FFRend 2.2.06 fixes some serious bugs which were introduced in version 2.2.02.
+
+<p><b>May 20, 2012</b>
+
+<p>FFRend 2.2.05 fixes some fairly minor UI bugs.
+
+<p><b>May 10, 2012</b>
+
+<p>FFRend 2.2.04 adds column resizing, and fixes a few bugs.
+
+<p><b>Apr 4, 2012</b>
+
+<p>FFRend 2.2.03 brings back <a href="help.php?topic=Help/Plugins/Monitoring_plugins.htm">monitor source selection</a>, and fixes a few bugs. Note that the check for updates feature introduced in 2.2.02 was failing to find its installer script. This is now fixed.
+
+<p><b>Jan 24, 2012</b>
+
+<p>FFRend 2.2.02 fixes problems with synchronization of oscillators between plugins, and also fixes a serious bug in the previous version which caused the entire desktop to flicker whenever a row view was updated.
+
+<p><b>Dec 29, 2011</b>
+
+<p>The new Fauve plugin colorizes input in the style of Fauvism! Here's an
+<a href="http://whorld.org/ffrend/temp/histoviz.jpg">example</a>, and
+<a href="http://whorld.org/ffrend/temp/elevatedAB.jpg">another</a>. It's available for <a href="download.html">download</a>, and here's
+<a href="plugins/MiscPlugs-ReadMe.html#Fauve">how it works</a>.
+
+<p><b>Dec 16, 2011</b>
+
+<p>FFRend 2.2.01 introduces a playlist, better integrates the load-balancing feature, improves memory management, and fixes a number of bugs. A new Histogram plugin is also available for download: it displays a continuous histogram of the input video, in <a href="http://ffrend.sourceforge.net/temp/histogram_plugin.jpg">various modes</a>.
+
+<p><b>Nov 17, 2011</b>
+
+<p>FFRend 2.2.00 fixes some relatively minor bugs.
+
+<p><b>Aug 25, 2011</b>
+
+<p>New plugins include a radar sweep source, character and text generators with antialiasing, a mask mixer, and a multiply mixer. Download them <a href="download.html">here</a>, read about them <a href="plugins/MiscPlugs-ReadMe.html">here</a>.
+
+<p><b>Jun 1, 2011</b>
+
+<p>FFRend 2.1.02 fixes a bug in the load balancing feature which can cause unexpected strobing.
+
+<p><b>May 31, 2011</b>
+
+<p>FFRend 2.1.01 fixes a serious bug which can cause incorrect behavior when editing plugin parameters via their sliders.
+
+<p><b>May 19, 2011</b>
+<p>FFRend 2.1.00 adds a major performance enhancement: <a href="http://ffrend.sourceforge.net/images/load-bal-scr-shot.gif">load balancing</a>! Read the <a href="help.php?topic=Help/Loose_Ends/Load_balance.htm">manual page</a>, and for an overview of <a href="http://ffrend.sourceforge.net/doc/pipeline_demo/pipeline_demo_3_ganging.html">ganging</a> as a way around Amdahl's law, see the author's illustrated article <a href="http://ffrend.sourceforge.net/doc/pipeline_demo/pipelining.html">Pipelining for Plugin Chains</a>. This version also fixes many bugs, some of them serious.
+
+<p><b>Jun 25, 2010</b>
+<p>The latest upgrade to version 2 fixes some minor bugs related to recording.
+
+<p><b>Jun 20, 2010</b>
+<p>The initial release of version 2 has a bug which can cause "The application failed to initialize properly (0xc0150002)." Please download the latest version.
+
+<p><b>Jun 10, 2010</b>
+<p>The long-awaited version 2 of FFRend, with parallel processing and so much more, is available for download. Here's <a href=
+"http://ffrend.sourceforge.net/help.php?topic=Help/Getting_Started/New_in_version_2.htm">what's new in version 2</a>.
+
+<p><b>Jan 17, 2008</b>
+<p>FFRend 1.7 adds <a href="help.php?topic=Help/Metaplugins/Metaparameter_groups.htm">metaparameter groups</a>. It's available for download.
+
+<p><b>Dec 17, 2007</b>
+<p>FFRend 1.6 adds MPEG support via AviSynth, clip thumbnails in the file browser, and the ability to monitor the output of any plugin.
+
+<p><b>Nov 11, 2007</b>
+<p>FFRend 1.5 adds a <a href="help.php?topic=Help/Recording/Job_Control.htm">job queue</a> for batch processing, and a <a href="help.php?topic=Help/Options/Global_plugin.htm">global plugin</a> that can be applied to all your projects.
+
+<p><b>Mar 3, 2007</b>
+<p>FFRend 1.4 adds metaplugins, a plugin authoring capability.
+
+<p><b>Feb 12, 2007</b>
+<p>FFRend finally has a <a href="http://www.beatfix.com/scorched/">demo movie</a>, thanks to another fine evening of collaboration with <a href="http://www.beatfix.com">Jeff Mission</a>; the music is "Hate Me Not" by Boston's own <a href="http://scorchio.net/">Scorchio</a>.
+
+<p><b>Feb 1, 2007</b>
+<p>FFRend 1.3.08 fixes some issues with the dual-monitor support, and makes MIDI Setup a control bar instead of a modal dialog.
+
+<p><b>Jan 17, 2007</b>
+<p>FFRend 1.3 supports <b>multi-input plugins</b>! And there was much rejoicing. This version also adds new sizable control bars, including a <a href="help.php?topic=Help/Plugins/Patch_Bay.htm">patch bay</a>, a <a href="help.php?topic=Help/Projects/File_Browser.htm">file browser</a>, and an output monitor.
+
+<p><b>Dec 28, 2006</b>
+<p>BoolMix is a boolean mixer effect plugin. It blends two input frames together using a boolean operation. It's now available for <a href="download.html">download</a>; you can read about it <a href="plugins/BoolMix-ReadMe.html">here</a>.
+
+<p><b>Dec 8, 2006</b>
+<p>WaveGen is a wave generator effect plugin. It's useful for making all sorts of periodically repeating shapes. I'm using it to create animated keying masks, as in the images below. It's now available for <a href="download.html">download</a>; you can read about it <a href="plugins/WaveGen-ReadMe.html">here</a>.
+
+<p><img src="images/WaveGen-Demo1-320.jpg" width=320 height=231><img src="images/WaveGen-Demo2-320.jpg" width=320 height=231>
+
+<p><b>Dec 4, 2006</b>
+<p>PlayerFF is a clip player source plugin that reads AVI files or still images. It's now available for <a href="download.html">download</a>; you can read about it <a href="plugins/PlayerFF-ReadMe.html">here</a>.
+
+<p><b>Nov 30, 2006</b>
+<p>Version 1.2 is available for download. It adds unlimited undo, and also fixes some minor problems; see the release notes.
+
+<p><b>Nov 15, 2006</b>
+<p>Version 1.1 is available for download. It adds MIDI support, and also fixes some minor problems; see the release notes.
+
+<p><b>Oct 30, 2006</b>
+<p>Version 1.0.04 is available for download. It contains some important bug fixes; see the release notes.
+
+<p><b>Oct 26, 2006</b>
+<p>FFRend 1.0 is available for download.
+
+<p><b>Sep 20, 2006</b>
+<p>Beta release is still at least a few weeks away. 
+
+<!--  content stops HERE  -->
+</div>
+</body>
+</html>
